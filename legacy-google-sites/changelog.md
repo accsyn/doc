@@ -2336,7 +2336,7 @@ FEATURES
 
 \* Copy; Handles blocked outgoing ports, attempt lowest ports.
 
-\* Copy; Allow files to disappear during transfer - no crash.
+\* Copy; Allow files to dissappear during transfer - no crash.
 
 BUG FIXES
 
@@ -2344,7 +2344,7 @@ BUG FIXES
 
 \*  Copy; Fixed bugs causing crashes when transfer has finished.
 
-\*  GUI/API; If authenticated with API KEY, a new session is automatically acquired when the old one expires.
+\*  GUI/API; If authenticated with API KEY, a new session is automatically aquired when the old one expires.
 
 v0.9-17, 20181112
 

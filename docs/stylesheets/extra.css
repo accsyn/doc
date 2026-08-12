@@ -10,14 +10,35 @@
   --md-primary-bg-color--light: rgba(0, 0, 0, 0.54);
 }
 
-/* Light mode: 50% darker green for links/active nav, readable on white */
+/* Light mode: 33% darker green for links/active nav, readable on white */
 [data-md-color-scheme="default"] {
-  --md-typeset-a-color: #087843;
-  --md-accent-fg-color: #0a9a56;
+  --md-typeset-a-color: #0ba159;
+  --md-accent-fg-color: #0cbd68;
 }
 
 /* Dark mode: keep the bright brand green */
 [data-md-color-scheme="slate"] {
   --md-typeset-a-color: #11f185;
   --md-accent-fg-color: #5ff7ac;
+}
+
+/* Changelog release cards */
+.md-typeset .release-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 0.2rem solid var(--md-primary-fg-color);
+  border-radius: 0.3rem;
+  box-shadow: var(--md-shadow-z1);
+  padding: 0.4rem 1.2rem 0.8rem;
+  margin: 1.4rem 0;
+}
+
+.md-typeset .release-card > h2 {
+  margin: 0.6rem 0;
+}
+
+.md-typeset .release-card > h2 small {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.6em;
+  font-weight: 400;
+  margin-left: 0.6rem;
 }
