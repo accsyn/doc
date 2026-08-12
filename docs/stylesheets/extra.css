@@ -1,0 +1,23 @@
+/* accsyn brand colour */
+:root {
+  /* Header bar keeps the full-strength brand green in both modes */
+  --md-primary-fg-color: #11f185;
+  --md-primary-fg-color--light: #5ff7ac;
+  --md-primary-fg-color--dark: #0cbd68;
+
+  /* Dark text on the bright green header for readability */
+  --md-primary-bg-color: rgba(0, 0, 0, 0.87);
+  --md-primary-bg-color--light: rgba(0, 0, 0, 0.54);
+}
+
+/* Light mode: 50% darker green for links/active nav, readable on white */
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: #087843;
+  --md-accent-fg-color: #0a9a56;
+}
+
+/* Dark mode: keep the bright brand green */
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #11f185;
+  --md-accent-fg-color: #5ff7ac;
+}

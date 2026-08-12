@@ -106,305 +106,431 @@ Documentation targeting end users, employees, administrators and developers
 
 ### FOR END USERS
 
-![](assets/home-4e7a34044760.png)
+<div class="grid cards" markdown>
 
-[ACCOUNT](account.md)
+-   ![](assets/index-6e20a48ac536.png)
 
-- How to sign up and manage your personal accsyn account.
+    **[ACCOUNT](account.md)**
 
-![](assets/home-ecacd3e8e818.png)
+    ---
 
-[HOW TO DOWNLOAD A DELIVERY](delivery/receive.md)
+    How to sign up and manage your personal accsyn account.
 
-- Learn how to action an accsyn delivery.
+-   ![](assets/index-f98c49c9650b.png)
 
-![](assets/home-c5cf676f702f.png)
+    **[HOW TO DOWNLOAD A DELIVERY](delivery/receive.md)**
 
-[ACCESS SHARED MATERIAL](file-sharing/access.md)
+    ---
 
-- Learn how to access shared folders using the accsyn Desktop app.
+    Learn how to action an accsyn delivery.
 
-![](assets/home-ea4866a1d93b.png)
+-   ![](assets/index-8f6c501ebf13.png)
 
-[AUTOMATED DELIVERIES](admin/hosts.md)
+    **[ACCESS SHARED MATERIAL](file-sharing/access.md)**
 
-- Learn how to set up the accsyn app for automated deliveries and locally mapped shares.
+    ---
+
+    Learn how to access shared folders using the accsyn Desktop app.
+
+-   ![](assets/index-1917f2c8f89d.png)
+
+    **[AUTOMATED DELIVERIES](admin/hosts.md)**
+
+    ---
+
+    Learn how to set up the accsyn app for automated deliveries and locally mapped shares.
+
+</div>
 
 ### INTRODUCTION AND SPECIFICATIONS
 
-![](assets/home-8528e64804d2.png)
+<div class="grid cards" markdown>
 
-[INTRODUCTION](introduction.md)
+-   ![](assets/index-972c270a41d9.png)
 
-- Learn about accsyn.
+    **[INTRODUCTION](introduction.md)**
 
-![](assets/home-a11d2ebf4dde.png)
+    ---
 
-[SPECIFICATIONS](specifications.md)
+    Learn about accsyn.
 
-- Detailed list of accsyn features.
+-   ![](assets/index-5581beaab5c9.png)
 
-![](assets/home-cecde8cb235c.png)
+    **[SPECIFICATIONS](specifications.md)**
 
-[CHANGELOG](changelog.md)
+    ---
 
-- What is new in the latest version.
+    Detailed list of accsyn features.
+
+-   ![](assets/index-67d4a6eb784d.png)
+
+    **[CHANGELOG](changelog.md)**
+
+    ---
+
+    What is new in the latest version.
+
+</div>
 
 ### OPERATING
 
-Deliveries
+#### Deliveries
 
 How to deliver files and folders to external users, or request an upload.
 
-![](assets/home-7d40bb0b9f97.png)
+<div class="grid cards" markdown>
 
-[INTRODUCTION](delivery.md)
+-   ![](assets/index-a8966b1aa43f.png)
 
-- Learn about the accsyn high speed file Delivery subsystem.
+    **[INTRODUCTION](delivery/index.md)**
 
-![](assets/home-31bf3540b920.png)
+    ---
 
-[CREATE DELIVERY](delivery/create.md)
+    Learn about the accsyn high speed file Delivery subsystem.
 
-- Learn how to create a file delivery / upload request.
+-   ![](assets/index-4b07fa129aa3.png)
 
-![](assets/home-06b23b770b0d.png)
+    **[CREATE DELIVERY](delivery/create.md)**
 
-[MANAGE DELIVERIES](delivery/manage.md)
+    ---
 
-- Learn how to monitor and manage a file delivery / upload request.
+    Learn how to create a file delivery / upload request.
 
-File sharing
+-   ![](assets/index-93cbc8a542b9.png)
+
+    **[MANAGE DELIVERIES](delivery/manage.md)**
+
+    ---
+
+    Learn how to monitor and manage a file delivery / upload request.
+
+</div>
+
+#### File sharing
 
 How to share folders with users.
 
-![](assets/home-f726e5636aad.jpg)
+<div class="grid cards" markdown>
 
-[INTRODUCTION](file-sharing.md)
+-   ![](assets/index-111204e33993.jpg)
 
-- Learn about File sharing in accsyn, leveraging the accsyn high speed file transfer protocol.
+    **[INTRODUCTION](file-sharing/index.md)**
 
-![](assets/home-479974e0f1ad.png)
+    ---
 
-[FILE SHARING](file-sharing/filesharing-workingwith.md)
+    Learn about File sharing in accsyn, leveraging the accsyn high speed file transfer protocol.
 
-- Learn how to share files and folders on your accsyn storage.
+-   ![](assets/index-f7999a9ec454.png)
 
-Media Vault
+    **[FILE SHARING](file-sharing/filesharing-workingwith.md)**
+
+    ---
+
+    Learn how to share files and folders on your accsyn storage.
+
+</div>
+
+#### Media Vault
 
 How to manage your master media
 
-![](assets/home-3e14fcd1a611.png)
+<div class="grid cards" markdown>
 
-[INTRODUCTION](vault.md)
+-   ![](assets/index-f3877d251eda.png)
 
-- An introduction to the accsyn Media Vault  feature
+    **[INTRODUCTION](vault/index.md)**
 
-![](assets/home-b08531417281.png)
+    ---
 
-[CREATE TITLE PROJECT](vault/create.md)
+    An introduction to the accsyn Media Vault feature
 
-- Getting started creating your first title and uploading media to accsyn.
+-   ![](assets/index-c85f325cbf6d.png)
 
-![](assets/home-92e20f3c4528.png)
+    **[CREATE TITLE PROJECT](vault/create.md)**
 
-[LOG TITLE MEDIA](vault/log-media.md)
+    ---
 
-- Getting started logging your first media beneath your title.
+    Getting started creating your first title and uploading media to accsyn.
 
-![](assets/home-eae6ac0ee64f.png)
+-   ![](assets/index-5c8d745c5b20.png)
 
-[WORK WITH MEDIA](vault/work.md)
+    **[LOG TITLE MEDIA](vault/log-media.md)**
 
-- Learn how to manage your titles and associated media.
+    ---
 
-![](assets/home-d3dfbc5cba8f.png)
+    Getting started logging your first media beneath your title.
 
-[DELIVER TITLE MEDIA](vault/deliver.md)
+-   ![](assets/index-92a05344ad02.png)
 
-- Learn how to deliver title media, and request upload to a title.
+    **[WORK WITH MEDIA](vault/work.md)**
 
-![](assets/home-dece5d80d9ff.png)
+    ---
 
-[TRANSCODE MEDIA](vault/process.md)
+    Learn how to manage your titles and associated media.
 
-- Learn how to transcode title media using the accsyn Media Processor.
+-   ![](assets/index-390bdef6cc76.png)
 
-![](assets/home-1376f3512a78.png)
+    **[DELIVER TITLE MEDIA](vault/deliver.md)**
 
-[STREAM TITLE](vault/stream.md)
+    ---
 
-- Learn how to create web streamable deliveries from a title.
+    Learn how to deliver title media, and request upload to a title.
 
-![](assets/home-fce049b200cb.png)
+-   ![](assets/index-0448d96daf4f.png)
 
-[MEDIA LAB SERVICES](vault/media-lab.md)
+    **[TRANSCODE MEDIA](vault/process.md)**
 
-- Learn about our media lab services.
+    ---
 
-General Management
+    Learn how to transcode title media using the accsyn Media Processor.
 
-![](assets/home-ab08b397b2de.png)
+-   ![](assets/index-ceab9ad46018.png)
 
-[JOB MONITORING & MANAGEMENT](manage/job.md)
+    **[STREAM TITLE](vault/stream.md)**
 
-- Inspect and manage jobs.
+    ---
 
-![](assets/home-3544d79271d3.png)
+    Learn how to create web streamable deliveries from a title.
 
-[TROUBLESHOOTING](troubleshooting.md)
+-   ![](assets/index-cfd38cd1a082.png)
 
-- Learn how to find and resolve errors that occur in runtime.
+    **[MEDIA LAB SERVICES](vault/media-lab.md)**
+
+    ---
+
+    Learn about our media lab services.
+
+</div>
+
+#### General Management
+
+<div class="grid cards" markdown>
+
+-   ![](assets/index-f385b76f1d64.png)
+
+    **[JOB MONITORING & MANAGEMENT](manage/job.md)**
+
+    ---
+
+    Inspect and manage jobs.
+
+-   ![](assets/index-06f6c6fd2a0e.png)
+
+    **[TROUBLESHOOTING](troubleshooting.md)**
+
+    ---
+
+    Learn how to find and resolve errors that occur in runtime.
+
+</div>
 
 ### ADMINISTRATING
 
-Trials & General Administration
+#### Trials & General Administration
 
-![](assets/home-1cb566098c49.png)
+<div class="grid cards" markdown>
 
-[START A FREE TRIAL](trial.md)
+-   ![](assets/index-9172cbe36fa4.png)
 
-- Get started with accsyn - try it out with your own business.
+    **[START A FREE TRIAL](trial.md)**
 
-![](assets/home-627342f08fe8.png)
+    ---
 
-[USERS](admin/user.md)
+    Get started with accsyn - try it out with your own business.
 
-- Learn how to manage your workspace users.
+-   ![](assets/index-948bb56a9908.png)
 
-![](assets/home-a18d288bac63.png)
+    **[USERS](admin/user.md)**
 
-[QUEUES](admin/queue.md)
+    ---
 
-- Learn how to set up and manage workspace queues.
+    Learn how to manage your workspace users.
 
-![](assets/home-ef6d7cb9811b.png)
+-   ![](assets/index-3cbbdd39bf58.png)
 
-[CLIENTS](admin/client.md)
+    **[QUEUES](admin/queue.md)**
 
-- Learn how to audit registered workspace file transfer clients.
+    ---
 
-![](assets/home-c539fa7b802f.png)
+    Learn how to set up and manage workspace queues.
 
-[STORAGE](admin/storage.md)
+-   ![](assets/index-2c68add78ff4.png)
 
-- Learn how to configure your accsyn volumes and shared folders.
+    **[CLIENTS](admin/client.md)**
 
-![](assets/home-bfa735c00d65.png)
+    ---
 
-[WORKSPACE SETTINGS](admin/settings.md)
+    Learn how to audit registered workspace file transfer clients.
 
-- Learn how to configure your workspace global settings.
+-   ![](assets/index-7c8a8bc2e8d1.png)
 
-BYOS
+    **[STORAGE](admin/storage.md)**
+
+    ---
+
+    Learn how to configure your accsyn volumes and shared folders.
+
+-   ![](assets/index-fdf91b00d07e.png)
+
+    **[WORKSPACE SETTINGS](admin/settings.md)**
+
+    ---
+
+    Learn how to configure your workspace global settings.
+
+</div>
+
+#### BYOS
 
 Bring Your Own Storage
 
-![](assets/home-573ad838e7e6.png)
+<div class="grid cards" markdown>
 
-[SETUP BYOS](admin/byos.md)
+-   ![](assets/index-c7948a14edef.png)
 
-- Set up accsyn servers on your own office or cloud premises.
+    **[SETUP BYOS](admin/byos/index.md)**
 
-![](assets/home-b9fdbaa19516.png)
+    ---
 
-[SERVERS](admin/byos/server.md)
+    Set up accsyn servers on your own office or cloud premises.
 
-- Learn how to install and manage accsyn servers.
+-   ![](assets/index-8a99ee601ff1.png)
 
-![](assets/home-424193593365.png)
+    **[SERVERS](admin/byos/server.md)**
 
-[SITES](admin/byos/site.md)
+    ---
 
-- Learn how to set up and manage accsyn sites.
+    Learn how to install and manage accsyn servers.
 
-![](assets/home-603573dfded1.png)
+-   ![](assets/index-6d4e93031185.png)
 
-[ENGINES](admin/byos/site.md)
+    **[SITES](admin/byos/site.md)**
 
-- Learn how to create engines enabling render farm functionality.
+    ---
+
+    Learn how to set up and manage accsyn sites.
+
+-   ![](assets/index-f7c60344d030.png)
+
+    **[ENGINES](admin/byos/engine.md)**
+
+    ---
+
+    Learn how to create engines enabling render farm functionality.
+
+</div>
 
 ### FOR DEVELOPERS
 
-[DEVELOPER HUB](developer.md)
+<div class="grid cards" markdown>
 
-- Automate file transfers and compute within your production pipeline.
+-   **[DEVELOPER HUB](developer/index.md)**
 
-![](assets/home-d136b56a282b.png)
+    ---
 
-[PYTHON API](developer/python-api.md)
+    Automate file transfers and compute within your production pipeline.
 
-- Learn how to develop with accsyn, using the default Python API.
+-   ![](assets/index-074cc716c6be.png)
 
-![](assets/home-c86b61bffeb2.png)
+    **[PYTHON API](developer/python-api.md)**
 
-[HOOKS (BYOS)](developer/hooks.md)
+    ---
 
-- Learn how to have accsyn execute custom applications/scripts upon file transfer events.
+    Learn how to develop with accsyn, using the default Python API.
 
-![](assets/home-7f76d576ab13.png)
+-   ![](assets/index-e4f521ef2ead.png)
 
-[RENDER FARM (BYOS)](developer/farm.md)
+    **[HOOKS (BYOS)](developer/hooks.md)**
 
-- Learn how to set up accsyn as a render farm across one or more remote sites.
+    ---
 
-![](assets/home-b40ea248c8a8.png)
+    Learn how to have accsyn execute custom applications/scripts upon file transfer events.
 
-[PUBLISH (BYOS)](developer/publish.md)
+-   ![](assets/index-84bf08d8d859.png)
 
-- Learn how to set up accsyn to validate and ingest material produced by external users/vendors.
+    **[RENDER FARM (BYOS)](developer/farm.md)**
 
-[JOB JSON SPECIFICATION](developer/job-specification.md)
+    ---
 
-- Explore the accsyn job create JSON payload syntax.
+    Learn how to set up accsyn as a render farm across one or more remote sites.
+
+-   ![](assets/index-357bb722b099.png)
+
+    **[PUBLISH (BYOS)](developer/publish.md)**
+
+    ---
+
+    Learn how to set up accsyn to validate and ingest material produced by external users/vendors.
+
+-   **[JOB JSON SPECIFICATION](developer/job-specification.md)**
+
+    ---
+
+    Explore the accsyn job create JSON payload syntax.
+
+</div>
 
 ## CODES AND SETTINGS
 
-[WARNING CODES](warnings.md)
+<div class="grid cards" markdown>
 
-- Learn about the different warning codes that appear within accsyn.
+-   **[WARNING CODES](warnings.md)**
 
-[ERROR CODES](errors.md)
+    ---
 
-- Learn about the different error codes that appear within accsyn.
+    Learn about the different warning codes that appear within accsyn.
 
-[INTERNAL SETTINGS](settings.md)
+-   **[ERROR CODES](errors.md)**
 
-- Documentation of accsyn internal entity settings
+    ---
+
+    Learn about the different error codes that appear within accsyn.
+
+-   **[INTERNAL SETTINGS](settings.md)**
+
+    ---
+
+    Documentation of accsyn internal entity settings
+
+</div>
 
 ## TUTORIALS
 
-![](assets/home-e6f073e470d8.png)
+<div class="grid cards" markdown>
 
-[FTP SERVER REPLACEMENT](tutorials/ftp-server-replacement.md)
+-   ![](assets/index-2811350bd190.png)
 
-  
+    **[FTP SERVER REPLACEMENT](tutorials/ftp-server-replacement.md)**
 
-- Learn how to set up accsyn in a similar way as an FTP server with superior performance and security.
+    ---
 
-![](assets/home-0fe2b4db7f33.jpg)
+    Learn how to set up accsyn in a similar way as an FTP server with superior performance and security.
 
-[OUTSOURCING PIPELINE](tutorials/outsourcing-pipeline.md)
+-   ![](assets/index-766af812d1b7.jpg)
 
-  
+    **[OUTSOURCING PIPELINE](tutorials/outsourcing-pipeline.md)**
 
-- Learn how to build a fully automated outsourcing pipeline, sending work files to a remote vendor unattended and ingesting published assets back into the production management tools.
+    ---
 
-![](assets/home-01c5f6f4285d.png)
+    Learn how to build a fully automated outsourcing pipeline, sending work files to a remote vendor unattended and ingesting published assets back into the production management tools.
 
-[REMOTE OFFICE SYNC](tutorials/remote-office-sync.md)
+-   ![](assets/index-6d179258cb70.png)
 
-  
+    **[REMOTE OFFICE SYNC](tutorials/remote-office-sync.md)**
 
-- Learn how to use the accsyn Python API to automate file synchronisation between your offices and/or cloud storage.
+    ---
 
-![](assets/home-80e063a858ea.jpg)
+    Learn how to use the accsyn Python API to automate file synchronisation between your offices and/or cloud storage.
 
-[FILM FESTIVAL](tutorials/film-festival.md)
+-   ![](assets/index-9b4e5ebdf324.jpg)
 
-  
+    **[FILM FESTIVAL](tutorials/film-festival.md)**
 
-- Learn how to set up accsyn as your main Film Festival file management platform.
+    ---
+
+    Learn how to set up accsyn as your main Film Festival file management platform.
+
+</div>
 
 ## TERMINOLOGY
 

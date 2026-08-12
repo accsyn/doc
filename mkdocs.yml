@@ -1,0 +1,108 @@
+site_name: accsyn Documentation
+site_url: https://support.accsyn.com/
+site_description: >-
+  Official documentation for accsyn - accelerated file transfers,
+  from set to screen.
+copyright: Copyright &copy; HDR AB, 2018-2026
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
+  - Account: account.md
+  - Start a trial: trial.md
+  - Specifications: specifications.md
+  - Delivery:
+      - delivery/index.md
+      - Create: delivery/create.md
+      - Manage: delivery/manage.md
+      - Receive: delivery/receive.md
+  - File sharing:
+      - file-sharing/index.md
+      - Working with: file-sharing/filesharing-workingwith.md
+      - Access: file-sharing/access.md
+  - Media Vault:
+      - vault/index.md
+      - Create title: vault/create.md
+      - Log media: vault/log-media.md
+      - Working with: vault/work.md
+      - Deliver: vault/deliver.md
+      - Stream media: vault/stream.md
+      - Process: vault/process.md
+      - Clip extract: vault/clip-extract.md
+      - Export: vault/export.md
+      - Order: vault/order.md
+      - Lab: vault/media-lab.md
+  - Developer Hub:
+      - developer/index.md
+      - Python API: developer/python-api.md
+      - Hooks: developer/hooks.md
+      - Render farm: developer/farm.md
+      - Publish: developer/publish.md
+      - Job specification: developer/job-specification.md
+  - Admin:
+      - admin/index.md
+      - Desktop App: admin/desktop-app.md
+      - Hosts: admin/hosts.md
+      - Users: admin/user.md
+      - Storage: admin/storage.md
+      - Queues: admin/queue.md
+      - Workspace Settings: admin/settings.md
+      - Clients: admin/client.md
+      - Jobs: manage/job.md
+      - Internal settings: settings.md
+      - BYOS:
+          - admin/byos/index.md
+          - Server: admin/byos/server.md
+          - Site: admin/byos/site.md
+          - Engine: admin/byos/engine.md
+  - Tutorials:
+      - Film festival: tutorials/film-festival.md
+      - FTP server replacement: tutorials/ftp-server-replacement.md
+      - Outsourcing pipeline: tutorials/outsourcing-pipeline.md
+      - Remote office sync: tutorials/remote-office-sync.md
+  - Troubleshooting:
+      - troubleshooting.md
+      - Warnings: warnings.md
+      - Errors: errors.md
+  - Changelog: changelog.md

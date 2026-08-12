@@ -1,0 +1,6 @@
+.git
+site/
+legacy-google-sites/
+__pycache__/
+google-sites-to-markdown.py
+README.md
