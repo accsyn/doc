@@ -8,7 +8,7 @@ accsyn is a SaaS (Software as a Service) platform featuring the high speed encry
 
 accsyn is designed to be used in one of these two scenarios:
 
-- Media production; Shooting, ingest, post production, rendering, collaboration, rendering, delivery and workflows.
+- Media production; Shooting, ingest, post production, rendering, collaboration, delivery and workflows.
 - Media distribution and archival;  Tagging and structuring, proxy generation, web streaming/previews, distribution to screen (cinemas, conferences), long term archival.
 
   
@@ -16,7 +16,7 @@ accsyn is designed to be used in one of these two scenarios:
 These common features are available across the platform:
 
 - [File Delivery](delivery.md); Smooth web browser based delivery of large file sets.
-- [File Sharing](file-sharing.md); Cloud hosted or on-prem advanced ACL driven file and folder sharing, replacing FTP and similar solutions. With advanced functionality such as desktop app monitor with queue management, locally mapped shares, remote sites/officess, render farm and publish workflows.
+- [File Sharing](file-sharing.md); Cloud hosted or on-prem advanced ACL driven file and folder sharing, replacing FTP and similar solutions. With advanced functionality such as desktop app monitor with queue management, locally mapped shares, remote sites/offices, render farm and publish workflows.
 
   
 
@@ -29,12 +29,12 @@ These features are targeting production:
 
 These features are targeting distribution and archival:
 
-- [Media Vault](vault.md); Media/master long term cloud storage with IMDB linkage,proxies, web streaming, clip extraction, Q/C.
+- [Media Vault](vault.md); Media/master long term cloud storage with IMDB linkage, proxies, web streaming, clip extraction, Q/C.
 - [Lab Services](vault/media-lab.md);  Have our partners help you refine your media assets.
 
   
 
-Important note: The Media Vault can not be run on-prem as of version 3 (although this is subject to be improved in future versions). To facilitation both BYOS and Media Vault, two separate workspaces  should be deployed.
+Important note: The Media Vault cannot be run on-prem as of version 3 (although this is subject to be improved in future versions). To facilitate both BYOS and Media Vault, two separate workspaces  should be deployed.
 
 ## Why would I need accsyn?
 
@@ -42,27 +42,27 @@ Film production, and media production in general, deals with transferring and st
 
   
 
-accsyn is designed act as a reliable file hub throughout the entire film creation process - 
+accsyn is designed to act as a reliable file hub throughout the entire film creation process - 
 
-from shoot on set all the way to the screen - cinema or a streaming
+from shoot on set all the way to the screen - cinema or streaming
 
 ## How does it work?
 
-The accsyn cloud backend both orchestrates high speed p2p transfers, compute jobs and provides media management capabilities. The accsyn app, which runs both on desktop and as a background service, act as the high speed file transfer endpoints.
+The accsyn cloud backend both orchestrates high speed p2p transfers, compute jobs and provides media management capabilities. The accsyn app, which runs both on desktop and as a background service, acts as the high speed file transfer endpoints.
 
 ![](assets/introduction-679212a60583.png)
 
-## How secure is accsn?
+## How secure is accsyn?
 
-Security and integrity is paramount, all internal communications are carried over standard https protocols and the ASC (accsyn copy) accelerated p2p protocol are using standard AES industry grade encryption. 
-
-  
-
-No file servers are listening 24/7, providing a minimal attack surface for hackers. Only during a brief moment during ASC file transfer init, a software firewalled (only accepting connections from the remote client IP) is spawned and then teared down upon connection establishment.
+Security and integrity are paramount, all internal communications are carried over standard https protocols and the ASC (accsyn copy) accelerated p2p protocol is using standard AES industry grade encryption. 
 
   
 
-For more in depth coverage of how the accsyn protocol works with comparison to other file transfer solutions:
+No file servers are listening 24/7, providing a minimal attack surface for hackers. Only during a brief moment during ASC file transfer init, a software firewall (only accepting connections from the remote client IP) is spawned and then torn down upon connection establishment.
+
+  
+
+For more in-depth coverage of how the accsyn protocol works in comparison to other file transfer solutions:
 
 [SECURITY WHITEPAPER](https://www.google.com/url?q=https%3A%2F%2Fdownload.accsyn.com%2Fsupport%2Faccsyn%2520Security%2520Whitepaper.pdf&sa=D&sntz=1&usg=AOvVaw1lYQGGZskz-LRSgvB8hdGl)
 
@@ -77,7 +77,7 @@ Yes, you can start your own 1 month 500GB or 1 BYOS storage server free trial by
 To start using accsyn within your business, you will need to create an accsyn Workspace:
 
 - Go to <https://accsyn.io>, you will be asked to register your personal account - this is mandatory.
-- An verification email will be sent to you, please action it.
+- A verification email will be sent to you, please action it.
 - Once logged in to accsyn, click START 30 DAYS FREE TRIAL button in the left hand menu.
 - Start the workspace by entering your contact information and the name you wish to give your Workspace, this can be changed later.
 
@@ -85,18 +85,18 @@ Once in, you are ready to [create your first accsyn delivery](delivery.md).
 
 [TRIAL](trial.md)
 
-- Detailed documentation on how to initate a trial
+- Detailed documentation on how to initiate a trial
 
 ## How is it licensed and what does it cost?
 
-An accsyn license grants you access to all features within the platform, without restrictions. Two types of licenses exists, the accsyn Cloud Workspace license and BYOS server licenses.
+An accsyn licence grants you access to all features within the platform, without restrictions. Two types of licences exist, the accsyn Cloud Workspace licence and BYOS server licences.
 
   
 
 accsyn comes with a standard 1TB Cloud workspace and 2 users included, with an additional charge for:
 
 - Storage; per TB (Terabyte) of additional cloud storage used on a monthly basis
-- Users\*; per additional elevated (admin or employee role user)  with an additional charge for web streams.
+- Users\*; per additional elevated (admin or employee role) user  with an additional charge for web streams.
 
   
 
@@ -119,13 +119,13 @@ Lab services are charged per order item, hours spent and deliverable.
 
 ## How do I get started?
 
-Depending on were you are in production, there are different ways to approach accsyn after you started your trial. The features below can be combined in many ways, it is up to you to decide which tools to use.
+Depending on where you are in production, there are different ways to approach accsyn after you started your trial. The features below can be combined in many ways, it is up to you to decide which tools to use.
 
   
 
 ### Delivery
 
-I you just need a delivery tool for sending out file packages, or receiving files, you simply use your web browser logged in to <https://accsyn.io> - no additional software needed.  Looking to deliver from your own on-prem server, head over to [BYOS](admin/byos.md) section.
+If you just need a delivery tool for sending out file packages, or receiving files, you simply use your web browser logged in to <https://accsyn.io> - no additional software needed.  Looking to deliver from your own on-prem server, head over to the [BYOS](admin/byos.md) section.
 
 [Deliveries](delivery.md)
 
@@ -149,11 +149,11 @@ The film is produced but the master needs some place to live, organised with pro
 
 ### Developer Hub
 
-I am looking to setup advanced automisations involving pushing and processing large files sets between different locations.
+I am looking to set up advanced automations involving pushing and processing large file sets between different locations.
 
 [Developer Hub](developer.md)
 
-- Discover what you can achive with programmabe file transfers.
+- Discover what you can achieve with programmable file transfers.
 
 ## What does accsyn mean?
 

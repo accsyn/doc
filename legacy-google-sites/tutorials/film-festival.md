@@ -1,6 +1,6 @@
 # Tutorial - Film Festival
 
-This tutorial is targeting Cloud Workspaces (Media Vault) and are note applicable for on-prem BYOS workspaces.
+This tutorial is targeting Cloud Workspaces (Media Vault) and is not applicable for on-prem BYOS workspaces.
 
 Contents:
 
@@ -55,25 +55,25 @@ This tutorial will walk through how to set up accsyn for acting as the central f
 - Creating the accsyn workspace.
 - Creating a movie title project.
 - Requesting upload of contribution from creator.
-- Ingesting the material to title and validating DCP
-- Creating a stream
-- Deliver to cinema
+- Ingesting the material to the title and validating DCP.
+- Creating a stream.
+- Deliver to cinema.
 
 ![](../assets/tutorials_film-festival-942b784126bc.png)
 
 Example film festival workflow from Stockholm Film Festival.  
 
-NOTE: Made up example data is provided in [brackets] throughout this tutorial.
+NOTE: Made-up example data is provided in [brackets] throughout this tutorial.
 
 ## Creating your new accsyn workspace
 
-The first step would be to create an accsyn Cloud Workspace,  detailed instructions can be found [here](../trial.md):
+The first step would be to create an accsyn Cloud Workspace, detailed instructions can be found [here](../trial.md):
 
 - Open <https://accsyn.io/trial>.
 - You will first be asked to sign up for your personal accsyn account. If you already have one, click Log in link.
 - When logged in you will land on the trial page, click Start my free trial button.
 - Enter a name for your workspace, typically the name of your film festival or company/organisation [Festival]
-- Select Media Vault as the feature you indend to try out primarily.
+- Select Media Vault as the feature you intend to try out primarily.
 - Click Create workspace when done, to have your workspace created.
 
 It will take a minute or so for your workspace to be created.
@@ -82,7 +82,7 @@ It will take a minute or so for your workspace to be created.
 
 ### What is a title?
 
-An accsyn title is a project folder beneath the default cloud storage volume designated to contain one or more media files, with the accsyn Media Vault feature. A title can be linked to an IMDb ID, making deployment easy as accsyn uses and API internally to fetch movie metadata including cover image thumbnail.
+An accsyn title is a project folder beneath the default cloud storage volume designated to contain one or more media files, with the accsyn Media Vault feature. A title can be linked to an IMDb ID, making deployment easy as accsyn uses an API internally to fetch movie metadata including cover image thumbnail.
 
   
 
@@ -90,21 +90,21 @@ An accsyn title is a project folder beneath the default cloud storage volume des
 
 To start managing your festival titles and media, download the accsyn desktop app. Go to <https://accsyn.io/vault> and you will be given download links and clear directions. If you have problems installing or using the app, find more detailed assistance [here](../admin/desktop-app.md).
 
-NOTE: Currently, accsyn web app does not support managing media. This is subject to change in a near future.
+NOTE: Currently, the accsyn web app does not support managing media. This is subject to change in the near future.
 
   
 
 ### Creating a title
 
-- Logon with the accsyn Desktop App as an administrator (or an employee with default storage volume access).
+- Log on with the accsyn Desktop App as an administrator (or an employee with default storage volume access).
 - Go to Titles tab.
 - Click New title button in upper right corner, or New title project card in title area.
 - Choose the type of media title/project.
-- If the title exists on IMDb, copy the URL and paste beneath IMDb input. Otherwise choose New title/project - not linked to an IMDb title [https://www.imdb.com/title/tt34998116]
+- If the title exists on IMDb, copy the URL and paste it beneath the IMDb input. Otherwise choose New title/project - not linked to an IMDb title [https://www.imdb.com/title/tt34998116]
 - Click Next.
 - [IMDb] A folder name will be suggested based on the IMDb title, adjust as needed. Note that folder name must be unique, and will be created at the root of the default cloud storage volume.
-- [Non IMDB] Enter a name of the project folder, try to avoid using non-US letter such as å, ô and so on to maintain compability with transcoding softwares and file systems. The folder can be renamed afterwards.  [MyShortFilm]
-- Check Apply title template folder structure to have a set of well defined subfolders created (recommended). Click Next.
+- [Non IMDb] Enter a name of the project folder, try to avoid using non-US letters such as å, ô and so on to maintain compatibility with transcoding software and file systems. The folder can be renamed afterwards. [MyShortFilm]
+- Check Apply title template folder structure to have a set of well-defined subfolders created (recommended). Click Next.
 
 ![](../assets/tutorials_film-festival-07df73589de7.png)
 
@@ -125,17 +125,17 @@ You will be redirected to the title view in app, here you can switch between two
 
 ### Explaining accsyn media management
 
-Media in accsyn are files that are ingested into the accsyn Media Vault beneath a title - an internal database in accsyn platform holding media metadata, proxies and other related information.
+Media in accsyn are files that are ingested into the accsyn Media Vault beneath a title - an internal database in the accsyn platform holding media metadata, proxies and other related information.
 
-Note: Media cannot exist outside titles - these files must resides beneath a title folder on storage.
+Note: Media cannot exist outside titles - these files must reside beneath a title folder on storage.
 
-Files that are imported in the media view, are always suggested to be ingested. 
+Files that are imported in the media view are always suggested to be ingested. 
 
 Files uploaded in the storage or files view can be kept as raw files, which is suitable during production/asset refinement. An uploaded file can be ingested later into the Media Vault as needed.
 
 ## Requesting upload of film festival contribution
 
-Now you want to the contributor to upload the movie to you - DCP and Master, here we facilitate the accsyn Delivery subsystem and the fast and secure ASC protocol.
+Now you want the contributor to upload the movie to you - DCP and Master, here we utilise the accsyn Delivery subsystem and the fast and secure ASC protocol.
 
 ### Request upload using the app
 
@@ -146,7 +146,7 @@ Now you want to the contributor to upload the movie to you - DCP and Master, her
 
 ### Request upload using the browser
 
-- Logon to <https://accsyn.io> as an employee or admin in your web browser.
+- Log on to <https://accsyn.io> as an employee or admin in your web browser.
 - Go to Requested in the workspace menu on the left hand side.
 - Click New request button
 - When asked, choose Upload to folder on accsyn storage.
@@ -159,17 +159,17 @@ Now you want to the contributor to upload the movie to you - DCP and Master, her
 - (Optional) Enter a message for the contributor [Please upload the DCP and screening media here]
 - Enter the contributor email address [demo.user@accsyn.com].
 - (Optional) Set the expiry date.
-- Click Send request to have user invited to your workspace and have a link with clear upload instructions sent to them.
+- Click Send request to have the user invited to your workspace and have a link with clear upload instructions sent to them.
 
 ![](../assets/tutorials_film-festival-b2c48748be06.png)
 
-Go to <https://accsyn.io/requested> to get an overview of your current upload request, open a request to monitor progress of DCP upload:
+Go to <https://accsyn.io/requested> to get an overview of your current upload requests, open a request to monitor progress of DCP upload:
 
 ![](../assets/tutorials_film-festival-20c53b706cd7.png)
 
 ## Ingest uploaded media
 
-Once the material is uploaded it is time to ingest it into the vault as media, with metadata extract and validation. Media in accsyn is simply a file or a folder that denotes final deliverable/archivable media of any kind such as a master, screening media, subtitles or sales material. More information about the media vault feature in accsyn can be found [here](../vault.md).
+Once the material is uploaded it is time to ingest it into the vault as media, with metadata extraction and validation. Media in accsyn is simply a file or a folder that denotes final deliverable/archivable media of any kind such as a master, screening media, subtitles or sales material. More information about the media vault feature in accsyn can be found [here](../vault.md).
 
   
 
@@ -181,17 +181,17 @@ At this stage, before ingesting media, you might involve your lab provider if yo
 
 Media can be ingested into the vault at any point, and media can also be removed leaving the files at storage:
 
-- Logon to the app and go to the title [Babystar]
-- Go to the Files tab and go to the folder were files were uploaded [Untagged].
+- Log on to the app and go to the title [Babystar]
+- Go to the Files tab and go to the folder where files were uploaded [Untagged].
 - Select the DCP and click Ingest button in the action bar.
-- The media logger dialog is brought up and the type(tag) of media and initial tags are identified from the file type and file name. Next you define the main tags:
-- Content; What type content media is [Feature]
-- Category; The category media belongs to, leave empty for DCP type.
+- The media logger dialog is brought up and the type (tag) of media and initial tags are identified from the file type and file name. Next you define the main tags:
+- Content; What type of content the media is [Feature]
+- Category; The category the media belongs to, leave empty for DCP type.
 - Subtitles; Define what subtitles this media has, leave empty if there are no subtitles.
 - Custom; Define your own tag, used for search/categorising media within the Vault.
-- Checksum; Enter the checksum media has on your end, used during validation.
+- Checksum; Enter the checksum the media has on your end, used during validation.
 - Tags; The additional tags identified from filename and file type.
-- Destination folder; Where to move media, by default accsyn try to maintain a standard title file structure based on the content, category and type tags. Have the media stay in the folder by choosing "Preserve folder structure".
+- Destination folder; Where to move media, by default accsyn tries to maintain a standard title file structure based on the content, category and type tags. Have the media stay in the folder by choosing "Preserve folder structure".
 - Validate; Have accsyn validate the DCP after ingest, making sure the DCP is not corrupt.
 
 Click Ingest Media in lower right corner to have it ingested and validated.
@@ -202,14 +202,14 @@ Go to the Media tab within the title to see it appear and get progress on valida
 
 ### Ingest screening master
 
-In the sam spirit, you ingest the media for screening:
+In the same spirit, you ingest the media for screening:
 
-- Select the quicktime movie and click Ingest.
+- Select the QuickTime movie and click Ingest.
 - Choose Feature as content and VOD as category.
 - If you have a checksum calculated, enter it and accsyn will validate the media after upload making sure that checksum matches.
 - Click Ingest Media when you are ready.
 
-A H264 low resolution (1280x720) proxy will be transcoded for preview in the app and the web.
+An H264 low resolution (1280x720) proxy will be transcoded for preview in the app and the web.
 
 ![](../assets/tutorials_film-festival-348bdc328cd9.png)
 
@@ -219,14 +219,14 @@ To monitor the proxy transcode / validation progress, go to Jobs at the bottom a
 
 ### DCP validation
 
-When the DCP has been validated, it will show up with green symbol marked SHA1 which means accsyn has run avalidation routine making sure the files within the DCP folder have the correct checksum. If the DCP validation fails, it indicates that either the DCP was corrupt at rest with your contributor or something went wrong during upload.
+When the DCP has been validated, it will show up with a green symbol marked SHA1 which means accsyn has run a validation routine making sure the files within the DCP folder have the correct checksum. If the DCP validation fails, it indicates that either the DCP was corrupt at rest with your contributor or something went wrong during upload.
 
 ## Creating a stream
 
-Go through this procedure if you need to stream the title at your festival, either as the main venue or as complementary backup to cinema DCP playback:
+Go through this procedure if you need to stream the title at your festival, either as the main venue or as a complementary backup to cinema DCP playback:
 
 1. Log on to the app and go to the title media tab.
-2. Select the VOD quicktime move (any movie type media can be streamed, but we recommend you tag screening media with category VOD - e.g. media having the adequate quality/bitrate).
+2. Select the VOD QuickTime movie (any movie type media can be streamed, but we recommend you tag screening media with category VOD - e.g. media having the adequate quality/bitrate).
 3. Choose Stream in the action bar.
 4. Media will be added to the outbox on the right hand side, add more files available for download and then click Next recipients button.
 5. The stream will be created and you will be redirected to the web browser to finish it up - enter recipient email addresses.
@@ -242,20 +242,20 @@ The recipient will receive an email with a link, which they can open to view the
 
 ## Deliver to cinema
 
-The final step would be to send the DCP to festival cinemas, again we facilitate the Delivery subsystem with the speedy and resilient file transfers provided by accsyn:
+The final step would be to send the DCP to festival cinemas, again we utilise the Delivery subsystem with the speedy and resilient file transfers provided by accsyn:
 
 ### Send DCP using app
 
-- Logon to the desktop app as an employee or admin.
-- Go to to the title and enter the DCP folder (or Untagged if you choose earlier to preserve folder structure).
+- Log on to the desktop app as an employee or admin.
+- Go to the title and enter the DCP folder (or Untagged if you chose earlier to preserve folder structure).
 - Select the DCP [Babystar]
 - Click Deliver in the action bar.
 - Add more files if needed, for example you might want to include the streaming media for backup/preview.
-- Click Next recipients to finishin up the delivery in the browser.
+- Click Next recipients to finish up the delivery in the browser.
 
 ### Send DCP using web browser
 
-- Logon to <https://accsyn.io> as an employee or admin in your web browser.
+- Log on to <https://accsyn.io> as an employee or admin in your web browser.
 - Go to Outbound in the workspace menu on the left hand side.
 - Click New delivery button.
 - Click on the drop area in the middle.
@@ -268,7 +268,7 @@ The final step would be to send the DCP to festival cinemas, again we facilitate
 - (Optional) Enter a message to the cinema.
 - Enter the cinema operator email address.
 - (Optional) Set the expiry date.
-- Click Send delivery to user invited to your workspace and have a link with clear download instructions sent to them.
+- Click Send delivery to have the user invited to your workspace and have a link with clear download instructions sent to them.
 
   
 
@@ -276,7 +276,7 @@ Monitor the delivery progress at <https://accsyn.io/outbound>, from the delivery
 
 ## Conclusions
 
-accsyn provides all the tools you need to run your film festival all the way from planning your titles, getting the media sent to you, lab collaboration, streaming and delivery to cinema - all empowered by the resilient accsyn fast file transfer protocal removing a ton of hassle and paint points.
+accsyn provides all the tools you need to run your film festival all the way from planning your titles, getting the media sent to you, lab collaboration, streaming and delivery to cinema - all empowered by the resilient accsyn fast file transfer protocol removing a ton of hassle and pain points.
 
   
 

@@ -26,7 +26,7 @@ v3.6-5 [26.06.24-29]
 
      - [PYTHON API 3.3.4] Documentation consolidated, aligned with support docs.
 
-     - [DOCUMENTATION] Re-introduced interal settings documentation (https://support.accsyn.com/settings)
+     - [DOCUMENTATION] Re-introduced internal settings documentation (https://support.accsyn.com/settings)
 
   BUG FIXES
 
@@ -148,7 +148,7 @@ v3.6-1 [26.03.29]
 
       - [WEB/ONBOARDING] Select between cloud and BYOS workspace, with a proper BYOS setup wizard that has to be completed before workspace is activated.
 
-      - [MEDIA VAULT] Nightly check for media and title existance, reflected on Vault titles page in app. Can be manually triggered from new media vault web admin page.
+      - [MEDIA VAULT] Nightly check for media and title existence, reflected on Vault titles page in app. Can be manually triggered from new media vault web admin page.
 
       - [COMPUTE] Support metadata on nested tasks, merged and supplied with engine execution.
 
@@ -272,11 +272,11 @@ v3.5-1 [25.12.15]
 
       - [APP/SERVER] Fixed bug where volume write test directory were not deleted.
 
-      - [APP] Fixed bug were a delivery could not be downloaded with app if alread running.
+      - [APP] Fixed bug were a delivery could not be downloaded with app if already running.
 
       - [APP] Fixed bug causing a 'Client not found' error during delivery download.
 
-      - [CORE] Fixed bug when pausing a compute job that is beeing dispatched to many servers at the same time.
+      - [CORE] Fixed bug when pausing a compute job that is being dispatched to many servers at the same time.
 
       - [CORE] Fixed bug when paused status was not taken into account on submit.
 
@@ -532,7 +532,7 @@ MINOR FEATURES
 
 BUG FIXES
 
-    - [APP/FILE SHARING] Users can now see files while selecting destination folder withing an upload session.
+    - [APP/FILE SHARING] Users can now see files while selecting destination folder within an upload session.
 
     - [APP/JOBS] Fixed sorting bug with paused jobs.
 
@@ -766,7 +766,7 @@ BUG FIXES
 
   - [APP/VAULT] Fixed bug where title cover could not be restored to default.
 
-  - [BACKEND] Thread safe backend logging, to prevent deadlocks when writin NFS log storage (Related to 1h outage 25.01.07)
+  - [BACKEND] Thread safe backend logging, to prevent deadlocks when writing NFS log storage (Related to 1h outage 25.01.07)
 
   - [CORE/APP] Fixed bug in storage browser with shares having different name than (API) code attribute. Fixed so share and volume names can be entered in the address field.
 
@@ -1006,7 +1006,7 @@ BUG FIXES
 
   - [APP] [APP] Flip file browser sorting arrows
 
-  - [WEBAPP] Fixed bug where boolean setting indikator buttons were oriented the wrong way.
+  - [WEBAPP] Fixed bug where boolean setting indicator buttons were oriented the wrong way.
 
   - [APP] Improved client lock file handling - check if PID is running and not prevent start if gone.
 
@@ -1228,7 +1228,7 @@ BUG FIXES
 
   - [APP] Fixed bug were To: resets after inviting a new user, instead of pre-selecting it.
 
-  - [ASC] hange prefix of temporary file from ".ASC\_TMP.\*" to ".ACCSYN\_TMP.\*" Changed prefix for single file resume checkpoint files from ".\_accsyn\_checkpoint" to ".ACCSYN\_CHECKPOINT." to fix some storage incompability issues. Changed prefix for partially transfered files from "\_accsyn\_incomplete." to "\_ACCSYN\_INCOMPLETE.".
+  - [ASC] Change prefix of temporary file from ".ASC\_TMP.\*" to ".ACCSYN\_TMP.\*" Changed prefix for single file resume checkpoint files from ".\_accsyn\_checkpoint" to ".ACCSYN\_CHECKPOINT." to fix some storage incompatibility issues. Changed prefix for partially transferred files from "\_accsyn\_incomplete." to "\_ACCSYN\_INCOMPLETE.".
 
 -------------------------------------------------------------------------------------------------------------------------------
 
@@ -1340,7 +1340,7 @@ FEATURES
 
    - [APP JOB VIEW] Improved job tasks and hooks view.
 
-   - [COMPUTE] Job filters can now include asterix for matching values, e.g. hostname:+render0\*
+   - [COMPUTE] Job filters can now include asterisk for matching values, e.g. hostname:+render0\*
 
    - [WEB DELIVERY] Improved web delivery job view with more information, disable web delivery in app if disabled in settings.
 
@@ -1424,7 +1424,7 @@ FEATURES
 
    - [API] New assign and deassign methods, initially for configuring (site) servers for root shares.
 
-   - [RENDER/FARM] Only the render output is displyed in process logs, to see outout from render Python wrapper there is a service log checkbox that enables it.
+   - [RENDER/FARM] Only the render output is displayed in process logs, to see output from render Python wrapper there is a service log checkbox that enables it.
 
    - [APP,BROWSER] Added "Inactivate share" option to enable fast cleanup. Also prevent locations (shares, local drives) to be updated on a reload or file operation.
 
@@ -1510,7 +1510,7 @@ FEATURES
 
    - Compute addon; possibility to configure 'compute' apps that makes accsyn act as a render farm executing render jobs, with app definitions as Python scripts. Enable cross-site file transfers to support rendering on-prem from another site or working from home. Also supports rendering on computers at a remote site, for example AWS or GCE cloud. Compute script repository: https://github.com/accsyn/compute-scripts
 
-   - ASC; Improved transfer log, showing size of current file transfered and also made sure speed measurements are in SI units - multiples of 1000, not 1024.
+   - ASC; Improved transfer log, showing size of current file transferred and also made sure speed measurements are in SI units - multiples of 1000, not 1024.
 
    - Global API keys - can be configured to inherit user role (clearance & permissions, have a fixed role or have explicit permissions but role inherited from user. New admin section and overall improved security with improved performance.
 
@@ -1644,7 +1644,7 @@ v1.3-3
 
   - Desktop app; Notification banners on-top of window.
 
-  - Configureable transmit subfolder (Admin>Settings>Share>Transmit directory).
+  - Configurable transmit subfolder (Admin>Settings>Share>Transmit directory).
 
   - Desktop app; Create queue button i "All transfers" view, queue configurable when creating/editing a share.
 
@@ -1704,9 +1704,9 @@ v1.3-2
 
   - PSK security enhancement; A secret Pre Shared Key is supplied and validated by server before a connection is accepted.
 
-  - Desktop app file browser; Multiple files/directories can now be deleted, with interruptable progress meter.
+  - Desktop app file browser; Multiple files/directories can now be deleted, with interruptible progress meter.
 
-  - GUI; Proper interruptable progress bars on modifying jobs/queues.
+  - GUI; Proper interruptible progress bars on modifying jobs/queues.
 
   \*b2; Python API; getsize boolean attribute to ls (file listing), calculates sizes for all directories returned in operation.
 
@@ -1724,7 +1724,7 @@ v1.3-2
 
   \*b2; Desktop app file browser; Write permissions are now reflected properly when mkdir, rename, move and delete buttons are presented.
 
-  \*b13; GUI; Fixed bug were progerss bar did not scale properly.
+  \*b13; GUI; Fixed bug were progress bar did not scale properly.
 
   \*b15; GUI; Mirrored uploads and downloads with user mapped root shares now works.
 
@@ -1778,7 +1778,7 @@ v1.2-6
 
   \*b9; User geodata collected.
 
-  \*b10; Webapp; Account activity can be audited benath user profile page.
+  \*b10; Webapp; Account activity can be audited beneath user profile page.
 
   \*b11; Python API; Log session activity to disk option.
 
@@ -1788,7 +1788,7 @@ v1.2-6
 
   \*b14; Webapp; Files are now shown while sharing a folder with user.
 
-  \*b17; Submit; relative paths are now assumed beeing relative default root share, Accsyn no longer tries to identify first relative path element as a share (code or ID). This to decrease ambiguity and make submit definition clearer, use "share=../.." syntax do define share relative paths always from now on, or full absolute server paths.
+  \*b17; Submit; relative paths are now assumed being relative default root share, Accsyn no longer tries to identify first relative path element as a share (code or ID). This to decrease ambiguity and make submit definition clearer, use "share=../.." syntax do define share relative paths always from now on, or full absolute server paths.
 
   BUG FIXES
 
@@ -1798,13 +1798,13 @@ v1.2-6
 
   \*b12; App submit; Fixed bugs with new share browser.
 
-  \*b15; Copy; Fixed bug when fast 0 bytes transfers failed even if they were successfull (process kill flushed stdout).
+  \*b15; Copy; Fixed bug when fast 0 bytes transfers failed even if they were successful (process kill flushed stdout).
 
   \*b16; Copy; Not overwriting an existing file with a directory (+E#J0058).
 
   \*b16; GUI; Links to Accsyn warning and error codes now available in log view.
 
-  \*b16; ASC; Fixed bug where finished transfers could hang after they were done, now Accsyn retries indefinately to report back - prevents stuck transfers is backend is temporaily down.
+  \*b16; ASC; Fixed bug where finished transfers could hang after they were done, now Accsyn retries indefinitely to report back - prevents stuck transfers is backend is temporarily down.
 
   \*b16; Fixed bug when site<>site transfers were submitted as corrupt jobs.
 
@@ -1820,7 +1820,7 @@ v1.2-5
 
   - Web app; Preview support of formats: .mp4,.jpg,.tiff,.png,.pdf,.svg,.ico,.ogg,.mkv,.jpeg,.apng,.bmp,.gif,.txt,.html,.json,.xml,.wav, & .webm. Setting beneath Misc for turning previews off.
 
-  - Web app; General improvements, visibility in mobile devices with responsive toolars. Improved volume, share and file browsing. Removed hashtag(#) from url paths.
+  - Web app; General improvements, visibility in mobile devices with responsive toolbars. Improved volume, share and file browsing. Removed hashtag(#) from url paths.
 
   - Python API; Improved job queries - "finished" boolean attribute to match GUI:s.
 
@@ -1840,7 +1840,7 @@ v1.2-5
 
   \* b14; ASC; Zero bytes jobs/tasks are now allowed.
 
-  \* b15; Python API/Create task; If another tasks exists with same source and destination, it is retried instead of added as dupliace. If argument 'allow\_duplicates' is supplied as False, an exception will be thrown.
+  \* b15; Python API/Create task; If another tasks exists with same source and destination, it is retried instead of added as duplicate. If argument 'allow\_duplicates' is supplied as False, an exception will be thrown.
 
   BUG FIXES
 
@@ -1856,7 +1856,7 @@ v1.2-4
 
   FEATURES
 
-  \* b1; Webapp; Adming pages improvements, fixed proper page history and URI:s allowing going back to were you were before.
+  \* b1; Webapp; Admin pages improvements, fixed proper page history and URI:s allowing going back to were you were before.
 
   \* b2; Webapp; "+NEW TRANSFER" option instead of "SEND>" that aligns with GUI app.
 
@@ -1936,7 +1936,7 @@ v1.2-3
 
   \* b3; Webapp; MD5 sum are now listed with installer packages.
 
-  \* b5; Desktop application now have RPM and DEB builds aswell.
+  \* b5; Desktop application now have RPM and DEB builds as well.
 
   \* b6; UI improvements.
 
@@ -2032,15 +2032,15 @@ v1.2-1
 
    \* b13; FHC; Crashes without a leaving a non-zero exitcode are now detected, i.e. segfaults.
 
-   \* b14; GUI; Fixed bug when transfering an entire root share failed.
+   \* b14; GUI; Fixed bug when transferring an entire root share failed.
 
    \* b17; FHC; Bug fixes in file list building causing relative names to end up wrong at other end.
 
    \* b18; GUI/Submit; Bug fixes with local share path mirror on dropped files.
 
-   \* b23; FHC; Further buf fixes/optimisations in protocol.
+   \* b23; FHC; Further bug fixes/optimisations in protocol.
 
-   \* b26; GUI/Submit; Bug fixes in file listing, now sorting alphabetially default and sorting by file size properly.
+   \* b26; GUI/Submit; Bug fixes in file listing, now sorting alphabetically default and sorting by file size properly.
 
    \* b26; GUI/Submit; Now remembers to mirror share paths if was chosen previous submit.
 
@@ -2092,7 +2092,7 @@ v1.1-4
 
    \* b22; GUI/Job view; Can now load transfer logs from previous retries.
 
-   \* b26; Admin/Audits; New section for vieweing failed logins, jobs submit failures and find jobs containing a path element - first iteration.
+   \* b26; Admin/Audits; New section for viewing failed logins, jobs submit failures and find jobs containing a path element - first iteration.
 
    \* b28; GUI Submit/browser; [Goto] folder button.
 
@@ -2148,7 +2148,7 @@ v1.1-3
 
    \* Submit job; file list now shows sorting arrows.
 
-   \* Addtional pointers when entering and leaving setup wizard.
+   \* Additional pointers when entering and leaving setup wizard.
 
    \* API session now expire 30 days after last accessed.
 
@@ -2196,7 +2196,7 @@ v1.1-3
 
    \* Files having paths with a mixture of whitespaces (' ') and ampersands ('&') could not be transferred.
 
-   \* Fixed bug where Mac OS X servers could not be updated throug web admin.
+   \* Fixed bug where Mac OS X servers could not be updated through web admin.
 
    \* Fixed multiple bugs in site server installation @ ADMIN>SERVERS.
 
@@ -2248,7 +2248,7 @@ FEATURES
 
 \* Made sure that job submit post hooks finished before transfer starts.
 
-\* Added 'transfer\_include' & 'transfer\_exclude' settings @ globalm queue and job level. Similar to rsync --include & --exclude
+\* Added 'transfer\_include' & 'transfer\_exclude' settings @ global, queue and job level. Similar to rsync --include & --exclude
 
 \* FilmHUB copy now allows for files in subfolders to change/disappear during transfer, without failure.
 
@@ -2336,7 +2336,7 @@ FEATURES
 
 \* Copy; Handles blocked outgoing ports, attempt lowest ports.
 
-\* Copy; Allow files to dissappear during transfer - no crash.
+\* Copy; Allow files to disappear during transfer - no crash.
 
 BUG FIXES
 
@@ -2344,7 +2344,7 @@ BUG FIXES
 
 \*  Copy; Fixed bugs causing crashes when transfer has finished.
 
-\*  GUI/API; If authenticated with API KEY, a new session is automatically aquired when the old one expires.
+\*  GUI/API; If authenticated with API KEY, a new session is automatically acquired when the old one expires.
 
 v0.9-17, 20181112
 

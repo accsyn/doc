@@ -1,6 +1,6 @@
 # Clip & still image extraction
 
-The clip and still image extractor enables you to quickly have selections transcoded and sent you, directly from the accsyn Media Vault, without needing to download the masters and process them locally.
+The clip and still image extractor enables you to quickly have selections transcoded and sent to you, directly from the accsyn Media Vault, without needing to download the masters and process them locally.
 
   
 
@@ -17,16 +17,16 @@ There are two ways to initiate the clip extraction:
 
 ### Layout
 
-The clip extraction processor are built into the proxy player, making it fast and straightforward to make a selection of clips and still images:
+The clip extraction processor is built into the proxy player, making it fast and straightforward to make a selection of clips and still images:
 
 ![](../assets/vault_clip-extract-c3665d3c6a0f.png)
 
 Seek bar
 
-Beneath the player window is the seek bar, reflecting the current position in movie: 
+Beneath the player window is the seek bar, reflecting the current position in the movie: 
 
 - In edit mode it has additional frame step buttons featuring 1 frame, 1 second, 3 seconds and finally 5 second jumps.
-- The selected clip range are rendered at the seek bar in green.
+- The selected clip range is rendered at the seek bar in green.
 - When selecting a clip, the seek bar jumps to the in point.
 
   
@@ -42,7 +42,7 @@ Clip bin
 On the right hand side you find the panel containing the clip list:
 
 - Clip list; A list of your clips and images is located at the top.
-- Add clip and and still buttons are located beneath the list.
+- Add clip and still buttons are located beneath the list.
 - Destination; What to do with the transcoded material.
 - Submit button.
 
@@ -56,9 +56,9 @@ Beneath the player controls is the clip editor:
 - |< - Go to the in point
 - Time code display
 - Copy time code to operating system clipboard, so you can paste it in a text document or similar.
-- . . .  - Set time code, enter time code or frame manually.
+- . . . - Set time code, enter time code or frame manually.
 - TC(Timecode) or FR(Frames) display selection.
-- >| - Go to out pint
+- >| - Go to the out point
 - SET OUT - Set the clip out point.
 - High quality - Check this to have a high quality video or still image exported.
 - High quality preset select - Choose the high quality transcoding preset.
@@ -71,10 +71,10 @@ Beneath the player controls is the clip editor:
 
   
 
-1. Position yourself on the timeline were you want to clip in point to be.
-2. Click the CLIP
-3. A clip will be added, with out point set automatially +1s in time.
-4. Adjust the the out point, and in point, as needed. This is done by moving the play head to the new position and either clip SET IN or SET OUT. The clip will be updated automatically, no need to save.
+1. Position yourself on the timeline where you want the clip in point to be.
+2. Click the CLIP button.
+3. A clip will be added, with the out point set automatically +1s in time.
+4. Adjust the out point, and in point, as needed. This is done by moving the play head to the new position and either clicking SET IN or SET OUT. The clip will be updated automatically, no need to save.
 5. Adjust high res / medium res quality options.
 
   
@@ -83,10 +83,10 @@ Beneath the player controls is the clip editor:
 
   
 
-1. Position yourself on the timeline were you want to still image to be captured.
-2. Click the STILL  button on the right.
+1. Position yourself on the timeline where you want the still image to be captured.
+2. Click the STILL button on the right.
 3. A still image will be added.
-4. Adjust the the time position as needed. This is done by moving the play head to the new position click SET FRAME. The still will be updated automatically, no need to save.
+4. Adjust the time position as needed. This is done by moving the play head to the new position and clicking SET FRAME. The still will be updated automatically, no need to save.
 5. Adjust high res / medium res quality options.
 
   
@@ -103,12 +103,12 @@ Click the trashcan icon located on the right hand side of the clip in the bin.
 ### Destination
 
 - Deliver; Have the result delivered back to either you or a custom set of recipients.
-- Custom: Choose folder on storage were to store the result.
+- Custom: Choose a folder on storage where to store the result.
 
   
   
 
-### Initiate clip exctraction
+### Initiate clip extraction
 
   
 

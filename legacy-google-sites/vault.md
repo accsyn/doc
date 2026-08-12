@@ -1,6 +1,6 @@
 # accsyn Media Vault - Introduction
 
-Learn about the accsyn Media Vault feature allowing you to use accsyn to host your film master files and deliverables, with media proxies, transcoding, streaming,  export tooling, lab services, and much more.
+Learn about the accsyn Media Vault feature allowing you to use accsyn to host your film master files and deliverables, with media proxies, transcoding, streaming, export tooling, lab services, and much more.
 
 Important notes:
 
@@ -12,10 +12,10 @@ Watch this 9 minute video to get up and running with your accsyn Media Vault:
 
 ### What is the accsyn Media Vault feature all about?
 
-accsyn provides media management capabilities for files residing on the accsyn cloud hosted storage. The major purpose is to categorize your media deliverables beneathtitles (movies, TV series, short films, general projects, etc) and then tag associated media files enabling:
+accsyn provides media management capabilities for files residing on the accsyn cloud hosted storage. The major purpose is to categorise your media deliverables beneath titles (movies, TV series, short films, general projects, etc) and then tag associated media files enabling:
 
 - Well structured title assets, making it very easy to find the content you are looking for, with IMDb linkage.
-- Streamlined and accelerated [delivery](delivery.md) of DCP:s, masters, sound, sales material, pictures and videos.
+- Streamlined and accelerated [delivery](delivery.md) of DCPs, masters, sound, sales material, pictures and videos.
 - Accelerated upload of media to your titles.
 - [File sharing](file-sharing.md), allowing collaboration with vendors, partners and clients.
 - Web streaming, allowing users to watch title media in their web browsers - no additional software needed.
@@ -33,15 +33,15 @@ The Media Vault is designed to work in tandem with Deliveries and File Sharing, 
 
   
 
-- Film production / media refinement; This is the phase were the film is produced, and is covered by the Delivery, File Sharing and Workflow accsyn tools. No media is logged in accsyn when using these features by default, although they can manually be logged as you wish.
+- Film production / media refinement; This is the phase where the film is produced, and is covered by the Delivery, File Sharing and Workflow accsyn tools. No media is logged in accsyn when using these features by default, although they can manually be logged as you wish.
 
   
 
-- Film distribution / archival;  The film is done and there is one or more master files, these are ingested as media into the Media Vault with proxies rendered and metadata extracted. In this phase, File Sharing and Delivery can still be utilised during the distribution process - for example when mastering separate DCP or when delivering/sharing content to VOD platforms.
+- Film distribution / archival; The film is done and there are one or more master files, these are ingested as media into the Media Vault with proxies rendered and metadata extracted. In this phase, File Sharing and Delivery can still be utilised during the distribution process - for example when mastering a separate DCP or when delivering/sharing content to VOD platforms.
 
   
 
-Although it is treated as two disconnected phases, a film can still live in a single root folder at your storage as a precreated "title" entity in the Vault, with production carrying on within that folder and with the final masters stored in the same folder upon production wrap.
+Although it is treated as two disconnected phases, a film can still live in a single root folder at your storage as a pre-created "title" entity in the Vault, with production carrying on within that folder and with the final masters stored in the same folder upon production wrap.
 
   
 
@@ -51,13 +51,13 @@ The only exception from this is for BYOS deployments - Media Vault cannot curren
 
 An accsyn "title" is a (root) folder on the cloud storage containing media bound to a specific movie or TV show, identified by its IMDb ID, or a general local media project. 
 
-accsyn fetches movie metadata from IMDb upon title creation making it easy to quickly setup the base structure of your library. Titles have a cover image, and also can have a banner image, for easier identification and enriched presentation of deliveries:
+accsyn fetches movie metadata from IMDb upon title creation making it easy to quickly set up the base structure of your library. Titles have a cover image, and also can have a banner image, for easier identification and enriched presentation of deliveries:
 
 ![](assets/vault-e79b295ea116.png)
 
 Example of title listing in the accsyn Desktop app.
 
-When media is uploaded to a title, you can either have accsyn sort it into a standard category based folder structure ore manage the folder structure yourself.
+When media is uploaded to a title, you can either have accsyn sort it into a standard category-based folder structure or manage the folder structure yourself.
 
 ## Media
 
@@ -73,7 +73,7 @@ Example of media tags:
 
 Type: VID (video), SND (sound), PIC (picture),..
 
-Ontent: FTR (feature), TRL (trailer), CLIP (clip)
+Content: FTR (feature), TRL (trailer), CLIP (clip)
 
 Category: MAS (master), DCP, VOD, SALES
 
@@ -93,7 +93,7 @@ With the accsyn [host daemon installation](admin/hosts.md) feature, deliveries t
 
 ## Transcoding
 
-Once the master media has been logged  (Category: MAS), accsyn enables transcode into a well defined set of sub content such as:
+Once the master media has been logged (Category: MAS), accsyn enables transcode into a well-defined set of sub content such as:
 
 - Clips & Still images, extract ProRes or H.264 subclips from your masters, or still images in TIF or JPG format.
 - VOD, for further streamable proxy transcode (HD HLS)
@@ -103,21 +103,21 @@ Once the master media has been logged  (Category: MAS), accsyn enables transcod
 
   
 
-The accsyn Cloud hosted storage, is backed by a powerful farm of high performance ffmpeg nodes, currently available for proxy transcoding without any additional costs.
+The accsyn Cloud hosted storage is backed by a powerful farm of high performance ffmpeg nodes, currently available for proxy transcoding without any additional costs.
 
 ## Web streaming
 
-Video media can be sent as a [streaming delivery](vault/stream.md) one or more recipients. They will get an email with a link to the stream, allowing account and/or password protected playback in their web browser. The streaming delivery can have a mixed content of streams, media and standard files and folders.
+Video media can be sent as a [streaming delivery](vault/stream.md) to one or more recipients. They will get an email with a link to the stream, allowing account and/or password protected playback in their web browser. The streaming delivery can have a mixed content of streams, media and standard files and folders.
 
   
 
-Once videos have had a streaming (HD) proxy transcoded, it can be watched in a standard web browser by the recipients.
+Once videos have had a streaming (HD) proxy transcoded, they can be watched in a standard web browser by the recipients.
 
 ## Lab services
 
 The media add-on was initially built in-house at one of accsyn's major customers to provide [streamlined lab services](vault/media-lab.md), services that now are provided by our partner FyraK media and include:
 
-1. General Media Work - have lab team consult you getting the most out of the vault, and have a look at your current media library facilitating a smooth import.
+1. General Media Work - have the lab team consult you on getting the most out of the vault, and have a look at your current media library facilitating a smooth import.
 2. DCP Mastering (Digital Cinema Packaging)
 3. Advanced AI Upres
 4. VOD (Video On Demand) export, supporting major stream vendors such as Netflix, Viasat, Disney+ and much more.

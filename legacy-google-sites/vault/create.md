@@ -1,6 +1,6 @@
 # Create a title
 
-Getting started creating your first accsyn title / project and upload media to accsyn.
+Getting started creating your first accsyn title / project and uploading media to accsyn.
 
 ### Preparations
 
@@ -21,17 +21,17 @@ Note: Make sure you are not on a BYOS workspace, as the Media Vault feature is n
 
 ### Type
 
-Select the type of movie, this controls if it can be a IMDB title or not.
+Select the type of movie, this controls if it can be an IMDb title or not.
 
   
 
 Create a local workspace title
 
-This title is not bound to an IMDB title, typically a corporate media title or other generic media project.
+This title is not bound to an IMDb title, typically a corporate media title or other generic media project.
 
-New IMDB bound title
+New IMDb bound title
 
-Enter the URL from IMDB or just the ID [tt6751668]. accsyn will try to connect to the OMDB API and fetch title metadata, sometimes titles does not exists in OMDB and title will have to be created as a local workspace title.
+Enter the URL from IMDb or just the ID [tt6751668]. accsyn will try to connect to the OMDB API and fetch title metadata, sometimes titles do not exist in OMDB and the title will have to be created as a local workspace title.
 
 Select an existing accsyn title
 
@@ -43,7 +43,7 @@ Check if the title is already known to accsyn, e.g. it has been created previous
 
 3.   Click Next, the cover image should be downloaded and presented, you can change it by clicking the pencil icon on the cover image. Here you can also set a banner image - prepare a jpeg with 9:1 proportions (optimal) and set it by clicking the pencil symbol in the upper right corner.
 
-4.  Now you need to decide which folder to create title in, it will suggest to name it the same as title. You can also browse and put it in an existing pre-created folder. Check Apply title template folder structure to have accsyn create some standard category folders (see below).
+4. Now you need to decide which folder to create the title in, it will suggest to name it the same as the title. You can also browse and put it in an existing pre-created folder. Check Apply title template folder structure to have accsyn create some standard category folders (see below).
 
 ![](../assets/vault_create-6c1e5e7f0426.png)
 
@@ -53,21 +53,21 @@ Check if the title is already known to accsyn, e.g. it has been created previous
 
 Example screenshot of title creation in accsyn.
 
-6.   Click Create title / Import titleto create the title at your workspace and deploy the folder structure.  If it is a title unknown to accsyn, it will also be created centrally in the platform.
+6.   Click Create title / Import title to create the title at your workspace and deploy the folder structure. If it is a title unknown to accsyn, it will also be created centrally in the platform.
 
 Title attributes:
 
 Any attributes you feel are missing? Reach out to us and we will add them.
 
-A standard title sub-folder structure can be chosen to be deployed when a new title is created, making it easy to get started organizing your media deliverables:
+A standard title sub-folder structure can be chosen to be deployed when a new title is created, making it easy to get started organising your media deliverables:
 
-- Here is were DCP masters are uploaded.
+- Here is where DCP masters are uploaded.
 
-- Here is were feature length masters are uploaded.
+- Here is where feature length masters are uploaded.
 
-- Here is were you transcode or upload VOD deliverables.
+- Here is where you transcode or upload VOD deliverables.
 
-- Here is were subtitles go, associated with masters by type, content and category tags.
+- Here is where subtitles go, associated with masters by type, content and category tags.
 
 - Folder for sound mixes.
 
@@ -75,15 +75,15 @@ A standard title sub-folder structure can be chosen to be deployed when a new ti
 
 - Other video material goes here.
 
-- Here is were you upload marketing material related to the title.
+- Here is where you upload marketing material related to the title.
 
-- Here is were trailer masters are uploaded.
+- Here is where trailer masters are uploaded.
 
-- Here is were you upload your title media for ingestion into accsyn later. Within this folder you are free to choose whatever structure that suits you.
+- Here is where you upload your title media for ingestion into accsyn later. Within this folder you are free to choose whatever structure that suits you.
 
 If these folders are not created now, they will be created when uploading files in the media view - based on type, content and category tag selection.
 
-You are now ready to start [upload and tag your first media](log-media.md)!
+You are now ready to start [uploading and tagging your first media](log-media.md)!
 
 ## Related articles
 

@@ -1,6 +1,6 @@
 # Workspace Settings
 
-This guide shows how to work with the global workspace settings
+This guide shows how to work with the global workspace settings.
 
   
 
@@ -106,7 +106,7 @@ Contents:
 
 Change the name of the workspace.
 
-Note: Pages needs to be reloaded and desktop app needs to be restarted for changes to take effect in UIs.
+Note: Pages need to be reloaded and the desktop app needs to be restarted for changes to take effect in UIs.
 
   
 
@@ -120,15 +120,15 @@ Note: Changing the code is an operation that only can be performed by the accsyn
 
 ### Logotype
 
-The images to use for branding, in light and dark mode variants.  They are chosen from resources, and needs to be uploaded here in advance: <https://accsyn.io/admin/resources>
+The images to use for branding, in light and dark mode variants.  They are chosen from resources, and need to be uploaded here in advance: <https://accsyn.io/admin/resources>
 
-Note: logotype images will be scaled down to fit 140x40px which is the default accsyn logotype dimensions, make sure your imagery looks decent in this format.
+Note: logotype images will be scaled down to fit 140x40px which are the default accsyn logotype dimensions, make sure your imagery looks decent in this format.
 
 ## Security
 
 ### Enforce MFA
 
-Require multi factor authentication before workspace can be accessed. When applied, different scenarios plays out at login depending auth provider:
+Require multi-factor authentication before the workspace can be accessed. When applied, different scenarios play out at login depending on the auth provider:
 
 - accsyn-email-password; accsyn will perform an MFA prompt sequence using method below before workspace can be accessed.
 - accsyn-email-password - MFA enrolled; The user will be requested to enter the code displayed in their authenticator app at login.
@@ -137,15 +137,15 @@ Require multi factor authentication before workspace can be accessed. When appli
 
   
 
-accsyn will check if the user is MFA authenticated from login. If not, the method described below will be used to authenticate - default by an code sent to user with an email message.
+accsyn will check if the user is MFA authenticated from login. If not, the method described below will be used to authenticate - by default a code sent to the user with an email message.
 
   
 
 Method
 
-The method to use to authenticate, if not alread MFA authenticated at login.
+The method to use to authenticate, if not already MFA authenticated at login.
 
-The default method is email - a six(6) digit code is sent by email to user and needs to be entered in the browser or app before login can be concluded.
+The default method is email - a six (6) digit code is sent by email to the user and needs to be entered in the browser or app before login can be concluded.
 
 Enforce for all roles
 
@@ -157,11 +157,11 @@ Require MFA for users having the elevated administrator base role.
 
 Enforce for employees
 
-Require MFA for users having the elevatedemployee/operator base role.
+Require MFA for users having the elevated employee/operator base role.
 
 Enforce for standard users
 
-Require MFA for standard non elevated users.
+Require MFA for standard non-elevated users.
 
 ## Storage
 
@@ -205,17 +205,17 @@ What to do when a file is missing at the sending party of a transfer job.
 
 ### Queue interrupt policy
 
-The policy to use for interrupting transfer jobs below in the queue, by default accsyn interrupts active job with lower priority or below in queue.
+The policy to use for interrupting transfer jobs below in the queue, by default accsyn interrupts active jobs with lower priority or below in the queue.
 
   
 
-Note: The transfer settings below can be overriden on volume, queue and job level.
+Note: The transfer settings below can be overridden on volume, queue and job level.
 
   
 
 ### Max retries
 
-Maximum number of time accsyn should retry a transfer until it is considered as failed.
+Maximum number of times accsyn should retry a transfer until it is considered as failed.
 
   
 
@@ -233,23 +233,23 @@ Enable file uploads to the workspace globally.
 
 ### Enable downloads
 
-Enable file downloadsfrom the workspace globally.
+Enable file downloads from the workspace globally.
 
   
 
-Note: The transfer settings below can be overriden on volume, queue and job level.
+Note: The transfer settings below can be overridden on volume, queue and job level.
 
   
 
 ### Speed limit
 
-The transfer speed limit to apply globally on all transfer, in MB/s (Megabytes per second).
+The transfer speed limit to apply globally on all transfers, in MB/s (Megabytes per second).
 
   
 
 ### Transfer encryption
 
-The encryption to apply during file transfers, protecting your data from insight during Internet transport. Note that encryption will be turned off by default if override IP:s are involved (client config) - transfer are assumed going over local LAN/encrypted VPN.
+The encryption to apply during file transfers, protecting your data from insight during Internet transport. Note that encryption will be turned off by default if override IPs are involved (client config) - transfers are assumed to go over local LAN/encrypted VPN.
 
   
 
@@ -261,13 +261,13 @@ The algorithm accsyn should use during file transfers - copy or sync (delete fil
 
 ### File comparison rule
 
-The methods accsyn should use determine if a file is out of sync and needs to be transferred.
+The methods accsyn should use to determine if a file is out of sync and needs to be transferred.
 
   
 
 ### File resume size limit
 
-File size, in megabytes (MB), at which single file resume ('transfer\_resume') should start to apply. Files below this limit in size, will never be resumed if interrupted midst transfer.
+File size, in megabytes (MB), at which single file resume ('transfer\_resume') should start to apply. Files below this limit in size will never be resumed if interrupted mid-transfer.
 
 Giving a value of -1 means that no limits should apply - limits disabled.
 
@@ -281,13 +281,13 @@ Have accsyn preserve ownership and/or permissions of files during transfer. This
 
 ### Concurrent transfers
 
-Define how many concurrent transfers server will allow for each remote client. A high value here could put high load on your network infrastructure and is only a benefit if you alternate between many quick simultaneous jobs, for example continously adding tasks to jobs using API:s. Can be overridden at clients.
+Define how many concurrent transfers server will allow for each remote client. A high value here could put high load on your network infrastructure and is only a benefit if you alternate between many quick simultaneous jobs, for example continuously adding tasks to jobs using APIs. Can be overridden at clients.
 
   
 
 ### Logging
 
-What accsyn should log during transfer. The transfer log is stored per-task and can be retreived by double-clicking a task in accsyn desktop app.
+What accsyn should log during transfer. The transfer log is stored per-task and can be retrieved by double-clicking a task in the accsyn desktop app.
 
   
 
@@ -297,14 +297,14 @@ Advanced transfer settings, see [accsyn Internal settings](../settings.md) for d
 
 ## Email
 
-Note: The email settingscan be overridden on volume and queue level
+Note: The email settings can be overridden on volume and queue level.
 
   
 
-accsyn dispatches email notifications on when different event occur. This settings page is divided in two parts:
+accsyn dispatches email notifications when different events occur. This settings page is divided in two parts:
 
 - Overall global settings.
-- Per-event settings
+- Per-event settings.
 
   
 
@@ -318,7 +318,7 @@ Enable or disable email notifications globally.
 
 Default recipients
 
-Who to include by default when accsyn sends emails in general, not related to an event below. This are overridden by specific event recipients (see below).
+Who to include by default when accsyn sends emails in general, not related to an event below. These are overridden by specific event recipients (see below).
 
 - Built-in; The default recipients as built into accsyn (role or explicit user)
 - Additional; Add more recipients here as needed, by clicking the ADD button. Roles, users and explicit external email recipients can be chosen.
@@ -333,7 +333,7 @@ What roles, users and email addresses to exclude globally. This applies to all e
 
 Reply-to
 
-The reply to address to set for all emails.
+The reply-to address to set for all emails.
 
   
 
@@ -357,7 +357,7 @@ Define the recipients that will get email when a job is submitted.
 
 ### Job failure
 
-Define the recipients that will get email when a job fails
+Define the recipients that will get email when a job fails.
 
   
 
@@ -383,7 +383,7 @@ In general, refer to [Render farm documentation](../developer/farm.md).
 
 ### Enable compute
 
-Enable or disable compute(render) feature for workspace.
+Enable or disable the compute (render) feature for the workspace.
 
   
 
@@ -415,7 +415,7 @@ See [Publish documentation](../developer/publish.md).
 
 ### Metadata
 
-Define global workspace metadata, these are passed on to hooks and compute jobs. Metadata can be defined on most accsyn entitites such as shares, queues and so on.
+Define global workspace metadata, these are passed on to hooks and compute jobs. Metadata can be defined on most accsyn entities such as shares, queues and so on.
 
 - Internal; this metadata will not be exposed to hooks that execute client side, unless it is an elevated (admin/employee) user client.
 - External; this metadata will be exposed to hooks that execute client (remote user) side also for standard users.

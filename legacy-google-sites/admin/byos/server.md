@@ -4,7 +4,7 @@ NOTE: This feature is exposed to BYOS licensed workspaces only.
 
 [BYOS](../byos.md)
 
-This guide outlines how to install different type of servers and manage existing ones.
+This guide outlines how to install different types of servers and manage existing ones.
 
 Contents:
 
@@ -71,20 +71,20 @@ A server is a physical or virtual machine that runs the accsyn app in background
   
 
 - A server is primarily designed to serve [volumes](../storage.md) - download and upload of files with associated file operations.
-- A server can also execute hooks and compute/render job as part of [Workflows](../../developer.md).
+- A server can also execute hooks and compute/render jobs as part of [Workflows](../../developer.md).
 - The daemon installer can be downloaded from <https://accsyn.io/getapp>.
 
   
 
 ### Server types
 
-- Storage server; This is default server and all new workspaces must have at least one.  The storage server serves one or more volume and are located on the main("hq") site by default, facilitating file operations. A storage server can also be configured to run compute/render jobs.
+- Storage server; This is the default server and all new workspaces must have at least one.  The storage server serves one or more volumes and is located on the main ("hq") site by default, facilitating file operations. A storage server can also be configured to run compute/render jobs.
 - Site server; A server that serves volumes on a site, enabling file synchronisation between physical locations and cloud.
 - Compute/render server; A server that is designated to run compute/render jobs, having virtual lane sub-servers with engines assigned.
 
   
 
-NOTE: There is also the user server type, which is installed by end users as parts of [hosts](../hosts.md), facilitating 24/7 unattended delivery and file sharing.
+NOTE: There is also the user server type, which is installed by end users as part of [hosts](../hosts.md), facilitating 24/7 unattended delivery and file sharing.
 
 ## Server list
 
@@ -101,10 +101,10 @@ The server list shows all active servers within your workspace:
 - Site - the site server is located at, default is main "hq" site.
 - Description; The description of the server.
 - Status:  (Second row) Shows the server status.
-- Last checkin: The date server last was seen online.
+- Last checkin: The date the server was last seen online.
 - Version: The accsyn daemon app version.
-- Lane count; The amount of compute lanes configured for server.
-- Volumes: List of volumes that server is serving.
+- Lane count; The number of compute lanes configured for the server.
+- Volumes: List of volumes that the server is serving.
 - Edit (pen) button.
 - Menu button.
 
@@ -122,17 +122,17 @@ Server menu:
 
 ### Requirements
 
-You need suitable hardware or virtual machine to run accsyn server on, specifications varies depending on the role server should have:
+You need suitable hardware or a virtual machine to run the accsyn server on, specifications vary depending on the role the server should have:
 
   
 
-- Storage; Estimate 1 core/vCPU is needed for one continuous encrypted 1gbps(100MB/s) file transfer. Storage servers also needs to be exposed to the Internet using NAT port forward rules, unless you plan to run all file transfers locally over a LAN/VPN.
-- Site servers; Same file transfers requirements as the storage server, and need to reach storage server having either Internet/WAN connectivity or LAN/VPN.
-- Compute/render;  Depending on you plan to run CPU or GPU intensive tasks, deploy suitable hardware with the necessary specs.
+- Storage; Estimate 1 core/vCPU is needed for one continuous encrypted 1gbps(100MB/s) file transfer. Storage servers also need to be exposed to the Internet using NAT port forward rules, unless you plan to run all file transfers locally over a LAN/VPN.
+- Site servers; Same file transfer requirements as the storage server, and need to reach the storage server having either Internet/WAN connectivity or LAN/VPN.
+- Compute/render;  Depending on whether you plan to run CPU or GPU intensive tasks, deploy suitable hardware with the necessary specs.
 
 ### Preparations
 
-Before you can install a new server, you will need to acquire a new BYOS server license - reach out to accsyn staff at [support@accsyn.com](mailto:support@accsyn.com) or [sales@accsyn.com](mailto:sales@accsyn.com). Free trial are available on request.
+Before you can install a new server, you will need to acquire a new BYOS server license - reach out to accsyn staff at [support@accsyn.com](mailto:support@accsyn.com) or [sales@accsyn.com](mailto:sales@accsyn.com). Free trials are available on request.
 
   
 
@@ -141,24 +141,24 @@ Storage server prep
 - Set a fixed LAN IP address on the server, unless the firewall supports DNS port forward configuration.
 - Allocate a TCP port range for accsyn file transfers, default is 45190-45220 and one or more low ports - typically 80 or 443.
 - Configure your firewall to NAT port forward these to the server fixed IP or DNS address on your local network.
-- Turn of any local firewalls on server, or configure them to allow incoming TCP connections on the accsyn ports.
+- Turn off any local firewalls on the server, or configure them to allow incoming TCP connections on the accsyn ports.
 
   
 
 Compute server prep
 
 - Windows; Python 3 available in PATH or at accsyn default location: C:\Python310 | C:\Python311 and so on.
-- Unix (Linux/MacOS); Uses default built-in python 3 interpreter, make sure it is in the path.
+- Unix (Linux/MacOS); Uses the default built-in Python 3 interpreter, make sure it is in the path.
 
   
 
-The python path can also be overridden if you need to point out a dedicated python environment, set the environment variable ACCSYN\_PYTHON\_EXECUTABLE to point the interpreter executable (full path).
+The Python path can also be overridden if you need to point out a dedicated Python environment, set the environment variable ACCSYN\_PYTHON\_EXECUTABLE to point to the interpreter executable (full path).
 
   
 
 Linux prep
 
-The installer relies on Java being present at the host, as Java is not bundled with installer:
+The installer relies on Java being present at the host, as Java is not bundled with the installer:
 
 - RHEL / CentOS (7) / Oracle Linux: sudo yum install -y java-17-openjdk-headless
 - RHEL/CentOS 8 or later: dnf install java-17-openjdk-headless
@@ -171,20 +171,20 @@ The installer relies on Java being present at the host, as Java is not bundled w
 
   
 
-Note: Mac and Windows installers comes with Java bundled.
+Note: Mac and Windows installers come with Java bundled.
 
   
 
 ### Installation
 
-To create a new server, click INSTALLSERVER button in upper right corner.
+To create a new server, click the INSTALL SERVER button in the upper right corner.
 
-First, choose the site server should be at. Default is main site ("hq").
+First, choose the site the server should be at. Default is the main site ("hq").
 
 Next choose the type of server:
 
 - Serve one or more volumes at site; Server should act as a Storage server (if at main site) or Site server (if other site chosen), choose which volume(s) to serve.
-- Compute/render server; The server should run run compute jobs and/or hooks as part of [Workflows](../../developer.md).
+- Compute/render server; The server should run compute jobs and/or hooks as part of [Workflows](../../developer.md).
 
 Click Initiate installation to generate the server ID used with the installer. Installation instructions:
 
@@ -192,7 +192,7 @@ Click Initiate installation to generate the server ID used with the installer. I
 
 ### Windows
 
-1. Download the service installer for Windows in the server machine.
+1. Download the service installer for Windows on the server machine.
 2. Make sure you have administrative privileges.
 3. Run the service installer executable, approve the UAC prompt.
 4. Click next on the introduction screen.
@@ -203,9 +203,9 @@ Click Initiate installation to generate the server ID used with the installer. I
 
 ### Mac
 
-1. Download the service installer for Mac in the server machine.
+1. Download the service installer for Mac on the server machine.
 2. Make sure you have administrative privileges.
-3. Run the service installer executable, enter you admin password when prompted.
+3. Run the service installer executable, enter your admin password when prompted.
 4. Click next on the introduction screen.
 5. Enter the server ID, mind case sensitivity.
 6. Finish the installer and launch the daemon at the end.
@@ -214,7 +214,7 @@ Click Initiate installation to generate the server ID used with the installer. I
 
 ### Linux
 
-1. Download the service installer for Linux in the server machine.
+1. Download the service installer for Linux on the server machine.
 2. Open a terminal on the server.
 3. Make sure the installer has executable permissions: chmod 755 accsyn-daemon-unix.sh.
 4. Run the service installer executable as root: sudo ./accsyn-daemon-unix.sh.
@@ -234,13 +234,13 @@ Windows
 
 - If you are running Windows Defender Firewall, or other software firewall, make sure it allows outgoing traffic on port 443(tcp) from accsyn executables, specifically C:\Program Files\Accsyn\accsyn.exe.
 - If you are running Antivirus software, make sure to whitelist the accsyn executables.
-- If it is a Storage server, make sure the firewall accepts incoming TCP connections on the accsyn ports. Also make sure antivirus allows accsyn exectuables to access the disk having the volume to be exposed.
+- If it is a Storage server, make sure the firewall accepts incoming TCP connections on the accsyn ports. Also make sure antivirus allows accsyn executables to access the disk having the volume to be exposed.
 
   
 
 Mac
 
-- Mac Gatekeeper by default prevents disk access, for accsyn to properly operate you will need to give /bin/bash full disk access (accsyn creates shell wrapper scripts when executing processes): Open System Settings > Privacy & Security > Full disk access.  Click the + sign and add /bin/bash (Hint: press Shift+Cmd+G to goto /bin folder).
+- Mac Gatekeeper by default prevents disk access, for accsyn to properly operate you will need to give /bin/bash full disk access (accsyn creates shell wrapper scripts when executing processes): Open System Settings > Privacy & Security > Full disk access.  Click the + sign and add /bin/bash (Hint: press Shift+Cmd+G to go to the /bin folder).
 - If you are running Antivirus software, make sure to whitelist accsyn executables and /bin/bash.
 
   
@@ -268,9 +268,9 @@ Displays a list of all volumes served by this server, go to the volume configura
 
 ### Lanes & Engines
 
-The accsyn compute feature is a part of [Workflows](../../developer.md) and enables you to run long running resource intensive computational tasks on your servers, e.g. render jobs in the context of media production.
+The accsyn compute feature is a part of [Workflows](../../developer.md) and enables you to run long-running resource-intensive computational tasks on your servers, e.g. render jobs in the context of media production.
 
-Compute jobs can only run on lanes, a lan is a virtual sub-server allowing parallellism.
+Compute jobs can only run on lanes, a lane is a virtual sub-server allowing parallelism.
 
 Here all compute lanes on the server are listed, numbered, together with the engines assigned.
 
@@ -285,7 +285,7 @@ Adjust the Compute lanes setting above, increasing it by one. This will spawn a 
 Disable/enable a lane
 
 - Click the checkboxes to enable/disable multiple lanes.
-- Right click the lane and choose Enable/Disable from the context meny.
+- Right click the lane and choose Enable/Disable from the context menu.
 - Click the lane menu (three dots) button on the right hand side of each lane and choose Enable/Disable.
 
   
@@ -309,15 +309,15 @@ Right click the lane, choose the assigned engine and then choose Enable/Disable.
   
   
 
-NOTE: Compute/render servers require additional BYOS licenses.
+NOTE: Compute/render servers require additional BYOS licences.
 
   
   
 
 ### Attributes
 
-- Site; The site server is at can be changed as long as it is not serving any volumes. De-configure any volumes @  [https://accsyn.io/admin/volumes/](https://accsyn.io/admin/volumes) to enable site change.
-- Description; Set the optional description server should have.
+- Site; The site the server is at can be changed as long as it is not serving any volumes. De-configure any volumes @  [https://accsyn.io/admin/volumes/](https://accsyn.io/admin/volumes) to enable site change.
+- Description; Set the optional description the server should have.
 
   
 
@@ -327,16 +327,16 @@ NOTE: Compute/render servers require additional BYOS licenses.
 
 File transfers
 
-- Ports; Configure the accsyn ports this server should listen to during file transfers with the high speed encrypted built accsyn protocol (ASC) and web browser transfers (HTTPS). Storage servers needs this port
+- Ports; Configure the accsyn ports this server should listen to during file transfers with the high speed encrypted built-in accsyn protocol (ASC) and web browser transfers (HTTPS). Storage servers need this port.
 - WAN IP; The WAN IP this server is reachable at. By default accsyn backend detects the WAN IP and reports this to clients out there, override this with a custom IP here.
 
-For servers serving volumes, the state of most recent connectivity test is displayed. This status is reset every time ports or wan ip is reconfigured. To have test run again, click the button on right hand side. As part of the test, accsyn will start TCP test servers on the machine and try to validate each configured port.
+For servers serving volumes, the state of the most recent connectivity test is displayed. This status is reset every time ports or WAN IP are reconfigured. To have the test run again, click the button on the right hand side. As part of the test, accsyn will start TCP test servers on the machine and try to validate each configured port.
 
   
 
 Compute
 
-- Compute lanes; The number of lanes, e.g. virtual compute servers, that this server should have. Allows for parallellism, executing different resource consuming engines/apps at the same time.
+- Compute lanes; The number of lanes, e.g. virtual compute servers, that this server should have. Allows for parallelism, executing different resource consuming engines/apps at the same time.
 
   
 
@@ -348,9 +348,9 @@ Advanced
 
 ### IP Overrides
 
-By default, accsyn routes traffic using the detected WAN IP:s of each endpoint (see WAN IP setting above). If a client fails to connect to connect to the WAN IP, it automatically tries the server's LAN IP addresses, this usually solves problems where both client and server are behind the same router.
+By default, accsyn routes traffic using the detected WAN IPs of each endpoint (see WAN IP setting above). If a client fails to connect to the WAN IP, it automatically tries the server's LAN IP addresses, this usually solves problems where both client and server are behind the same router.
 
-To permanently add a route between server and client, add an IP override here. An IP override defines which IP address a client should be able to reach the server at, overriding the default WAN connection behavior.
+To permanently add a route between server and client, add an IP override here. An IP override defines which IP address a client should be able to reach the server at, overriding the default WAN connection behaviour.
 
   
 
@@ -364,19 +364,19 @@ List of IP overrides; Use the delete/trashcan icon button to remove an override.
 
 Add override:
 
-- Client; The client that override applies to.
-- Local IP: The IP that server should have when communicating with client.
-- Remote IP: (Optional) The IP that client has.
+- Client; The client that the override applies to.
+- Local IP: The IP that the server should have when communicating with the client.
+- Remote IP: (Optional) The IP that the client has.
 
   
 
 ### Metadata
 
-Define metadata for this server, will be appended to upstream metadata and provided to jobs with Workflows - API calls, engine execution, hooks execution, and so on.
+Define metadata for this server, which will be appended to upstream metadata and provided to jobs with Workflows - API calls, engine execution, hooks execution, and so on.
 
-## Manage theserver installation
+## Manage the server installation
 
-Guidelines how to manage the accsyn daemon running on the server.
+Guidelines on how to manage the accsyn daemon running on the server.
 
 ### Log file location
 
@@ -413,7 +413,7 @@ Linux
 - To stop the daemon: sudo systemctl stop accsyndaemon
 - To start the daemon: sudo systemctl start accsyndaemon
 
-NOTE: This might vary on different Linux distros
+NOTE: This might vary on different Linux distros.
 
   
 
@@ -426,7 +426,7 @@ If you need to change this afterwards,  you need to re-configure the daemon and
 Windows
 
 - Open Services (run services.msc)
-- Locate accsynDaemon and and stop the services
+- Locate accsynDaemon and stop the service
 - Change the ownership of the local configuration & log folder to the new user (C:\ProgramData\accsyn)
 - Repeat for C:\Windows\TEMP\.accsyn if exists.
 - Open service properties and go to Log on tab
@@ -441,7 +441,7 @@ Mac
 - Stop and unload accsyndaemon: sudo launchctl stop com.accsyn.daemon && sudo launchctl unload /Library/LaunchDaemons/com.accsyn.daemon.plist
 - Edit /Library/LaunchDaemons/com.accsyn.daemon.plist and add the UserName key, see example below.
 - Change ownership to new user for /var/log/accsyn, /Library/Preferences/com.accsyn and /var/tmp/.accsyn (if exists).
-- Load and start daemon again:sudo launchctl load /Library/LaunchDaemons/com.accsyn.daemon.plist
+- Load and start daemon again: sudo launchctl load /Library/LaunchDaemons/com.accsyn.daemon.plist
 
   
 
@@ -489,11 +489,11 @@ Linux
 - Stop accsyndaemon: systemctl stop accsyndaemon
 - Edit /etc/systemd/system/accsyndaemon.service and add the user, see example below.
 - Change ownership to new user for /var/log/accsyn, /var/lib/accsyn and /tmp/.accsyn (if exists).
-- Start daemon again:systemctl start accsyndaemon
+- Start daemon again: systemctl start accsyndaemon
 
   
 
-Example systemd config file for having accsyn to be run as user "anna":
+Example systemd config file for having accsyn run as user "anna":
 
   
 
@@ -531,7 +531,7 @@ WantedBy=multi-user.target graphical.target
 
 ### Setting environment variables
 
-To have environment variables passed on to accsyn daemon/service process, make these configuration:
+To have environment variables passed on to the accsyn daemon/service process, make these configurations:
 
 Windows
 
@@ -577,17 +577,17 @@ Environment="MY\_VAR=my\_value"
 
 ### Enabling low port file transfers
 
-To be able to have server bind to a port < 1024, permission needs to be granted in the operating system. Launch a terminal as root and run:
+To be able to have the server bind to a port < 1024, permission needs to be granted in the operating system. Launch a terminal as root and run:
 
 setcap 'cap\_net\_bind\_service=+ep' /usr/lib/jvm/jre/bin/java
 
-Note: the Java path might be different based on your Linux distribution, find out the executable path by running "ps aux" while accsyn daemon is running.
+Note: the Java path might be different based on your Linux distribution, find out the executable path by running "ps aux" while the accsyn daemon is running.
 
- Combined with running as a standard non privileged user account, Java can refuse to start with this error:
+ Combined with running as a standard non-privileged user account, Java can refuse to start with this error:
 
 /usr/lib/jvm/jre/bin/java: error while loading shared libraries: libjli.so: cannot open shared object file: No such file or directory
 
-If so is the case, add libjli location as a trusted runtime loader path by creating /etc/ld.so.conf.d/java.conf with the content:  
+If that is the case, add the libjli location as a trusted runtime loader path by creating /etc/ld.so.conf.d/java.conf with the content:  
 
 [JRE\_HOME]/lib/amd64/jli
 
@@ -597,7 +597,7 @@ Then restart the machine to have configuration take effect.
 
 ### Background watchdog
 
-accsyn also installs a watchdog that checks daemon every 5 min and restarts it if has not responded. The watchdog also restarts the daemon upon a remotely initiated update, if daemon is configured to run as a different user than the default.
+accsyn also installs a watchdog that checks the daemon every 5 min and restarts it if it has not responded. The watchdog also restarts the daemon upon a remotely initiated update, if daemon is configured to run as a different user than the default.
 
   
 
@@ -605,11 +605,11 @@ accsyn also installs a watchdog that checks daemon every 5 min and restarts it i
 
 ### Update server
 
-Major updates to accsyn, that requires all servers/clients to be re-installed and might break backward compatibility, is called a major version upgrade. For example going from version 2.x to 3.x. This is upgrade action will be planned together with you as the domain admins, with the builtin safety that clients will be warned and enforced to upgrade directly when launching the desktop app. 
+Major updates to accsyn, that require all servers/clients to be re-installed and might break backward compatibility, are called a major version upgrade. For example going from version 2.x to 3.x. This upgrade action will be planned together with you as the domain admins, with the built-in safety that clients will be warned and forced to upgrade directly when launching the desktop app. 
 
   
 
-Note: Before doing an upgrade, older versions will be saved and can be restored if upgrade fails.
+Note: Before doing an upgrade, older versions will be saved and can be restored if the upgrade fails.
 
   
 
@@ -617,22 +617,22 @@ Minor updates and bug fixes are deployed regularly and announced by email after 
 
   
 
-IMPORTANT NOTE: We constantly update accsyn backend and make sure it is compatible with the servers and clients deployed within your organisation, and if we perform a major upgrade with breaking changes we give heads up far in advance enabling you to plan a upgrade date with our support team - to minimize downtime and production outage.
+IMPORTANT NOTE: We constantly update accsyn backend and make sure it is compatible with the servers and clients deployed within your organisation, and if we perform a major upgrade with breaking changes we give a heads-up far in advance enabling you to plan an upgrade date with our support team - to minimise downtime and production outage.
 
   
 
-To update the server, perform the same routes as when updating the desktop app in general.
+To update the server, perform the same routine as when updating the desktop app in general.
 
 1. Make sure no critical file transfers or compute tasks are executing on the server.
 2. Download the corresponding daemon installer from <https://accsyn.io/getapp>
-3. Run the installer and start the daemon, se platform specific instructions above.
-4. Perform some basic tests to make sure server is functioning as expected.
+3. Run the installer and start the daemon, see platform specific instructions above.
+4. Perform some basic tests to make sure the server is functioning as expected.
 
   
 
 Backend/cloud database and backups
 
-The accsyn underlaying database is backed up every hour and can be restored on request. A backup of the database is also taken prior to upgrade and will be restored if an update is rolled back.
+The accsyn underlying database is backed up every hour and can be restored on request. A backup of the database is also taken prior to upgrade and will be restored if an update is rolled back.
 
   
 
@@ -640,7 +640,7 @@ Note: No passwords or other user personal data is stored in the database/cloud i
 
 ## Delete a server
 
-To delete a volume, open the server's menu (three dots icon) on the right hand side and choose Delete.
+To delete a server, open the server's menu (three dots icon) on the right hand side and choose Delete.
 
   
 
@@ -653,4 +653,4 @@ NOTES: 
 
   
 
-Server will stop serve volumes, not data will be touched on physical storage on deletion.
+The server will stop serving volumes, no data will be touched on physical storage on deletion.

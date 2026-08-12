@@ -30,7 +30,7 @@ Contents:
 
 [Can I get my trial prolonged?](trial.md)
 
-[I love accsyn, how to I sign up?](trial.md)
+[I love accsyn, how do I sign up?](trial.md)
 
 [Cloud Workspace](trial.md)
 
@@ -46,7 +46,7 @@ It gives you the possibility to try out accsyn within your organisation before y
 
 ## What are the limitations?
 
-There are no limitations when it comes to functionalitywith an accsyn trial - we want you to be able to try it out without any reduced functionality to be able to get the full picture of what the software can do.
+There are no limitations when it comes to functionality with an accsyn trial - we want you to be able to try it out without any reduced functionality to be able to get the full picture of what the software can do.
 
 ## Workspace types
 
@@ -66,7 +66,7 @@ The default type of accsyn workspace is called a Cloud workspace. Suitable both 
 accsyn supports self hosted storage, this is called a BYOS Workspace (Bring-Your-Own-Storage) and is tailored for media production - shoot, DIT, post, delivery:
 
 - You install accsyn on your own premises, be it a physical location or cloud.
-- You serve files from your own storage  ([File Sharing](file-sharing.md) / [Delivery](delivery.md) features) , with no limits on used space.
+- You serve files from your own storage  ([File Sharing](file-sharing.md) / [Delivery](delivery.md) features), with no limits on used space.
 - Enables advanced [Workflows](developer.md) including [Site sync](tutorials/remote-office-sync.md), Hooks, Publishing and Compute(render) farms.
 
   
@@ -77,9 +77,9 @@ Important note: Media Vault features, including streaming and transcoding, are n
 
 ### Enterprise Workspace
 
-This is special deals offered on request only:
+These are special deals offered on request only:
 
-- Mandatory for large business.
+- Mandatory for large businesses.
 - Ability to self-host the entire accsyn workspace with storage.
 - Custom features, augment code and receive custom builds.
 - Prioritised support in separate communication channels.
@@ -93,7 +93,7 @@ Here follows a step-by-step walkthrough on how to launch your own accsyn trial W
 
 ### Create personal account
 
-Before you can launch the trial, you need an personal accsyn user account.  That is done by opening the following URL in your browser: <https://accsyn.io/signup>
+Before you can launch the trial, you need a personal accsyn user account.  That is done by opening the following URL in your browser: <https://accsyn.io/signup>
 
 [Account](account.md)
 
@@ -103,14 +103,14 @@ Before you can launch the trial, you need an personal accsyn user account.  Tha
 
   
 
-1. Log on to accsyn and click START 30 DAYS FREE TRIAL in lower lefter corner, or visit: <https://accsyn.io/trial>.
+1. Log on to accsyn and click START 30 DAYS FREE TRIAL in the lower left corner, or visit: <https://accsyn.io/trial>.
 2. Go to the Cloud tab
-3. Read through the information presented and then click START MY FREE CLOUD TRIAL button.
+3. Read through the information presented and then click the START MY FREE CLOUD TRIAL button.
 4. Choose a name for your workspace, typically this would be the name of your business/organisation.
 5. Choose Cloud type.
 6. To further help us understand your needs, choose the main accsyn feature you intend to use.
 7. Read our [Terms and conditions](https://download.accsyn.com/terms.html) and tick the box if you agree.
-8. Click CREATE WORKSPACE button when you are ready.
+8. Click the CREATE WORKSPACE button when you are ready.
 
   
 
@@ -128,14 +128,14 @@ You are now all set to start trying out accsyn for the first time!
 
 ### Launch a BYOS trial
 
-1. Log on to accsyn and click START 30 DAYS FREE TRIAL in lower lefter corner, or visit: <https://accsyn.io/trial>.
-2. Go to theBYOStab
-3. Read through the information presented and then click START MY FREE BYOS TRIAL button.
+1. Log on to accsyn and click START 30 DAYS FREE TRIAL in the lower left corner, or visit: <https://accsyn.io/trial>.
+2. Go to the BYOS tab
+3. Read through the information presented and then click the START MY FREE BYOS TRIAL button.
 4. Choose a name for your workspace, typically this would be the name of your business/organisation.
 5. To further help us understand your needs, choose the main accsyn feature you intend to use.
 6. Read our [Terms and conditions](https://download.accsyn.com/terms.html) and tick the box if you agree.
-7. Click CREATE WORKSPACE button when you are ready.
-8. When workspace has been created, you will be redirected to the BYOS setup wizard that will guide you through the process of installing your server and configuring your storage volume.
+7. Click the CREATE WORKSPACE button when you are ready.
+8. When the workspace has been created, you will be redirected to the BYOS setup wizard that will guide you through the process of installing your server and configuring your storage volume.
 
 [BYOS](admin/byos.md)
 
@@ -143,7 +143,7 @@ You are now all set to start trying out accsyn for the first time!
 
 ## Can I get help setting up a trial?
 
-Yes, we can setup a trial in the cloud for you to test out. Simple reach out to us at [support@accsyn.com](mailto:support@accsyn.com).
+Yes, we can set up a trial in the cloud for you to test out. Simply reach out to us at [support@accsyn.com](mailto:support@accsyn.com).
 
 ## For how long will my trial last?
 
@@ -151,19 +151,19 @@ It lasts for 30 days by default, from the day you finish the setup wizard.
 
 ## Can I get my trial prolonged?
 
-Yes, send an email to support@ [accsyn.com](http://accsyn.com) stating for how long you want to extend trial and the reason.
+Yes, send an email to support@ [accsyn.com](http://accsyn.com) stating for how long you want to extend the trial and the reason.
 
-## I love accsyn, how to I sign up?
+## I love accsyn, how do I sign up?
 
-To sign up for a paid accsyn subscription, follow these instructions
+To sign up for a paid accsyn subscription, follow these instructions.
 
   
 
 ### Cloud Workspace
 
 - Head over to <https://accsyn.io/signup>
-- Choose the cloud subscription that you want to sign up.
-- Click the sign up button at the bottom of page.
+- Choose the cloud subscription that you want to sign up for.
+- Click the sign up button at the bottom of the page.
 
   
 
@@ -173,7 +173,7 @@ You will be redirected to our payment service powered by Stripe, finalise the pu
 
 ### BYOS & Enterprise
 
-Please reach out to [sales@accsyn.com](mailto:sales@accsyn.com) to sign up the subscription deal.
+Please reach out to [sales@accsyn.com](mailto:sales@accsyn.com) to sign up for the subscription deal.
 
 ## accsyn was nothing for us, how do I cancel the trial?
 
@@ -181,11 +181,11 @@ To tear down your trial, click the workspace menu on the left and choose Delete 
 
   
 
-Note: This cannot be undone, all workspace date will be deleted immediately.
+Note: This cannot be undone, all workspace data will be deleted immediately.
 
 ## Further resources
 
-If you have questions regarding accsyn trial and subscriptions, do not hesitate to reach out to support by email:
+If you have questions regarding accsyn trials and subscriptions, do not hesitate to reach out to support by email:
 
   
 
@@ -193,4 +193,4 @@ If you have questions regarding accsyn trial and subscriptions, do not hesitate 
 
   
 
-We should answer within one(1) business day.
+We should answer within one (1) business day.

@@ -6,7 +6,7 @@ This guide shows how to administrate your workspace storage - volumes, shared fo
 
 Prerequisites:
 
-- Logged on as an administrator at<https://accsyn.io/admin/volumes>.
+- Logged on as an administrator at <https://accsyn.io/admin/volumes>.
 
 Contents:
 
@@ -38,8 +38,8 @@ A volume is the topmost folder on a server where accsyn is allowed to access fil
 
 - More than one volume may exist within a workspace.
 - accsyn cannot access anything outside volumes, admins can access all volumes whereas employees and standard users must be given explicit access.
-- One volume must be the "default" volume, the default volume is were home shares are created and new temp deliveries lives.
-- A volume must be served by a [server](byos/server.md), the server that is servering the default server is called the main server.
+- One volume must be the "default" volume, the default volume is where home shares are created and new temp deliveries live.
+- A volume must be served by a [server](byos/server.md), the server that is serving the default volume is called the main server.
 - Volumes can be served on other sites,  as proxy volumes, enabling replication across physical or cloud locations.
 
 ## Volume list
@@ -51,8 +51,8 @@ The volume list shows all active volumes within your workspace:
 - Status indicator; Green is enabled, orange is disabled.
 - Name (code); The name of the volume.
 - Default indicator - points out the workspace default volume, where deliveries originate from and accsyn home share folders are created.
-- Share count: Shows the amount of shared folders beneath volume.
-- User count: Shows amount of users having access to volume.
+- Share count: Shows the number of shared folders beneath the volume.
+- User count: Shows the number of users having access to the volume.
 - Description; (Optional) The description of volume.
 - Servers; List of main and site servers serving volume.
 - Edit (pen) button.
@@ -64,7 +64,7 @@ Volume menu:
 
 - Edit; Bring up volume editor.
 - Disable; Disable the volume.
-- Enable; Enabled the volume.
+- Enable; Enable the volume.
 - Inactivate; Archive the volume.
 - Activate; Restore volume from archive.
 - Logs; Show log events related to the volume.
@@ -73,7 +73,7 @@ Volume menu:
 Filtering:
 
 - Active volumes; Show current active volumes
-- Inactivate archived volumes; Show volumes that has been inactivated - kept in workspace for audit reasons.
+- Inactivate archived volumes; Show volumes that have been inactivated - kept in the workspace for audit reasons.
 
 ## View volume
 
@@ -84,7 +84,7 @@ To view/expand a volume, click on it. Volume information that is presented is:
 
   
 
-A shared folder is a folder beneath, or the entire volume it self, were standard users can be granted access to download and upload files. 
+A shared folder is a folder beneath, or the entire volume itself, where standard users can be granted access to download and upload files. 
 
 A home folder is a special type of personal shared folder that can be created upon invitation, to provide a default area of user collaboration.
 
@@ -97,16 +97,16 @@ Hint: For more information about operating shared folders and storage in general
 Share list:
 
 - Name; The given name of the share.
-- Path; The (relative) path shared folder is at.
-- Metrics; The amount of access points within the share folder, and the amount of users having access to shared folders, as defined by ACL:
-- Accessed; The most recent time share was accessed.
+- Path; The (relative) path the shared folder is at.
+- Metrics; The number of access points within the share folder, and the number of users having access to shared folders, as defined by ACLs.
+- Accessed; The most recent time the share was accessed.
 
   
 
 Share menu:
 
 - Edit; Audit and edit the share.
-- Logs; Display log events related to share.
+- Logs; Display log events related to the share.
 - Disable; Disable the share.
 - Enable; Enable the share.
 - Inactivate (archive); Remove the share but keep it in the platform for auditing purposes.
@@ -115,7 +115,7 @@ Share menu:
 
 ## Create a new volume
 
-To create a new volume, click NEW VOLUME button in upper right corner.
+To create a new volume, click the NEW VOLUME button in the upper right corner.
 
   
 
@@ -127,7 +127,7 @@ Enter the local path for the accsyn volume and click Validate path when you are 
 
   
 
-Enter the name of the volume and additional paths by which this volume should be associated with.
+Enter the name of the volume and additional paths which this volume should be associated with.
 
   
 
@@ -141,14 +141,14 @@ To edit a volume, click on it in the list.
 
 ### Access
 
-Audit all users having access to the volume, as ACL:s grouped by accsyn base roles:
+Audit all users having access to the volume, as ACLs grouped by accsyn base roles:
 
 - User; The user ident (email).
 - Share; The shared folder or home the user has access to.
 - Path; The path beneath shared folder where user has access.
 - R(ead); Indicate if user has rights to list and download files.
 - W(rite); Indicate if user has rights to upload and modify files.
-- Granted; The date ACL entry were created.
+- Granted; The date the ACL entry was created.
 - Granted by; The user giving access.
 - Ack; Indicate if user has acknowledged the grant.
 
@@ -158,19 +158,19 @@ Revoke access
 
 Click the rightmost trashcan icon button at an ACL entry to revoke access for the user.
 
-Note: administrators cannot be revoked access on volume level, they will require to be disabled or deleted on a user level.
+Note: administrators cannot be revoked access on volume level, they will need to be disabled or deleted on a user level.
 
   
 
 ### Servers
 
-List servers that are serving the volume, the server at main site (hq) are coloured green.
+List servers that are serving the volume, the server at the main site (hq) is coloured green.
 
-To set/change the server for a site, hover the corresponding site and click the pen icon that appears. A list of servers configured at site will be presented, if no servers found you will need to install a new server on the site for the purpose.
+To set/change the server for a site, hover the corresponding site and click the pen icon that appears. A list of servers configured at the site will be presented, if no servers are found you will need to install a new server on the site for the purpose.
 
 You can override the path(s) that volume has at the site, when changing these - make sure that the server and clients at site can read and write files as needed at these paths.
 
-Note: Site servers may require additional BYOS licenses.
+Note: Site servers may require additional BYOS licences.
 
   
 
@@ -198,7 +198,7 @@ NOTE: Email settings can be further overridden on queue and individual job level
 
 ### Metadata
 
-Define metadata for this volume, will be appended to upstream metadata and provided to jobs with Workflows - API calls, engine execution, hooks execution, and so on.
+Define metadata for this volume, which will be appended to upstream metadata and provided to jobs with Workflows - API calls, engine execution, hooks execution, and so on.
 
 ## Delete a volume
 
@@ -214,4 +214,4 @@ NOTES: 
 
   
 
-Eventual shared folders and homes beneath the volume will also be deleted. Also collections containing files on volume, will have these file references removed.
+Any shared folders and homes beneath the volume will also be deleted. Also, collections containing files on the volume will have these file references removed.

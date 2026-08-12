@@ -1,6 +1,6 @@
 # User administration
 
-This guide shows how to manage your workspace users and is targeting workspace administators and employees
+This guide shows how to manage your workspace users and is targeting workspace administrators and employees.
 
 Contents:
 
@@ -33,7 +33,7 @@ Contents:
 Prerequisites:
 
 - An active accsyn workspace.
-- An elevated accsyn account being member of workspace, either admin or employee.
+- An elevated accsyn account being a member of the workspace, either admin or employee.
 
 ## What is a user
 
@@ -52,17 +52,17 @@ Each user has a base role, defining what they will be able to do  within the pl
 
 ## Licensing
 
-accsyn comes with unlimited Standard role user accounts, but with a license restriction on elevated users - administrators and employees.
+accsyn comes with unlimited Standard role user accounts, but with a licence restriction on elevated users - administrators and employees.
 
-The accsyn Essentials cloud subscription plan allows for one(1) elevated users, whilst the accsyn Pro and BYOS plans allows for two(2) elevated users.
+The accsyn Essentials cloud subscription plan allows for one (1) elevated user, whilst the accsyn Pro and BYOS plans allow for two (2) elevated users.
 
-Excess amount of elevated users are billed on a monthly basis according to the current pricing, for more information see <https://accsyn.com/pricing>.
+The excess number of elevated users is billed on a monthly basis according to the current pricing, for more information see <https://accsyn.com/pricing>.
 
- The user count are evaluated every day at midnight 00:00 CET, and the monthly top notation is used to calculated the exceess amount of elevated user and are charged accordingly the next billing period.  To check your current render farm usage, visit your workspace billing page @ [https://accsyn.io/si](https://accsyn.io/signup)
+ The user count is evaluated every day at midnight 00:00 CET, and the monthly top notation is used to calculate the excess number of elevated users, which is charged accordingly the next billing period.  To check your current render farm usage, visit your workspace billing page @ [https://accsyn.io/si](https://accsyn.io/signup)
 
 ## List users
 
-To list all members of your workspace, click the Workspace button on the left hand side and choose Users from the pulldown menu. The list of users will be shown, on list per role:
+To list all members of your workspace, click the Workspace button on the left hand side and choose Users from the pulldown menu. The list of users will be shown, one list per role:
 
 ![](../assets/admin_user-e82564cf6632.png)
 
@@ -74,7 +74,7 @@ Presentation:
 4. Invited: When the user was invited to your workspace.
 5. Invitee: Who invited the user.
 6. Edit; Click to initiate user edit.
-7. Modifications; Pulldown menu with single user modifications actions.
+7. Modifications; Pulldown menu with single user modification actions.
 
   
 
@@ -99,7 +99,7 @@ Enter the email address the user has. If the user already exists within the work
 
 Role
 
-The base role user should be given.
+The base role the user should be given.
 
   
 
@@ -117,39 +117,39 @@ Check this if a home folder should be created on the default storage volume, wit
 
 ### Change role
 
-The base role a user has can be changed any time. In the user list, click the user and go to Attributes tab were you will find an entry for changing the role.
+The base role a user has can be changed any time. In the user list, click the user and go to the Attributes tab where you will find an entry for changing the role.
 
   
 
 ### Status
 
-The user can either enabled (default) or disabled, a disabled user is logged off immediately, jobs(transfers) are cut off and looses access to your workspace.
+The user can be either enabled (default) or disabled, a disabled user is logged off immediately, jobs (transfers) are cut off and the user loses access to your workspace.
 
-Select the user in list and choose Enable/Disable bulk actions, or, click the three-dot context menu drop down on the user and choose Enable/Disable option.
+Select the user in the list and choose Enable/Disable bulk actions, or, click the three-dot context menu drop down on the user and choose the Enable/Disable option.
 
   
 
 ### Archive & Restore
 
-To inactivate the user, e.g. archive it for later restore or audit, either selected user and run Inactivate or choose Inactivate from the user's context menu.
+To inactivate the user, e.g. archive it for later restore or audit, either select the user and run Inactivate or choose Inactivate from the user's context menu.
 
-The user can be re-eactivated again using the same approach.
+The user can be re-activated again using the same approach.
 
   
 
 ### Delete
 
-To delete a user, either do it by bulk selection actions of from the user context menu.  Note that deletion cannot be undone, reach out to support to bring back an accidentially deleted user of importance.
+To delete a user, either do it by bulk selection actions or from the user context menu.  Note that deletion cannot be undone, reach out to support to bring back an accidentally deleted user of importance.
 
 ## Audit
 
 ### Logs
 
-User activity is stored as a log stream within the accsyn platform, to bring out the log open the users context menu (three-dot icon the right hand side) and choose Logs. It can also be opened by clicking a user an click the Log events button at the bottom.
+User activity is stored as a log stream within the accsyn platform, to bring out the log open the user's context menu (three-dot icon on the right hand side) and choose Logs. It can also be opened by clicking a user and clicking the Log events button at the bottom.
 
 ### Access
 
-To view which storage, folders a certain user has access to, click the user in list and go to the Access tab. (Active) Deliveries, upload requests and web streams are also listed here.
+To view which storage folders a certain user has access to, click the user in the list and go to the Access tab. (Active) Deliveries, upload requests and web streams are also listed here.
 
 ### Clients
 

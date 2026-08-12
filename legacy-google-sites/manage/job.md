@@ -14,8 +14,8 @@ Covered elsewhere:
 
 Prerequisites:
 
-- Logged to <https://accsyn.io/jobs> as an elevated user - having employee or admin role.
-- Logged on to the desktop app as an elevated user - having employee or admin role. Download app [here](https://accsyn.io/getapp).
+- Logged on to <https://accsyn.io/jobs> as an elevated user - having employee or admin role.
+- Logged on to the desktop app as an elevated user - having employee or admin role. Download the app [here](https://accsyn.io/getapp).
 
 Contents:
 
@@ -57,7 +57,7 @@ It shows the progress and the ETR, if you have many jobs running it will display
 
   
 
-In  the desktop app, you will find your jobs at the exapandle bottom area in the MY JOBS tab.
+In  the desktop app, you will find your jobs at the expandable bottom area in the MY JOBS tab.
 
 ### Workspace jobs
 
@@ -69,7 +69,7 @@ Jobs are spawned:
 
   
 
-To monitor all ongoing and finished transfer, go to the Jobs page (<https://accsyn.io/jobs>) om the web.
+To monitor all ongoing and finished transfers, go to the Jobs page (<https://accsyn.io/jobs>) on the web.
 
 The page displays all file transfers and compute jobs currently running, grouped by queues:
 
@@ -81,14 +81,14 @@ Choose between displaying active or finished(and aborted) jobs. Change grouping 
 
 ### Job view
 
-Expand a job to view detailed information about the job, including tasks/files within job.
+Expand a job to view detailed information about the job, including tasks/files within the job.
 
   
 
 Toolbar:
 
 - Pause, resume, abort job buttons.
-- View job log - all events related to job during its lifetime.
+- View job log - all events related to the job during its lifetime.
 - Queue and position within brackets.
 - Size of job
 
@@ -96,17 +96,17 @@ Toolbar:
 
 ### Task list
 
-A task is a single file or folder within a file transfers, or a compute/render task:
+A task is a single file or folder within a file transfer, or a compute/render task:
 
-- Select; Select one or more task to modify the status.
+- Select; Select one or more tasks to modify the status.
 - Number/uri; The task number/identifier.
 - Name; The filename
 - Size; The size of the file being processed.
 - Status; The status of processing.
-- Tries; The amount of times task has processed.
-- Start; The time task started processing.
-- Time: The time task processed.
-- Logs; Bring the detailed task process log.
+- Tries; The number of times the task has processed.
+- Start; The time the task started processing.
+- Time: The time the task processed.
+- Logs; Bring up the detailed task process log.
 - Description; (Optional) Task description.
 
   
@@ -120,7 +120,7 @@ A task is a single file or folder within a file transfers, or a compute/render t
 
 ## Job and queue management
 
-This section covers more advanced operations that involves managing jobs (transfers/compute) on a larger scale. accsyn has been designed to be a central hub for all file transfers and long running background tasks within an organisation, enabling operators to prioritise single jobs or groups of jobs depending on project needs.
+This section covers more advanced operations that involve managing jobs (transfers/compute) on a larger scale. accsyn has been designed to be a central hub for all file transfers and long running background tasks within an organisation, enabling operators to prioritise single jobs or groups of jobs depending on project needs.
 
   
 
@@ -128,15 +128,15 @@ This section covers more advanced operations that involves managing jobs (transf
 
 How to manage job states using your web browser:
 
-- Pause (active only); To pause a job, either select the job in the list and choose Pause from the action bar, or open the job and click the pause icon. Job will stop executing immediately and be de-queued.
-- Retry/resume; To retry a job a paused/failed active job or a finished/aborted job, either select the job in the list and choose Resume/Retry from the action bar, or open the job and click the play icon. Job will be put at bottom of queue and resume operations once job(s) above has given way.
-- Abort;  To abort a job, either select the job in the list and choose Abort from the action bar, or open the job and click the stop icon. Job will stop executing immediately and be flagged as finished.
+- Pause (active only); To pause a job, either select the job in the list and choose Pause from the action bar, or open the job and click the pause icon. The job will stop executing immediately and be de-queued.
+- Retry/resume; To retry a paused/failed active job or a finished/aborted job, either select the job in the list and choose Resume/Retry from the action bar, or open the job and click the play icon. The job will be put at the bottom of the queue and resume operations once the job(s) above have given way.
+- Abort;  To abort a job, either select the job in the list and choose Abort from the action bar, or open the job and click the stop icon. The job will stop executing immediately and be flagged as finished.
 
   
 
 ### Queue system
 
-Under the hood, accsyn provides a queue management system.  Each job, including deliveries, are always placed in a queue. If not provided during submission, the default queue is used. Each queue has a priority number, defining which  jobs should run before others. Jobs cannot have a priority number set, to change job priority the job has to be moved to another queue. 
+Under the hood, accsyn provides a queue management system.  Each job, including deliveries, is always placed in a queue. If not provided during submission, the default queue is used. Each queue has a priority number, defining which  jobs should run before others. Jobs cannot have a priority number set, to change job priority the job has to be moved to another queue. 
 
   
 
@@ -144,7 +144,7 @@ Three standard queues are supplied in accsyn:
 
 1. High, priority: 999.
 2. Medium, priority: 500 - the default queue.
-3. Low, priority: 1
+3. Low, priority: 1.
 
   
 
@@ -169,13 +169,13 @@ To change the queue a job is in:
 
 To change the order of jobs in a queue:
 
-1. Drag the job to a new position in queue by dropping it on the drop zones that appear between jobs.
+1. Drag the job to a new position in the queue by dropping it on the drop zones that appear between jobs.
 
   
 
 Different rules apply by default depending on job type:
 
-- File transfers; They are interrupted immediately to give way to the job(s) above in queue.
+- File transfers; They are interrupted immediately to give way to the job(s) above in the queue.
 - Renders: They are allowed to finish processing before giving way.
 
   
@@ -186,24 +186,24 @@ To learn how to configure your accsyn workspace queues, head over to [Queue admi
 
 ### (Advanced) Manage task states
 
-The state of individual tasks can also altered to fine tune which parts of a job should run. Expand the job and select one or more tasks in the task list:
+The state of individual tasks can also be altered to fine-tune which parts of a job should run. Expand the job and select one or more tasks in the task list:
 
-- Retry (non waiting tasks only): Force retry of a executing, failed, on hold or finished task.
+- Retry (non waiting tasks only): Force retry of an executing, failed, on hold or finished task.
 - Put on hold: Pause the task temporarily, for manual retry at a later stage.
 - Set failed: Set task manually as failed.
 - Set done: Set task manually as done.
-- Exclude: Exclude the task, has the same function as delete but task is kept for auditing reasons.
+- Exclude: Exclude the task, has the same function as delete but the task is kept for auditing reasons.
 
   
 
 ### Retry mechanism
 
-accsyn is design to provide robust self-healing file transfers, which means that if interrupted it will retry with an exponential fall-off rate. Several reasons for interruptions can exist:
+accsyn is designed to provide robust self-healing file transfers, which means that if interrupted it will retry with an exponential fall-off rate. Several reasons for interruptions can exist:
 
-- The job is paused/aborted or another job is brought above job in queue or has a higher priority.
-- One of the file transfer endpoints (clients) goes offline or looses their network connection.
+- The job is paused/aborted or another job is brought above the job in the queue or has a higher priority.
+- One of the file transfer endpoints (clients) goes offline or loses its network connection.
 - The storage volume goes offline, file(s) disappear or runs out of space.
 
   
 
-The amount of retries to perform can be configured as  job\_max\_retries and job\_autoretray\_delay\_s settings on queue level and globally on workspace level.
+The number of retries to perform can be configured as  job\_max\_retries and job\_autoretray\_delay\_s settings on queue level and globally on workspace level.

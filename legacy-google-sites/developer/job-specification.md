@@ -1,6 +1,6 @@
 # Job JSON specification
 
-This document provides accsyn job JSON  (JavaScript Object Notification) payload examples and describes best practices for using the accsyn API or CLI.
+This document provides accsyn job JSON  (JavaScript Object Notation) payload examples and describes best practices for using the accsyn API or CLI.
 
 [Job JSON specification](job-specification.md)
 
@@ -76,7 +76,7 @@ Rev 1.007, 21.05.11
 
 accsyn jobs are internally submitted in JSON format, from desktop app, web and CLI.
 
-When submitting a job through the API our using a file with CLI, the correct job JSON must be provided as specified throughout the rest of this document.
+When submitting a job through the API or using a file with the CLI, the correct job JSON must be provided as specified throughout the rest of this document.
 
   
 
@@ -103,16 +103,16 @@ The general structure:
   
 
 - Job attributes; (optional) Typically name of job, queue, initial status and so on. For detailed information, please refer to the [accsyn Python API documentation](https://accsyn-python-api.readthedocs.io/en/latest/transfers.html).
-- Tasks: List or dictitionary of tasks - files and directories to transfer, see party and path notation below.
-- Settings; (optional) Additional job settings, see [accsyn Settings documentation](../settings.md) for a complete listing
-- Metadata; (optional) Additional job metadat
+- Tasks: List or dictionary of tasks - files and directories to transfer, see party and path notation below.
+- Settings; (optional) Additional job settings, see [accsyn Settings documentation](../settings.md) for a complete listing.
+- Metadata; (optional) Additional job metadata.
 
   
   
 
 ### Transfer tasks
 
-A task is a file or folder to transfer, a job can contain multiple tasks but must at least contain one. accsyn support different methods of supplying tasks with in the payload:
+A task is a file or folder to transfer, a job can contain multiple tasks but must at least contain one. accsyn supports different methods of supplying tasks within the payload:
 
   
 
@@ -197,7 +197,7 @@ C) Or as a dictionary (the internal accsyn notation):
 Notes: 
 
 - Nested tasks are allowed, these are defined by a "tasks" sub key. It is used with compute jobs, see examples below.
-- "0" and "1" above are called task "uri":s and must be unique (within the tasks locally at that level).  Tasks are also assigned an unique ID that can be used to further modify the job.
+- "0" and "1" above are called task "uri"s and must be unique (within the tasks locally at that level).  Tasks are also assigned a unique ID that can be used to further modify the job.
 
   
 
@@ -214,45 +214,45 @@ An accsyn source/destination should be passed on as a combination of a party and
   
 
 - Party; Identifies the sending or receiving endpoint entity.
-- Path; The path to the file or directory to transfer, either on accsyn path notation or an absolute path.
+- Path; The path to the file or directory to transfer, either in accsyn path notation or an absolute path.
 
   
 
-For a detailed breakdown of parties and path, please refer to the [accsyn Python API documentation](https://accsyn-python-api.readthedocs.io/en/latest/transfers.html). 
+For a detailed breakdown of parties and paths, please refer to the [accsyn Python API documentation](https://accsyn-python-api.readthedocs.io/en/latest/transfers.html). 
 
   
 
 Example party definitions:
 
 - myworkspace; Denotes the workspace side as source or destination - the main site (hq), resolves to the [Server](../admin/byos/server.md) hosting the file (through volume) identified by the path.
-- john@user.com;Denotes a user as a source or destination, they must have a (running) client ([Desktop App](../admin/desktop-app.md) or [User Server](../admin/hosts.md) instance) that can be resolved by accsyn
+- john@user.com; Denotes a user as a source or destination, they must have a (running) client ([Desktop App](../admin/desktop-app.md) or [User Server](../admin/hosts.md) instance) that can be resolved by accsyn.
 - site=london; Denotes the site with (unique) API "code" identifier "london".
-- client=6611fbca3f8c4d3e7a3b678a; Denotes an explicit client, for example if a user are running multiple clients.
+- client=6611fbca3f8c4d3e7a3b678a; Denotes an explicit client, for example if a user is running multiple clients.
 
   
 
 Path examples:
 
-- C:\Users\john\Desktop\image.png; A local path at user end.
+- C:\Users\john\Desktop\image.png; A local path at the user end.
 - ~/Document.pdf; A relative path on user's Home share at workspace.
 - /Volumes/projects/reference.tif; An absolute path on a volume, can be used with workspace/site parties if they match configured volume paths.
-- volume=projects/reference.tif ; Same notation,  but references the volume "projects" by its unique API "code" attribute and leaving accsyn to resolve the absolute path using configured prefix for server platform. This is also called the accsyn path notation.
-- volume=(default)/reference.tif ; Same notatation but specifying the default volume directly.
+- volume=projects/reference.tif ; Same notation,  but references the volume "projects" by its unique API "code" attribute and leaving accsyn to resolve the absolute path using the configured prefix for the server platform. This is also called the accsyn path notation.
+- volume=(default)/reference.tif ; Same notation but specifying the default volume directly.
 - share=myproject/assets.zip ; Relaxed share definition - unspecified share type, resolves to the volume, shared folder, home or collection "myproject" by its unique API "code" attribute.
-- folder=6734b3ca8c3592a922bdb0de/TO\_ACME/source.rar; File is located in shared folder identified by the explicit it, in subfolder "TO\_ACME".
+- folder=6734b3ca8c3592a922bdb0de/TO\_ACME/source.rar; File is located in the shared folder identified by the explicit id, in subfolder "TO\_ACME".
 - home=[john@user.com](mailto:john@user.com)/UPLOAD/test.abc; File is located at Home share [john@user.com](mailto:john@user.com) , in subfolder "UPLOAD".
-- myproject/reference.jpg ; Assume file paths being relative default volume, equivalent to share=projects/myproject/reference.jpg.
-- racing2019\_grade/test.abc; Used in conjunction with user as target, deliver file into relative folder "racing2019\_grade" at user end.
+- myproject/reference.jpg ; Assumes file paths being relative to the default volume, equivalent to share=projects/myproject/reference.jpg.
+- racing2019\_grade/test.abc; Used in conjunction with a user as target, delivers the file into the relative folder "racing2019\_grade" at the user end.
 
   
 
 Notes:
 
-- The "default volume" is a the volume having the default attribute set to true, and is assigned the first volume created for a workspace. At least one default volume must be assigned within an accsyn workspace.
+- The "default volume" is the volume having the default attribute set to true, and is assigned the first volume created for a workspace. At least one default volume must be assigned within an accsyn workspace.
 
-- - A folder cannot be given as destination unless a "/" (or "\" for Windows) is added. For example downloading a file "x.jpeg" to destination "/Volumes/nas/TEMP" will store the file as "TEMP", not inside folder TEMP. Correct destination notation in this case are: "/Volumes/nas/TEMP/", or even better: "/Volumes/nas/TEMP/x.jpeg".
+- - A folder cannot be given as destination unless a "/" (or "\" for Windows) is added. For example downloading a file "x.jpeg" to destination "/Volumes/nas/TEMP" will store the file as "TEMP", not inside folder TEMP. Correct destination notation in this case is: "/Volumes/nas/TEMP/", or even better: "/Volumes/nas/TEMP/x.jpeg".
   - Destination paths can be left out if other party is a site or a user's locally mapped share, this is called "path mirroring", and is suitable for keeping servers and/or workstations in sync when it comes to file structure.
-  - If party is omitted, accsyn interprets this as the workspace party - file is to be sent to or from hq.
+  - If the party is omitted, accsyn interprets this as the workspace party - the file is to be sent to or from hq.
 
   
 
@@ -278,15 +278,15 @@ Note:  The accsyn Python API does not provide a built-in p2p ASC client - it ca
 
 A user is only allowed to access files and folders on an accsyn site (workspace/main hq premises or remote site) given explicit access through ACLs.
 
-When downloading or uploading a file, only the user owning the API/CLI session are allowed to specify local absolute paths (e.g. C:\Users\ John\Downloads), to send a file to user you must create a Delivery were the user then chooses were to download (or what to upload if it is an upload request). For more information, see [Delivery](../delivery.md).
+When downloading or uploading a file, only the user owning the API/CLI session is allowed to specify local absolute paths (e.g. C:\Users\ John\Downloads); to send a file to a user you must create a Delivery where the user then chooses where to download (or what to upload if it is an upload request). For more information, see [Delivery](../delivery.md).
 
-There is an exception to this: if the user has mapped a share locally and has given explicit write permissions to it, an elevated user are allowed to push files to the user's client using mirror path option or explicit path notation (see examples below). Same goes for upload - an elevated user can pull files from a remote user's computer and upload them to a workspace volume if the user has given explicit read access to the corresponding locally mapped share. For more information on how to setup locally maped shares, see [Hosts](../admin/hosts.md).
+There is an exception to this: if the user has mapped a share locally and has given explicit write permissions to it, an elevated user is allowed to push files to the user's client using mirror path option or explicit path notation (see examples below). Same goes for upload - an elevated user can pull files from a remote user's computer and upload them to a workspace volume if the user has given explicit read access to the corresponding locally mapped share. For more information on how to set up locally mapped shares, see [Hosts](../admin/hosts.md).
 
   
 
 ### User permissions - site transfers
 
-When transferring files between sites, the user has to have the admin role or employee with full access to the involved volume(s).
+When transferring files between sites, the user has to have the admin role, or be an employee with full access to the involved volume(s).
 
 ## Example transfer job snippets
 
@@ -312,7 +312,7 @@ Drop off the file "Prototype.zip", short simplified single task notation:
 }
 
 - "~" resolves to the home share.
-- No destination path were given, leave for accsyn to resolve destination folder. This includes adding eventual delivery dropoff date subfolder (default on the form: YYYYMMDD)
+- No destination path was given, leaving it for accsyn to resolve the destination folder. This includes adding any delivery dropoff date subfolder (default in the form: YYYYMMDD)
 
   
 
@@ -391,11 +391,11 @@ Download two files, with an explicit client specified:
 
   
 
-Specify target endpoint by hostname
+Specify target endpoint by hostname:
 
 {
 
-    "source":"~/SketchesFinal",
+    "source":"~/SketchesFinal",
 
     "destination":"emma@compers.com@PCLocal-001:/Users/Emma/Downloads/"
 
@@ -405,9 +405,9 @@ Specify target endpoint by hostname
 
   
 
-### Operator\*upload
+### Operator\* upload
 
-\* Operator is another term for elevated user - a user having either admin or employee roles. Operators have access to volumes, standard users have not.  
+\* Operator is another term for elevated user - a user having either admin or employee roles. Operators have access to volumes, standard users do not.  
 
 Sync the folder "deployment" to a subfolder on accsyn workspace storage:
 
@@ -421,14 +421,14 @@ Sync the folder "deployment" to a subfolder on accsyn workspace storage:
 
 Notes:
 
-- A relative path is given as destination, this resolves to the default\* volume on workspace.
-- The operator needs to have write access to the volume
+- A relative path is given as destination, this resolves to the default\* volume on the workspace.
+- The operator needs to have write access to the volume.
 
 \* Default volume is the volume having the "default" attribute set to true.  
 
 ### Operator folder download
 
-Download the file "Fireflies\_001" from volume "asset" going into High priority queue, storing locally:
+Download the file "Fireflies\_001" from volume "assets" going into the High priority queue, storing locally:
 
 {
 
@@ -442,9 +442,9 @@ Download the file "Fireflies\_001" from volume "asset" going into High priority 
 
 Notes:
 
-- Term operator means an elevated accsyn user - administrator or employee with read access to (default) volume
+- The term operator means an elevated accsyn user - administrator or employee with read access to the (default) volume
 - The workspace party is omitted here, this is allowed since the other user party is clearly stated and no ambiguity exists when it comes to the source party.
-- Neither the source volume is given here as source, just a relative path. When no source volume or share is given, the default volume is assumed being the source.
+- Neither is the source volume given here as source, just a relative path. When no source volume or share is given, the default volume is assumed to be the source.
 
   
 
@@ -472,13 +472,13 @@ Upload folder "/Users/john/Desktop/delivery" to Shared Folder "thefilm" into sub
 
 }
 
-Note: Shares are identified wither by their unique ID, or by their unique API "code" identifier.
+Note: Shares are identified either by their unique ID, or by their unique API "code" identifier.
 
   
 
 ### Operator download to site
 
-Sync a folder on volume "projects" @ main site(default: "hq") to site "berlin":
+Sync a folder on volume "projects" @ main site (default: "hq") to site "berlin":
 
  {
 
@@ -488,8 +488,8 @@ Sync a folder on volume "projects" @ main site(default: "hq") to site "berlin":
 
 } 
 
-- The operator needs to have read and write permissions to the volume
-- No destination path is given, accsyn will mirror the path structure on receiving end.
+- The operator needs to have read and write permissions to the volume.
+- No destination path is given, accsyn will mirror the path structure on the receiving end.
 
   
 
@@ -509,7 +509,7 @@ Corresponding transfer of a folder from site "cloud" to site "berlin":
 
 ### Operator push
 
-Push(download) a folder to locally mapped share "thefilm" at remote user, storing in a different folder:
+Push (download) a folder to the locally mapped share "thefilm" at the remote user, storing in a different folder:
 
 {
 
@@ -519,13 +519,13 @@ Push(download) a folder to locally mapped share "thefilm" at remote user, storin
 
 }
 
-- The user must have mapped the share locally (configured through app or through ACCSYN\_\*\_PATH envs) , write access enabled.
+- The user must have mapped the share locally (configured through the app or through ACCSYN\_\*\_PATH envs), write access enabled.
 
   
 
 ### Operator pull
 
-Pull a file from remote locally mapped share "thefilm" back to workspace storage:
+Pull a file from the remote locally mapped share "thefilm" back to workspace storage:
 
 {
 
@@ -533,13 +533,13 @@ Pull a file from remote locally mapped share "thefilm" back to workspace storage
 
 }
 
-- No destination is given, accsyn will resolve to workspace default volume and also apply mirrored paths.
+- No destination is given, accsyn will resolve to the workspace default volume and also apply mirrored paths.
 
   
 
 ### Metadata
 
-Sync a folder on share "projects"  from site "berlin" back to hq, deleting files that does not existing on receiving end.Supply metadata that can be picked up by hooks:
+Sync a folder on share "projects"  from site "berlin" back to hq, deleting files that do not exist on the receiving end. Supply metadata that can be picked up by hooks:
 
 {"tasks":[{
 
@@ -563,7 +563,7 @@ Sync a folder on share "projects"  from site "berlin" back to hq, deleting file
 
 ### Skip existing files
 
-Upload file "final\_export.mov", at share "projects"  from user to share "racing2019\_grade", but not overwriting it if exists and size or modification date differ:
+Upload file "final\_export.mov", at share "projects"  from user to share "racing2019\_grade", but not overwriting it if it exists and size or modification date differ:
 
 {"tasks":[{
 
@@ -579,7 +579,7 @@ Upload file "final\_export.mov", at share "projects"  from user to share "racin
 
 ### Exclude files
 
-Upload a large folder, excluding all files ending with "tmp" and is only numbers:
+Upload a large folder, excluding all files ending with "tmp" and files that are only numbers:
 
 {"tasks":[{
 
@@ -615,7 +615,7 @@ Tasks (files) can have different priorities, enabling pre-delivery of some impor
 
 }]}
 
-In this case, the file bried\_v001.pdf will be sent first, then material.rar. accsyn priorities range from 1000 (highest) to 1 (lowest).
+In this case, the file brief\_v001.pdf will be sent first, then material.rar. accsyn priorities range from 1000 (highest) to 1 (lowest).
 
   
 
@@ -623,7 +623,7 @@ In this case, the file bried\_v001.pdf will be sent first, then material.rar. ac
 
 accsyn supports sending a subset of a numbered file sequence, this is handy when you do not want to send an entire directory with a huge amount of files but instead want to do a selection.
 
-Transfer a part of a file sequence from one site to another, mirrored paths (requires VPN direct connection or both server setup with NAT port forwarding of accsyn protocol ports):
+Transfer a part of a file sequence from one site to another, mirrored paths (requires a VPN direct connection or both servers set up with NAT port forwarding of accsyn protocol ports):
 
 {"tasks":[{
 
@@ -637,7 +637,7 @@ Transfer a part of a file sequence from one site to another, mirrored paths (req
 
 ### Placeholder jobs
 
-In some situations, a job needs to be created in beforehand, to enable tasks to be added shortly after. To achieve this, a placeholder job can be submitted:
+In some situations, a job needs to be created beforehand, to enable tasks to be added shortly after. To achieve this, a placeholder job can be submitted:
 
 {"tasks":[{
 
@@ -651,13 +651,13 @@ In some situations, a job needs to be created in beforehand, to enable tasks to 
 
 The job will immediately be set to done, with no files actually transferred.
 
-Note: This example relies on the main site name is the default - "hq", the expression can also be replaced with your workspace code/domain (mycompany in these examples).
+Note: This example relies on the main site name being the default - "hq", the expression can also be replaced with your workspace code/domain (mycompany in these examples).
 
 ## Compute/render job examples
 
 ### Nested compute jobs and dependencies
 
-accsyn not only supports rendering for example a single Houdini scene, splitting a frame range up in buckets, over a pool of render servers. Nested jobs with dependencies are also supported. Here is an example of a pipeline job, that runs task through a custom "pipeline" engine :
+accsyn not only supports rendering for example a single Houdini scene, splitting a frame range up in buckets, over a pool of render servers. Nested jobs with dependencies are also supported. Here is an example of a pipeline job, that runs tasks through a custom "pipeline" engine:
 
   
 
@@ -791,14 +791,14 @@ accsyn not only supports rendering for example a single Houdini scene, splitting
 
 Explanation of the job JSON:
 
-- Top level engine attribute;  tell accsyn to run all tasks using the engine "pipeline" (API code identifier).
+- Top level engine attribute;  tells accsyn to run all tasks using the engine "pipeline" (API code identifier).
 - Task EP000\_SC0110\_SL02\_PS01\_TK01; The main parent task to execute, in this example it relates to a take in a motion capture studio pipeline.
 - EP000\_SC0110\_SL02\_PS01\_TK01 "tasks" attribute; Tells accsyn that this task has sub tasks (nested), that will be executed instead of the task itself.
-- EP000\_SC0110\_SL02\_PS01\_TK01/pickup; Sub-task of EP000\_SC0110\_SL02\_PS01\_TK01, its compute parameters will be aggregated and made available to all subsequence tasks.
+- EP000\_SC0110\_SL02\_PS01\_TK01/pickup; Sub-task of EP000\_SC0110\_SL02\_PS01\_TK01, its compute parameters will be aggregated and made available to all subsequent tasks.
 - EP000\_SC0110\_SL02\_PS01\_TK01/pickup/0; Leaf task, will be executed first (bucket size = 1)
 - EP000\_SC0110\_SL02\_PS01\_TK01/pickup/1 & 2; Subsequent sub tasks.
-- EP000\_SC0110\_SL02\_PS01\_TK01/notify-pickup-done; Has a dependency on on the "pickup" task, and will not executed until the pickup tasks, and all its sub tasks) have executed successfully.
-- Metadata; Are aggregated upstream and supplied upon execution, the same way compute data does.
+- EP000\_SC0110\_SL02\_PS01\_TK01/notify-pickup-done; Has a dependency on the "pickup" task, and will not execute until the pickup task (and all its sub tasks) have executed successfully.
+- Metadata; Are aggregated upstream and supplied upon execution, the same way compute data is.
 
 ## Best practices and limitations
 
@@ -810,10 +810,10 @@ accsyn is a p2p file transfer protocol which means that each transfer job can on
 
 A source or destination party can be:
 
-- The workspace(organization); on-prem servers at main site (hq), running the accsyn daemon app in server mode.
-- A user; Identified by the Email, running the accsyn desktop app or daemon app in user server mode.
+- The workspace (organisation); on-prem servers at the main site (hq), running the accsyn daemon app in server mode.
+- A user; Identified by the email, running the accsyn desktop app or daemon app in user server mode.
 - A site; Identified by a unique name, running the accsyn daemon app in server mode.
-- Web browser; For downloads and uploads using web browser.
+- Web browser; For downloads and uploads using a web browser.
 
   
 
@@ -853,23 +853,23 @@ Example: Transfer one file from share1 and another from share2, that can reside 
 
 ### Job count limit
 
-Although now limits on the amount of jobs are enforced by accsyn, when amount reaches 500+ a substantial degrade of performance occurs and UI will become immeasurable. 
+Although no limits on the amount of jobs are enforced by accsyn, when the amount reaches 500+ a substantial degradation of performance occurs and the UI will become unusable. 
 
 The recommended approach is to reduce the amount of jobs and instead have multiple tasks within each job. 
 
-Giving an example were the API in an automatic workflow submits a sync job for each file updated and everyday, if thousands of files are updated accsyn will soon reach its limits and the job listing in desktop app /web app will be overflowed.
+Giving an example where the API in an automatic workflow submits a sync job for each file updated every day, if thousands of files are updated accsyn will soon reach its limits and the job listing in the desktop app/web app will be overflowed.
 
-A better approach would be to let the API load a daily sync job for each source-destination pair (create if not exists) and add tasks to that job instead. This would reduce the amount of jobs drastically, and will make job listing much more readable when it comes to find other important jobs that otherwise would totally drown.
+A better approach would be to let the API load a daily sync job for each source-destination pair (create if not exists) and add tasks to that job instead. This would reduce the amount of jobs drastically, and will make the job listing much more readable when it comes to finding other important jobs that otherwise would totally drown.
 
   
 
 ### Large jobs with a lot of files
 
-accsyn transfers files using the same algorithm as \*NIX rsync which means that a list of files with size and modification dates are sent to receiving end in order to determine which files need to be sent.
+accsyn transfers files using the same algorithm as \*NIX rsync which means that a list of files with size and modification dates is sent to the receiving end in order to determine which files need to be sent.
 
-For very large file transfers containing a lot of smaller files in deep lengthy folder structures, accsyn might run out of RAM during file transfer init and in those cases it is recommended to split a job in multiple tasks. 
+For very large file transfers containing a lot of smaller files in deep lengthy folder structures, accsyn might run out of RAM during file transfer init and in those cases it is recommended to split a job into multiple tasks. 
 
-For example when doing project backup with accsyn, instead of sending the entire root share or directory - send each project directory as individual tasks and set "task\_bucketsize" setting to "1":
+For example, when doing a project backup with accsyn, instead of sending the entire root share or directory - send each project directory as individual tasks and set the "task\_bucketsize" setting to "1":
 
 {
 

@@ -30,11 +30,11 @@ Contents:
 
 ## Introduction
 
-This tutorial describes how to setup manual or API driven sync of file assets between main premises (hq) and a remote site - a common scenario in film post production for distributed organisations:
+This tutorial describes how to set up manual or API-driven sync of file assets between main premises (hq) and a remote site - a common scenario in film post production for distributed organisations:
 
 - The main storage on main premises (hq) holds source production assets.
-- Each projects has a fixed templated folder structure, enabling automisations.
-- Work is going to be performed on a selected subset (e.g. shots) at the remote office (site)
+- Each project has a fixed templated folder structure, enabling automation.
+- Work is going to be performed on a selected subset (e.g. shots) at the remote office (site).
 - An operator (employee) should be able to push (download) the required file assets to the site, from within their in-house production tool.
 - Each project should have its own queue, to be able to prioritise transfers on a per-project basis.
 - The operator should get an email notification when all assets are synced.
@@ -49,7 +49,7 @@ The tutorial will walk through:
 
   
 
-NOTE: Made up example data is provided in [brackets] throughout this tutorial.
+NOTE: Made-up example data is provided in [brackets] throughout this tutorial.
 
 ## Schematics
 
@@ -69,12 +69,12 @@ Hint: find out your workspace API code identifier @ <https://accsyn.io/admin/set
 
 ## Setting up site
 
-We are not going into great details on how to setup remote sites with accsyn, this is well covered in the [site documentation](../admin/byos/site.md):
+We are not going into great detail on how to set up remote sites with accsyn, this is well covered in the [site documentation](../admin/byos/site.md):
 
 1. Create the site @ <https://accsyn.io/admin/sites/new> that will represent the remote office in accsyn [london]
-2. Install a server on the site @ <https://accsyn.io/admin/servers/new>,  acting as the endpoint for all p2p ASC file transfer between main hq site and the office.
+2. Install a server on the site @ <https://accsyn.io/admin/servers/new>, acting as the endpoint for all p2p ASC file transfer between the main hq site and the office.
 3. Edit the accsyn storage volume to be served at the site by the new server, provide a custom volume path in case storage is not mounted at the same path at site as it is at hq.
-4. Test that you can transfer files to site, by logging on the accsyn Desktop app and transfer a file from hq to site.
+4. Test that you can transfer files to site, by logging on to the accsyn Desktop app and transferring a file from hq to site.
 
   
 
@@ -86,28 +86,28 @@ With a site active, you can now start syncing files between your main location (
 
   
 
-Download and run to the accsyn desktop app:
+Download and run the accsyn desktop app:
 
 [Get the accsyn Desktop app](https://www.google.com/url?q=https%3A%2F%2Faccsyn.io%2Fgetapp&sa=D&sntz=1&usg=AOvVaw347DVoq0Wwbl4tjIp_nP7D)
 
 Here is an example of how to download a folder from central hq/accsyn location, to your remote site:
 
-1. Logon to the desktop top with an administrator account, or with an employee having read and write access to the volume.
+1. Log on to the desktop app with an administrator account, or with an employee having read and write access to the volume.
 2. Click on the TRANSFER tab in the app top menu.
 3. On the left hand source side (From), choose your main location - Workspace (hq or accsyn cloud).
 4. On the right hand destination side (To), choose your site.
 5. Browse and select the file(s) and/or folders(s) to transfer on left hand side.
-6. On the  right hand side, either choose "Mirror paths" option or "Browse". Mirror paths will transfer the files with paths intact, mirroring them to the destination. With browse, you can choose the download location yourself.
-7. Click the green middle arrow butto to launch the sync transfer.
+6. On the right hand side, either choose "Mirror paths" option or "Browse". Mirror paths will transfer the files with paths intact, mirroring them to the destination. With browse, you can choose the download location yourself.
+7. Click the green middle arrow button to launch the sync transfer.
 8. Monitor the transfer in the bottom MY JOBS or TRANSFER tabs.
 
 ## Setting up project queues
 
-Note: You can skip this step if you do not need project queues - all sync job to run in the default (Medium prio) queue.
+Note: You can skip this step if you do not need project queues - all sync jobs will run in the default (Medium prio) queue.
 
 ### Manual queue creation
 
-1. Create a queue for the project @  <https://accsyn.io/admin/queues/new> [proj001]
+1. Create a queue for the project @ <https://accsyn.io/admin/queues/new> [proj001]
 2. Repeat this for all projects you wish to enable sync for.
 
 ### Create queue using API
@@ -122,7 +122,7 @@ In this tutorial, we assume you have your project data stored on a NAS on a shar
 
   
 
-Further on, we assume projects are located directly within the root of that folder, and the file assets to be synced for each shot is located in a scans folder like this:
+Further on, we assume projects are located directly within the root of that folder, and the file assets to be synced for each shot are located in a scans folder like this:
 
 projects/
 
@@ -158,11 +158,11 @@ As an alternative, to provide more granular project permissions and enhanced sec
 
 ### In-house tool plugin development
 
-In this tutorial, we assume you have an in-house project management tool such as ftrack or Autodesk Flow, were you have projects and shots.
+In this tutorial, we assume you have an in-house project management tool such as ftrack or Autodesk Flow, where you have projects and shots.
 
-We are not going to cover how to implement this task, as it varies a lot depending on the tool, but here are a rough guideline:
+We are not going to cover how to implement this task, as it varies a lot depending on the tool, but here is a rough guideline:
 
-1. Write a plugin within the tool that operators can run on one or more select shots.
+1. Write a plugin within the tool that operators can run on one or more selected shots.
 2. Have the plugin resolve the relative path/paths for each selected shot, and provide it as a list [proj001/sc0010/sh0010/scans] together with the site that user selects.
 3. Have the plugin call the download sync script below, or if it is a Python based tool that is compatible with the accsyn Python API - implement the sync script below directly within your tool/plugin.
 
@@ -170,9 +170,9 @@ We are not going to cover how to implement this task, as it varies a lot dependi
 
 ### accsyn sync script
 
-This is the script that does the heavy lifting, and is either implemented directly as a module within the tool above by extracting the 'site\_sync' function or executed as standalone CLI tool in the shell - suitable if the in-house tool is not written in Python / can't use the accsyn Python API directly.
+This is the script that does the heavy lifting, and is either implemented directly as a module within the tool above by extracting the 'site\_sync' function or executed as a standalone CLI tool in the shell - suitable if the in-house tool is not written in Python / cannot use the accsyn Python API directly.
 
-Prepare the local script environment so the API can authenticate with accsyn backend, we recommend setting the ACCSYN\_API\_USER and ACCSYN\_API\_KEY environment variables locally on the machine, or store it locally in a hidden file. Hard coding the API key in your Python script and then pushing it to Github can be a security hazard in is strongly discouraged.
+Prepare the local script environment so the API can authenticate with the accsyn backend, we recommend setting the ACCSYN\_API\_USER and ACCSYN\_API\_KEY environment variables locally on the machine, or store it locally in a hidden file. Hard-coding the API key in your Python script and then pushing it to Github can be a security hazard and is strongly discouraged.
 
 Here is a working example CLI implementation of the sync script, that takes that list of shot assets as arguments and downloads the files using the fast and secure ASC protocol to the site - (code is available on Github, see resources below):
 
@@ -183,8 +183,8 @@ Breakdown of the script:
 1. Command line arguments are read and passed on the site\_sync function.
 2. The accsyn API session object is created.
 3. The share, queue and site entities are loaded from accsyn and verified.
-4. The list of tasks are built,  with paths mirrored on destination end.
-5. The script submits and re-uses one sync job, for each project and direction (download/upload) each day. This gives a good balance when it comes to amount of jobs within a project queue and the amounts of tasks (files) within each job making it easy to manage at a later stage.
+4. The list of tasks is built, with paths mirrored on the destination end.
+5. The script submits and re-uses one sync job, for each project and direction (download/upload) each day. This gives a good balance when it comes to amount of jobs within a project queue and the amount of tasks (files) within each job, making it easy to manage at a later stage.
 
   
 

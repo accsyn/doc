@@ -24,7 +24,7 @@
 
 [Troubleshooting](desktop-app.md)
 
-[I have trouble logging in, it never get pass the login screen](desktop-app.md)
+[I have trouble logging in, it never gets past the login screen](desktop-app.md)
 
 [I am getting java.lang.UnsupportedOperationException: Setting a system-wide Policy object is not supported](desktop-app.md)
 
@@ -34,7 +34,7 @@
 
   
 
-The accsyn app is desktop application is primarily for providing accelerated accsyn p2p file transfers running in the background (tray), but also has a GUI enabling advanced functionality that includes extended [Delivery](../delivery.md), [File Sharing](../file-sharing.md) and [Media Vault](../vault.md) management.
+The accsyn app is a desktop application primarily for providing accelerated accsyn p2p file transfers running in the background (tray), but also has a GUI enabling advanced functionality that includes extended [Delivery](../delivery.md), [File Sharing](../file-sharing.md) and [Media Vault](../vault.md) management.
 
 ![](../assets/admin_desktop-app-fa39d7dd7bb8.png)
 
@@ -55,7 +55,7 @@ Besides this, the app is mandatory when:
   
 
 - Detailed monitoring and audit of jobs (deliveries, transfers, queues).
-- Managing [file sharing](../file-sharing.md) on your clour or on-prem storage.
+- Managing [file sharing](../file-sharing.md) on your cloud or on-prem storage.
 - [Access](../file-sharing/access.md) shared folders.
 - Manage the accsyn [Media Vault](../vault.md) - ingest and manage your media, as a manager.
 - Submit render jobs and publish files in BYOS configurations - part of [workflows](../developer.md).
@@ -64,11 +64,11 @@ Note: the desktop app is also included in the accsyn Daemon(service) installatio
 
 ## Where to download
 
-The app is written in Java and requires Java installed on Linux platforms, Windows & Mac installers has Java bundled. The desktop app is included in the accsyn daemon installation, there is no need to install it separately.
+The app is written in Java and requires Java installed on Linux platforms, Windows & Mac installers have Java bundled. The desktop app is included in the accsyn daemon installation, there is no need to install it separately.
 
   
 
-Find the links to the app installer below, login with your personal accsyn account:
+Find the links to the app installer below, log in with your personal accsyn account:
 
 [DOWNLOAD APP](https://www.google.com/url?q=https%3A%2F%2Faccsyn.io%2Fgetapp&sa=D&sntz=1&usg=AOvVaw347DVoq0Wwbl4tjIp_nP7D)
 
@@ -78,7 +78,7 @@ There are two options for installing the desktop app:
 
   
 
-- Install only for the current user (default); Requires no administrator previleges, app will be installed in your account profile @ %LOCALAPPDATA%\Programs\Accsyn by default.
+- Install only for the current user (default); Requires no administrator privileges, the app will be installed in your account profile @ %LOCALAPPDATA%\Programs\Accsyn by default.
 - Run installer as administrator, making it available for all machine users; Will install the accsyn app in C:\Program Files by default.
 
   
@@ -87,11 +87,11 @@ Hint: Pin it to your task bar for easy access in the future.
 
 ## Mac install
 
-Open the installer DMG and then drag-n-drop the app to were you want to install it.
+Open the installer DMG and then drag-n-drop the app to where you want to install it.
 
   
 
-Hint: Keep it to your dock for easy access in the future.
+Hint: Keep it in your dock for easy access in the future.
 
 ## Linux install
 
@@ -118,7 +118,7 @@ You can install accsyn on most major Linux distributions using the appropriate p
 
   
 
-Verify the application by running it and logon to accsyn
+Verify the application by running it and logging on to accsyn.
 
   
 
@@ -152,13 +152,13 @@ Categories=Utility
 
 ### Updating
 
-To stay on top of bug fixes, and get the latest features and improvements, update the accsyn deskop app regularly.
+To stay on top of bug fixes, and get the latest features and improvements, update the accsyn desktop app regularly.
 
   
 
 If installed for current user:
 
-- Logon to the desktop app
+- Log on to the desktop app
 - Click on the user account button in upper right corner.
 - Choose "Check for updates" in the dropdown menu.
 
@@ -168,7 +168,7 @@ Note: if the in-app update fails, download the installer using the link presente
 
   
 
-If installed for all user (administrative rights required):
+If installed for all users (administrative rights required):
 
 Download the installer and re-install using the instructions above.
 
@@ -212,11 +212,11 @@ Linux
 
 General/platform independent
 
-### I have trouble logging in, it never get pass the login screen
+### I have trouble logging in, it never gets past the login screen
 
 Cause: the accsyn local preferences might have become corrupt. 
 
-Solution: try removing these preference folders manually and retry operation. 
+Solution: try removing these preference folders manually and retry the operation. 
 
   
 
@@ -224,7 +224,7 @@ Linux
 
 ### I am getting java.lang.UnsupportedOperationException: Setting a system-wide Policy object is not supported
 
-Cause: You are trying to install the accsyn desktop app on a system that has the accsyn daemon installer.
+Cause: You are trying to install the accsyn desktop app on a system that has the accsyn daemon installed.
 
 Solution: Download and update using the daemon instead.
 
