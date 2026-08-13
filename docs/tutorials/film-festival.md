@@ -2,52 +2,6 @@
 
 This tutorial is targeting Cloud Workspaces (Media Vault) and is not applicable for on-prem BYOS workspaces.
 
-Contents:
-
-[Introduction](film-festival.md)
-
-[Creating your new accsyn workspace](film-festival.md)
-
-[Create your first movie title](film-festival.md)
-
-[What is a title?](film-festival.md)
-
-[Install the accsyn Desktop app](film-festival.md)
-
-[Creating a title](film-festival.md)
-
-[Explaining accsyn media management](film-festival.md)
-
-[Requesting upload of film festival contribution](film-festival.md)
-
-[Request upload using the app](film-festival.md)
-
-[Request upload using the browser](film-festival.md)
-
-[Finishing up the request in browser](film-festival.md)
-
-[Ingest uploaded media](film-festival.md)
-
-[Ingest DCP](film-festival.md)
-
-[Ingest screening master](film-festival.md)
-
-[DCP validation](film-festival.md)
-
-[Creating a stream](film-festival.md)
-
-[Deliver to cinema](film-festival.md)
-
-[Send DCP using app](film-festival.md)
-
-[Send DCP using web browser](film-festival.md)
-
-[Finish up delivery in the browser](film-festival.md)
-
-[Conclusions](film-festival.md)
-
-[More resources](film-festival.md)
-
 ## Introduction
 
 This tutorial will walk through how to set up accsyn for acting as the central file transfer and media management platform for a film festival:
@@ -63,7 +17,7 @@ This tutorial will walk through how to set up accsyn for acting as the central f
 
 Example film festival workflow from Stockholm Film Festival.  
 
-NOTE: Made-up example data is provided in [brackets] throughout this tutorial.
+*NOTE: Made-up example data is provided in [brackets] throughout this tutorial.*
 
 ## Creating your new accsyn workspace
 
@@ -88,9 +42,9 @@ An accsyn title is a project folder beneath the default cloud storage volume des
 
 ### Install the accsyn Desktop app
 
-To start managing your festival titles and media, download the accsyn desktop app. Go to <https://accsyn.io/vault> and you will be given download links and clear directions. If you have problems installing or using the app, find more detailed assistance [here](../admin/desktop-app.md).
+To start managing your festival titles and media, download the accsyn desktop app. Go to <https://accsyn.io/vault> and you will be given download links and clear directions. If you have problems installing or using the app, find more detailed assistance [here](../desktop-app.md).
 
-NOTE: Currently, the accsyn web app does not support managing media. This is subject to change in the near future.
+*NOTE: Currently, the accsyn web app does not support managing media. This is subject to change in the near future.*
 
   
 
@@ -127,7 +81,7 @@ You will be redirected to the title view in app, here you can switch between two
 
 Media in accsyn are files that are ingested into the accsyn Media Vault beneath a title - an internal database in the accsyn platform holding media metadata, proxies and other related information.
 
-Note: Media cannot exist outside titles - these files must reside beneath a title folder on storage.
+*Note: Media cannot exist outside titles - these files must reside beneath a title folder on storage.*
 
 Files that are imported in the media view are always suggested to be ingested. 
 

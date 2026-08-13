@@ -4,7 +4,7 @@ This guide is for you that are expecting a delivery or upload request sent with 
 
   
 
-Note: If you have been granted access to a shared folder or collection, please head over to this guide:
+*Note: If you have been granted access to a shared folder or collection, please head over to this guide:*
 
 [Access Shared Folders](../file-sharing/access.md)
 
@@ -22,7 +22,7 @@ If you have not received an email, check your spam filters to make sure it has n
 
 If you have no accsyn account, you will need to register one. 
 
-Note: Anonymous access to the platform is not allowed due to security reasons and if you believe you need access to a delivery - reach out and ask the sender to be added as a recipient.
+*Note: Anonymous access to the platform is not allowed due to security reasons and if you believe you need access to a delivery - reach out and ask the sender to be added as a recipient.*
 
 You can choose to sign up with email or log in with Google (recommended if applicable)
 
@@ -51,10 +51,10 @@ Once the download method is chosen, a prompt will ask you where to save the file
 
 Screenshot of a delivery being downloaded.
 
-Notes:
+*Notes:*
 
-- If downloading through the web browser, remember to not close or reload the browser until finished.
-- If downloading with the app, you can safely close the web browser and open it later to check for progress. But if you log out of your computer and/or quit the desktop app, the transfer will be interrupted but resume again as soon as you log in and start the desktop app again.
+- *If downloading through the web browser, remember to not close or reload the browser until finished.*
+- *If downloading with the app, you can safely close the web browser and open it later to check for progress. But if you log out of your computer and/or quit the desktop app, the transfer will be interrupted but resume again as soon as you log in and start the desktop app again.*
 
 ### Upload to a request
 

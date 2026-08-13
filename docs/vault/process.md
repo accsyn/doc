@@ -76,7 +76,7 @@ Create an HLS streamable HD proxy of VOD media, tailored for web streaming with 
 
 A "hddef" proxy will be created on media, with status "TRANSCODING" that will be set to ONLINE once transcode has finished.
 
-Note: Streaming proxies are only available on video type media.
+*Note: Streaming proxies are only available on video type media.*
 
 ### Video proxy
 
@@ -88,7 +88,7 @@ A video proxy is always created by default when videos are ingested into the vau
 
 A "hd720" proxy will be created on media, with status "TRANSCODING" that will be set to ONLINE once transcode has finished.
 
-Note: Video proxies are only available on video type media.
+*Note: Video proxies are only available on video type media.*
 
 ### Image proxy
 
@@ -99,7 +99,7 @@ An image proxy is always created by default when images are ingested into the va
 
 A "lr" proxy will be created on media, with status "TRANSCODING" that will be set to ONLINE once transcode has finished.
 
-Note: Image proxies are only available on image type media.
+*Note: Image proxies are only available on image type media.*
 
 ## Misc
 

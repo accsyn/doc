@@ -1,8 +1,7 @@
 # Site administration
 
-NOTE: This feature is exposed to BYOS and Enterprise licensed workspaces only.
+* NOTE: This feature is exposed to [BYOS](index.md) and Enterprise licensed workspaces only.*
 
-[BYOS](index.md)
 
 This guide walks through how to add and configure remote sites within your accsyn workspace.
 
@@ -12,35 +11,6 @@ Prerequisites:
 
 - Logged on as an administrator to <https://accsyn.io/admin/servers>.
 
-Contents:
-
-[What is a site?](site.md)
-
-[Site types](site.md)
-
-[Site location based WAN IP](site.md)
-
-[Sites and file transfers](site.md)
-
-[Sites and compute/render jobs](site.md)
-
-[Site list](site.md)
-
-[Create a new site](site.md)
-
-[Edit a site](site.md)
-
-[Toolbar](site.md)
-
-[Servers & Clients](site.md)
-
-[Attributes](site.md)
-
-[Metadata](site.md)
-
-[Delete a site](site.md)
-
-[Related resources](site.md)
 
 ## What is a site?
 
@@ -147,7 +117,7 @@ List of servers and clients assigned to the site.
 - Spawned; When it was created.
 - ID; The internal (API) ID of server/client.
 
-NOTE: Site and compute/render servers require additional BYOS licences.
+*NOTE: Site and compute/render servers require additional BYOS licences.*
 
   
 
@@ -176,12 +146,12 @@ To delete a site, open the site's menu (three dots icon) on the right hand side 
 
   
 
-NOTES: 
+*NOTES:*
 
-- Server(s) assigned to site must be re-assigned to another site before proceeding.
+- *Server(s) assigned to site must be re-assigned to another site before proceeding.*
 
-- The main site cannot be deleted, reach out to support to have another site be set as the main site.
-- This cannot be undone.
+- *The main site cannot be deleted, reach out to support to have another site be set as the main site.*
+- *This cannot be undone.*
 
 ### Related resources
 

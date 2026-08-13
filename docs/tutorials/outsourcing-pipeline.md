@@ -1,42 +1,6 @@
 # Tutorial - Outsourcing Pipeline
 
-Note: This tutorial is for on-prem BYOS deployments of accsyn, please reach out to support if you need corresponding functionality with your cloud hosted workspace.
-
-Contents:
-
-[Introduction](outsourcing-pipeline.md)
-
-[Why automate outsourcing?](outsourcing-pipeline.md)
-
-[Why choose accsyn as the solution?](outsourcing-pipeline.md)
-
-[Tutorial overview](outsourcing-pipeline.md)
-
-[Workflow](outsourcing-pipeline.md)
-
-[Schematics](outsourcing-pipeline.md)
-
-[Setting up your workspace](outsourcing-pipeline.md)
-
-[Installing the user remote server at vendor](outsourcing-pipeline.md)
-
-[Send work files and send to vendor](outsourcing-pipeline.md)
-
-[Manual sync of work file assets](outsourcing-pipeline.md)
-
-[Share project folders](outsourcing-pipeline.md)
-
-[Automated API sync of work file assets](outsourcing-pipeline.md)
-
-[Configuring vendor asset publish](outsourcing-pipeline.md)
-
-[What is accsyn Publish?](outsourcing-pipeline.md)
-
-[Implementing the publish scripts](outsourcing-pipeline.md)
-
-[Conclusions](outsourcing-pipeline.md)
-
-[Additional resources](outsourcing-pipeline.md)
+*Note: This tutorial is for on-prem BYOS deployments of accsyn, please reach out to support if you need corresponding functionality with your cloud hosted workspace.*
 
 ## Introduction
 
@@ -85,7 +49,7 @@ This tutorial will cover:
 
   
 
-NOTE: Made-up example data is provided in [brackets] throughout this tutorial.
+*NOTE: Made-up example data is provided in [brackets] throughout this tutorial.*
 
 ## Workflow
 
@@ -115,7 +79,7 @@ In this tutorial, we assume the following:
 
 ## Setting up your workspace
 
-The first step is to create your own accsyn workspace trial, the whole process is described in detail [here](https://sites.google.com/filmhubsoftware.com/help/trial):
+The first step is to create your own accsyn workspace trial, the whole process is described in detail [here](https://-/trial):
 
 1. Open <https://accsyn.io/trial> in your web browser, you will be asked to sign up for your personal accsyn account (email address identifier).
 2. Create a BYOS Workspace.
@@ -165,7 +129,7 @@ Send these additional instructions to the vendor for setting up a mapped share:
 6. Go to Share Mappings.
 7. There should now be a new entry named "proj", check "Read" and "Write" boxes. This will enable Acme VFX operators to push files to, and pull files from, the local mapped storage folder @ \\server\clients\AcmeVFX.
 
-Note: "PROJ" element in the environment variable definition must match the API code attribute on the default accsyn volume.
+*Note: "PROJ" element in the environment variable definition must match the API code attribute on the default accsyn volume.*
 
 ## Send work files and send to vendor
 
@@ -190,10 +154,10 @@ Here we simply use the accsyn Desktop app to push assets to the vendor manually:
 
   
 
-Notes: 
+*Notes:*
 
-- The same procedure applies for pulling file(s) from the remote vendor's locally mapped volume - transfer from the vendor to your workspace (upload).
-- In case accsyn Publish is not to be used, remember to create a home share for the vendor so they possess means of uploading the final result back.
+- *The same procedure applies for pulling file(s) from the remote vendor's locally mapped volume - transfer from the vendor to your workspace (upload).*
+- *In case accsyn Publish is not to be used, remember to create a home share for the vendor so they possess means of uploading the final result back.*
 
   
 
@@ -213,7 +177,7 @@ This approach puts the labour on the remote vendor, to download work assets them
 
 The user will get a notification by email on how to use the app to download the source material themselves. 
 
-Note: In case accsyn Publish is not to be used and no Home share is created for the vendor, grant access to an output folder beneath the project where the user can upload the final work done [scd/\_VENDORS/compersinc] (remember to also give write access otherwise they will not be able to upload)
+*Note: In case accsyn Publish is not to be used and no Home share is created for the vendor, grant access to an output folder beneath the project where the user can upload the final work done [scd/\_VENDORS/compersinc] (remember to also give write access otherwise they will not be able to upload)*
 
   
 
@@ -337,7 +301,7 @@ The transfer job will be queued with the rest of the jobs. 
 
   
 
-Note: if multiple jobs (projects, or previous day) jobs are active, operators can use the powerful accsyn queue mechanism to prioritise between sync jobs. Even within a sync job, tasks can be prioritised, enabling transfer of certain shots before others.
+*Note: if multiple jobs (projects, or previous day) jobs are active, operators can use the powerful accsyn queue mechanism to prioritise between sync jobs. Even within a sync job, tasks can be prioritised, enabling transfer of certain shots before others.*
 
 ## Configuring vendor asset publish
 

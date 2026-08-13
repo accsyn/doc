@@ -2,34 +2,6 @@
 
 This guide shows how to manage your workspace users and is targeting workspace administrators and employees.
 
-Contents:
-
-[What is a user](user.md)
-
-[Licensing](user.md)
-
-[List users](user.md)
-
-[Invite new user](user.md)
-
-[Modify users](user.md)
-
-[Change role](user.md)
-
-[Status](user.md)
-
-[Archive & Restore](user.md)
-
-[Delete](user.md)
-
-[Audit](user.md)
-
-[Logs](user.md)
-
-[Access](user.md)
-
-[Clients](user.md)
-
 Prerequisites:
 
 - An active accsyn workspace.
@@ -41,7 +13,7 @@ Users in accsyn are identified by their unique email addresses and their interna
 
 Accounts are personal - when the user registers their account they choose their own password or can choose to sign up using a third party identity provider such as Google.
 
-Note: A user in accsyn can have access to more than one workspace, this means that removing the user from your workspace does not remove their accsyn account.
+*Note: A user in accsyn can have access to more than one workspace, this means that removing the user from your workspace does not remove their accsyn account.*
 
 Each user has a base role, defining what they will be able to do  within the platform. There are three base roles in accsyn.
 

@@ -4,55 +4,13 @@ This guide explains how to utilise accsyn as a file sharing service, similar to 
 
   
 
-Note: File sharing is currently not available in the web browser, this is subject to be improved in future versions of accsyn.
-
-Contents:
-
-[Storage view](filesharing-workingwith.md)
-
-[Share list](filesharing-workingwith.md)
-
-[File list](filesharing-workingwith.md)
-
-[Access info](filesharing-workingwith.md)
-
-[Sharing a volume with employees](filesharing-workingwith.md)
-
-[Sharing a folder with users](filesharing-workingwith.md)
-
-[Create a shared folder](filesharing-workingwith.md)
-
-[Share folder with users](filesharing-workingwith.md)
-
-[Modify a shared folder](filesharing-workingwith.md)
-
-[Removing a shared folder](filesharing-workingwith.md)
-
-[Creating a collection](filesharing-workingwith.md)
-
-[Share a collection with users](filesharing-workingwith.md)
-
-[Removing a collection](filesharing-workingwith.md)
-
-[Accessing a shared folder](filesharing-workingwith.md)
-
-[Remove access for a folder / collection](filesharing-workingwith.md)
-
-[Create a home](filesharing-workingwith.md)
-
-[Modify a share](filesharing-workingwith.md)
-
-[Removing a share](filesharing-workingwith.md)
-
-[Related articles](filesharing-workingwith.md)
+*Note: File sharing is currently not available in the web browser, this is subject to be improved in future versions of accsyn.*
 
 ## Storage view
 
-  
-
 Preparations
 
-1. To manage your accsyn Storage, you will need to download and [install the accsyn Desktop app](../admin/desktop-app.md).
+1. To manage your accsyn Storage, you will need to download and [install the accsyn Desktop app](../desktop-app.md).
 2. Log in with the desktop app as an elevated user - admin with full access or as an employee with access to at least one volume.
 
   
@@ -95,7 +53,7 @@ On the right hand side, you find the access info panel displaying info about whi
 
 ## Sharing a volume with employees
 
-Note: to give administrators access to your workspace, invite them using the INVITE USER tool in the desktop app or go to <https://accsyn.io/users>.
+*Note: to give administrators access to your workspace, invite them using the INVITE USER tool in the desktop app or go to <https://accsyn.io/users>.*
 
   
 
@@ -120,7 +78,7 @@ To revoke access for an employee, click the trashcan button on the right hand si
 
 ## Sharing a folder with users
 
-Note: accsyn does not support sharing single files as of current version, this might be subject to change in future versions. To share a single file, add it to a collection (see below).
+*Note: accsyn does not support sharing single files as of current version, this might be subject to change in future versions. To share a single file, add it to a collection (see below).*
 
 The base is a shared folder, ACLs are then applied to this folder, granting users access to the entire folder (/ path) or a subfolder for either downloading files and/or uploading files.
 
@@ -212,7 +170,7 @@ To stop a user from accessing a folder, follow these steps:
 
 The user will not get a notification when access has been revoked.
 
-Note: If a user does not have access to any shared folder or collection anymore, they will not be able to log in to the Desktop app and access your workspace anymore.
+*Note: If a user does not have access to any shared folder or collection anymore, they will not be able to log in to the Desktop app and access your workspace anymore.*
 
 ## Create a home
 
@@ -234,13 +192,13 @@ ACLs will be automatically created, giving the user read(download) and write(upl
 
 To modify a share, right click it in the share list and choose Edit.
 
-Note: If you change the share code attribute, update your API workflows accordingly.
+*Note: If you change the share code attribute, update your API workflows accordingly.*
 
 ## Removing a share
 
 To remove a share, right click it in the share list and choose Delete.
 
-Note: files on storage will NOT be affected, and will have to be manually deleted in the file browser.
+*Note: files on storage will NOT be affected, and will have to be manually deleted in the file browser.*
 
 ### Related articles
 

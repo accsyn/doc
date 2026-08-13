@@ -1,43 +1,5 @@
 # Tutorial - FTP server replacement
 
-Contents:
-
-[Introduction](ftp-server-replacement.md)
-
-[What is FTP?](ftp-server-replacement.md)
-
-[Why replace FTP?](ftp-server-replacement.md)
-
-[Why choose accsyn as the file transfer solution?](ftp-server-replacement.md)
-
-[Tutorial overview](ftp-server-replacement.md)
-
-[Schematics](ftp-server-replacement.md)
-
-[Setting up your workspace](ftp-server-replacement.md)
-
-[Setting up your own storage server (BYOS)](ftp-server-replacement.md)
-
-[Introduction to accsyn File Sharing](ftp-server-replacement.md)
-
-[Delivery](ftp-server-replacement.md)
-
-[Inviting an employee to your volume](ftp-server-replacement.md)
-
-[Share a project folder with users](ftp-server-replacement.md)
-
-[Example folder structure](ftp-server-replacement.md)
-
-[Creating the shared project folder](ftp-server-replacement.md)
-
-[Sharing the source folder](ftp-server-replacement.md)
-
-[Sharing the upload folder](ftp-server-replacement.md)
-
-[What will the user see?](ftp-server-replacement.md)
-
-[Conclusions](ftp-server-replacement.md)
-
 ## Introduction
 
 This tutorial goes through how to set up accsyn in a pure File Sharing configuration, either at accsyn default hosted cloud storage or self-serviced on-prem/cloud.
@@ -90,7 +52,7 @@ This tutorial will cover:
 
   
 
-NOTE: Made-up example data is provided in [brackets] throughout this tutorial.
+*NOTE: Made-up example data is provided in [brackets] throughout this tutorial.*
 
 ## Schematics
 
@@ -101,11 +63,11 @@ NOTE: Made-up example data is provided in [brackets] throughout this tutorial.
 The first step is to create your own accsyn Workspace in trial mode, the whole process is described in detail [here](https://sites.google.com/filmhubsoftware.com/help/trial):
 
 1. Open <https://accsyn.io/trial> in your web browser, you will be asked to sign up for your personal accsyn account (email address identifier).
-2. Download and log on to the accsyn [Desktop app](../admin/desktop-app.md), the app is used for managing file sharing.
+2. Download and log on to the accsyn [Desktop app](../desktop-app.md), the app is used for managing file sharing.
 
 ## Setting up your own storage server (BYOS)
 
-Note: this is for BYOS deployments where you would want to provide your own storage and serve files from your own local or cloud premises.
+*Note: this is for BYOS deployments where you would want to provide your own storage and serve files from your own local or cloud premises.*
 
 We assume you start off from the cloud workspace trial, skip this step if you already have set up an accsyn BYOS workspace:
 
@@ -144,7 +106,7 @@ Find more information about the accsyn Delivery feature [here](../delivery/index
 
 ## Inviting an employee to your volume
 
-Note: Skip this step if you intend to share files using your existing administrator account and have no need to invite a second operator to your workspace.
+*Note: Skip this step if you intend to share files using your existing administrator account and have no need to invite a second operator to your workspace.*
 
   
 
@@ -197,7 +159,7 @@ Login to the desktop app as an administrator or an employee having read & write 
 
   
 
-Note: if you want to share the entire project folder with a user, you can also grant access directly from the share dialog as needed.
+*Note: if you want to share the entire project folder with a user, you can also grant access directly from the share dialog as needed.*
 
   
 

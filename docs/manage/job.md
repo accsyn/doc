@@ -17,34 +17,6 @@ Prerequisites:
 - Logged on to <https://accsyn.io/jobs> as an elevated user - having employee or admin role.
 - Logged on to the desktop app as an elevated user - having employee or admin role. Download the app [here](https://accsyn.io/getapp).
 
-Contents:
-
-[Job monitoring](job.md)
-
-[My jobs](job.md)
-
-[Workspace jobs](job.md)
-
-[Job view](job.md)
-
-[Task list](job.md)
-
-[Footer](job.md)
-
-[Job and queue management](job.md)
-
-[Manage job states](job.md)
-
-[Queue system](job.md)
-
-[Concurrent file transfers](job.md)
-
-[Re-queue jobs](job.md)
-
-[(Advanced) Manage task states](job.md)
-
-[Retry mechanism](job.md)
-
 ## Job monitoring
 
 ### My jobs

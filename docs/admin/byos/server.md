@@ -1,68 +1,9 @@
 # Server administration
 
-NOTE: This feature is exposed to BYOS licensed workspaces only.
+*NOTE: This feature is exposed to [BYOS](index.md) licensed workspaces only.*
 
-[BYOS](index.md)
 
 This guide outlines how to install different types of servers and manage existing ones.
-
-Contents:
-
-[What is a server?](server.md)
-
-[Server types](server.md)
-
-[Server list](server.md)
-
-[Install a new server](server.md)
-
-[Requirements](server.md)
-
-[Preparations](server.md)
-
-[Installation](server.md)
-
-[Windows](server.md)
-
-[Mac](server.md)
-
-[Linux](server.md)
-
-[Post actions](server.md)
-
-[Edit a server](server.md)
-
-[Toolbar](server.md)
-
-[Serving](server.md)
-
-[Lanes & Engines](server.md)
-
-[Attributes](server.md)
-
-[Settings](server.md)
-
-[IP Overrides](server.md)
-
-[Metadata](server.md)
-
-[Manage the server installation](server.md)
-
-[Log file location](server.md)
-
-[Stopping and starting the server](server.md)
-
-[Running server as a different user](server.md)
-
-[Setting environment variables](server.md)
-
-[Enabling low port file transfers](server.md)
-
-[Background watchdog](server.md)
-
-[Update server](server.md)
-
-[Delete a server](server.md)
 
 ## What is a server?
 
@@ -84,7 +25,7 @@ A server is a physical or virtual machine that runs the accsyn app in background
 
   
 
-NOTE: There is also the user server type, which is installed by end users as part of [hosts](../hosts.md), facilitating 24/7 unattended delivery and file sharing.
+*NOTE: There is also the user server type, which is installed by end users as part of [hosts](../hosts.md), facilitating 24/7 unattended delivery and file sharing.*
 
 ## Server list
 
@@ -171,7 +112,7 @@ The installer relies on Java being present at the host, as Java is not bundled w
 
   
 
-Note: Mac and Windows installers come with Java bundled.
+*Note: Mac and Windows installers come with Java bundled.*
 
   
 
@@ -309,7 +250,7 @@ Right click the lane, choose the assigned engine and then choose Enable/Disable.
   
   
 
-NOTE: Compute/render servers require additional BYOS licences.
+*NOTE: Compute/render servers require additional BYOS licences.*
 
   
   
@@ -413,7 +354,7 @@ Linux
 - To stop the daemon: sudo systemctl stop accsyndaemon
 - To start the daemon: sudo systemctl start accsyndaemon
 
-NOTE: This might vary on different Linux distros.
+*NOTE: This might vary on different Linux distros.*
 
   
 
@@ -581,7 +522,7 @@ To be able to have the server bind to a port < 1024, permission needs to be gran
 
 setcap 'cap\_net\_bind\_service=+ep' /usr/lib/jvm/jre/bin/java
 
-Note: the Java path might be different based on your Linux distribution, find out the executable path by running "ps aux" while the accsyn daemon is running.
+*Note: the Java path might be different based on your Linux distribution, find out the executable path by running "ps aux" while the accsyn daemon is running.*
 
  Combined with running as a standard non-privileged user account, Java can refuse to start with this error:
 
@@ -609,7 +550,7 @@ Major updates to accsyn, that require all servers/clients to be re-installed and
 
   
 
-Note: Before doing an upgrade, older versions will be saved and can be restored if the upgrade fails.
+*Note: Before doing an upgrade, older versions will be saved and can be restored if the upgrade fails.*
 
   
 
@@ -636,7 +577,7 @@ The accsyn underlying database is backed up every hour and can be restored on re
 
   
 
-Note: No passwords or other user personal data is stored in the database/cloud instance. accsyn utilises Auth0 which is GDPR compliant.
+*Note: No passwords or other user personal data is stored in the database/cloud instance. accsyn utilises Auth0 which is GDPR compliant.*
 
 ## Delete a server
 
@@ -644,12 +585,12 @@ To delete a server, open the server's menu (three dots icon) on the right hand s
 
   
 
-NOTES: 
+*NOTES:*
 
-- A server must be shut down and be offline in order to be deleted.
+- *A server must be shut down and be offline in order to be deleted.*
 
-- The default server, e.g. the server serving the default volume, cannot be deleted. You must first configure another server to serve the default volume, or change default volume.
-- This cannot be undone.
+- *The default server, e.g. the server serving the default volume, cannot be deleted. You must first configure another server to serve the default volume, or change default volume.*
+- *This cannot be undone.*
 
   
 

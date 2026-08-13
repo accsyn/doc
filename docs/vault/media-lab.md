@@ -2,20 +2,6 @@
 
 Learn how to utilise our powerhouse media lab services, operated by senior staff with 25+ years of media industry experience.
 
-Contents:
-
-[Services & Prices](media-lab.md)
-
-[What is the accsyn Lab?](media-lab.md)
-
-[Get started](media-lab.md)
-
-[How does it work?](media-lab.md)
-
-[Existing accsyn customers](media-lab.md)
-
-[Services](media-lab.md)
-
 ## Services & Prices
 
 Get the list of updated services and prices here:

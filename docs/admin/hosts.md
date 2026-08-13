@@ -2,32 +2,6 @@
 
 This guide explains how to use hosts and servers to enable automated deliveries and expose local shared storage with accsyn.
 
-Contents:
-
-[What is a host?](hosts.md)
-
-[What is a client?](hosts.md)
-
-[Automatic deliveries](hosts.md)
-
-[Local file sharing](hosts.md)
-
-[The Hosts page](hosts.md)
-
-[Host installation](hosts.md)
-
-[Running the host as a specific user on Windows](hosts.md)
-
-[Running the host as a specific user on Mac](hosts.md)
-
-[Setup automated deliveries](hosts.md)
-
-[Setup local file sharing](hosts.md)
-
-[Mapping an entire volume as user](hosts.md)
-
-[Troubleshooting](hosts.md)
-
 ### What is a host?
 
 A host is a running instance of accsyn (API/web browser/CLI instances excluded) on behalf of your personal accsyn account. There are two types of hosts:
@@ -174,7 +148,7 @@ You will need to edit the launchctl config to have it run as the specific user a
 
 Example launchctl configuration for running accsyn daemon in user space as system user "myloginname"
 
-Note: If you have been running accsyn service elevated and switch to a non-elevated user, you will need to open up permissions / set ownership for the account in question on these folders: /var/log/accsyn, /Library/Preferences/com.accsyn, /tmp/.accsyn
+*Note: If you have been running accsyn service elevated and switch to a non-elevated user, you will need to open up permissions / set ownership for the account in question on these folders: /var/log/accsyn, /Library/Preferences/com.accsyn, /tmp/.accsyn*
 
 3. Load the config file: sudo launchctl load /Library/LaunchDaemons/com.accsyn.daemon.plist
 
@@ -187,7 +161,7 @@ Check the accsyn log that it is running properly, log location: /var/log/accsyn/
 
 ## Setup automated deliveries
 
-Note: Skip this step if you seek to only setup local file sharing.
+*Note: Skip this step if you seek to only setup local file sharing.*
 
 When the host has been installed you will be brought to the host edit page, if not click the pencil icon on the host when it appears to bring up the editor:
 

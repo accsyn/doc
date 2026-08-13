@@ -1,6 +1,6 @@
 # Render farm
 
-NOTE: This feature is exposed to BYOS workspaces only.
+*NOTE: This feature is exposed to BYOS workspaces only.*
 
 [BYOS](../admin/byos/index.md)
 
@@ -78,11 +78,11 @@ accsyn has built-in render farm functionality, providing execution of render app
 
 ## How does it work?
 
-The accsyn render farm feature is API centric and is designed to be integrated into other Python enabled applications such as DCC (Digital Content Creation) software (Maya, Unreal, Houdini etc.), although render jobs can be submitted using the [accsyn Desktop app](../admin/desktop-app.md) to some extent.
+The accsyn render farm feature is API centric and is designed to be integrated into other Python enabled applications such as DCC (Digital Content Creation) software (Maya, Unreal, Houdini etc.), although render jobs can be submitted using the [accsyn Desktop app](../desktop-app.md) to some extent.
 
   
 
-Note: Reach out to the accsyn support if you need the desktop app extended to fully support render job submission.
+*Note: Reach out to the accsyn support if you need the desktop app extended to fully support render job submission.*
 
   
 
@@ -224,7 +224,7 @@ Notes/hints: 
 
   
 
-1. Download and install the [accsyn Desktop app](../admin/desktop-app.md).
+1. Download and install the [accsyn Desktop app](../desktop-app.md).
 2. Log in with a user that has permission to access the input files at the volume, and submit render jobs.
 3. Open the Render tab.
 4. Drag and drop the input file [render.01001.ifd] on the area or click Storage button and browse to the file.

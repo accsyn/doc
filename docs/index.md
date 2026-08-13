@@ -2,24 +2,57 @@
 
 ## STATUS
 
-[Auth0 STATUS](https://www.google.com/url?q=https%3A%2F%2Fstatus.auth0.com%2F&sa=D&sntz=1&usg=AOvVaw2Utj4gAtlg78c8Y67GCIqs)
+<div class="grid cards status-online" markdown>
 
-Ongoing incidents: -
+-   ONLINE
 
-Upcoming planned maintenance: -
+</div>
 
-Uptime:
+<div class="grid cards" markdown>
 
-Guaranteed uptime:
+-   **Ongoing incidents**
 
-99.87%  - 8h outage recent year
+    ---
 
-99.3%  - Max 61h outage a year
+    \-
 
-Recent year outages:
+-   **Upcoming planned maintenance**
 
-  
-26.04.22 (10min); Auth0 DNS outage.26.01.28 (5min); Cloud accsyn server outage.25.08.13 (5h); Certificate upgrade issues.25.03.21 (Partial - mail - 2d); Mail service outage.25.01.09 (1h); Backend/hosting outage.25.01.08 (0.5h); Backend/hosting outage.25.01.07 08:30-08:30 (1h); Backend/hosting outage.24.12.19 07:30-08:00 (0.5h); Central backend SSO outage.24.11.05 - 2025.01.31; Ongoing migration of v2 workspaces, might cause outage and interruptions.
+    ---
+
+    \-
+
+</div>
+
+<div class="grid cards" markdown>
+
+-   **Uptime**
+
+    ---
+
+    99.94% - 5h outage recent year
+
+-   **Guaranteed uptime**
+
+    ---
+
+    99.3% - Max 61h outage a year
+
+</div>
+
+<div class="grid cards" markdown>
+
+-   **Recent outages**
+
+    ---
+
+    - 26.04.22 (10min); Auth0 DNS outage.
+    - 26.01.28 (5min); Cloud accsyn server outage.
+    - 25.08.13 (5h); Certificate upgrade issues.
+
+</div>
+
+Identity provider status: [Auth0 status page](https://status.auth0.com/)
 
 ## CONTACT SUPPORT
 
@@ -54,13 +87,13 @@ The quickest way to get help is using the live chat located right next to this s
 
 Feel free to drop an email to our support team:
 
-## [support@accsyn.com](mailto:support@accsyn.com)
+[support@accsyn.com](mailto:support@accsyn.com)
 
 ### Premium Support user or Enterprise Workspace
 
 As an Enterprise customer or if subscribing to our Premium Support service, you are entitled to prioritised support through email, a private chat channel and by telephone. We use Slack as our chat solution and you will be invited to your Slack channel during sign on. 
 
-Note: If you cannot use Slack and/or have your own chat solution we are open to other arrangements. 
+*Note: If you cannot use Slack and/or have your own chat solution we are open to other arrangements.*
 
 For urgent matters, if chat/telephone does not respond in time, please also send an urgent email to [support@accsyn.com](mailto:support@accsyn.com). Find more information about our email support below.
 
@@ -84,7 +117,7 @@ Desktop app:
 
 ### Terms
 
-accsyn SaaS is provided "as is" which means it is a best effort service. If you have questions regarding our support obligations, have a look at our [terms and conditions](http://filmhubsoftware.com/terms).
+accsyn SaaS is provided "as is" which means it is a best effort service. If you have questions regarding our support obligations, have a look at our [terms and conditions](https://accsyn.com/terms).
 
   
 

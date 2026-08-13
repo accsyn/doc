@@ -2,44 +2,6 @@
 
 This article describes the trial feature offered and how to get going with your own accsyn Workspace.
 
-Contents:
-
-[What is a trial?](trial.md)
-
-[What are the limitations?](trial.md)
-
-[Workspace types](trial.md)
-
-[Cloud Workspace (default)](trial.md)
-
-[BYOS Workspace](trial.md)
-
-[Enterprise Workspace](trial.md)
-
-[How do I launch the trial?](trial.md)
-
-[Create personal account](trial.md)
-
-[Launch the Cloud Workspace trial](trial.md)
-
-[Launch a BYOS trial](trial.md)
-
-[Can I get help setting up a trial?](trial.md)
-
-[For how long will my trial last?](trial.md)
-
-[Can I get my trial prolonged?](trial.md)
-
-[I love accsyn, how do I sign up?](trial.md)
-
-[Cloud Workspace](trial.md)
-
-[BYOS & Enterprise](trial.md)
-
-[accsyn was nothing for us, how do I cancel the trial?](trial.md)
-
-[Further resources](trial.md)
-
 ## What is a trial?
 
 It gives you the possibility to try out accsyn within your organisation before you decide to purchase a subscription.
@@ -181,7 +143,7 @@ To tear down your trial, click the workspace menu on the left and choose Delete 
 
   
 
-Note: This cannot be undone, all workspace data will be deleted immediately.
+*Note: This cannot be undone, all workspace data will be deleted immediately.*
 
 ## Further resources
 

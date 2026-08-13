@@ -194,10 +194,10 @@ C) Or as a dictionary (the internal accsyn notation):
 
   
 
-Notes: 
+*Notes:*
 
-- Nested tasks are allowed, these are defined by a "tasks" sub key. It is used with compute jobs, see examples below.
-- "0" and "1" above are called task "uri"s and must be unique (within the tasks locally at that level).  Tasks are also assigned a unique ID that can be used to further modify the job.
+- *Nested tasks are allowed, these are defined by a "tasks" sub key. It is used with compute jobs, see examples below.*
+- *"0" and "1" above are called task "uri"s and must be unique (within the tasks locally at that level).  Tasks are also assigned a unique ID that can be used to further modify the job.*
 
   
 
@@ -225,7 +225,7 @@ For a detailed breakdown of parties and paths, please refer to the [accsyn Pytho
 Example party definitions:
 
 - myworkspace; Denotes the workspace side as source or destination - the main site (hq), resolves to the [Server](../admin/byos/server.md) hosting the file (through volume) identified by the path.
-- john@user.com; Denotes a user as a source or destination, they must have a (running) client ([Desktop App](../admin/desktop-app.md) or [User Server](../admin/hosts.md) instance) that can be resolved by accsyn.
+- john@user.com; Denotes a user as a source or destination, they must have a (running) client ([Desktop App](../desktop-app.md) or [User Server](../admin/hosts.md) instance) that can be resolved by accsyn.
 - site=london; Denotes the site with (unique) API "code" identifier "london".
 - client=6611fbca3f8c4d3e7a3b678a; Denotes an explicit client, for example if a user is running multiple clients.
 
@@ -246,13 +246,13 @@ Path examples:
 
   
 
-Notes:
+*Notes:*
 
-- The "default volume" is the volume having the default attribute set to true, and is assigned the first volume created for a workspace. At least one default volume must be assigned within an accsyn workspace.
+- *The "default volume" is the volume having the default attribute set to true, and is assigned the first volume created for a workspace. At least one default volume must be assigned within an accsyn workspace.*
 
-- - A folder cannot be given as destination unless a "/" (or "\" for Windows) is added. For example downloading a file "x.jpeg" to destination "/Volumes/nas/TEMP" will store the file as "TEMP", not inside folder TEMP. Correct destination notation in this case is: "/Volumes/nas/TEMP/", or even better: "/Volumes/nas/TEMP/x.jpeg".
-  - Destination paths can be left out if other party is a site or a user's locally mapped share, this is called "path mirroring", and is suitable for keeping servers and/or workstations in sync when it comes to file structure.
-  - If the party is omitted, accsyn interprets this as the workspace party - the file is to be sent to or from hq.
+- - *A folder cannot be given as destination unless a "/" (or "\" for Windows) is added. For example downloading a file "x.jpeg" to destination "/Volumes/nas/TEMP" will store the file as "TEMP", not inside folder TEMP. Correct destination notation in this case is: "/Volumes/nas/TEMP/", or even better: "/Volumes/nas/TEMP/x.jpeg".*
+  - *Destination paths can be left out if other party is a site or a user's locally mapped share, this is called "path mirroring", and is suitable for keeping servers and/or workstations in sync when it comes to file structure.*
+  - *If the party is omitted, accsyn interprets this as the workspace party - the file is to be sent to or from hq.*
 
   
 
@@ -270,7 +270,7 @@ If no server or client can be resolved, an error will be given with appropriate 
 
   
 
-Note:  The accsyn Python API does not provide a built-in p2p ASC client - it can only be used to control transfers.
+*Note:  The accsyn Python API does not provide a built-in p2p ASC client - it can only be used to control transfers.*
 
   
 
@@ -419,10 +419,10 @@ Sync the folder "deployment" to a subfolder on accsyn workspace storage:
 
 }
 
-Notes:
+*Notes:*
 
-- A relative path is given as destination, this resolves to the default\* volume on the workspace.
-- The operator needs to have write access to the volume.
+- *A relative path is given as destination, this resolves to the default\* volume on the workspace.*
+- *The operator needs to have write access to the volume.*
 
 \* Default volume is the volume having the "default" attribute set to true.  
 
@@ -440,11 +440,11 @@ Download the file "Fireflies\_001" from volume "assets" going into the High prio
 
 }
 
-Notes:
+*Notes:*
 
-- The term operator means an elevated accsyn user - administrator or employee with read access to the (default) volume
-- The workspace party is omitted here, this is allowed since the other user party is clearly stated and no ambiguity exists when it comes to the source party.
-- Neither is the source volume given here as source, just a relative path. When no source volume or share is given, the default volume is assumed to be the source.
+- *The term operator means an elevated accsyn user - administrator or employee with read access to the (default) volume*
+- *The workspace party is omitted here, this is allowed since the other user party is clearly stated and no ambiguity exists when it comes to the source party.*
+- *Neither is the source volume given here as source, just a relative path. When no source volume or share is given, the default volume is assumed to be the source.*
 
   
 
@@ -472,7 +472,7 @@ Upload folder "/Users/john/Desktop/delivery" to Shared Folder "thefilm" into sub
 
 }
 
-Note: Shares are identified either by their unique ID, or by their unique API "code" identifier.
+*Note: Shares are identified either by their unique ID, or by their unique API "code" identifier.*
 
   
 
@@ -591,7 +591,7 @@ Upload a large folder, excluding all files ending with "tmp" and files that are 
 
 }]}
 
-Note: multiple exclude statements are separated by an escaped comma - \, . This means that an escaped comma cannot be used in exclude expressions.
+*Note: multiple exclude statements are separated by an escaped comma - \, . This means that an escaped comma cannot be used in exclude expressions.*
 
   
 
@@ -651,7 +651,7 @@ In some situations, a job needs to be created beforehand, to enable tasks to be 
 
 The job will immediately be set to done, with no files actually transferred.
 
-Note: This example relies on the main site name being the default - "hq", the expression can also be replaced with your workspace code/domain (mycompany in these examples).
+*Note: This example relies on the main site name being the default - "hq", the expression can also be replaced with your workspace code/domain (mycompany in these examples).*
 
 ## Compute/render job examples
 

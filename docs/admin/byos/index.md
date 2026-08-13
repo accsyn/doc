@@ -146,7 +146,7 @@ With this step, we configure and test the (TCP) network ports that remote client
 
   
 
-Note: If your server is directly connected to the Internet, skip the firewall NAT setup and instead make sure the ports are opened in local software firewall configs.
+*Note: If your server is directly connected to the Internet, skip the firewall NAT setup and instead make sure the ports are opened in local software firewall configs.*
 
   
 
@@ -172,7 +172,7 @@ Enter the absolute path on the server, the path must exist and be writeable by t
 
   
 
-Note: To change the user that the server runs as, please refer to [server documentation](server.md).
+*Note: To change the user that the server runs as, please refer to [server documentation](server.md).*
 
   
 

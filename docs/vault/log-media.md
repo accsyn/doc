@@ -13,7 +13,7 @@ Before you can start utilising accsyn title library capabilities, files and fold
 
 Whenever you are in a title context and an uploaded file is recognised as media, accsyn ingests the file into the vault. Ingest means that the file is stored in the vault database as a media entity with metadata extracted and, if a picture or video file, proxy and thumbnail. 
 
-Note: Files can be uploaded without being ingested, for later ingest or if you want the vault simply to ignore the files. This is done from the Storage view.
+*Note: Files can be uploaded without being ingested, for later ingest or if you want the vault simply to ignore the files. This is done from the Storage view.*
 
 Ingested media are displayed in the Media view within vault, files that are not ingested will only be displayed in the Files view.
 

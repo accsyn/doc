@@ -72,7 +72,7 @@ When done, click Export button to kick off export on the accsyn farm. You will b
 
   
 
-Note: not all entries are required with the Allente exporter, for example the trailer might not be necessary to include in some scenarios.
+*Note: not all entries are required with the Allente exporter, for example the trailer might not be necessary to include in some scenarios.*
 
   
 

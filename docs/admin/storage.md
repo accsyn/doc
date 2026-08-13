@@ -8,28 +8,6 @@ Prerequisites:
 
 - Logged on as an administrator at <https://accsyn.io/admin/volumes>.
 
-Contents:
-
-[What is a volume?](storage.md)
-
-[Volume list](storage.md)
-
-[View volume](storage.md)
-
-[Create a new volume](storage.md)
-
-[Edit a volume](storage.md)
-
-[Access](storage.md)
-
-[Servers](storage.md)
-
-[Attributes](storage.md)
-
-[Metadata](storage.md)
-
-[Delete a volume](storage.md)
-
 ## What is a volume?
 
 A volume is the topmost folder on a server where accsyn is allowed to access files - download, upload, rename, move and delete.
@@ -158,7 +136,7 @@ Revoke access
 
 Click the rightmost trashcan icon button at an ACL entry to revoke access for the user.
 
-Note: administrators cannot be revoked access on volume level, they will need to be disabled or deleted on a user level.
+*Note: administrators cannot be revoked access on volume level, they will need to be disabled or deleted on a user level.*
 
   
 
@@ -170,7 +148,7 @@ To set/change the server for a site, hover the corresponding site and click the 
 
 You can override the path(s) that volume has at the site, when changing these - make sure that the server and clients at site can read and write files as needed at these paths.
 
-Note: Site servers may require additional BYOS licences.
+*Note: Site servers may require additional BYOS licences.*
 
   
 
@@ -184,7 +162,7 @@ Transfer settings
 
 Override global accsyn copy protocol (ASC) file transfer settings for the volume.
 
-NOTE: Transfer settings can be further overridden on share, queue and individual job level.
+*NOTE: Transfer settings can be further overridden on share, queue and individual job level.*
 
   
 
@@ -192,7 +170,7 @@ Email Settings
 
 Override global email rules for jobs involving this share.
 
-NOTE: Email settings can be further overridden on queue and individual job level.
+*NOTE: Email settings can be further overridden on queue and individual job level.*
 
   
 
@@ -206,11 +184,11 @@ To delete a volume, open the volume menu (three dots icon) on the right hand sid
 
   
 
-NOTES: 
+*NOTES:*
 
-- Default volumes cannot be deleted, assign another volume as default first.
+- *Default volumes cannot be deleted, assign another volume as default first.*
 
-- This cannot be undone.
+- *This cannot be undone.*
 
   
 

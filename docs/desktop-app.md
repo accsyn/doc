@@ -1,42 +1,12 @@
 # accsyn Desktop App
 
-[What is the accsyn Desktop app?](desktop-app.md)
-
-[When do I need to use the desktop app?](desktop-app.md)
-
-[Where to download](desktop-app.md)
-
-[Windows install](desktop-app.md)
-
-[Mac install](desktop-app.md)
-
-[Linux install](desktop-app.md)
-
-[Linux desktop launchers](desktop-app.md)
-
-[Manage](desktop-app.md)
-
-[Updating](desktop-app.md)
-
-[Log file location](desktop-app.md)
-
-[Local preferences](desktop-app.md)
-
-[Troubleshooting](desktop-app.md)
-
-[I have trouble logging in, it never gets past the login screen](desktop-app.md)
-
-[I am getting java.lang.UnsupportedOperationException: Setting a system-wide Policy object is not supported](desktop-app.md)
-
-[Related articles](desktop-app.md)
-
 ## What is the accsyn Desktop app?
 
   
 
-The accsyn app is a desktop application primarily for providing accelerated accsyn p2p file transfers running in the background (tray), but also has a GUI enabling advanced functionality that includes extended [Delivery](../delivery/index.md), [File Sharing](../file-sharing/index.md) and [Media Vault](../vault/index.md) management.
+The accsyn app is a desktop application primarily for providing accelerated accsyn p2p file transfers running in the background (tray), but also has a GUI enabling advanced functionality that includes extended [Delivery](delivery/index.md), [File Sharing](file-sharing/index.md) and [Media Vault](vault/index.md) management.
 
-![](../assets/admin_desktop-app-fa39d7dd7bb8.png)
+![](assets/admin_desktop-app-fa39d7dd7bb8.png)
 
 Screenshot - manage title projects.
 
@@ -46,7 +16,7 @@ The app is required to facilitate accelerated and resumable file transfers - the
 
   
 
-When creating a [delivery](../delivery/index.md), or actioning a delivery on the web, the app installation is guided from the browser - no manual installation is required. The app will then run in the background (system tray / menu bar) as needed during transfer, and can then be closed.
+When creating a [delivery](delivery/index.md), or actioning a delivery on the web, the app installation is guided from the browser - no manual installation is required. The app will then run in the background (system tray / menu bar) as needed during transfer, and can then be closed.
 
   
 
@@ -55,12 +25,12 @@ Besides this, the app is mandatory when:
   
 
 - Detailed monitoring and audit of jobs (deliveries, transfers, queues).
-- Managing [file sharing](../file-sharing/index.md) on your cloud or on-prem storage.
-- [Access](../file-sharing/access.md) shared folders.
-- Manage the accsyn [Media Vault](../vault/index.md) - ingest and manage your media, as a manager.
-- Submit render jobs and publish files in BYOS configurations - part of [workflows](../developer/index.md).
+- Managing [file sharing](file-sharing/index.md) on your cloud or on-prem storage.
+- [Access](file-sharing/access.md) shared folders.
+- Manage the accsyn [Media Vault](vault/index.md) - ingest and manage your media, as a manager.
+- Submit render jobs and publish files in BYOS configurations - part of [workflows](developer/index.md).
 
-Note: the desktop app is also included in the accsyn Daemon(service) installation, used for setting up [BYOS servers](byos/server.md).
+*Note: the desktop app is also included in the accsyn Daemon(service) installation, used for setting up [BYOS servers](admin/byos/server.md).*
 
 ## Where to download
 
@@ -164,7 +134,7 @@ If installed for current user:
 
   
 
-Note: if the in-app update fails, download the installer using the link presented and re-install using the instructions above.
+*Note: if the in-app update fails, download the installer using the link presented and re-install using the instructions above.*
 
   
 
@@ -235,8 +205,8 @@ Having further issues? Please reach out to support providing your logs folder co
 
 ### Related articles
 
-[Daemon(service)](byos/server.md)
+[Daemon(service)](admin/byos/server.md)
 
-[File Sharing](../file-sharing/index.md)
+[File Sharing](file-sharing/index.md)
 
-[Media Vault](../vault/index.md)
+[Media Vault](vault/index.md)

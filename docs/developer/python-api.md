@@ -2,34 +2,6 @@
 
 The accsyn Python API facilitates programmable file transfers with Python (v3).
 
-Contents:
-
-[How to create and manage API keys](python-api.md)
-
-[Manage user API keys](python-api.md)
-
-[Manage workspace API keys (administrators)](python-api.md)
-
-[Install the Python API](python-api.md)
-
-[PIP](python-api.md)
-
-[Poetry](python-api.md)
-
-[From source](python-api.md)
-
-[Using](python-api.md)
-
-[Create a new API session](python-api.md)
-
-[Example - download a file](python-api.md)
-
-[Documentation](python-api.md)
-
-[Source code](python-api.md)
-
-[Further resources](python-api.md)
-
 ## How to create and manage API keys
 
 To create a new API key, open <https://accsyn.io/developer> in your browser. This page is available from the user menu in the top right corner, "Developer" menu entry:
@@ -112,7 +84,7 @@ job = session.create("transfer",{"source":"volume=projects/A001\_C064\_09224Y\_0
 
   
 
-Note: the accsyn API does not run any file transfers itself, it can only queue file transfers that then get resolved and dispatched to the involved server and client p2p endpoints.
+*Note: the accsyn API does not run any file transfers itself, it can only queue file transfers that then get resolved and dispatched to the involved server and client p2p endpoints.*
 
 ## Documentation
 

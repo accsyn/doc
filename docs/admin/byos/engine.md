@@ -1,8 +1,7 @@
 # Engine administration
 
-NOTE: This feature is exposed to BYOS and Enterprise licensed workspaces only.
+*NOTE: This feature is exposed to [BYOS](index.md) and Enterprise licensed workspaces only.*
 
-[BYOS](index.md)
 
 This guide walks through how to create and configure engines within an accsyn workspace.
 
@@ -12,25 +11,6 @@ Prerequisites:
 
 - Logged on as an administrator to <https://accsyn.io/admin/engines>.
 
-Contents:
-
-[What is an engine?](engine.md)
-
-[Engine list](engine.md)
-
-[Create a new engine](engine.md)
-
-[Edit an engine](engine.md)
-
-[Script](engine.md)
-
-[Attributes](engine.md)
-
-[Metadata](engine.md)
-
-[Delete an engine](engine.md)
-
-[Related resources](engine.md)
 
 ## What is an engine?
 
@@ -124,12 +104,12 @@ To delete an engine, click the red trashcan button on the engine in the listing.
 
   
 
-NOTES: 
+*NOTES:*
 
-- No job(s) using the engine can be active, they have to be aborted.
+- *No job(s) using the engine can be active, they have to be aborted.*
 
-- Engine will be de-assigned from lane clients.
-- This cannot be undone.
+- *Engine will be de-assigned from lane clients.*
+- *This cannot be undone.*
 
 ### Related resources
 

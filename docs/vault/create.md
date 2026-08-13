@@ -4,13 +4,13 @@ Getting started creating your first accsyn title / project and uploading media t
 
 ### Preparations
 
-- To manage your Media Vault, you will first need to [install the accsyn Desktop App](../admin/desktop-app.md).
+- To manage your Media Vault, you will first need to [install the accsyn Desktop App](../desktop-app.md).
 - Launch the app
 - Login as a user having the administrator or employee role.
 
   
 
-Note: Make sure you are not on a BYOS workspace, as the Media Vault feature is not available in that configuration.
+*Note: Make sure you are not on a BYOS workspace, as the Media Vault feature is not available in that configuration.*
 
 ## Create title
 

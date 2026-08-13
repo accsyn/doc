@@ -2,46 +2,6 @@
 
 This guide describes how to sign up your personal accsyn account and have your user entity created in the platform.
 
-Contents:
-
-[What is the personal accsyn account?](account.md)
-
-[Register a new account](account.md)
-
-[Choosing identity provider](account.md)
-
-[Signing up with accsyn email-password provider](account.md)
-
-[Sign up with Google](account.md)
-
-[Login](account.md)
-
-[Log in to browser](account.md)
-
-[Log in with desktop app](account.md)
-
-[Manage your account](account.md)
-
-[Primary email](account.md)
-
-[Identity provider](account.md)
-
-[Multifactor authenticated](account.md)
-
-[Account created](account.md)
-
-[Account activity](account.md)
-
-[Developer](account.md)
-
-[Troubleshooting](account.md)
-
-[I have forgotten my password](account.md)
-
-[My account is disabled](account.md)
-
-[Further resources](account.md)
-
 ### What is the personal accsyn account?
 
 An accsyn account is a unique email address identifying a physical person within the platform.
@@ -56,7 +16,7 @@ By design, all access to the accsyn platform is restricted and you need to be lo
 
   
 
-Note: There is one exception to that - anonymous deliveries,  this is the only context where a user can access files without needing to log in.
+*Note: There is one exception to that - anonymous deliveries,  this is the only context where a user can access files without needing to log in.*
 
 ## Register a new account
 
@@ -107,7 +67,7 @@ Open <https://accsyn.io> in your browser, this will take you to the login page.
 
 ### Log in with desktop app
 
-For detailed information on this topic, refer to the [Desktop app guide](admin/desktop-app.md)
+For detailed information on this topic, refer to the [Desktop app guide](desktop-app.md)
 
 ## Manage your account
 

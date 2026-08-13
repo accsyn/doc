@@ -1,72 +1,9 @@
 # Work with titles and media
 
-Contents:
-
-[A breakdown of the vault](work.md)
-
-[1 - Vault view](work.md)
-
-[2- Monitor panel](work.md)
-
-[3 - Account button](work.md)
-
-[4 - Breadcrumb](work.md)
-
-[5 - Main navigation](work.md)
-
-[Title browser](work.md)
-
-[6 - Titles toolbar](work.md)
-
-[7 - Search titles and filter/display options](work.md)
-
-[8 - Recent titles](work.md)
-
-[9 - Type filter buttons](work.md)
-
-[10 - Title listing](work.md)
-
-[New title placeholder](work.md)
-
-[Title view - files](work.md)
-
-[Title banner](work.md)
-
-[Toolbar](work.md)
-
-[Share browser](work.md)
-
-[File list](work.md)
-
-[Title view - media](work.md)
-
-[Search media](work.md)
-
-[Advanced media tag filters](work.md)
-
-[Toolbar & action bar](work.md)
-
-[Manage title](work.md)
-
-[Set a custom cover image](work.md)
-
-[Set a custom title banner image](work.md)
-
-[Remove a title](work.md)
-
-[Manage media](work.md)
-
-[Get media info](work.md)
-
-[Storage](work.md)
-
-[Media](work.md)
-
 This guide describes the vault view in the accsyn Desktop app - how to navigate it, find information and work with your titles and media.
-
   
 
-Note: This view is not present for BYOS workspaces, please refer to separate documentation.
+*Note: This view is not present for BYOS workspaces, please refer to separate documentation.*
 
   
 
@@ -186,7 +123,7 @@ The top of the title view is occupied by the title banner - where title and medi
 - Click the IMDb button to open the title in IMDb.
 - Click the pencil (edit) button to [edit/remove the title](media-lab.md).
 
-Note: A default title banner background is rendered in the accsyn app, change it from the edit title dialog.
+*Note: A default title banner background is rendered in the accsyn app, change it from the edit title dialog.*
 
   
 

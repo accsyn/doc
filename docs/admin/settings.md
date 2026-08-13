@@ -8,105 +8,13 @@ Prerequisites:
 
 - Logged on as an administrator to <https://accsyn.io/admin/settings>.
 
-Contents:
-
-[General](settings.md)
-
-[Name](settings.md)
-
-[Logotype](settings.md)
-
-[Security](settings.md)
-
-[Enforce MFA](settings.md)
-
-[Storage](settings.md)
-
-[Create directories](settings.md)
-
-[Auto create homes](settings.md)
-
-[Homes directory](settings.md)
-
-[Enable cache](settings.md)
-
-[Advanced](settings.md)
-
-[Job](settings.md)
-
-[On missing file/frame](settings.md)
-
-[Queue interrupt policy](settings.md)
-
-[Max retries](settings.md)
-
-[Job retry delay](settings.md)
-
-[File Transfer](settings.md)
-
-[Enable uploads](settings.md)
-
-[Enable downloads](settings.md)
-
-[Speed limit](settings.md)
-
-[Transfer encryption](settings.md)
-
-[Transfer mode](settings.md)
-
-[File comparison rule](settings.md)
-
-[File resume size limit](settings.md)
-
-[Transfer attributes](settings.md)
-
-[Concurrent transfers](settings.md)
-
-[Logging](settings.md)
-
-[Advanced](settings.md)
-
-[Email](settings.md)
-
-[Global email settings](settings.md)
-
-[Issues](settings.md)
-
-[Client register](settings.md)
-
-[Job submit](settings.md)
-
-[Job failure](settings.md)
-
-[User](settings.md)
-
-[Share](settings.md)
-
-[Hooks](settings.md)
-
-[Compute](settings.md)
-
-[Enable compute](settings.md)
-
-[Avoid client policy for failed executions](settings.md)
-
-[Queue interrupt policy (compute)](settings.md)
-
-[Pools](settings.md)
-
-[Publish](settings.md)
-
-[Metadata](settings.md)
-
-[Metadata](settings.md)
-
 ## General
 
 ### Name
 
 Change the name of the workspace.
 
-Note: Pages need to be reloaded and the desktop app needs to be restarted for changes to take effect in UIs.
+*Note: Pages need to be reloaded and the desktop app needs to be restarted for changes to take effect in UIs.*
 
   
 
@@ -114,7 +22,7 @@ Code
 
 The unique API identifier of workspace, as generated from the initial name chosen. This is also the same as the REST domain / hostname, e.g. https://<workspace code>.[accsyn.com/api/v3](http://accsyn.com/api/v3)
 
-Note: Changing the code is an operation that only can be performed by the accsyn Support team.
+*Note: Changing the code is an operation that only can be performed by the accsyn Support team.*
 
   
 
@@ -122,7 +30,7 @@ Note: Changing the code is an operation that only can be performed by the accsyn
 
 The images to use for branding, in light and dark mode variants.  They are chosen from resources, and need to be uploaded here in advance: <https://accsyn.io/admin/resources>
 
-Note: logotype images will be scaled down to fit 140x40px which are the default accsyn logotype dimensions, make sure your imagery looks decent in this format.
+*Note: logotype images will be scaled down to fit 140x40px which are the default accsyn logotype dimensions, make sure your imagery looks decent in this format.*
 
 ## Security
 
@@ -209,7 +117,7 @@ The policy to use for interrupting transfer jobs below in the queue, by default 
 
   
 
-Note: The transfer settings below can be overridden on volume, queue and job level.
+*Note: The transfer settings below can be overridden on volume, queue and job level.*
 
   
 
@@ -237,7 +145,7 @@ Enable file downloads from the workspace globally.
 
   
 
-Note: The transfer settings below can be overridden on volume, queue and job level.
+*Note: The transfer settings below can be overridden on volume, queue and job level.*
 
   
 
@@ -297,7 +205,7 @@ Advanced transfer settings, see [accsyn Internal settings](../settings.md) for d
 
 ## Email
 
-Note: The email settings can be overridden on volume and queue level.
+*Note: The email settings can be overridden on volume and queue level.*
 
   
 
@@ -422,6 +330,6 @@ Define global workspace metadata, these are passed on to hooks and compute jobs.
 
 Related articles
 
-[Desktop App](desktop-app.md)
+[Desktop App](../desktop-app.md)
 
 [accsyn Internal Settings](../settings.md)

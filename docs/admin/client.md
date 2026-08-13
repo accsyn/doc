@@ -8,14 +8,6 @@ Prerequisites:
 
 - Logged on as an administrator to <https://accsyn.io/admin/clients>.
 
-Contents:
-
-[What is a client?](client.md)
-
-[Client list](client.md)
-
-[Delete a client](client.md)
-
 ## What is a client?
 
 A client is the remote party in a p2p accsyn client file transfer.
@@ -62,10 +54,10 @@ Client menu:
 
 To delete a client, open the client menu (three dots icon) on the right hand side and choose Delete.
 
-NOTE: This cannot be undone.
+*NOTE: This cannot be undone.*
 
 Any job(s) that reside in the queue will be moved to the default queue. If this is the only queue left, deletion will fail.
 
 Related articles
 
-[Desktop App](desktop-app.md)
+[Desktop App](../desktop-app.md)

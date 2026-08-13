@@ -8,24 +8,6 @@ Prerequisites:
 
 - Logged on as an administrator to <https://accsyn.io/admin/queues>.
 
-Contents:
-
-[What is a queue?](queue.md)
-
-[Queue list](queue.md)
-
-[Create a new queue](queue.md)
-
-[Edit a queue](queue.md)
-
-[Attributes](queue.md)
-
-[Hooks](queue.md)
-
-[Metadata](queue.md)
-
-[Delete a queue](queue.md)
-
 ## What is a queue?
 
 A queue is an accsyn job entity acting as a container for ordered jobs having a fixed priority.
@@ -90,7 +72,7 @@ Transfer settings
 
 Override global accsyn copy protocol (ASC) file transfer settings for the queue.
 
-NOTE: Transfer settings can be further overridden on individual job level.
+*NOTE: Transfer settings can be further overridden on individual job level.*
 
   
 
@@ -98,7 +80,7 @@ Job settings
 
 Override global job settings for the queue.
 
-NOTE: Job settings can be further overridden on individual job level.
+*NOTE: Job settings can be further overridden on individual job level.*
 
   
 
@@ -122,6 +104,6 @@ Define metadata for this queue, which will be appended to upstream metadata and 
 
 To delete a queue, open the menu (three dots icon) on the right hand side and choose Delete.
 
-NOTE: This cannot be undone.
+*NOTE: This cannot be undone.*
 
 Any job(s) that reside in the queue will be moved to the default queue. If this is the only queue left, deletion will fail.

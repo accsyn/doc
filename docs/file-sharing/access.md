@@ -8,30 +8,6 @@ For more information on how to action a delivery, head over to this guide:
 
 [Receive Delivery](../delivery/receive.md)
 
-Contents:
-
-[Email notification](access.md)
-
-[Installing the accsyn Desktop app](access.md)
-
-[Downloading files](access.md)
-
-[Upload files](access.md)
-
-[Advanced mode - transfer](access.md)
-
-[Manage app](access.md)
-
-[Installation location](access.md)
-
-[Data files location](access.md)
-
-[Log files location](access.md)
-
-[Uninstall app](access.md)
-
-[Troubleshooting](access.md)
-
 ## Email notification
 
 When someone gives you access to a folder within an accsyn workspace, you should have received an email notification:
@@ -42,7 +18,7 @@ Example of a file sharing email notification
 
 If it is the first time using the accsyn platform, you will also receive an invitation email telling you how to activate your personal accsyn account.
 
-Note: If you cannot find these emails, make sure to check your filtered spam inbox for emails. Search for the sender "[noreply@accsyn.com](mailto:noreply@accsyn.com)".
+*Note: If you cannot find these emails, make sure to check your filtered spam inbox for emails. Search for the sender "[noreply@accsyn.com](mailto:noreply@accsyn.com)".*
 
 If you did not get any email, you can still get going by signing up at <https://accsyn.com/signup> using the same email address that files were shared to. When signed in, you will be redirected to the Shared with me web page giving you full instructions on how to proceed from there.
 
@@ -50,7 +26,7 @@ If you did not get any email, you can still get going by signing up at <https://
 
 Follow this guide to install the accsyn Desktop app on your computer:
 
-[Install Desktop App](../admin/desktop-app.md)
+[Install Desktop App](../desktop-app.md)
 
 ## Downloading files
 
@@ -65,7 +41,7 @@ Example screenshot of the desktop app with two new accessible shared folders.
 
 3. To download files from a folder, click the green Download button. 
 
-Note: If you do not see the notification(s), or you have dismissed them, click on the Download button in the upper area to launch the download tool.
+*Note: If you do not see the notification(s), or you have dismissed them, click on the Download button in the upper area to launch the download tool.*
 
 4. The download tool will appear, giving you the option to select which files and folders to download, and where to download them to locally:
 
@@ -169,7 +145,7 @@ To uninstall accsyn installed as an administrator on Windows, or with superuser 
 
   
 
-Note: The uninstaller does not remove data and log files, these have to be manually removed.
+*Note: The uninstaller does not remove data and log files, these have to be manually removed.*
 
 ## Troubleshooting
 

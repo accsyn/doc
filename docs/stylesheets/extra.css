@@ -22,6 +22,28 @@
   --md-accent-fg-color: #5ff7ac;
 }
 
+/* Status banner card - green background with white ONLINE text */
+.md-typeset .status-online li {
+  background-color: #00a100;
+  border: none;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.md-typeset .status-online li > p:first-child {
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin: 0.3em 0 0.1em;
+}
+
+.md-typeset .status-online li:hover,
+.md-typeset .status-online li:focus-within {
+  border: none;
+  box-shadow: var(--md-shadow-z2);
+}
+
 /* Changelog release cards */
 .md-typeset .release-card {
   border: 1px solid var(--md-default-fg-color--lightest);

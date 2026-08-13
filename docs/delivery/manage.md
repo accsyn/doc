@@ -51,7 +51,7 @@ By default, recipients that have not actioned deliveries are notified automatica
 - A first reminder when 2/3 of the time has passed up until expiry.
 - A second reminder three (3) days before expiry.
 
-Note: When the delivery expires, the files will be kept on storage for another 4h after which they will be permanently deleted. This applies to standard deliveries uploaded to a temp space, when delivering permanent files residing on the accsyn Cloud storage or BYOS storage, files will not be touched.
+*Note: When the delivery expires, the files will be kept on storage for another 4h after which they will be permanently deleted. This applies to standard deliveries uploaded to a temp space, when delivering permanent files residing on the accsyn Cloud storage or BYOS storage, files will not be touched.*
 
 To manually notify a recipient, click the paperplane button on the right hand side of the recipient in the Pending section. A reminder email will be dispatched to the user, if they do not receive it - have them check their spam filters.
 

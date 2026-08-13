@@ -4,7 +4,7 @@ This guide covers media streaming within the accsyn platform - send VOD web stre
 
   
 
-Note: Web streaming comes with an initial amount of free views, after which additional views are charged in arrears. Check accsyn [pricing](https://accsyn.com/pricing) for more information.
+*Note: Web streaming comes with an initial amount of free views, after which additional views are charged in arrears. Check accsyn [pricing](https://accsyn.com/pricing) for more information.*
 
 ## Prepare streaming
 

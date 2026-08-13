@@ -11,7 +11,7 @@ This guide shows how a file delivery is created in accsyn and sent to a recipien
 
 A standard accsyn delivery is one or more files and/or folders uploaded to a temporary place on your accsyn cloud storage, for delivery to one or more recipients.
 
-Note: See below for guides on delivering from files already residing on the cloud storage or delivering media from a title.
+*Note: See below for guides on delivering from files already residing on the cloud storage or delivering media from a title.*
 
   
 
@@ -72,7 +72,7 @@ Disclaimer: Allowing anonymous access is generally a bad idea, as you will expos
 
 When ready, click SEND DELIVERY to have the download link created and emails sent to the recipients.
 
-Note: you can leave the delivery for completion later, deliveries will stay there for 8h before they expire and you will have to start over.
+*Note: you can leave the delivery for completion later, deliveries will stay there for 8h before they expire and you will have to start over.*
 
 ## Create an upload request
 
@@ -110,7 +110,7 @@ Deliveries can also be made from the accsyn Cloud storage if you are using it as
 
   
 
-1. Download and install the [accsyn Desktop app](../admin/desktop-app.md), log in to your workspace (with a user having the admin or employee role)
+1. Download and install the [accsyn Desktop app](../desktop-app.md), log in to your workspace (with a user having the admin or employee role)
 2. Open the STORAGE tab.
 3. Upload files & folders to your permanent storage.
 4. Select the files/folders and either click the Share button in the action bar and choose Deliver, or right click and do Share>Deliver.
@@ -125,7 +125,7 @@ Screenshot showing desktop app when choosing a file for delivery.
 
 Media can easily be delivered from the media vault:
 
-1. Download and install the [accsyn Desktop app](../admin/desktop-app.md), log in to your workspace (with a user having the admin or employee role)
+1. Download and install the [accsyn Desktop app](../desktop-app.md), log in to your workspace (with a user having the admin or employee role)
 2. Create the title and log media to deliver.
 3. Select the media file(s) and choose Deliver from the action bar, or right click media and choose Deliver:
 

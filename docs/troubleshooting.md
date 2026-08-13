@@ -10,50 +10,6 @@ Included in your BYOS subscription contract is office hours debugging of failing
 
 IMPORTANT NOTE: We cannot make accsyn solve issues that are out of our control, this includes misconfiguration of the software, errors in your software/operating system/drivers or hardware errors such as failing disks/network/controllers.
 
-Contents:
-
-[accsyn setup](troubleshooting.md)
-
-[Directory listing crashes during BYOS setup](troubleshooting.md)
-
-[Transfers cannot be submitted](troubleshooting.md)
-
-[Job warning and error codes](troubleshooting.md)
-
-[Transfer does not start](troubleshooting.md)
-
-[The remote client is offline](troubleshooting.md)
-
-[The remote client is disabled](troubleshooting.md)
-
-[The accsyn trial period has ended](troubleshooting.md)
-
-[The server is offline](troubleshooting.md)
-
-[The user is disabled](troubleshooting.md)
-
-[The share is offline](troubleshooting.md)
-
-[The share is disabled](troubleshooting.md)
-
-[The involved site is disabled](troubleshooting.md)
-
-[A free channel/port cannot be allocated](troubleshooting.md)
-
-[Transfer failures](troubleshooting.md)
-
-[Missing source file(s)](troubleshooting.md)
-
-[Network connection lost](troubleshooting.md)
-
-[Files cannot be written](troubleshooting.md)
-
-[Firewalls are blocking connections or scramble the connection during transfer](troubleshooting.md)
-
-[Error and warning codes](troubleshooting.md)
-
-[Having further issues?](troubleshooting.md)
-
 ## accsyn setup
 
 Issues related to accsyn workspace installation only.
@@ -112,7 +68,7 @@ Solution: Make sure the user enables their client to have the transfer commence.
 
 Description:
 
-Note: Affects trial licensed accsyn workspaces only.
+*Note: Affects trial licensed accsyn workspaces only.*
 
 When the accsyn trial ends, no transfer jobs will be executed until the trial is extended or a valid permanent subscription licence is made active. The message “Accsyn demo license as expired. (W#J066)” should be displayed on the job. This is a global issue and should be displayed as a top bar notification in your UI. 
 

@@ -133,7 +133,7 @@ If you just need a delivery tool for sending out file packages, or receiving fil
 
 ### File Sharing
 
-When you need an area to store and share files during production with collaborators, either cloud or on-prem([BYOS](admin/byos/index.md)). To manage your storage and sharing, you will need to install and use the [accsyn Desktop app](admin/desktop-app.md) after your trial is up and running.
+When you need an area to store and share files during production with collaborators, either cloud or on-prem([BYOS](admin/byos/index.md)). To manage your storage and sharing, you will need to install and use the [accsyn Desktop app](desktop-app.md) after your trial is up and running.
 
 [File Sharing](file-sharing/index.md)
 
@@ -141,7 +141,7 @@ When you need an area to store and share files during production with collaborat
 
 ### Media Vault
 
-The film is produced but the master needs some place to live, organised with proxies and tooling for distributing it to the screen. To manage your vault, you will need to install and use the [accsyn Desktop app](admin/desktop-app.md) after your trial is up and running.
+The film is produced but the master needs some place to live, organised with proxies and tooling for distributing it to the screen. To manage your vault, you will need to install and use the [accsyn Desktop app](desktop-app.md) after your trial is up and running.
 
 [Media Vault](vault/index.md)
 

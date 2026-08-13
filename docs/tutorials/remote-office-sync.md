@@ -1,33 +1,5 @@
 # Tutorial - Remote office sync
 
-Contents:
-
-[Introduction](remote-office-sync.md)
-
-[Schematics](remote-office-sync.md)
-
-[Prerequisites](remote-office-sync.md)
-
-[Setting up site](remote-office-sync.md)
-
-[Manual Sync](remote-office-sync.md)
-
-[Setting up project queues](remote-office-sync.md)
-
-[Manual queue creation](remote-office-sync.md)
-
-[Create queue using API](remote-office-sync.md)
-
-[Setting up volume](remote-office-sync.md)
-
-[Developing](remote-office-sync.md)
-
-[In-house tool plugin development](remote-office-sync.md)
-
-[accsyn sync script](remote-office-sync.md)
-
-[Further resources](remote-office-sync.md)
-
 ## Introduction
 
 This tutorial describes how to set up manual or API-driven sync of file assets between main premises (hq) and a remote site - a common scenario in film post production for distributed organisations:
@@ -49,7 +21,7 @@ The tutorial will walk through:
 
   
 
-NOTE: Made-up example data is provided in [brackets] throughout this tutorial.
+*NOTE: Made-up example data is provided in [brackets] throughout this tutorial.*
 
 ## Schematics
 
@@ -103,7 +75,7 @@ Here is an example of how to download a folder from central hq/accsyn location, 
 
 ## Setting up project queues
 
-Note: You can skip this step if you do not need project queues - all sync jobs will run in the default (Medium prio) queue.
+*Note: You can skip this step if you do not need project queues - all sync jobs will run in the default (Medium prio) queue.*
 
 ### Manual queue creation
 
@@ -188,7 +160,7 @@ Breakdown of the script:
 
   
 
-Note: this is just a sample script - modify as you see fit within your production environment.
+*Note: this is just a sample script - modify as you see fit within your production environment.*
 
 ## Further resources
 

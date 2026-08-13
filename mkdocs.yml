@@ -16,15 +16,13 @@ theme:
     - search.highlight
     - content.code.copy
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       primary: custom
       accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: custom
       accent: custom
       toggle:
@@ -33,6 +31,9 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/hubspot.js
 
 markdown_extensions:
   - admonition
@@ -49,9 +50,7 @@ plugins:
 nav:
   - Home: index.md
   - Introduction: introduction.md
-  - Account: account.md
-  - Start a trial: trial.md
-  - Specifications: specifications.md
+  - Starting a trial: trial.md
   - Delivery:
       - delivery/index.md
       - Create: delivery/create.md
@@ -82,7 +81,6 @@ nav:
       - Job specification: developer/job-specification.md
   - Admin:
       - admin/index.md
-      - Desktop App: admin/desktop-app.md
       - Hosts: admin/hosts.md
       - Users: admin/user.md
       - Storage: admin/storage.md
@@ -96,13 +94,16 @@ nav:
           - Server: admin/byos/server.md
           - Site: admin/byos/site.md
           - Engine: admin/byos/engine.md
+  - Account: account.md
+  - Desktop App: desktop-app.md
+  - Specifications: specifications.md
+  - Changelog: changelog.md
+  - Troubleshooting:
+      - troubleshooting.md
+      - Warnings: warnings.md
+      - Errors: errors.md
   - Tutorials:
       - Film festival: tutorials/film-festival.md
       - FTP server replacement: tutorials/ftp-server-replacement.md
       - Outsourcing pipeline: tutorials/outsourcing-pipeline.md
       - Remote office sync: tutorials/remote-office-sync.md
-  - Troubleshooting:
-      - troubleshooting.md
-      - Warnings: warnings.md
-      - Errors: errors.md
-  - Changelog: changelog.md

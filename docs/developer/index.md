@@ -2,22 +2,6 @@
 
 This section guides you through how to develop with accsyn.
 
-Contents:
-
-[Introduction](index.md)
-
-[Developing with accsyn](index.md)
-
-[Python API](index.md)
-
-[Job JSON specification](index.md)
-
-[Hooks](index.md)
-
-[Publish](index.md)
-
-[Rendering/compute](index.md)
-
 ## Introduction
 
 accsyn is designed from the ground up to facilitate API-driven file transfers and compute workflows, enabling advanced automated workflows and integration into third-party tools.
@@ -51,7 +35,7 @@ Learn how to programmatically launch and manage file transfers, create deliverie
 
 Learn the accsyn job JSON format, for use with the Python API and workflows in general.
 
-Note: the following features are currently only available for BYOS Workspaces.
+*Note: the following features are currently only available for BYOS Workspaces.*
 
 ## Hooks
 
