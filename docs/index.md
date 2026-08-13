@@ -1,6 +1,6 @@
 # Home
 
-## STATUS
+## Status
 
 <div class="grid cards status-online" markdown>
 
@@ -54,7 +54,7 @@
 
 Identity provider status: [Auth0 status page](https://status.auth0.com/)
 
-## CONTACT SUPPORT
+## Contact support
 
 ### Guidelines
 
@@ -81,7 +81,7 @@ We typically answer within one (1) business day,  office hours:
 
 ### Chat support
 
-The quickest way to get help is using the live chat located right next to this section, provide your email address so we can get back to you at a later stage =>
+The quickest way to get help is using the live chat located in the bottom right corner. 
 
 ### Email support
 
@@ -131,19 +131,17 @@ accsyn SaaS is provided "as is" which means it is a best effort service. If you 
 
 ## <https://accsyn.com>
 
-## KNOWLEDGE BASE
-
-DOCUMENTATION
+## Knowledge base
 
 Documentation targeting end users, employees, administrators and developers
 
-### FOR END USERS
+### For end users
 
 <div class="grid cards" markdown>
 
 -   ![](assets/index-6e20a48ac536.png)
 
-    **[ACCOUNT](account.md)**
+    **[Account](account.md)**
 
     ---
 
@@ -151,7 +149,7 @@ Documentation targeting end users, employees, administrators and developers
 
 -   ![](assets/index-f98c49c9650b.png)
 
-    **[HOW TO DOWNLOAD A DELIVERY](delivery/receive.md)**
+    **[How to download a delivery](delivery/receive.md)**
 
     ---
 
@@ -159,7 +157,7 @@ Documentation targeting end users, employees, administrators and developers
 
 -   ![](assets/index-8f6c501ebf13.png)
 
-    **[ACCESS SHARED MATERIAL](file-sharing/access.md)**
+    **[Access shared material](file-sharing/access.md)**
 
     ---
 
@@ -167,7 +165,7 @@ Documentation targeting end users, employees, administrators and developers
 
 -   ![](assets/index-1917f2c8f89d.png)
 
-    **[AUTOMATED DELIVERIES](admin/hosts.md)**
+    **[Automated deliveries](admin/hosts.md)**
 
     ---
 
@@ -175,13 +173,13 @@ Documentation targeting end users, employees, administrators and developers
 
 </div>
 
-### INTRODUCTION AND SPECIFICATIONS
+### Introduction and specifications
 
 <div class="grid cards" markdown>
 
 -   ![](assets/index-972c270a41d9.png)
 
-    **[INTRODUCTION](introduction.md)**
+    **[Introduction](introduction.md)**
 
     ---
 
@@ -189,7 +187,7 @@ Documentation targeting end users, employees, administrators and developers
 
 -   ![](assets/index-5581beaab5c9.png)
 
-    **[SPECIFICATIONS](specifications.md)**
+    **[Specifications](specifications.md)**
 
     ---
 
@@ -197,7 +195,7 @@ Documentation targeting end users, employees, administrators and developers
 
 -   ![](assets/index-67d4a6eb784d.png)
 
-    **[CHANGELOG](changelog.md)**
+    **[Changelog](changelog.md)**
 
     ---
 
@@ -205,7 +203,7 @@ Documentation targeting end users, employees, administrators and developers
 
 </div>
 
-### OPERATING
+### Operating
 
 #### Deliveries
 
@@ -215,7 +213,7 @@ How to deliver files and folders to external users, or request an upload.
 
 -   ![](assets/index-a8966b1aa43f.png)
 
-    **[INTRODUCTION](delivery/index.md)**
+    **[Introduction](delivery/index.md)**
 
     ---
 
@@ -223,7 +221,7 @@ How to deliver files and folders to external users, or request an upload.
 
 -   ![](assets/index-4b07fa129aa3.png)
 
-    **[CREATE DELIVERY](delivery/create.md)**
+    **[Create delivery](delivery/create.md)**
 
     ---
 
@@ -231,7 +229,7 @@ How to deliver files and folders to external users, or request an upload.
 
 -   ![](assets/index-93cbc8a542b9.png)
 
-    **[MANAGE DELIVERIES](delivery/manage.md)**
+    **[Manage deliveries](delivery/manage.md)**
 
     ---
 
@@ -247,7 +245,7 @@ How to share folders with users.
 
 -   ![](assets/index-111204e33993.jpg)
 
-    **[INTRODUCTION](file-sharing/index.md)**
+    **[Introduction](file-sharing/index.md)**
 
     ---
 
@@ -255,7 +253,7 @@ How to share folders with users.
 
 -   ![](assets/index-f7999a9ec454.png)
 
-    **[FILE SHARING](file-sharing/filesharing-workingwith.md)**
+    **[File sharing](file-sharing/filesharing-workingwith.md)**
 
     ---
 
@@ -271,7 +269,7 @@ How to manage your master media
 
 -   ![](assets/index-f3877d251eda.png)
 
-    **[INTRODUCTION](vault/index.md)**
+    **[Introduction](vault/index.md)**
 
     ---
 
@@ -279,7 +277,7 @@ How to manage your master media
 
 -   ![](assets/index-c85f325cbf6d.png)
 
-    **[CREATE TITLE PROJECT](vault/create.md)**
+    **[Create title project](vault/create.md)**
 
     ---
 
@@ -287,7 +285,7 @@ How to manage your master media
 
 -   ![](assets/index-5c8d745c5b20.png)
 
-    **[LOG TITLE MEDIA](vault/log-media.md)**
+    **[Log title media](vault/log-media.md)**
 
     ---
 
@@ -295,7 +293,7 @@ How to manage your master media
 
 -   ![](assets/index-92a05344ad02.png)
 
-    **[WORK WITH MEDIA](vault/work.md)**
+    **[Work with media](vault/work.md)**
 
     ---
 
@@ -303,7 +301,7 @@ How to manage your master media
 
 -   ![](assets/index-390bdef6cc76.png)
 
-    **[DELIVER TITLE MEDIA](vault/deliver.md)**
+    **[Deliver title media](vault/deliver.md)**
 
     ---
 
@@ -311,7 +309,7 @@ How to manage your master media
 
 -   ![](assets/index-0448d96daf4f.png)
 
-    **[TRANSCODE MEDIA](vault/process.md)**
+    **[Transcode media](vault/process.md)**
 
     ---
 
@@ -319,7 +317,7 @@ How to manage your master media
 
 -   ![](assets/index-ceab9ad46018.png)
 
-    **[STREAM TITLE](vault/stream.md)**
+    **[Stream title](vault/stream.md)**
 
     ---
 
@@ -327,7 +325,7 @@ How to manage your master media
 
 -   ![](assets/index-cfd38cd1a082.png)
 
-    **[MEDIA LAB SERVICES](vault/media-lab.md)**
+    **[Media lab services](vault/media-lab.md)**
 
     ---
 
@@ -341,7 +339,7 @@ How to manage your master media
 
 -   ![](assets/index-f385b76f1d64.png)
 
-    **[JOB MONITORING & MANAGEMENT](manage/job.md)**
+    **[Job monitoring & management](manage/job.md)**
 
     ---
 
@@ -349,7 +347,7 @@ How to manage your master media
 
 -   ![](assets/index-06f6c6fd2a0e.png)
 
-    **[TROUBLESHOOTING](troubleshooting.md)**
+    **[Troubleshooting](troubleshooting.md)**
 
     ---
 
@@ -357,7 +355,7 @@ How to manage your master media
 
 </div>
 
-### ADMINISTRATING
+### Administrating
 
 #### Trials & General Administration
 
@@ -365,7 +363,7 @@ How to manage your master media
 
 -   ![](assets/index-9172cbe36fa4.png)
 
-    **[START A FREE TRIAL](trial.md)**
+    **[Start a free trial](trial.md)**
 
     ---
 
@@ -373,7 +371,7 @@ How to manage your master media
 
 -   ![](assets/index-948bb56a9908.png)
 
-    **[USERS](admin/user.md)**
+    **[Users](admin/user.md)**
 
     ---
 
@@ -381,7 +379,7 @@ How to manage your master media
 
 -   ![](assets/index-3cbbdd39bf58.png)
 
-    **[QUEUES](admin/queue.md)**
+    **[Queues](admin/queue.md)**
 
     ---
 
@@ -389,7 +387,7 @@ How to manage your master media
 
 -   ![](assets/index-2c68add78ff4.png)
 
-    **[CLIENTS](admin/client.md)**
+    **[Clients](admin/client.md)**
 
     ---
 
@@ -397,7 +395,7 @@ How to manage your master media
 
 -   ![](assets/index-7c8a8bc2e8d1.png)
 
-    **[STORAGE](admin/storage.md)**
+    **[Storage](admin/storage.md)**
 
     ---
 
@@ -405,7 +403,7 @@ How to manage your master media
 
 -   ![](assets/index-fdf91b00d07e.png)
 
-    **[WORKSPACE SETTINGS](admin/settings.md)**
+    **[Workspace settings](admin/settings.md)**
 
     ---
 
@@ -421,7 +419,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-c7948a14edef.png)
 
-    **[SETUP BYOS](admin/byos/index.md)**
+    **[Setup BYOS](admin/byos/index.md)**
 
     ---
 
@@ -429,7 +427,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-8a99ee601ff1.png)
 
-    **[SERVERS](admin/byos/server.md)**
+    **[Servers](admin/byos/server.md)**
 
     ---
 
@@ -437,7 +435,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-6d4e93031185.png)
 
-    **[SITES](admin/byos/site.md)**
+    **[Sites](admin/byos/site.md)**
 
     ---
 
@@ -445,7 +443,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-f7c60344d030.png)
 
-    **[ENGINES](admin/byos/engine.md)**
+    **[Engines](admin/byos/engine.md)**
 
     ---
 
@@ -453,11 +451,11 @@ Bring Your Own Storage
 
 </div>
 
-### FOR DEVELOPERS
+### For developers
 
 <div class="grid cards" markdown>
 
--   **[DEVELOPER HUB](developer/index.md)**
+-   **[Developer hub](developer/index.md)**
 
     ---
 
@@ -465,7 +463,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-074cc716c6be.png)
 
-    **[PYTHON API](developer/python-api.md)**
+    **[Python API](developer/python-api.md)**
 
     ---
 
@@ -473,7 +471,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-e4f521ef2ead.png)
 
-    **[HOOKS (BYOS)](developer/hooks.md)**
+    **[Hooks (BYOS)](developer/hooks.md)**
 
     ---
 
@@ -481,7 +479,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-84bf08d8d859.png)
 
-    **[RENDER FARM (BYOS)](developer/farm.md)**
+    **[Render farm (BYOS)](developer/farm.md)**
 
     ---
 
@@ -489,13 +487,13 @@ Bring Your Own Storage
 
 -   ![](assets/index-357bb722b099.png)
 
-    **[PUBLISH (BYOS)](developer/publish.md)**
+    **[Publish (BYOS)](developer/publish.md)**
 
     ---
 
     Learn how to set up accsyn to validate and ingest material produced by external users/vendors.
 
--   **[JOB JSON SPECIFICATION](developer/job-specification.md)**
+-   **[Job JSON specification](developer/job-specification.md)**
 
     ---
 
@@ -503,23 +501,23 @@ Bring Your Own Storage
 
 </div>
 
-## CODES AND SETTINGS
+## Codes and settings
 
 <div class="grid cards" markdown>
 
--   **[WARNING CODES](warnings.md)**
+-   **[Warning codes](warnings.md)**
 
     ---
 
     Learn about the different warning codes that appear within accsyn.
 
--   **[ERROR CODES](errors.md)**
+-   **[Error codes](errors.md)**
 
     ---
 
     Learn about the different error codes that appear within accsyn.
 
--   **[INTERNAL SETTINGS](settings.md)**
+-   **[Internal settings](settings.md)**
 
     ---
 
@@ -527,13 +525,13 @@ Bring Your Own Storage
 
 </div>
 
-## TUTORIALS
+## Tutorials
 
 <div class="grid cards" markdown>
 
 -   ![](assets/index-2811350bd190.png)
 
-    **[FTP SERVER REPLACEMENT](tutorials/ftp-server-replacement.md)**
+    **[FTP server replacement](tutorials/ftp-server-replacement.md)**
 
     ---
 
@@ -541,7 +539,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-766af812d1b7.jpg)
 
-    **[OUTSOURCING PIPELINE](tutorials/outsourcing-pipeline.md)**
+    **[Outsourcing pipeline](tutorials/outsourcing-pipeline.md)**
 
     ---
 
@@ -549,7 +547,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-6d179258cb70.png)
 
-    **[REMOTE OFFICE SYNC](tutorials/remote-office-sync.md)**
+    **[Remote office sync](tutorials/remote-office-sync.md)**
 
     ---
 
@@ -557,7 +555,7 @@ Bring Your Own Storage
 
 -   ![](assets/index-9b4e5ebdf324.jpg)
 
-    **[FILM FESTIVAL](tutorials/film-festival.md)**
+    **[Film festival](tutorials/film-festival.md)**
 
     ---
 
@@ -565,7 +563,7 @@ Bring Your Own Storage
 
 </div>
 
-## TERMINOLOGY
+## Terminology
 
 - Learn about the different terms and notations used with accsyn
 
