@@ -6,22 +6,6 @@
 
 This documentation explains accsyn hooks and walks through how to configure them within your Workspace.
 
-[What is a hook?](hooks.md)
-
-[How does it work?](hooks.md)
-
-[Hook data input format](hooks.md)
-
-[Job lifecycle hooks](hooks.md)
-
-[Publish hooks](hooks.md)
-
-[Configure hooks](hooks.md)
-
-[Configure queue hooks](hooks.md)
-
-[Further resources](hooks.md)
-
 ## What is a hook?
 
 A hook is a configured command line that points to a script on your servers, that is executed by accsyn on certain triggers within accsyn:

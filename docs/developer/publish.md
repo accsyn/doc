@@ -6,40 +6,6 @@
 
 This guide walks through how to set up a publishing workflow within your accsyn Workspace.
 
-CONTENT
-
-[What is publish?](publish.md)
-
-[How does it work?](publish.md)
-
-[Validation phase](publish.md)
-
-[Upload phase](publish.md)
-
-[Ingestion phase](publish.md)
-
-[Publish hooks developer guidelines](publish.md)
-
-[Prerequisites](publish.md)
-
-[Developing the pre publish hook script](publish.md)
-
-[Developing the publish(ingest) hook script](publish.md)
-
-[Configuring the pre publish (validation) hook](publish.md)
-
-[Configuring up the publish(ingest) hook](publish.md)
-
-[Testing](publish.md)
-
-[Troubleshooting](publish.md)
-
-[My pre-publish hook(s) crashes during execution, where can I read the logs?](publish.md)
-
-[The publish job failed and turned red after publish hook crashed, how do I re-run the hook?](publish.md)
-
-[Further resources](publish.md)
-
 ## What is publish?
 
 Common in media production is the need to work with external vendors; the accsyn [File Sharing](../file-sharing/index.md) feature is ideal for setting up shared folders to distribute work assets and also receive the final work done.

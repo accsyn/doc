@@ -2,72 +2,8 @@
 
 This document provides accsyn job JSON  (JavaScript Object Notation) payload examples and describes best practices for using the accsyn API or CLI.
 
-[Job JSON specification](job-specification.md)
-
-[When is the job JSON used?](job-specification.md)
-
-[Structure of transfer job JSON payload](job-specification.md)
-
-[Transfer tasks](job-specification.md)
-
-[Source and Destination notation](job-specification.md)
-
-[Client resolve](job-specification.md)
-
-[User permissions - upload and download](job-specification.md)
-
-[User permissions - site transfers](job-specification.md)
-
-[Example transfer job snippets](job-specification.md)
-
-[Workspace drop-off](job-specification.md)
-
-[User share download](job-specification.md)
-
-[Operator\* upload](job-specification.md)
-
-[Operator folder download](job-specification.md)
-
-[User share upload](job-specification.md)
-
-[Operator download to site](job-specification.md)
-
-[Operator transfer between sites](job-specification.md)
-
-[Operator push](job-specification.md)
-
-[Operator pull](job-specification.md)
-
-[Metadata](job-specification.md)
-
-[Skip existing files](job-specification.md)
-
-[Exclude files](job-specification.md)
-
-[Priorities](job-specification.md)
-
-[File sequences](job-specification.md)
-
-[Placeholder jobs](job-specification.md)
-
-[Compute/render job examples](job-specification.md)
-
-[Nested compute jobs and dependencies](job-specification.md)
-
-[Best practices and limitations](job-specification.md)
-
-[Source and destination party](job-specification.md)
-
-[Path specification](job-specification.md)
-
-[Job count limit](job-specification.md)
-
-[Large jobs with a lot of files](job-specification.md)
-
-Rev 1.007, 21.05.11
 
 ## Job JSON specification
-
   
 
 ### When is the job JSON used?

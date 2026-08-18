@@ -123,13 +123,14 @@ accsyn SaaS is provided "as is" which means it is a best effort service. If you 
 
 ### Login - access personal accsyn account and your workspace
 
-## <https://accsyn.io>
+<https://accsyn.io>
 
   
 
 ### Web page- general information and resources
 
-## <https://accsyn.com>
+<https://accsyn.com>
+
 
 ## Knowledge base
 
