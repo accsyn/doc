@@ -173,7 +173,7 @@ When the host has been installed you will be brought to the host edit page, if n
 
 From now on, all deliveries sent to your account (email address) from any accsyn workspace, will be downloaded in the folder you configured as long as the computer is powered on and the accsyn background daemon executable process is running. If the user server instance does not exist, one will be created.
 
-## Setup local file sharing
+## Map shares locally
 
 Prerequisites:
 
