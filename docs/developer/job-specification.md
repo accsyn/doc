@@ -109,14 +109,11 @@ C) Or as a dictionary (the internal accsyn notation):
 
 ### Source and Destination notation
 
-  
 
 An accsyn source/destination should be passed on as a combination of a party and a path similar to standard rsync and scp notation, using this template:
-
   
 
 <party>:<path>
-
   
 
 - Party; Identifies the sending or receiving endpoint entity.
@@ -130,13 +127,14 @@ For a detailed breakdown of parties and paths, please refer to the [accsyn Pytho
 
 Example party definitions:
 
-- myworkspace; Denotes the workspace side as source or destination - the main site (hq), resolves to the [Server](../admin/byos/server.md) hosting the file (through volume) identified by the path.
+- myworkspacecode; THe workspace API unique identifier (code). Denotes the workspace party, the main site (hq), as source or destination. Resolves to the [Server](../admin/byos/server.md) hosting the file (through volume) identified by the path.
 - john@user.com; Denotes a user as a source or destination, they must have a (running) client ([Desktop App](../desktop-app.md) or [User Server](../admin/hosts.md) instance) that can be resolved by accsyn. The most recent online client will be chosen.
 - john@user.com@Hostname; A user source and destination resolving to a client having a specific hostname. 
 - site=london; Denotes the site with (unique) API "code" identifier "london".
 - client=6611fbca3f8c4d3e7a3b678a; Denotes an explicit client, for example if a user is running multiple clients.
 
-  
+
+* Note: If no party is given (empty/missing source or destination), the workspace party is assumed.*
 
 Path examples:
 
@@ -389,8 +387,20 @@ Push (download) a folder to the locally mapped share "thefilm" at the remote use
 
 ```json
 {
-    "source":"share=thefilm/\_OUTSOURCING/Paint\_and\_cleanup-Compers-260703",
+    "source":"share=thefilm/\_OUTSOURCING/Paint_and_cleanup-Compers-260703",
     "destination":"emma@compers.com:share=thefilm/\_FROM\_THECOMPANY/"
+}
+```
+
+- The user must have mapped the share locally (configured through the app or through ACCSYN\_\*\_PATH envs), write access enabled.
+
+Push a file to a user´s specific client, mirroring paths on destinaton:
+
+
+```json
+{
+    "source":"share=thefilm/Contracts/TheFilm_OS_TC.docx",
+    "destination":"client=6a8c4a5a27845b692f405ed0"
 }
 ```
 
@@ -400,11 +410,11 @@ Push (download) a folder to the locally mapped share "thefilm" at the remote use
 
 ### Operator pull from user
 
-Pull a file from remote user´s locally mapped share "thefilm" back to workspace storage:
+Pull a file from default volume mapped locally on remote user´s client back to workspace storage:
 
 ```json
 {
-    "source":"emma@compers.com:share=thefilm/DELIVERY/WIP-260703.zip",
+    "source":"emma@compers.com:share=(default)/DELIVERY/WIP-260703.zip",
 }
 ```
 
