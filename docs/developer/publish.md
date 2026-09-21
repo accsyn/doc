@@ -32,6 +32,8 @@ The pre publish script can:
 - If file sets are incomplete.
 - If files have the wrong naming convention.
 - File sizes do not add up.
+- If non-publishable files still can be uploaded.
+- Determine the destination path for each file/folder.
 
 The user will then be presented feedback, for each item - typically a folder per task in a post production workflow. If all is greenlit, the user will be able to publish the files.
 
@@ -39,7 +41,7 @@ The user will then be presented feedback, for each item - typically a folder per
 
 The pre-publish provides the path to where files will be uploaded; this way you can steer exactly where files will end up - typically a staging area for further ingestion.
 
-Important Note: The user does not require write permission to this path, leaving it to the pre publish hook logic to determine the upload destination per entry.
+*Important Note: The user does not require write permission to this path, leaving it to the pre publish hook logic to determine the upload destination per entry.*
 
 ### Ingestion phase
 
@@ -96,16 +98,17 @@ Breakdown of the output:
 File entry format:
 
 - id; The publish entry id, should be preserved from the input.
-- ident; An internal unique entry identifier for the publish entry, provided as a label/human readable identifier to the remote user.
-- can\_publish; If true, the entry is accepted as is.
-- rejected; If true, the entry is rejected with a comment.
 - warning; String describing the reason the entry was not approved, will be presented clearly to the user within the desktop app.
-- can\_upload; If true, files are still allowed to be uploaded. E.g. the entry was not technically approved, but allow "panic" upload for manual internal publish later.
-- comment\_label; (Optional) The label to precede the comment input field, defaults to: "Comment:".
+- rejected; If true, the file entry is rejected with the warning provided. Entries below have no effect.
+
+- ident; An unique entry identifier for the publish entry, provided as a label/human readable identifier to the remote user. Defaults to the filename.
+- can\_publish; If true, the publish entry is approved as is.
+- can\_upload; If true and can_publish is false, file/folder are still allowed to be uploaded. E.g. the entry was not technically approved, but "panic" upload is allowed - typicall to a staging area for manual hands on by staff.
 - path; If approved, or can be uploaded, this is the destination path that will be used for that entry during upload phase. Can be given as an absolute path that accsyn understands (derived from configured volume platform paths), or in accsyn notation (ex: volume=projects/staging/proj\_task001\_v001\_completed)
 - info; (optional) Additional feedback to the user on this entry.
+- comment\_label; (Optional) The label to precede the comment input field, defaults to: "Comment:".
 
-  
+*Note: additional entries provided by the pre-publish are preserved and provided as-is to the publish/ingest hook*
 
 ### Developing the publish(ingest) hook script
 
@@ -118,13 +121,14 @@ Breakdown of entries in the files JSON data sub-structure:
 - time\_report; The time (in seconds) reported by user.
 - path; The destination path, as dictated earlier by the pre publish hook (see above).
 - filename; The last path entry.
-- can\_publish: As provided by the pre publish hook (see above).
-- v\_hr; The name of the destination volume.
-- ident; As provided by the pre publish hook(see above).
 - is\_dir; If true, the entry is a directory.
 - v; The internal accsyn ID of the destination volume.
+- v\_hr; The name of the destination volume.
+- ident; As provided by the pre publish hook(see above).
+- can\_publish: As provided by the pre publish hook (see above).
 - comment; The comment entered by the user.
 - status; The status entered by the user.
+- ..; Additional entries provided by from the pre-publish hook.
 
 ## Configuring the pre publish (validation) hook
 
