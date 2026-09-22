@@ -14,13 +14,20 @@ There are no limitations when it comes to functionality with an accsyn trial - w
 
   
 
-### Cloud Workspace (default)
+### Cloud Workspace
 
 The default type of accsyn workspace is called a Cloud workspace. Suitable both for media production and distribution - sales, film festivals, archival:
 
 - Storage is securely hosted within the ISO 27001 certified premises in Stockholm, Sweden.
 - Suitable for both media production ([File Sharing](file-sharing/index.md) / [Delivery](delivery/index.md) features) and media distribution ([Media Vault](vault/index.md) feature).
 
+#### ESSENTIALS
+
+accsyn is offered as an ESSENTIALS cloud workspace, at a reduced price and with reduced capabilites:
+
+- Only one(1) operator allowed.
+- 500GB restricted storage.
+- API functionality is not available.
   
 
 ### BYOS Workspace
@@ -35,7 +42,14 @@ accsyn supports self hosted storage, this is called a BYOS Workspace (Bring-Your
 
 Important note: Media Vault features, including streaming and transcoding, are not available with BYOS deployments.
 
-  
+#### LITE
+
+accsyn is offered as a BYOS LITE workspace, at a reduced price and with reduced capabilites:
+
+- API functionality is not available.
+- Hooks/automisations/publish is unavailable.
+- Additional operators, site servers and compute servers can still be aquired.
+
 
 ### Enterprise Workspace
 
@@ -88,6 +102,10 @@ You are now all set to start trying out accsyn for the first time!
 
   
 
+*Note: The trial includes full Cloud functionality. When you later convert to a paid subscription, you choose between **ESSENTIALS** (reduced price and capabilities — see above) and **PRO** (Pay As You Go).*
+
+  
+
 ### Launch a BYOS trial
 
 1. Log on to accsyn and click START 30 DAYS FREE TRIAL in the lower left corner, or visit: <https://accsyn.io/trial>.
@@ -99,9 +117,14 @@ You are now all set to start trying out accsyn for the first time!
 7. Click the CREATE WORKSPACE button when you are ready.
 8. When the workspace has been created, you will be redirected to the BYOS setup wizard that will guide you through the process of installing your server and configuring your storage volume.
 
-[BYOS](admin/byos/index.md)
+  
 
-- Full BYOS documentation - how to get started.
+*Note: The trial includes full BYOS functionality. When you later convert to a paid subscription, you choose between **LITE** (reduced price and capabilities — see above) and **PRO**. Both include one (1) storage server and two (2) operator users.*
+
+
+Further resources:
+
+- How to get started: [BYOS Documentation](admin/byos/index.md)
 
 ## Can I get help setting up a trial?
 
@@ -123,19 +146,31 @@ To sign up for a paid accsyn subscription, follow these instructions.
 
 ### Cloud Workspace
 
-- Head over to <https://accsyn.io/signup>
-- Choose the cloud subscription that you want to sign up for.
-- Click the sign up button at the bottom of the page.
+1. Open the workspace menu and go to the Subscription / Sign up page, or visit <https://accsyn.io/signup>.
+2. On the Cloud tab, choose the plan you want:
+   - **ESSENTIALS** — value plan for small teams (500GB, 1 operator). API is not available.
+   - **PRO Pay As You Go** — flexible pricing for professionals (1TB included, 2 operators), with Media Vault streaming and related features.
+3. Click the sign up button and finalise payment via Stripe to activate the subscription.
 
   
 
-You will be redirected to our payment service powered by Stripe, finalise the purchase to activate the subscription.
+### BYOS Workspace
+
+1. Open the workspace menu and go to the Subscription / Sign up page (BYOS tab), or visit <https://accsyn.io/signup?byos=true>.
+2. Choose the BYOS plan you want:
+   - **LITE** — reduced price for on-prem teams. API and Hooks are not available. One (1) storage server and two (2) operator users included.
+   - **PRO** — full on-prem feature set. One (1) storage server and two (2) operator users included.
+3. Click the sign up button and finalise payment via Stripe to activate the subscription.
 
   
 
-### BYOS & Enterprise
+For additional storage servers, site/compute licenses or Premium Support, reach out to [sales@accsyn.com](mailto:sales@accsyn.com) or [support@accsyn.com](mailto:support@accsyn.com).
 
-Please reach out to [sales@accsyn.com](mailto:sales@accsyn.com) to sign up for the subscription deal.
+  
+
+### Enterprise
+
+Please reach out to [sales@accsyn.com](mailto:sales@accsyn.com) to sign up for an Enterprise subscription deal.
 
 ## accsyn was nothing for us, how do I cancel the trial?
 

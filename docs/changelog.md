@@ -17,6 +17,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [APP/SUMBIT] Bring back download and upload tab buttons. Improved source and destination parties checkboxes.
 - [APP] Improved invite new user UX, consolidated grant access dialog. Larger My jobs See all button, with fixes and improvements.
 - [Python API 3.4.0] Improved access grant and revoke, improved documentation. Consolidated docstrings. Expanded and improved test coverage.
+- [WEB] Possibility to cancel card billed subscriptions, with support for cancellation period. 
 
 **Bug fixes**
 
@@ -28,6 +29,8 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [CORE] Improved permission checks with mirrored paths/mapped local shares transfers.
 - [CORE/WEB] Fixed bug with changing default volume. Fixed bug with changing queue priority.
 - [APP] Fixed process log viewer refresh bug, fixed bug with file browser breadcrumb path change.
+- [APP/SHARING] Fixed bug when sharing a folder and new prompted user for invite were not showing up in list.
+- [WEB] Fixed bug when error feedback were not displayed on site deletion.
 
 **Changes**
 

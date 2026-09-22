@@ -2,6 +2,8 @@
 
 The accsyn Python API facilitates programmable file transfers with Python (v3).
 
+*Important Note: API:s are not available for Essentials and Lite type workspaces.*
+
 ## How to create and manage API keys
 
 To create a new API key, open <https://accsyn.io/developer> in your browser. This page is available from the user menu in the top right corner, "Developer" menu entry:
