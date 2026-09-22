@@ -4,6 +4,39 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
+## v3.6-6 <small>September 22, 2026</small>
+
+**Minor features**
+
+- [DOCUMENTATION] Ported support/documentation pages from Google sites to self served SCM:ed Mkdocs for better readability, improved changelog.
+- [WEB/DELIVERY] Improved delivery recipients input to have one row per recipient, with possibility to edit. General delivery improvements.
+- [WEB/CORE] Properly handle usage (users, cloud storage, sites and compute servers) billing for card billed workspaces.  
+- [CORE/PUBLISH/APP] Additional JSON data provided by pre-publish hook are now preserved and provided with publish hook call.
+- [WEB/DELIVERY] Properly show delivery status, and show properly as inaccessible to recipients.
+- [WEB/AUDIT] Mail audit page, showing outgoing and delivered emails.
+- [APP/SUMBIT] Bring back download and upload tab buttons. Improved source and destination parties checkboxes.
+- [APP] Improved invite new user UX, consolidated grant access dialog. Larger My jobs See all button, with fixes and improvements.
+- [Python API 3.4.0] Improved access grant and revoke, improved documentation. Consolidated docstrings. Expanded and improved test coverage.
+
+**Bug fixes**
+
+- [CORE/PUBLISH/APP] Destination path provided by pre-publish hook is now properly validated. Minor bug fixes and documentation updates.
+- [CORE/MAPPED SHARES/APP] Bug fixes with local share path overrides.
+- [CORE/REPEAT] Fixed bug where job repeat did not start.
+- [WEB/DELIVERY] Fix folder browser upload bug, fixed bug when user not could delete uploaded request files. Fixed bug where temp delivery files were not deleted on abort. Fixed ZIP/compress bug. Fix bug where recipients not could be removed from init deliveries.
+- [APP] Fix finished jobs pagination bug.
+- [CORE] Improved permission checks with mirrored paths/mapped local shares transfers.
+- [CORE/WEB] Fixed bug with changing default volume. Fixed bug with changing queue priority.
+- [APP] Fixed process log viewer refresh bug, fixed bug with file browser breadcrumb path change.
+
+**Changes**
+
+- [CORE] Deliveries are now kept for three months after finish, then archived.
+
+</div>
+
+<div class="release-card" markdown>
+
 ## v3.6-5 <small>June 24-29, 2026</small>
 
 **Minor features**
