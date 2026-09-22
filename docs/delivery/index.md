@@ -6,6 +6,8 @@ This page serves as an introduction to the accsyn File Delivery subsystem - avai
 
 We recommend watching this 3 minute video, covering the basics - how to send a delivery and having the user receive it:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mPgkwiBtQMs" title="accsyn Delivery introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## What is a delivery?
 
 An accsyn delivery is one or more files and/or folders that need to be transmitted to one or more recipients, in a speedy and secure manner. A delivery can also be an upload request, having users send large datasets back to you.

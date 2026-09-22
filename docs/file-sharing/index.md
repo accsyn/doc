@@ -6,6 +6,8 @@ This page serves as an introduction to the accsyn File Sharing subsystem - the s
 
 We recommend watching this 1:30 minute video, providing an introduction to file sharing:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PqQLXAfZF5M" title="accsyn File Sharing introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## What is accsyn File Sharing?
 
 In principle, it is an FTP replacement combining powerful ACL mechanisms with fast, secure and resumable file transfers / deliveries.
