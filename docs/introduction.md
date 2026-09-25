@@ -8,24 +8,25 @@ accsyn is a SaaS (Software as a Service) platform featuring the high speed encry
 
 accsyn is designed to be used in one of these two scenarios:
 
-- Media production; Shooting, ingest, post production, rendering, collaboration, delivery and workflows.
+- Media production; Shoot/DIT, ingest, post production/vfx, rendering, collaboration, delivery and automisations.
 - Media distribution and archival;  Tagging and structuring, proxy generation, web streaming/previews, distribution to screen (cinemas, conferences), long term archival.
 
   
 
 These common features are available across the platform:
 
-- [File Delivery](delivery/index.md); Smooth web browser based delivery of large file sets.
-- [File Sharing](file-sharing/index.md); Cloud hosted or on-prem advanced ACL driven file and folder sharing, replacing FTP and similar solutions. With advanced functionality such as desktop app monitor with queue management, locally mapped shares, remote sites/offices, render farm and publish workflows.
+- [Delivery](delivery/index.md); Smooth web browser based delivery of large file sets.
+- [Collaboration/File Sharing](file-sharing/index.md); Cloud hosted or on-prem advanced ACL driven file and folder sharing, replacing FTP and similar solutions.
 
-  
 
-These features are targeting production:
+These features are targeting production and [BYOS](admin/byos/index.md) workspaces:
 
-- [BYOS](admin/byos/index.md); Run accsyn servers on your own infrastructure. Compute/render farm, hooks and publishing.
-- [Workflows](vault/media-lab.md); Automate file transfers, creating advanced API driven workflows.
+- [Multi site sync](admin/byos/site.md) Keep your remote offices and cloud locations in sync.
+- [Hooks](developer/hooks.md) Kick of automisations on certain internal events.
+- [Publish](developer/publish.md) Build an asset validate-and-ingest workflow.
+- [Python API](developer/python-api.md) Code driven file transfers.
+- [Render farm](developer/farm.md) Deploy a cluster of CPU/GPU machine performing heavy duty long running tasks.
 
-  
 
 These features are targeting distribution and archival:
 
@@ -34,7 +35,7 @@ These features are targeting distribution and archival:
 
   
 
-Important note: The Media Vault cannot be run on-prem as of version 3 (although this is subject to be improved in future versions). To facilitate both BYOS and Media Vault, two separate workspaces  should be deployed.
+*Important note: The Media Vault cannot be run BYOS/on-prem as of version 3 (although this is subject to be improved in future versions). To facilitate both BYOS and Media Vault, two separate workspaces  should be deployed.*
 
 ## Why would I need accsyn?
 
@@ -42,9 +43,7 @@ Film production, and media production in general, deals with transferring and st
 
   
 
-accsyn is designed to act as a reliable file hub throughout the entire film creation process - 
-
-from shoot on set all the way to the screen - cinema or streaming
+**accsyn is designed to act as a reliable file hub throughout the entire film creation process - from shoot on set all the way to the screen - cinema or streaming.**
 
 ## How does it work?
 
@@ -62,11 +61,9 @@ No file servers are listening 24/7, providing a minimal attack surface for hacke
 
   
 
-For more in-depth coverage of how the accsyn protocol works in comparison to other file transfer solutions:
+For the consolidated protocol and security reference, including the architecture, transfer lifecycle, comparison with other transfer approaches, job model and performance tuning, see:
 
-[SECURITY WHITEPAPER](https://www.google.com/url?q=https%3A%2F%2Fdownload.accsyn.com%2Fsupport%2Faccsyn%2520Security%2520Whitepaper.pdf&sa=D&sntz=1&usg=AOvVaw1lYQGGZskz-LRSgvB8hdGl)
-
-- Explore the ASC protocol in detail
+[ACCSYN WHITEPAPER](whitepaper.md)
 
 ## Is there a free trial?
 
@@ -81,11 +78,13 @@ To start using accsyn within your business, you will need to create an accsyn Wo
 - Once logged in to accsyn, click START 30 DAYS FREE TRIAL button in the left hand menu.
 - Start the workspace by entering your contact information and the name you wish to give your Workspace, this can be changed later.
 
-Once in, you are ready to [create your first accsyn delivery](delivery/index.md).
+Once in, you are ready to [create your first accsyn delivery](delivery/index.md) or [share your first folder](file-sharing/index.md)
+
+### Documentation
+
+Detailed documentation on how to initiate a trial:
 
 [TRIAL](trial.md)
-
-- Detailed documentation on how to initiate a trial
 
 ## How is it licensed and what does it cost?
 
@@ -96,14 +95,15 @@ An accsyn licence grants you access to all features within the platform, without
 accsyn comes with a standard 1TB Cloud workspace and 2 users included, with an additional charge for:
 
 - Storage; per TB (Terabyte) of additional cloud storage used on a monthly basis
-- Users\*; per additional elevated (admin or employee role) user  with an additional charge for web streams.
+- Users\*; per additional operator (admin or employee role) user  with an additional charge for web streams.
 
   
 
-accsyn BYOS comes with one storage server and 2 users,  with an additional charge for:
+accsyn BYOS comes with one storage server and 2 users, with an additional charge for:
 
-- Per site server\*
-- Per compute/render server\*
+- Users\*; per additional operator (admin or employee role) user with an additional charge for web streams.
+- Site servers\*
+- Compute/render servers\*
 
   
 
@@ -113,9 +113,9 @@ accsyn BYOS comes with one storage server and 2 users,  with an additional char
 
 Lab services are charged per order item, hours spent and deliverable.
 
-[Pricing](https://www.google.com/url?q=https%3A%2F%2Faccsyn.com%2Fpricing%2F&sa=D&sntz=1&usg=AOvVaw0R0zBMaZwmUvZt7XYlLZXp)
+Learn overall pricing, and download the current price list:
 
-- Learn overall pricing, and download the current price list.
+[PRICING](https://accsyn.com/pricing)
 
 ## How do I get started?
 

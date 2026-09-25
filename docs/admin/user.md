@@ -15,12 +15,11 @@ Accounts are personal - when the user registers their account they choose their 
 
 *Note: A user in accsyn can have access to more than one workspace, this means that removing the user from your workspace does not remove their accsyn account.*
 
-Each user has a base role, defining what they will be able to do  within the platform. There are three base roles in accsyn.
+Each user has a base role, defining what they will be able to do within the platform. There are three base roles in accsyn.
 
-- Admin; Allowed to see and perform any type of operations, including administration.
-- Employee; Allowed to perform any type of operation on volumes they have access to, not allowed to perform administrative tasks.
-
-- Standard; Standard (end) user, only allowed to access deliveries and shared files given explicit access to.
+- **Admin** Allowed to see and perform any type of operations, including administration.
+- **Employee** Allowed to perform any type of operation on volumes they have access to, not allowed to perform administrative tasks.
+- **Standard** The Standard end user, only allowed to access deliveries and shared folder/homes/collections given explicit access to.
 
 ## Licensing
 
@@ -30,13 +29,13 @@ The accsyn Essentials cloud subscription plan allows for one (1) elevated user, 
 
 The excess number of elevated users is billed on a monthly basis according to the current pricing, for more information see <https://accsyn.com/pricing>.
 
- The user count is evaluated every day at midnight 00:00 CET, and the monthly top notation is used to calculate the excess number of elevated users, which is charged accordingly the next billing period.  To check your current render farm usage, visit your workspace billing page @ [https://accsyn.io/si](https://accsyn.io/signup)
+The user count is evaluated every day at midnight 00:00 CET, and the monthly top notation is used to calculate the excess number of elevated users, which is charged accordingly the next billing period.  To check your current render farm usage, visit your workspace billing page @ [https://accsyn.io/signup](https://accsyn.io/signup)
 
 ## List users
 
 To list all members of your workspace, click the Workspace button on the left hand side and choose Users from the pulldown menu. The list of users will be shown, one list per role:
 
-![](../assets/admin_user-e82564cf6632.png)
+![](../assets/admin_users_list.png)
 
 Presentation:
 
@@ -61,29 +60,32 @@ Filters:
 
 To invite another administrator, employee or standard user, click the +INVITE USER in the upper right corner. This will bring up the invitation page:
 
-![](../assets/admin_user-faf0ea9f10f6.png)
+![](../assets/admin_users_invite.png)
 
-Email
+### Email ###
 
 Enter the email address the user has. If the user already exists within the workspace, a warning will be given.
 
-  
 
-Role
+### Role ###
 
 The base role the user should be given.
 
-  
 
-Volume access (employee role)
+### Volume access (employee role) ###
 
 Choose one or more volume(s) the user should be granted access to. With no volume access, the employee will only be able to do basic job monitoring and audits.
 
-  
 
-Create home share
+### Create home share ###
 
 Check this if a home folder should be created on the default storage volume, with full access for the user, providing a place to upload material available immediately on account registration.
+
+The default behaviour defining if a home share shall be created or not can be configured in [Workspace Settings](settings.md).
+
+### Message to user ###
+
+Supply a personal message with the invitation.
 
 ## Modify users
 

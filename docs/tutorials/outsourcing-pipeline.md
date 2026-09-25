@@ -205,96 +205,91 @@ Boilerplate code:
 
   
 
-# Install accsyn python API
+#### Install accsyn python API
 
 >pip install accsyn-python-api
 
   
 
-# (Inside ftrack action script)
+#### Inside ftrack action script
 
-<code to collect/generate outsourcing file assets>
+Implement code that collect/generate outsourcing file asset paths.
 
   
 
-# Assume the list of file paths calculated from ftrack are generated and stored in the variable source\_files:
+#### Assume the list of file paths calculated from ftrack are generated and stored in the variable source\_files:
 
 source\_files = ["scd/0010/0010/src/plates/scd\_0010\_0010\_src", "scd/0010/0010/cleanup/scd\_0010\_0010\_cleanup\_description.txt"]
 
-# Import and create the accsyn session object
+### Import and create the accsyn session object
 
-# It requires the following environment variables set:
+It requires the following environment variables set:
 
-# ACCSYN\_WORKSPACE=acmevfx
+ACCSYN_WORKSPACE=acmevfx
 
-# ACCSYN\_API\_USER=pipeline@acmevfx.co.uk
+ACCSYN_API_USER=pipeline@acmevfx.co.uk
 
-# ACCSYN\_API\_KEY=...
+ACCSYN_API_KEY=...
 
-# Note: Create a new API key @ <https://accsyn.io/developer>
+**Note: Create a new API key @ <https://accsyn.io/developer>**
 
-import accsyn\_api
+```python
+import accsyn_api
 
-session = accsyn\_api.Session()
+session = accsyn_api.Session()
+```
+  
+
+#### Assume vendor name is already looked up by task assignee and defined. Also assume project name has been evaluated
+
+```python
+vendor_name = "CompersInc"
+project_name = "scd"
+```
 
   
 
-# Assume vendor name is already looked up by task assignee and defined. Also assume project name has been evaluated
+#### Generate sync job name, optimal is to have on per project, vendor and day.
 
-vendor\_name = "CompersInc"
-
-project\_name = "scd"
-
+```python
+job_name = f"Outsource - download - {project_name} - {vendor_name} - {datetime.now.strftime('%y%m%d')}"
+```
   
 
-# Generate sync job name, optimal is to have on per project, vendor and day.
+#### Build accsyn sync transfer tasks
 
-job\_name = f"Outsource - download - {project\_name} - {vendor\_name} - {datetime.now.strftime('%y%m%d')}"
 
-  
-
-# Build accsyn sync transfer tasks
-
+```python
 tasks = []
-
-for path\_rel in source\_files:
-
+for path_rel in source_files:
     tasks.append(dict(
-
         source=f"volume=proj/{path\_rel}",
-
         destination="emma@compersinc.com"
-
     ))   
-
+```
   
 
 # Locate daily sync transfer:
 
+```python
 job = session.find(f'Transfer where name="{job\_name}"')
-
+```
   
 
 # Create or append to existing job
 
+```python
 if not job:
-
     job = session.create("Transfer", dict(
-
         tasks=tasks,
-
         mirror\_paths=True
-
     ))
-
 else:
-
     # Append tasks to existing sync job, will resume/retry finished job and retry(resend) existing duplicate tasks
-
     tasks = session.create("Task", tasks, entityid=job['id'], allow\_duplicates=True)
 
 # (Optional) End script with feedback to ftrack web UI session that outsource transfer were dispatched, providing job['name']/job['id'] for reference
-
+```
   
 
 The transfer job will be queued with the rest of the jobs. 

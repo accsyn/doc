@@ -64,3 +64,40 @@
   font-weight: 400;
   margin-left: 0.6rem;
 }
+
+/* Whitepaper print action */
+.whitepaper-print-button {
+  display: block;
+  margin: 0 0 1rem;
+}
+
+@media print {
+  .whitepaper-print-button,
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-top,
+  .md-dialog {
+    display: none !important;
+  }
+
+  .md-main__inner,
+  .md-content {
+    margin: 0;
+    max-width: none;
+  }
+
+  .md-typeset h1,
+  .md-typeset h2,
+  .md-typeset h3,
+  .md-typeset h4 {
+    break-after: avoid-page;
+  }
+
+  .md-typeset img,
+  .md-typeset tr,
+  .md-typeset blockquote {
+    break-inside: avoid;
+  }
+}

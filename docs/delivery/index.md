@@ -1,6 +1,6 @@
 # File Delivery - an introduction
 
-This page serves as an introduction to the accsyn File Delivery subsystem - available either as a standalone tool or built into [File Sharing](../file-sharing/index.md) and the  [Media Vault](../vault/index.md), or driven through [Workflows](../developer/index.md).
+This page serves as an introduction to the accsyn File Delivery subsystem - available either as a standalone tool or built into [File Sharing](../file-sharing/index.md) and the  [Media Vault](../vault/index.md), or driven through [Automisations](../developer/index.md).
 
 ## Get started
 
@@ -12,13 +12,20 @@ We recommend watching this 3 minute video, covering the basics - how to send a d
 
 An accsyn delivery is one or more files and/or folders that need to be transmitted to one or more recipients, in a speedy and secure manner. A delivery can also be an upload request, having users send large datasets back to you.
 
+There are two types of deliveries:
+
+- **Temporary delivery**; Files and folders are uploaded to a temporary folder on your accsyn cloud or on-prem storage, which then is delivered to recipient(s) and later remved upon finish.
+- **Standard delivery**; You select files and folders to delivery on your accsyn cloud or on-prem storage.
+
 ## How does it work?
 
-You upload the file and/or folders to be sent to the temp accsyn Cloud storage (Outbound page), define the recipient email addresses, set the expiry date of the delivery and then submit the delivery. Files can also be delivered from the permanent accsyn Cloud storage or from BYOS volumes/shares, either from your browser or by using the accsyn Desktop app - from the storage (File Sharing) tool or within the Media Vault.
+The delivery is created out of a set of uploaded files or from existing files, recipients are added and expiry date plus other options are set. The delivery job will stay active and more recipients can be added afterwards.
 
-  
+### How will the recipients action the delivery? 
 
 The recipients will get an email sent to them with a link and clear instructions on how to download and save the files/folders on their local computer.
+
+They will be guided through the process of download, installing and using the desktop app to download the files (default). If feasible, the recipient can also choose to download the files in their browser.
 
 ## How does accsyn handle transfer of very large files and folders?
 
@@ -35,8 +42,7 @@ The first time, the user will be asked if they want to use the web browser or in
 
 ### Standard authorisation
 
-By default, only the users identified by the email addresses entered during delivery creation are allowed to download the files. They will have to create an accsyn account, or log in through one of our supported authentication vendors (e.g. Google), to be able to access the delivery.
-
+By default, only the users identified by the email addresses entered during delivery creation are allowed to download the files. They will have to create an accsyn account, or log in through one of our supported external authentication providers (e.g. Google), to be able to access the delivery.
   
 
 ### Public link
@@ -44,6 +50,10 @@ By default, only the users identified by the email addresses entered during deli
 A delivery can be created as Public, this means that any registered accsyn user can download the files if they have the link. Public deliveries can have a password entered as an extra protection layer.
 
   
+### Password protection
+
+Public deliveries can be protected by an password, that recipients must enter before they can download the delivery.
+
 
 ### Anonymous access
 
@@ -51,11 +61,13 @@ Public deliveries can be set to be accessed anonymously, this means that anyone 
 
   
 
-Warning: anonymous deliveries cannot be audited effectively, meaning that you cannot really control who gets access to your files. Use this option carefully!
+**Warning: anonymous deliveries cannot be audited effectively, meaning that you cannot really control who gets access to your files. Use this option carefully!**
 
 ## What will happen when the delivery expires?
 
-Before the delivery expires, users will be reminded twice so they do not forget to download the files. When the delivery has expired, it will be set to done status and after 4h the temp files on the accsyn cloud storage will be deleted.
+Before the delivery expires, users will be reminded twice so they do not forget to download the files. When the delivery has expired, it will be set to done status. 
+
+Temporary deliveries will have their files deleted after 4h from the accsyn storage.
 
 ## Does accsyn support reverse deliveries - request upload from users?
 
@@ -69,4 +81,4 @@ Yes, from within the accsyn Desktop App you can send files and folders from the 
 
 accsyn does not support thumbnail generation of arbitrary files, but with the accsyn Media Vault a title stream delivery can be created and sent to one or more recipients, allowing for high quality bandwidth aware streaming of media. Learn how to create a stream [here](../vault/stream.md).
 
-Next: [create your first delivery](create.md).
+Next: [Create your first delivery](create.md).

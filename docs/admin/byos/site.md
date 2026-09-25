@@ -11,6 +11,11 @@ Prerequisites:
 
 - Logged on as an administrator to <https://accsyn.io/admin/servers>.
 
+## Tutorial
+
+Learn how to setup sites in accsyn and have assets synced using the API:
+
+[Remote office sync](../../tutorials/remote-office-sync.md)
 
 ## What is a site?
 

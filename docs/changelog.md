@@ -4,7 +4,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
-## v3.6-6 <small>September 22, 2026</small>
+## v3.6-6 <small>September 22-23, 2026</small>
 
 **Minor features**
 
@@ -31,6 +31,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [APP] Fixed process log viewer refresh bug, fixed bug with file browser breadcrumb path change.
 - [APP/SHARING] Fixed bug when sharing a folder and new prompted user for invite were not showing up in list.
 - [WEB] Fixed bug when error feedback were not displayed on site deletion.
+- [APP] Improved transfer startup times.
 
 **Changes**
 

@@ -72,7 +72,7 @@ Hint: For more information about operating shared folders and storage in general
 
   
 
-Share list:
+Shares (folders/homes) list:
 
 - Name; The given name of the share.
 - Path; The (relative) path the shared folder is at.

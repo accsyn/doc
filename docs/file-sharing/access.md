@@ -35,7 +35,7 @@ Once installed, downloading files is a very streamlined process:
 1. Launch the accsyn Desktop app.
 2. Log in using the email account that was used when they shared the files with you - the email address the notification above was sent to. The window will display and notify you that you have accessible items:
 
-![](../assets/file-sharing_access-aaafa868f93d.png)
+![](../assets/file-sharing_access.png)
 
 Example screenshot of the desktop app with two new accessible shared folders.
 

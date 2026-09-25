@@ -12,6 +12,12 @@ Watch this 9 minute video to get up and running with your accsyn Media Vault:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U24JNuAL2mo" title="accsyn Media Vault introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Tutorial
+
+Learn how to setup an accsyn Vault step by step by following this tutorial:
+
+[Film Festival](../tutorials/film-festival.md)
+
 ### What is the accsyn Media Vault feature all about?
 
 accsyn provides media management capabilities for files residing on the accsyn cloud hosted storage. The major purpose is to categorise your media deliverables beneath titles (movies, TV series, short films, general projects, etc) and then tag associated media files enabling:

@@ -117,7 +117,7 @@ Desktop app:
 
 ### Terms
 
-accsyn SaaS is provided "as is" which means it is a best effort service. If you have questions regarding our support obligations, have a look at our [terms and conditions](https://accsyn.com/terms).
+accsyn SaaS is provided "as is" which means it is a best effort service. If you have questions regarding our support obligations, have a look at our [terms and conditions](https://accsyn.com/terms) and our [privacy policy](https://accsyn.com/policy).
 
   
 
@@ -185,6 +185,14 @@ Documentation targeting end users, employees, administrators and developers
     ---
 
     Learn about accsyn.
+
+-   ![](assets/index_asc-protocol.png)
+
+    **[Whitepaper](whitepaper.md)**
+
+    ---
+
+    Learn about security and the ASC file transfer protocol.
 
 -   ![](assets/index-5581beaab5c9.png)
 
@@ -254,7 +262,7 @@ How to share folders with users.
 
 -   ![](assets/index-f7999a9ec454.png)
 
-    **[File sharing](file-sharing/filesharing-workingwith.md)**
+    **[File sharing](file-sharing/manage.md)**
 
     ---
 

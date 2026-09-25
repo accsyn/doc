@@ -50,6 +50,7 @@ plugins:
 nav:
   - Home: index.md
   - Introduction: introduction.md
+  - Whitepaper: whitepaper.md
   - Starting a trial: trial.md
   - Delivery:
       - delivery/index.md
@@ -58,7 +59,7 @@ nav:
       - Receive: delivery/receive.md
   - File sharing:
       - file-sharing/index.md
-      - Working with: file-sharing/filesharing-workingwith.md
+      - Manage: file-sharing/manage.md
       - Access: file-sharing/access.md
   - Media Vault:
       - vault/index.md
@@ -97,13 +98,14 @@ nav:
   - Account: account.md
   - Desktop App: desktop-app.md
   - Specifications: specifications.md
-  - Changelog: changelog.md
+  - Tutorials:
+    - FTP server replacement: tutorials/ftp-server-replacement.md
+    - Outsourcing pipeline: tutorials/outsourcing-pipeline.md
+    - Remote office sync: tutorials/remote-office-sync.md
+    - Film Festival: tutorials/film-festival.md
   - Troubleshooting:
       - troubleshooting.md
       - Warnings: warnings.md
       - Errors: errors.md
-  - Tutorials:
-      - Film festival: tutorials/film-festival.md
-      - FTP server replacement: tutorials/ftp-server-replacement.md
-      - Outsourcing pipeline: tutorials/outsourcing-pipeline.md
-      - Remote office sync: tutorials/remote-office-sync.md
+  - Changelog: changelog.md
+

@@ -2,38 +2,6 @@
 
 This page serves as an admin and operator's manual for accsyn BYOS - how to set up and use accsyn on your own premises.
 
-CONTENTS:
-
-[What is BYOS?](index.md)
-
-[Which additional features become available?](index.md)
-
-[Setting up](index.md)
-
-[Set up new BYOS workspace](index.md)
-
-[Initiate workspace conversion](index.md)
-
-[Intro](index.md)
-
-[Initiate setup](index.md)
-
-[Intro](index.md)
-
-[Install server](index.md)
-
-[Set up network](index.md)
-
-[Configure storage volume](index.md)
-
-[Apply](index.md)
-
-[Finalise](index.md)
-
-[Testing](index.md)
-
-[Steps to take from here](index.md)
-
 ## What is BYOS?
 
 By default, new accsyn workspaces are 100% cloud hosted in terms of storage and volumes.

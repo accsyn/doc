@@ -7,13 +7,12 @@ This guide shows how a file delivery is created in accsyn and sent to a recipien
 - An active accsyn workspace trial or subscription.
 - A web browser, preferably Google Chrome.
 
-## Create a standard delivery
+## Create a temp delivery
 
-A standard accsyn delivery is one or more files and/or folders uploaded to a temporary place on your accsyn cloud storage, for delivery to one or more recipients.
+A accsyn temp delivery is one or more files and/or folders uploaded to a temporary place on your accsyn cloud storage, for delivery to one or more recipients.
 
 *Note: See below for guides on delivering from files already residing on the cloud storage or delivering media from a title.*
 
-  
 
 1. Log on to the accsyn web app [<https://accsyn.io>].
 2. Go to the Outbound section beneath the workspace menu button on the left hand side.
@@ -38,14 +37,6 @@ The recommended way is to install and use the accsyn desktop app for transferrin
 
 If you seek to use the browser, instead choose PROCEED WITH BROWSER and then upload the files one by one - note that web browsers do not support folder upload, then you will have to switch to the app.
 
-### Browse accsyn storage
-
-Watch this video to see how to send a folder from your storage:
-
-A file browser will appear, listing the contents of your accsyn storage. Choose the file(s) and/or folder(s) to send, and then click ADD TO DELIVERY:
-
-![](../assets/delivery_create-983924dcc160.png)
-
 5. Delete files from delivery by clicking the trashcan symbol on the right hand side of each file added.
 
 6. When all files have been added, enter the email address of the user that should download the delivery. Multiple users can be added here and users that have been sent to earlier are remembered and selectable from a list.
@@ -60,13 +51,11 @@ Screenshot of delivery access options.
 
 By default, only the recipients can download the delivery when logged in with the same email. If you want any accsyn user with the link to be able to download the delivery, check Allow any user with a link to download this delivery.   To protect the download further, you can add a password by filling out the Secret field.
 
-  
 
 If you want to allow anonymous access, meaning that anyone can download the delivery without needing to create an accsyn account/login, check Allow anonymous access.
 
-  
 
-Disclaimer: Allowing anonymous access is generally a bad idea, as you will expose your files without any layer of access protection!
+*Disclaimer: Allowing anonymous access is generally a bad idea, as you will expose your files without any layer of access protection!*
 
 ### Send delivery
 
@@ -74,13 +63,26 @@ When ready, click SEND DELIVERY to have the download link created and emails sen
 
 *Note: you can leave the delivery for completion later, deliveries will stay there for 8h before they expire and you will have to start over.*
 
-## Create an upload request
+## How to create a standard delivery
+
+A standard delivery is created out of a selection of existing files and folder on your cloud or on-prem accsyn storage.
+
+Watch this video to see how to send a folder from your storage:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Km6K1xq3Z2U" title="accsyn Delivery introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+A file browser will appear, listing the contents of your accsyn storage. Choose the file(s) and/or folder(s) to send, and then click ADD TO DELIVERY:
+
+![](../assets/delivery_create-983924dcc160.png)
+
+## How to create an upload request
 
 An upload request is a reversed delivery - requesting users to upload files to a folder for download when everyone has actioned the upload.
 
-  
 
 This video shows how to create an upload request to a temporary folder:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yU0FLcHbYqo" title="accsyn Delivery introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 1. Log on to the accsyn web app [<https://accsyn.io>].
 2. Go to the Requested section beneath the workspace menu button on the left hand side.
@@ -104,28 +106,29 @@ A file browser will appear where you can choose which folder to upload to. A new
 
 When you are all set, click SEND REQUEST to have emails dispatched to recipients with upload instructions. If uploading to a temp folder, it will be created at the storage.
 
-## Deliver from Cloud or BYOS storage
+
+## Deliver from Cloud or On-prem storage
 
 Deliveries can also be made from the accsyn Cloud storage if you are using it as permanent storage, this section also applies to BYOS deliveries from volumes/shared folders.
 
-  
-
 1. Download and install the [accsyn Desktop app](../desktop-app.md), log in to your workspace (with a user having the admin or employee role)
-2. Open the STORAGE tab.
+2. Open the Storage view.
 3. Upload files & folders to your permanent storage.
-4. Select the files/folders and either click the Share button in the action bar and choose Deliver, or right click and do Share>Deliver.
+4. Select the files/folders and either click the "Share" button in the action bar and choose Deliver, or right click and do Share>Deliver.
 
 ![](../assets/delivery_create-f5721007308e.png)
 
 Screenshot showing desktop app when choosing a file for delivery.
 
-5. The new delivery will be spawned and you will be redirected to your web browser to finish up the delivery (see above).
+5. Files are put in the "cart" at right hand side, add more files as needed.
+6. Click "NEXT RECIPIENTS" to open a browser to finish up the delivery (see above).
+
 
 ## Deliver from the Media Vault
 
-Media can easily be delivered from the media vault:
+Media can easily be delivered from the accsyn Media vault:
 
-1. Download and install the [accsyn Desktop app](../desktop-app.md), log in to your workspace (with a user having the admin or employee role)
+1. Download and install the accsyn [Desktop app](../desktop-app.md), log in to your workspace (with a user having the admin or employee role)
 2. Create the title and log media to deliver.
 3. Select the media file(s) and choose Deliver from the action bar, or right click media and choose Deliver:
 
@@ -137,19 +140,18 @@ Screenshot showing desktop app when choosing media for delivery.
 
 5. When done, click Next recipients, to finish up the delivery in your browser - the same way you do for any delivery within the platform.
 
+
 ## Request upload to Cloud storage
 
 In the same way, upload requests can be created with the desktop app, to have users upload to a permanent folder on your accsyn Cloud or BYOS storage.
 
-  
-
-1. Download and install the accsyn Desktop app, log in to your workspace (with a user having the admin or employee role)
-2. Open the STORAGE tab.
+1. Download and install the accsyn [Desktop app](../desktop-app.md), log in to your workspace (with a user having the admin or employee role)
+2. Open the Storage view.
 3. Browse to the folder you want to have users upload to, create new folders by clicking the create folder menu button or right click and choose Create new folder.
 4. Click the Share button in the menu and choose Request upload here, or right click and do Share>Request upload here.
 5. The new upload request will be spawned and you will be redirected to your web browser to finish it up (see above).
 
-Next: [monitor and manage a delivery.](manage.md)
+Next: [Monitor and manage a delivery.](manage.md)
 
 Related articles:
 

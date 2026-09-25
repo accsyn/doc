@@ -8,6 +8,12 @@ We recommend watching this 1:30 minute video, providing an introduction to file 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PqQLXAfZF5M" title="accsyn File Sharing introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Tutorial
+
+Learn how to setup accsyn File Sharing step by step by following this tutorial:
+
+[FTP server replacement](../tutorials/ftp-server-replacement.md)
+
 ## What is accsyn File Sharing?
 
 In principle, it is an FTP replacement combining powerful ACL mechanisms with fast, secure and resumable file transfers / deliveries.
@@ -24,24 +30,21 @@ accsyn has been streamlined for sharing folders efficiently, giving operators fu
 
 The most basic form of file sharing is making a delivery - collecting the files and/or folders to send to a user, available for a limited time. Learn about file deliveries [here](../delivery/index.md).
 
-  
-
 To understand how accsyn file sharing works we first declare some terms used throughout this guide:
 
-- ACL; Access Control List, defines which employees have access to volumes, and which standard users have access to Shared folders.
-- Share; Is a common abbreviation and the internal accsyn entity for a container that contains files and folders sharable with users, a share could be a volume, shared folder, collection or home share (see below). Shares must be unique within the workspace and cannot have the same name. When using the accsyn API, shares are usually targeted using the common "share=<ident>/.." notation.
-- Volume; A volume is the root folder exposed to accsyn on a file server. accsyn cannot access files outside this root folder, and all file sharing (and delivering, title management and so on) happens within this folder. In a BYOS setup, you can have as many volumes as you need. Administrators have full access to volumes, employees have full access to the volumes they have been granted access to. Standard users do not have direct access to a volume.
-- Shared folder; A folder beneath a volume, or the volume root folder, intended to be shared with standard users through ACLs.
-- Collection; Files and folders collected from one or more volumes and put into a virtual folder that can be shared with users the same way a shared folder would.
-- Home; A special shared folder, named as the user (email), giving users a place to upload and download material outside the default production area. By default, this feature is turned off and can be turned on in Settings.
+- **ACL** Access Control List, defines which employees have access to volumes, and which standard users have access to Shared folders.
+- **Share** Is a common abbreviation and the internal accsyn entity for a container that contains files and folders sharable with users, a share could be a volume, shared folder, collection or home share (see below). Share API code identifier must be unique within the workspace and cannot have the same code as another share. When using the accsyn API, shares are usually targeted using the common "share=<ident>/.." notation.
+- **Volume**; A volume is the root folder exposed to accsyn on a file server. accsyn cannot access files outside this root folder, and all file sharing (and delivering, title management and so on) happens within this folder. In a BYOS setup, you can have as many volumes as you need. Administrators have full access to volumes, employees have full access to the volumes they have been granted access to. Standard users do not have direct access to a volume.
+- **Shared folder** A folder beneath a volume, or the volume root folder, intended to be shared with standard users through ACLs.
+- **Collection** Files and folders collected from one or more volumes and put into a virtual folder that can be shared with users the same way a shared folder would.
+- **Home** A special shared folder, named as the user (email), giving users a place to upload and download material outside the default production area. By default, this feature is turned off and can be turned on in Settings.
 
-  
 
 Users get access to shared files depending on their role:
 
-- Administrators; Have full access to all volumes, be careful who you invite to be an administrator.
-- Employees; Are granted access to one or more volumes by administrators, giving them full access to the files and folders - create shares, deliveries, monitor and audit.
-- Standard users; Except for deliveries sent to them, standard users only have access to shared (home) folders beneath a volume or collections.
+- **Administrators** Have full access to all volumes, be careful who you invite to be an administrator.
+- **Employees** Are granted access to one or more volumes by administrators, giving them full access to the files and folders - create shares, deliveries, monitor and audit.
+- **(Standard) Users**; Except for deliveries sent to them, standard users only have access to shared folders/homes beneath a volume or collections.
 
 ## Can I share Titles and associated media within the vault?
 
@@ -51,10 +54,11 @@ A good example is to create a permanent "DCP" collection, with a set of DCPs to 
 
 ## Can I share files on my own local or cloud storage?
 
-Yes, accsyn provides a BYOS licensing option allowing you to install on-prem our cloud servers facilitating file sharing and delivery on your storage solutions.
+Yes, accsyn provides a BYOS licensing option allowing you to install on-prem our cloud servers facilitating file sharing and delivery on your storage solutions. For more information see [BYOS](../admin/byos/index.md).
 
+## Can my clients share folders on their local machine
+
+Yes, accsyn supports mapping shares locally on a client (Desktop App or User server) and then grant read and write access. See [Hosts](../admin/hosts.md) for more information.
   
 
-Read more about BYOS here.
-
-Next: [work with accsyn File Sharing](filesharing-workingwith.md)
+Next: [Work with accsyn File Sharing](manage.md)
