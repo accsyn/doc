@@ -45,7 +45,11 @@ Servers will not be auto-assigned this way, they will manually have to be assign
 
 ### Sites and file transfers
 
-When a download or upload is initiated from a machine assigned to a site, or detected to be at the site based on the WAN IP, the transfer will be carried out by the site server and not the client itself.
+When a download or upload is initiated from a machine assigned to a site, or detected to be at the site based on the WAN IP, and the workspace setting **Route transfers via site server** (`site_route_transfers`) is enabled, the transfer will be carried out by the site server and not the client itself. This offloads the client so it can be turned off and transfers will proceed. Note that transfers might queue up on the site server and not schedule immediately as would be the case if the client were used as transfer endpoint.
+
+When the setting is disabled, the initiating client remains the transfer endpoint.
+
+Configure this under Admin → Settings → Site. See [Workspace Settings](../settings.md#site).
 
   
 
@@ -137,7 +141,9 @@ List of servers and clients assigned to the site.
 
 Settings
 
-Sites currently have no settings.
+- Route transfers via site server (`site_route_transfers`); Override the workspace setting for this site. When enabled, download and upload transfers initiated by clients on this site will be redirected to the site server. This offloads the client so it can be turned off and transfers will proceed. Note that transfers might queue up on the site server and not schedule immediately as would be the case if the client were used as transfer endpoint.
+
+Workspace-level defaults are configured under Admin → Settings → Site. See [Workspace Settings](../settings.md#site).
 
   
 

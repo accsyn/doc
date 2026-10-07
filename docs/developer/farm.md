@@ -1,72 +1,8 @@
 # Render farm
 
-*NOTE: This feature is exposed to BYOS workspaces only.*
-
-[BYOS](../admin/byos/index.md)
+*NOTE: This feature is exposed to standard (not Lite) [BYOS](../admin/byos/index.md) workspaces only.*
 
 This guide walks through how to set up a render farm with your accsyn Workspace.
-
-CONTENT
-
-[What is a Render farm?](farm.md)
-
-[How does it work?](farm.md)
-
-[Engines](farm.md)
-
-[Lanes](farm.md)
-
-[Filters](farm.md)
-
-[Pools](farm.md)
-
-[Licensing](farm.md)
-
-[Engine source code](farm.md)
-
-[Prerequisites](farm.md)
-
-[Enabling compute feature](farm.md)
-
-[Installing engines](farm.md)
-
-[Common engine](farm.md)
-
-[Application engine](farm.md)
-
-[Installing and configuring a render server](farm.md)
-
-[Submitting a render job](farm.md)
-
-[Prerequisites](farm.md)
-
-[Submit using the accsyn Desktop app](farm.md)
-
-[Submit using the accsyn Python API](farm.md)
-
-[Cross-site rendering](farm.md)
-
-[Prerequisites](farm.md)
-
-[Setting up remote render](farm.md)
-
-[How it works](farm.md)
-
-[Considerations](farm.md)
-
-[Building your own submitter](farm.md)
-
-[Breakdown of the submitter](farm.md)
-
-[Conclusion](farm.md)
-
-[Building your own render engine](farm.md)
-
-[Developer guidelines/prerequisites](farm.md)
-
-[Script structure](farm.md)
-
-[Other resources](farm.md)
 
 ## What is a Render farm?
 
@@ -143,7 +79,7 @@ You are free to fork off these or create your own engine scripts, as needed. Fee
 
 ## Prerequisites
 
-- An active BYOS accsyn workspace and an active administrator login.
+- An active standard (not Lite) BYOS accsyn workspace and an active administrator login.
 - One or more dedicated render computers, with the render application installed and licensed.
 
   
@@ -164,7 +100,7 @@ As a first step, we need to enable compute:
 Before we can install any engines, we need to install the common engine - the base:
 
 1. Log on as an administrator at [accsyn.io/admin/engines](http://accsyn.io/admin/engines) and click Create engine.
-2. Enter the engine name common.
+2. Giv it the engine name/code 'common' (Mandatory)
 3. Open the common script on GitHub as raw, link: <https://raw.githubusercontent.com/accsyn/compute-scripts/refs/heads/main/source/common.py>
 4. Copy the script and paste it in the Python script entry.
 5. (Optional) Set description and vendor [accsyn]. Color has no effect here.
@@ -172,16 +108,16 @@ Before we can install any engines, we need to install the common engine - the ba
 
 You now have the base setup.
 
-  
-
 ### Application engine
 
+Now you are ready to install arbitrary engines, we are providing a "Hello world" example engine that can be used for testing and will be used in this quide.
+
 - Log on as an administrator at [accsyn.io/admin/engines](http://accsyn.io/admin/engines) and click Create engine.
-- Enter the application engine name, we recommend giving the exact same name as the Python script is named, without the .py extension [mantra-20.5]
-- Open the common script on GitHub as raw, link: <https://raw.githubusercontent.com/accsyn/compute-scripts/refs/heads/main/source/mantra-20.5.py>
+- Enter the application engine name, we recommend giving the exact same name as the Python script is named, without the .py extension [hello-world.py]
+- Open the common script on GitHub as raw, link: <https://raw.githubusercontent.com/accsyn/compute-scripts/refs/heads/main/source/hello-world.py>
 - Copy the script and paste it in the Python script entry.
 - (Optional) Set description
-- (Optional) Set vendor (SideFX).
+- (Optional) Set vendor [accsyn].
 - (Optional) Set the color, used in farm view to distinguish applications.
 - Click Create & Publish.
 
@@ -189,16 +125,15 @@ You now have a configured render farm and are ready to install nodes.
 
 ## Installing and configuring a render server
 
-To be able to execute engine scripts, you will need a server:
+To be able to execute engine scripts, you will need a server. You can either configure an existing storage server to process render jobs or install one or more dedicated render servers:
 
-1. Go to Workspace menu>Administrate>Servers (<https://accsyn.io/admin/servers>) and click INSTALL SERVER.
+1. Go to Workspace menu>Administrate>Servers (<https://accsyn.io/admin/servers>) and click INSTALL SERVER. Skip to step 4 if you want to enable an existing server.
 2. Choose Render server role.
 3. Conclude the server installation by installing the daemon and authenticating it using the code displayed.
 4. Edit the server and go to Lanes & Engines tab.
 5. One lane should be displayed; to change the number of lanes, go to the Attributes tab.
 6. Right click on the lane, choose the engine [Mantra 20.5] and choose Available.
 
-  
 
 The render server is now set up and ready to run jobs. Reload the web admin pages to have the Farm menu option appear on the left-hand side - use it to monitor your render servers.
 
@@ -222,21 +157,20 @@ Notes/hints: 
 - Newly added engines, or your custom engines, are not automatically available/supported to submit with the desktop app. Please reach out to support to make an implementation request.
 - To view the resulting render job submit API payload, click the JSON button next to the RENDER button - it is very helpful when designing your own API based submit logic.
 
-  
+In this guide, we will just submit a text (.txt) file to be processed by the Hello World engine:
 
 1. Download and install the [accsyn Desktop app](../desktop-app.md).
 2. Log in with a user that has permission to access the input files at the volume, and submit render jobs.
 3. Open the Render tab.
-4. Drag and drop the input file [render.01001.ifd] on the area or click Storage button and browse to the file.
+4. Create/copy a text file to your accsyn storage. Drag and drop the input text file [README.text] on the area or click "Browse Storage" button to select the file.
 5. Any input file sequence will be detected.
 6. Check Parse input for dependencies to have accsyn parse ASCII input file(s) for dependencies when an engine is selected, and track them - enables proper cross-site rendering.
-7. Select the engine [Mantra 20.5]
+7. Select the engine [Hello World]
 8. Enter the frame range to render, either as a single continuous range or a set of ranges [1001-1100]. See examples below.
 9. (Optional) Enter one or more frames or ranges to render before the rest, it has to be within the main frame range above.
-10. (Optional) Adjust the job attributes as needed, see below for descriptions.
-11. Click RENDER in bottom right corner to submit the job to the farm.
+10. (Optional) Adjust the render job settings and attributes as needed, see below for descriptions.
+11. Click SUBMIT RENDER in bottom right corner to submit the job to the farm.
 
-  
 
 Render job attributes/settings:
 
@@ -272,7 +206,7 @@ Render job attributes/settings:
   - Clear output directory; Define if the output directory should be cleared before render is started on a new site, mitigates stray files present from previous renders to the same folder.
   - Download output from <workspace name> on finished items(s)/tasks(s); Decide if output should be continuously synced back to the submitting machine when an engine completes execution on a render server.
   - Additional render parameters (advanced); Define default DCC render command line parameters and other advanced attributes.
-  - Common and platform environment variables; Enter environment variables, one entry per row, in the form "FLEXLM\_DIAGNOSTICS=2".
+  - Common and platform environment variables; Enter environment variables, one entry per row, in the form "FLEXLM_DIAGNOSTICS=2".
   - Bucket size; Define how many items/tasks should be collected and dispatched to each render server. Requires engines to support items - e.g. each input file can be used for rendering multiple images defined by sub frame ranges (Maya, Nuke etc).
 
   
@@ -336,262 +270,147 @@ As mentioned earlier, the accsyn farm feature is API-first, meaning that it is p
 
 In this example we build a minimal Python (PySide) based submitter designed to be launched as a standalone desktop application. Source code:
 
-  
+```bash
+pip install accsyn-python-api
 
-accsyn-submitter.py:
+pip install PySide6
+```
 
+**accsyn-submitter.py:**
+
+```python
 import os
-
 import sys
-
 import re
-
 import traceback
 
-  
-
-# pip install accsyn-python-api
-
-import accsyn\_api
-
-  
-
-# pip install PySide6
-
+import accsyn_api
+ 
 from PySide6 import QtWidgets
 
 from PySide6.QtWidgets import (
-
     QDialog, QApplication, QVBoxLayout, QHBoxLayout, QFormLayout,
-
     QComboBox, QLineEdit, QPushButton, QLabel, QMessageBox
-
 )
 
 from PySide6.QtCore import Qt
 
 from PySide6.QtGui import QColor
 
-  
 
 class SubmitterDialog(QDialog):
-
     """Dialog for submitting a generic render job to accsyn"""
-
-    def \_\_init\_\_(self, parent=None):
-
-        super(SubmitterDialog, self).\_\_init\_\_(parent)
-
+    def __init__(self, parent=None):
+        super(SubmitterDialog, self).__init__(parent)
         self.setWindowTitle("Accsyn Render Farm Submitter")
-
         self.setMinimumWidth(600)
-
         # Create farm session object, requires environment variables set:
-
-        #    ACCSYN\_WORKSPACE=<workspace API code>
-
-        #    ACCSYN\_API\_USER=<accsyn user ident (email)>
-
-        #    ACCSYN\_API\_KEY=<secret API key, generated from https://accsyn.io/developer>
-
-        self.session = accsyn\_api.Session()
-
-  
+        #    ACCSYN_WORKSPACE=<workspace API code>
+        #    ACCSYN_API_USER=<accsyn user ident (email)>
+        #    ACCSYN_API_KEY=<secret API key, generated from https://accsyn.io/developer>
+        self.session = accsyn_api.Session()
 
         self.engines = []
+        self.setup_ui()
+        self.load_engines()
 
-        self.setup\_ui()
-
-        self.load\_engines()
-
-    def setup\_ui(self):
-
+    def setup_ui(self):
         """Setup the user interface"""
-
         layout = QVBoxLayout(self)
-
         layout.setSpacing(10)
-
         layout.setContentsMargins(15, 15, 15, 15)
-
         # Engine selection row
-
-        engine\_row = QHBoxLayout()
-
-        engine\_label = QLabel("Engine:")
-
-        engine\_label.setMinimumWidth(80)
-
-        self.engine\_combo = QComboBox()
-
-        self.engine\_combo.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
-
-        engine\_row.addWidget(engine\_label)
-
-        engine\_row.addWidget(self.engine\_combo)
-
-        layout.addLayout(engine\_row)
-
+        engine_row = QHBoxLayout()
+        engine_label = QLabel("Engine:")
+        engine_label.setMinimumWidth(80)
+        self.engine_combo = QComboBox()
+        self.engine_combo.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        engine_row.addWidget(engine_label)
+        engine_row.addWidget(self.engine_combo)
+        layout.addLayout(engine_row)
         # Input field row
-
-        input\_row = QHBoxLayout()
-
-        input\_label = QLabel("Input:")
-
-        input\_label.setMinimumWidth(80)
-
-        self.input\_field = QLineEdit()
-
-        self.input\_field.setPlaceholderText("share=<share ident>/<path>/<to>/<a file>")
-
-        self.input\_field.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
-
-        input\_row.addWidget(input\_label)
-
-        input\_row.addWidget(self.input\_field)
-
-        layout.addLayout(input\_row)
-
+        input_row = QHBoxLayout()
+        input_label = QLabel("Input:")
+        input_label.setMinimumWidth(80)
+        self.input_field = QLineEdit()
+        self.input_field.setPlaceholderText("share=<share ident>/<path>/<to>/<a file>")
+        self.input_field.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        input_row.addWidget(input_label)
+        input_row.addWidget(self.input_field)
+        layout.addLayout(input_row)
         # Range field row
-
-        range\_row = QHBoxLayout()
-
-        range\_label = QLabel("Range:")
-
-        range\_label.setMinimumWidth(80)
-
-        self.range\_field = QLineEdit()
-
-        self.range\_field.setPlaceholderText("1-100")
-
-        self.range\_field.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
-
-        range\_row.addWidget(range\_label)
-
-        range\_row.addWidget(self.range\_field)
-
-        layout.addLayout(range\_row)
-
+        range_row = QHBoxLayout()
+        range_label = QLabel("Range:")
+        range_label.setMinimumWidth(80)
+        self.range_field = QLineEdit()
+        self.range_field.setPlaceholderText("1-100")
+        self.range_field.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        range_row.addWidget(range_label)
+        range_row.addWidget(self.range_field)
+        layout.addLayout(range_row)
         # Output field row
-
-        output\_row = QHBoxLayout()
-
-        output\_label = QLabel("Output:")
-
-        output\_label.setMinimumWidth(80)
-
-        self.output\_field = QLineEdit()
-
-        self.output\_field.setPlaceholderText("share=<share ident>/<path>/<to>/<folder>")
-
-        self.output\_field.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
-
-        output\_row.addWidget(output\_label)
-
-        output\_row.addWidget(self.output\_field)
-
-        layout.addLayout(output\_row)
-
+        output_row = QHBoxLayout()
+        output_label = QLabel("Output:")
+        output_label.setMinimumWidth(80)
+        self.output_field = QLineEdit()
+        self.output_field.setPlaceholderText("share=<share ident>/<path>/<to>/<folder>")
+        self.output_field.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        output_row.addWidget(output_label)
+        output_row.addWidget(self.output_field)
+        layout.addLayout(output_row)
         # Buttons row
-
-        button\_layout = QHBoxLayout()
-
-        self.cancel\_button = QPushButton("Cancel")
-
-        self.cancel\_button.clicked.connect(self.reject)
-
-        button\_layout.addWidget(self.cancel\_button)
-
-        button\_layout.addStretch()  # Spacer in the middle
-
-        self.submit\_button = QPushButton("SUBMIT")
-
-        self.submit\_button.setStyleSheet("""
-
+        button_layout = QHBoxLayout()
+        self.cancel_button = QPushButton("Cancel")
+        self.cancel_button.clicked.connect(self.reject)
+        button_layout.addWidget(self.cancel_button)
+        button_layout.addStretch()  # Spacer in the middle
+        self.submit_button = QPushButton("SUBMIT")
+        self.submit_button.setStyleSheet("""
             QPushButton {
-
                 background-color: #4CAF50;
-
                 color: white;
-
                 font-weight: bold;
-
                 padding: 8px 20px;
-
                 border: none;
-
                 border-radius: 4px;
-
             }
-
             QPushButton:hover {
-
                 background-color: #45a049;
-
             }
-
             QPushButton:pressed {
-
                 background-color: #3d8b40;
-
             }
-
         """)
 
-        self.submit\_button.clicked.connect(self.on\_submit)
+        self.submit_button.clicked.connect(self.on_submit)
+        button_layout.addWidget(self.submit_button)
+        layout.addLayout(button_layout)
 
-        button\_layout.addWidget(self.submit\_button)
-
-        layout.addLayout(button\_layout)
-
-    def load\_engines(self):
-
+    def load_engines(self):
         """Query all engines from accsyn that have type=compute"""
-
         try:
-
             engines = self.session.find("engine where type=compute")
-
             self.engines = engines if engines else []
-
             # Populate combobox
-
-            self.engine\_combo.clear()
-
+            self.engine_combo.clear()
             if self.engines:
-
                 for engine in self.engines:
-
                     # Engine might be a dict with 'name' or 'code' field, or just a string
-
                     if isinstance(engine, dict):
-
                         name = engine.get('name') or engine.get('code') or str(engine)
-
                     else:
-
                         name = str(engine)
-
-                    self.engine\_combo.addItem(name, engine)
-
+                    self.engine_combo.addItem(name, engine)
             else:
-
-                self.engine\_combo.addItem("No compute engines found", None)
-
-                self.submit\_button.setEnabled(False)
-
+                self.engine_combo.addItem("No compute engines found", None)
+                self.submit_button.setEnabled(False)
         except Exception as e:
-
             QMessageBox.warning(self, "Error Loading Engines", 
+                              f"Failed to load engines from accsyn:\n\n{str(e)}\n\n{traceback.format_exc()}")
+            self.engine_combo.addItem("Error loading engines", None)
+            self.submit_button.setEnabled(False)
 
-                              f"Failed to load engines from accsyn:\n\n{str(e)}\n\n{traceback.format\_exc()}")
-
-            self.engine\_combo.addItem("Error loading engines", None)
-
-            self.submit\_button.setEnabled(False)
-
-    def validate\_input\_path(self, path):
-
+    def validate_input_path(self, path):
         """Validate input path format: share=<share ident>/<path>/<to>/<a file>"""
 
         if not path:
@@ -608,229 +427,133 @@ class SubmitterDialog(QDialog):
 
         return True, None
 
-    def validate\_output\_path(self, path):
-
+    def validate_output_path(self, path):
         """Validate output path as accsyn shaped folder path"""
-
         if not path:
-
             return False, "Output path is required"
-
         # Similar pattern to input, but should be a folder path
-
         # Accsyn paths typically start with share=
-
         pattern = r'^share=[^/]+(/[^/]+)+/?$'
-
         if not re.match(pattern, path):
-
             return False, "Output path must be a valid accsyn folder path (share=<share ident>/<path>/<to>/<folder>)"
-
         return True, None
 
-    def validate\_range(self, range\_str):
-
+    def validate_range(self, range_str):
         """Validate frame range format: 1-100"""
-
-        if not range\_str:
-
+        if not range_str:
             return False, "Range is required"
-
         # Pattern: number-number
-
         pattern = r'^\d+-\d+$'
-
-        if not re.match(pattern, range\_str):
-
+        if not re.match(pattern, range_str):
             return False, "Range must be in format: 1-100"
 
         # Check that start <= end
-
         try:
-
-            start, end = map(int, range\_str.split('-'))
-
+            start, end = map(int, range_str.split('-'))
             if start > end:
-
                 return False, "Start frame must be less than or equal to end frame"
-
         except ValueError:
-
             return False, "Range must contain valid numbers"
-
         return True, None
 
-    def validate\_fields(self):
-
+    def validate_fields(self):
         """Validate all input fields"""
-
         errors = []
-
         # Validate engine
-
-        if self.engine\_combo.currentData() is None:
-
+        if self.engine_combo.currentData() is None:
             errors.append("Please select a valid engine")
-
         # Validate input path
-
-        input\_path = self.input\_field.text().strip()
-
-        valid, error\_msg = self.validate\_input\_path(input\_path)
-
+        input_path = self.input_field.text().strip()
+        valid, error_msg = self.validate_input_path(input_path)
         if not valid:
-
-            errors.append(f"Input: {error\_msg}")
-
+            errors.append(f"Input: {error_msg}")
         # Validate range
-
-        range\_str = self.range\_field.text().strip()
-
-        valid, error\_msg = self.validate\_range(range\_str)
-
+        range_str = self.range_field.text().strip()
+        valid, error_msg = self.validate_range(range_str)
         if not valid:
-
-            errors.append(f"Range: {error\_msg}")
-
+            errors.append(f"Range: {error_msg}")
         # Validate output path
-
-        output\_path = self.output\_field.text().strip()
-
-        valid, error\_msg = self.validate\_output\_path(output\_path)
-
+        output_path = self.output_field.text().strip()
+        valid, error_msg = self.validate_output_path(output_path)
         if not valid:
-
-            errors.append(f"Output: {error\_msg}")
-
+            errors.append(f"Output: {error_msg}")
         return errors
 
-    def build\_payload(self):
-
+    def build_payload(self):
         """Build the accsyn API render farm submit JSON payload"""
-
-        engine\_data = self.engine\_combo.currentData()
-
+        engine_data = self.engine_combo.currentData()
         # Get engine identifier (could be string or dict with 'code' or 'name')
-
-        if isinstance(engine\_data, dict):
-
-            engine = engine\_data.get('code') or engine\_data.get('name') or str(engine\_data)
-
+        if isinstance(engine_data, dict):
+            engine = engine_data.get('code') or engine_data.get('name') or str(engine_data)
         else:
-
-            engine = str(engine\_data)
-
+            engine = str(engine_data)
         # Parse frame range
-
-        range\_str = self.range\_field.text().strip()
-
-        start\_frame, end\_frame = map(int, range\_str.split('-'))
-
+        range_str = self.range_field.text().strip()
+        start_frame, end_frame = map(int, range_str.split('-'))
         payload = {
-
             'engine': engine,
-
-            'input': self.input\_field.text().strip(),
-
-            'output': self.output\_field.text().strip(),
-
-            'range': f"{start\_frame}-{end\_frame}",
-
+            'input': self.input_field.text().strip(),
+            'output': self.output_field.text().strip(),
+            'range': f"{start_frame}-{end_frame}",
         }
-
         return payload
 
-    def submit\_job(self, payload):
-
+    def submit_job(self, payload):
         """Submit job to accsyn API"""
-
         try:
-
             result = self.session.create('job', payload)
-
             return True, result
-
         except Exception as e:
-
             return False, str(e)
 
-    def on\_submit(self):
-
+    def on_submit(self):
         """Handle submit button click"""
-
         # Validate fields
-
-        errors = self.validate\_fields()
-
+        errors = self.validate_fields()
         if errors:
-
-            error\_msg = "Please correct the following errors:\n\n" + "\n".join(f"• {error}" for error in errors)
-
-            QMessageBox.warning(self, "Validation Error", error\_msg)
-
+            error_msg = "Please correct the following errors:\n\n" + "\n".join(f"• {error}" for error in errors)
+            QMessageBox.warning(self, "Validation Error", error_msg)
             return
 
         # Build payload
-
-        payload = self.build\_payload()
-
+        payload = self.build_payload()
         # Submit job
-
-        success, result = self.submit\_job(payload)
-
+        success, result = self.submit_job(payload)
         if success:
-
             QMessageBox.information(
-
                 self,
-
                 "Job Submitted",
-
                 f"Job were submitted successfully to accsyn!\n\nID: {result['id']}"
-
             )
-
             self.accept()
-
         else:
-
             QMessageBox.critical(
-
                 self,
-
                 "Submission Failed",
-
-                f"Failed to submit job:\n\n{result}\n\n{traceback.format\_exc()}"
-
+                f"Failed to submit job:\n\n{result}\n\n{traceback.format_exc()}"
             )
 
-  
-  
 
-if \_\_name\_\_ == '\_\_main\_\_':
-
+if __name__ == '__main__':
     app = QApplication(sys.argv)
-
     dialog = SubmitterDialog()
-
     dialog.show()
-
     sys.exit(app.exec())
+
+```  
 
 ### Breakdown of the submitter
 
-  
-
 - Imports/dependencies; Besides standard Python libraries, the script requires the libraries "accsyn-python-api" and "PySide6" to be available in the running environment.
 - Class init; Here the accsyn API session is created; it assumes accsyn API credentials stored in environment variables. They can also be submitted as arguments to the Session(..) call.
-- setup\_ui; Create the simple GUI where the user can choose engine, input the file to render, frame range and where to save the images.
-- load\_engines; This utility function loads available engines from accsyn. Requires at least one standard type (compute) engine to be available.
-- validate\_input\_path & validate\_output\_path; Makes sure that the path is in accsyn form/notation.
-- validate\_range; Validate frame range number expression (start-end)
-- validate\_fields; Validates all values entered by the user.
-- build\_payload; Builds the API submit payload based on the user input.
-- submit\_job; Submits the render farm job to accsyn.
-- on\_submit; Handle submit button click.
+- setup_ui; Create the simple GUI where the user can choose engine, input the file to render, frame range and where to save the images.
+- load_engines; This utility function loads available engines from accsyn. Requires at least one standard type (compute) engine to be available.
+- validate_input_path & validate_output_path; Makes sure that the path is in accsyn form/notation.
+- validate_range; Validate frame range number expression (start-end)
+- validate_fields; Validates all values entered by the user.
+- build_payload; Builds the API submit payload based on the user input.
+- submit_job; Submits the render farm job to accsyn.
+- on_submit; Handle submit button click.
 - Main bootstrap; executed when launched like "python3 <path/to/[submitter.py](http://submitter.py)>"
 
   
@@ -861,91 +584,70 @@ Most likely, the default engines provided by accsyn do not cover your needs and 
 
 Engine scripts must adhere to the following base structure:
 
-..
 
+```python
 class Engine(Common):
 
-    \_\_revision\_\_ = 1  # Will be automatically increased each publish
+    __revision__ = 1 
 
     # -- ENGINE CONFIG START --
 
     SETTINGS = {
-
       "items": True,
-
-      "filename\_extensions": ".nk",
-
+      "filename_extensions": ".nk",
       ..
 
     }
 
-  
-
-    PARAMETERS = {"mapped\_share\_paths": [], "arguments": ["-txV"], "input\_conversion": "auto"}
+    PARAMETERS = {"mapped_share_paths": [], "arguments": ["-txV"], "input_conversion": "auto"}
 
     # -- ENGINE CONFIG END --
 
-  
+    ..
+
+    def __init__(self, argv):
+        super(Engine, self).__init__(argv)
 
     ..
 
-    def \_\_init\_\_(self, argv):
-
-        super(Engine, self).\_\_init\_\_(argv)
-
-    ..
-
-  
-
-    def get\_executable(self, preferred\_nuke\_version=None):
-
+    def get_executable(self, preferred_nuke_version=None):
         """Return path to executable as string"""
-
         ...
 
-  
 
-    def get\_envs(self):
+    def get_envs(self):
 
         """Get dynamic environment variables"""
-
         ..
 
-  
-
-    def get\_commandline(self, item):
-
+    def get_commandline(self, item):
         """Construct the full command line to execute, returned as a list"""
-
         ..
 
     ..
 
   
 
-if \_\_name\_\_ == '\_\_main\_\_':
+if __name__ == '__main__':
+     engine = Engine(sys.argv)
+     engine.load()  # Load data
+     engine.execute()  # Run
 
-    ..
-
-        engine = Engine(sys.argv)
-
-        engine.load()  # Load data
-
-        engine.execute()  # Run
+```
 
 Breakdown of the engine script:
 
 - Engine config; defines the settings for the engine, for example if the application supports items or the default command line arguments to pass on to the app.
 
   - items (boolean); True means each input file can be the source of multiple output files, for example the case for Maya, Nuke, Houdini. Some renderers like Houdini Mantra and Arnold take a file sequence as input; still, it will be executed as numbered items defined by a sub frame range on each render server. ffmpeg on the other hand does not support items - each input file is executed as a task and generates exactly one or more output files.
-  - multiple\_inputs (boolean); True means the engine script supports multiple inputs, this is false for Maya, Nuke etc. but true for ffmpeg.
-  - filename\_extensions (string);  Comma separated list of input filename extensions associated with the underlying (DCC) application, for example ".ma,.mb" for Maya.
-  - binary\_filename\_extensions (string); Comma separated list of filename extensions that denote binary file format, this tells accsyn which input files can be parsed during submit with the desktop app or not.
+  - multiple_inputs (boolean); True means the engine script supports multiple inputs, this is false for Maya, Nuke etc. but true for ffmpeg.
+  - filename_extensions (string);  Comma separated list of input filename extensions associated with the underlying (DCC) application, for example ".ma,.mb" for Maya.
+  - binary_filename_extensions (string); Comma separated list of filename extensions that denote binary file format, this tells accsyn which input files can be parsed during submit with the desktop app or not.
   - binary (boolean); Tells accsyn that all input files are binary.
-  - default\_range (string); The default frame range to suggest in desktop app submitter.
-  - default\_bucketsize (number); The default bucket size to suggest in desktop app submitter.
-  - max\_bucketsize (number); The maximum bucket size the render application supports.
-  - default\_output\_path (string); Suggest this default output path.
+  - default_range (string); The default frame range to suggest in desktop app submitter.
+  - default_bucketsize (number); The default bucket size to suggest in desktop app submitter.
+  - max_bucketsize (number); The maximum bucket size the render application supports.
+  - default_output_path (string); Suggest this default output path.
   - type; The type of engine, default is "compute" for DCC rendering applications. The rest are special engines not covered by this documentation.
 - Init; instantiate the engine, and also define additional class variables.
 - Get executable; Evaluate and return the path to the application binary executable, will be the first element of the command line.

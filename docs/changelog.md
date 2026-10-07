@@ -4,7 +4,27 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
-## v3.6-6 <small>September 22-23, 2026</small>
+## v3.6-7 <small>October 7, 2026</small>
+
+**Minor features**
+
+- [WEB/AUDIT] Dispatcher audit page - evaluate decisions mede by the accsyn job/task dispatcher. Useful for debugging compute filter evaluations.
+- [WEB/AUDIT] Optimised dispatcher performance and memory consumption.
+- [DOC] Updated job specification and site documentation.
+- [COMPUTE/RENDER] Provided Hello World sample engine and updated render farm documentation.
+
+**Bug fixes**
+
+- [CORE/SUBMIT] Fixed permission vulnerabilities related to push and pull to/from remote user mapped shares.  
+- [APP] Fixed bugs with transfer party destination evaluations.
+- [APP] Fixed bugs with configuring client site, general app polishes and improvements.
+
+**Changes**
+
+- [CORE] Added global and site boolean setting "site_route_transfers" (default: false). If true, downloads & uploads initated by a client on same site will go through the site server (if present).
+
+
+## v3.6-6 <small>September 25, 2026</small>
 
 **Minor features**
 
@@ -17,7 +37,8 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [APP/SUMBIT] Bring back download and upload tab buttons. Improved source and destination parties checkboxes.
 - [APP] Improved invite new user UX, consolidated grant access dialog. Larger My jobs See all button, with fixes and improvements.
 - [Python API 3.4.0] Improved access grant and revoke, improved documentation. Consolidated docstrings. Expanded and improved test coverage.
-- [WEB] Possibility to cancel card billed subscriptions, with support for cancellation period. 
+- [WEB] Possibility to cancel card billed subscriptions, with support for cancellation period.
+- [CORE/FILE OPS] Shares and ACLs are updated accordingly on file rename, move and delete operations through UI:s or API.
 
 **Bug fixes**
 

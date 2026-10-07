@@ -42,3 +42,5 @@ A complete listing of all accsyn warning codes that can appear as:
 | W#J069 | File sequence member is missing: ... | An expected member of a file sequence cannot be found. |
 | W#J070 | All client\|node(s) are currently occupied. | There are no clients or nodes available to run the job. |
 | W#J071 | Cannot be dispatched, ... jobs are currently disabled... | Downloads, uploads or compute jobs have been disabled within the entire accsyn workspace or for a role / user. |
+| W#J072 | Compute are not enabled globally! | An administrator needs to enable compute withing the workspace. |
+| W#J073 | Compute are not enabled at for the server! | An administrator needs to enable compute for the client. |

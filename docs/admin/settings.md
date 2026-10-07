@@ -203,6 +203,18 @@ What accsyn should log during transfer. The transfer log is stored per-task and 
 
 Advanced transfer settings, see [accsyn Internal settings](../settings.md) for details.
 
+## Site
+
+*Note: Site settings are available for [BYOS](byos/index.md) and Enterprise licensed workspaces only.*
+
+### Route transfers via site server
+
+If enabled, download and upload transfers initiated by clients on the same site will be redirected to the site server on the same site. This offloads the client so it can be turned off and transfers will proceed. Note that transfers might queue up on the site server and not schedule immediately as would be the case if the client were used as transfer endpoint.
+
+Can be overridden per site under Admin → Sites → Settings.
+
+See [Site administration](byos/site.md) for more information about sites and file transfers.
+
 ## Email
 
 *Note: The email settings can be overridden on volume and queue level.*

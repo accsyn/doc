@@ -101,3 +101,8 @@
     break-inside: avoid;
   }
 }
+
+/* Widen the overall MkDocs Material page */
+.md-grid {
+  max-width: none;
+}

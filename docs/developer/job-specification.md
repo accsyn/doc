@@ -4,7 +4,6 @@ This document provides accsyn job JSON  (JavaScript Object Notation) payload ex
 
 
 ## Job JSON specification
-  
 
 ### When is the job JSON used?
 
@@ -100,10 +99,9 @@ C) Or as a dictionary (the internal accsyn notation):
 ```
   
 
-*Notes:*
-
-- *Nested tasks are allowed, these are defined by a "tasks" sub key. It is used with compute jobs, see examples below.*
-- *"0" and "1" above are called task "uri"s and must be unique (within the tasks locally at that level).  Tasks are also assigned a unique ID that can be used to further modify the job.*
+<sup>*Notes:*</sup><br>
+<sup>- *Nested tasks are allowed, these are defined by a "tasks" sub key. It is used with compute jobs, see examples below.*</sup><br>
+<sup>- *"0" and "1" above are called task "uri"s and must be unique (within the tasks locally at that level).  Tasks are also assigned a unique ID that can be used to further modify the job.*</sup><br>
 
   
 
@@ -134,7 +132,7 @@ Example party definitions:
 - client=6611fbca3f8c4d3e7a3b678a; Denotes an explicit client, for example if a user is running multiple clients.
 
 
-* Note: If no party is given (empty/missing source or destination), the workspace party is assumed.*
+<sup>- * Note: If no party is given (empty/missing source or destination), the workspace party is assumed.*</sup>
 
 Path examples:
 
@@ -144,21 +142,18 @@ Path examples:
 - volume=projects/reference.tif ; Same notation,  but references the volume "projects" by its unique API "code" attribute and leaving accsyn to resolve the absolute path using the configured prefix for the server platform. This is also called the accsyn path notation.
 - volume=(default)/reference.tif ; Same notation but specifying the default volume directly.
 - share=myproject/assets.zip ; Relaxed share definition - unspecified share type, resolves to the volume, shared folder, home or collection "myproject" by its unique API "code" attribute.
-- folder=6734b3ca8c3592a922bdb0de/TO\_ACME/source.rar; File is located in the shared folder identified by the explicit id, in subfolder "TO\_ACME".
+- folder=6734b3ca8c3592a922bdb0de/TO_ACME/source.rar; File is located in the shared folder identified by the explicit id, in subfolder "TO_ACME".
 - home=[john@user.com](mailto:john@user.com)/UPLOAD/test.abc; File is located at Home share [john@user.com](mailto:john@user.com) , in subfolder "UPLOAD".
 - myproject/reference.jpg ; Assumes file paths being relative to the default volume, equivalent to share=projects/myproject/reference.jpg.
-- racing2019\_grade/test.abc; Used in conjunction with a user as target, delivers the file into the relative folder "racing2019\_grade" at the user end.
+- racing2019_grade/test.abc; Used in conjunction with a user as target, delivers the file into the relative folder "racing2019_grade" at the user end.
 
   
 
-*Notes:*
-
-- *The "default volume" is the volume having the default attribute set to true, and is assigned the first volume created for a workspace. At least one default volume must be assigned within an accsyn workspace.*
-
-- - *A folder cannot be given as destination unless a "/" (or "\" for Windows) is added. For example downloading a file "x.jpeg" to destination "/Volumes/nas/TEMP" will store the file as "TEMP", not inside folder TEMP. Correct destination notation in this case is: "/Volumes/nas/TEMP/", or even better: "/Volumes/nas/TEMP/x.jpeg".*
-  - *Destination paths can be left out if other party is a site or a user's locally mapped share, this is called "path mirroring", and is suitable for keeping servers and/or workstations in sync when it comes to file structure.*
-  - *If the party is omitted, accsyn interprets this as the workspace party - the file is to be sent to or from hq.*
-
+<sup>*Notes:*</sup><br>
+<sup>- *The "default volume" is the volume having the default attribute set to true, and is assigned the first volume created for a workspace. At least one default volume must be assigned within an accsyn workspace.*</sup><br>
+<sup>- *A folder cannot be given as destination unless a "/" (or "\" for Windows) is added. For example downloading a file "x.jpeg" to destination "/Volumes/nas/TEMP" will store the file as "TEMP", not inside folder TEMP. Correct destination notation in this case is: "/Volumes/nas/TEMP/", or even better: "/Volumes/nas/TEMP/x.jpeg".*</sup><br>
+<sup>- *Destination paths can be left out if other party is a site or a user's locally mapped share, this is called "path mirroring", and is suitable for keeping servers and/or workstations in sync when it comes to file structure.*</sup><br>
+<sup>- *If the party is omitted, accsyn interprets this as the workspace party - the file is to be sent to or from main site/hq.*</sup><br>
   
 
 ### Client resolve
@@ -203,7 +198,15 @@ Prerequisites:
 
   
 
-Drop off the file "Prototype.zip", short simplified single task notation:
+Drop off the file "Prototype.zip", minimal single task notation:
+
+```json
+{
+    "source":"/home/Adrian/pitches/Prototype.zip",
+}
+```
+
+Without destination given, the home share is evaluated by default for standard users. Expanded notation:
 
 ```json
 {
@@ -212,10 +215,9 @@ Drop off the file "Prototype.zip", short simplified single task notation:
 }
 ```
 
-- "~" resolves to the home share.
-- No destination path was given, leaving it for accsyn to resolve the destination folder. This includes adding any delivery dropoff date subfolder (default in the form: YYYYMMDD)
+<sup>- *"~" denotes the home share.*</sup><br>
+<sup>- *No destination path was given, leaving it for accsyn to resolve the destination folder. This includes adding any delivery dropoff date subfolder (default in the form: YYYYMMDD)*</sup><br>
 
-  
 
 With target subfolder and providing a name, letting accsyn append the source filename to destination path:
 
@@ -232,18 +234,18 @@ With a different filename for destination:
 ```json
 {
     "source":"/home/Adrian/pitches/Prototype.zip",
-    "destination":"~/Prototype\_260703.zip"
+    "destination":"~/Prototype_260703.zip"
 }
 ```
   
 
-### User share download
+### User download from share
 
 Prerequisites:
 
-- The user needs to have a Home share and read access to it (entire share or a subfolder)
-- The user needs to have a registered accsyn client (Desktop App or User Server) instance.
+- *The user needs to have a Home share and read access to it (entire share or a subfolder)*
 
+- *The user needs to have a registered accsyn client (Desktop App or User Server) instance.*
   
 
 Download folder "Material" from workspace home share:
@@ -255,27 +257,32 @@ Download folder "Material" from workspace home share:
 }
 ```
 
-- The destination party client will resolve to the most recently online client.
-
+<sup>- *The destination party client will resolve to the most recently online client.*</sup>
   
 
-Download two files, with an explicit client specified:
+Download three files, with an explicit client specified:
 
 ```json
 {
     "tasks":[
         {
-            "source":"~/Material",
+            "source":"folder=thefilm/Material",
             "destination":"client=6a479e243bed6009ac9d6763:/Users/Adrian/Downloads/"
         },
         {
-            "source":"~/Legal",
+            "source":"collection=admin/Legal.docx",
             "destination":"client=6a479e243bed6009ac9d6763:/Users/Adrian/Downloads/"
         },
+        {
+            "source":"~/Agreement.pdf",
+            "destination":"client=6a479e243bed6009ac9d6763:/Users/Adrian/Downloads/"
+        }
     ]
 }
 ```
   
+<sup>- *Make sure share identifier are the unique share API 'code' attribute.*</sup>
+
 
 Specify target endpoint by hostname:
 
@@ -285,10 +292,18 @@ Specify target endpoint by hostname:
     "destination":"emma@compers.com@PCLocal-001:/Users/Emma/Downloads/"
 }
 ```
+<sup>- *Be aware of ambiguity in case two computers share the same name!*</sup>
 
-- Be aware of ambiguity in case two computers share the same name!
+Relaxed download to locally mapped share mirroring path structure:
 
-  
+```json
+{
+    "source":"folder=thefilm/WorkPackage",
+}
+```
+<sup>- *This requires share 'thefilm' or parent volume to be mapped locally, paths will be mirrored *</sup>
+
+
 ### Operator upload
 
 Sync the folder "deployment" to a subfolder on accsyn workspace storage:
@@ -296,35 +311,31 @@ Sync the folder "deployment" to a subfolder on accsyn workspace storage:
 ```json
 {
     "source":"D:/dev/pipeline/build/deployment",
-    "destination":"\_PIPEINE/live/deployment"
+    "destination":"_PIPELINE/live/deployment"
 }
 ```
 
-*Notes:*
+<sup>- *A relative path is given as destination, this resolves to the default\* volume on the workspace.*</sup><br>
+<sup>- *The operator needs to have write access to the volume.*</sup><br>
+<sup>- *Operator is another name for elevated users - having either admin or employee roles. Operators have access to volumes, standard users does not.*</sup><br>
 
-- *A relative path is given as destination, this resolves to the default\* volume on the workspace.*
-- *The operator needs to have write access to the volume.*
-- *Operator is another name for elevated users - having either admin or employee roles. Operators have access to volumes, standard users does not.*
-
-\* Default volume is the volume having the "default" attribute set to true.  
+<sup>\* Default volume is the volume having the "default" attribute set to true. </sup><br>
 
 ### Operator download
 
-Download the file "Fireflies\_001" from volume "assets" going into the High priority queue, storing locally:
+Download the file "Fireflies_001" from volume "assets" going into the High priority queue, storing locally:
 
 ```json
 {
-    "source":"volume=assets/Flies/Fireflies\_001",
-    "destination":"D:/work/ASSETS/Fireflies\_001",
+    "source":"volume=assets/Flies/Fireflies_001",
+    "destination":"D:/work/ASSETS/Fireflies_001",
     "queue":"High"
 }
 ```
 
-*Notes:*
-
-- *The term operator means an elevated accsyn user - administrator or employee with read access to the (default) volume*
-- *The workspace party is omitted here, this is allowed since the other user party is clearly stated and no ambiguity exists when it comes to the source party.*
-- *Neither is the source volume given here as source, just a relative path. When no source volume or share is given, the default volume is assumed to be the source.*
+<sup>- *The term operator means an elevated accsyn user - administrator or employee with read access to the (default) volume*</sup><br>
+<sup>- *The workspace party is omitted here, this is allowed since the other user party is clearly stated and no ambiguity exists when it comes to the source party.*</sup><br>
+<sup>- *Neither is the source volume given here as source, just a relative path. When no source volume or share is given, the default volume is assumed to be the source.*</sup><br>
 
   
 
@@ -332,24 +343,24 @@ Corresponding full expanded syntax for reference, assuming the workspace code/na
 
 ```json
 {
-    "source":"thecompany:volume=assets/Flies/Fireflies\_001",
-    "destination":"john@thecompany.com:D:/work/ASSETS/Fireflies\_001"
+    "source":"thecompany:volume=assets/Flies/Fireflies_001",
+    "destination":"john@thecompany.com:D:/work/ASSETS/Fireflies_001"
 }
 ```
   
 
 ### User home share upload
 
-Upload folder "/Users/john/Desktop/delivery" to Shared Folder "thefilm" into subfolder "from\_john/20180413":
+Upload folder "/Users/john/Desktop/delivery" to Shared Folder "thefilm" into subfolder "from_john/20180413":
 
 ```json
 {
-    "source":"/Users/john/Desktop/new\_scans", 
-    "destination":"folder=thefilm/from\_john/20180413/"
+    "source":"/Users/john/Desktop/new_scans", 
+    "destination":"folder=thefilm/from_john/20180413/"
 }
 ```
 
-*Note: Shares are identified either by their unique ID, or by their unique API "code" identifier.*
+<sup>- *Shares are identified either by their unique ID, or by their unique API "code" identifier.*</sup>
 
   
 
@@ -359,13 +370,31 @@ Sync a folder on volume "projects" @ main site (default: "hq") to site "berlin":
 
 ```json
 {
-    "source":"share=projects/thefilm/SCENES", 
+    "source":"volume=projects/thefilm/SCENES", 
     "destination":"site=berlin"
 } 
 ```
 
-- The operator needs to have read and write permissions to the volume.
-- No destination path is given, accsyn will mirror the path structure on the receiving end.
+<sup>- *The operator needs to have read and write permissions to the volume.*</sup>
+
+<sup>- *No destination path is given, accsyn will mirror the path structure on the receiving end.*</sup>
+
+
+### Operator upload from site
+
+Sync a folder on volume "projects" @ main site (default: "hq") to site "berlin":
+
+```json
+{
+    "source":"site=berlin:thefilm/OUTPUT", 
+} 
+```
+
+<sup>- *The operator needs to have read and write permissions to the volume.*</sup>
+
+<sup>- *No source share is given, will resolve to the default volume.*</sup>
+
+<sup>- *No destination is given, paths will be mirrored on receiving end.*</sup>
 
   
 
@@ -375,11 +404,15 @@ Corresponding transfer of a folder from site "cloud" to site "berlin":
 
 ```json
 {
-    "source":"site=cloud:share=render/got/sc01/sh01/render/got\_sc01\_sh01\_comp\_v012",
-    "destination":"site=berlin"
+    "source":"site=cloud:share=render/got/sc01/sh01/render/got_sc01_sh01_comp_v012",
+    "destination":"berlin"
 }
 ```
-  
+
+<sup>- *This requires the destion site server to be reachable either over WAN or LAN.*</sup>
+
+<sup>- *We are using relaxed destination resolve based on the unique API code identifier for the site*</sup>
+
 
 ### Operator push to user
 
@@ -387,26 +420,25 @@ Push (download) a folder to the locally mapped share "thefilm" at the remote use
 
 ```json
 {
-    "source":"share=thefilm/\_OUTSOURCING/Paint_and_cleanup-Compers-260703",
-    "destination":"emma@compers.com:share=thefilm/\_FROM\_THECOMPANY/"
+    "source":"share=thefilm/_OUTSOURCING/Paint_and_cleanup-Compers-260703",
+    "destination":"emma@compers.com:share=thefilm/_FROM_THECOMPANY/"
 }
 ```
 
-- The user must have mapped the share locally (configured through the app or through ACCSYN\_\*\_PATH envs), write access enabled.
+<sup>- *The user must have mapped the share locally (configured through the app or through ACCSYN_THEFILM_PATH env, 'THEFILM' matches share API 'code' attribute), write access enabled.*</sup>
+
 
 Push a file to a user´s specific client, mirroring paths on destinaton:
 
-
 ```json
 {
-    "source":"share=thefilm/Contracts/TheFilm_OS_TC.docx",
+    "source":"volume=projects/Admin/TheFilm_OS_TC.docx",
     "destination":"client=6a8c4a5a27845b692f405ed0"
 }
 ```
 
-- The user must have mapped the share locally (configured through the app or through ACCSYN\_\*\_PATH envs), write access enabled.
+<sup>- *The user must have mapped the volume locally (configured through ACCSYN_PROJECTS_PATH envs, 'PROJECTS' matches volume API 'code' attribute), write access enabled.*</sup>
 
-  
 
 ### Operator pull from user
 
@@ -418,7 +450,7 @@ Pull a file from default volume mapped locally on remote user´s client back to 
 }
 ```
 
-- No destination is given, accsyn will resolve to the workspace default volume and also apply mirrored paths.
+<sup>- *No destination is given, accsyn will resolve to the workspace default volume and also apply mirrored paths.*</sup>
 
 
 
@@ -430,31 +462,31 @@ Sync a folder on share "projects"  from site "berlin" back to hq, deleting file
 {
     "tasks":[
       {
-        "source":"site=berlin:projects/racing2019\_grade/davinci\_files",
+        "source":"site=berlin:projects/racing2019_grade/davinci_files",
         "destination":"myorg",
-        "metadata":{"app":"davinci\_resolve"}
+        "metadata":{"app":"davinci_resolve"}
       }
     ],
     "metadata":{"artist":"malcolm"},
-    "settings":{"transfer\_mode":"onewaysync"}
+    "settings":{"transfer_mode":"onewaysync"}
 }
 ```
 
-- Settings are always supplied as strings, please refer to [Settings documentation](../settings.md).
+<sup>- *Settings are always supplied as strings, please refer to [Settings documentation](../settings.md).*</sup>
 
   
 
 ### Skip existing files
 
-Upload file "final\_export.mov", at share "projects"  from user to share "racing2019\_grade", but not overwriting it if it exists and size or modification date differ:
+Upload file "final_export.mov", at share "projects"  from user to share "racing2019_grade", but not overwriting it if it exists and size or modification date differ:
 
 ```json
 {
     "tasks":[
       {
-        "source":"E:\racing2019\_grade\davinci\_files\final\_export.mov",
-        "destination":"mycompany:share=racing2019\_grade/FROM\_EDIT/final\_export.mov",
-        "settings":{"transfer\_ignore\_existing":"file"}
+        "source":"E:\racing2019_grade\davinci_files\final_export.mov",
+        "destination":"mycompany:share=racing2019_grade/FROM_EDIT/final_export.mov",
+        "settings":{"transfer_ignore_existing":"file"}
       }
     ]
 }
@@ -470,14 +502,14 @@ Upload a large folder, excluding all files ending with "tmp" and files that are 
   "tasks":[
     {
       "source":"F:\BIGGIE",
-      "destination":"mycompany:share=projects\\_\_UPLOADS\BIGGIE",
-      "settings":{"transfer\_exclude":"\*tmp\,re('[0-9]')"}
+      "destination":"mycompany:share=projects\__UPLOADS\BIGGIE",
+      "settings":{"transfer_exclude":"\*tmp\,re('[0-9]')"}
     }
   ]
 }
 ```
 
-*Note: multiple exclude statements are separated by an escaped comma - \, . This means that an escaped comma cannot be used in exclude expressions.*
+<sup>- *Multiple exclude statements are separated by an escaped comma - \, . This means that an escaped comma cannot be used in exclude expressions.*</sup>
 
   
 
@@ -489,18 +521,18 @@ Tasks (files) can have different priorities, enabling pre-delivery of some impor
 {
   "tasks":[
     {
-      "source":"share=bidding/LFM/brief\_v001.pdf",
-      "destination":"lisa@"mail.com:/Volumes/media/\_TO\_BID,
+      "source":"share=bidding/LFM/brief_v001.pdf",
+      "destination":"lisa@"mail.com:/Volumes/media/_TO_BID,
       "priority":999
     },{
       "source":"share=bidding/LFM/material.rar",
-      "destination":"lisa@"mail.com:/Volumes/media/\_TO\_BID,
+      "destination":"lisa@"mail.com:/Volumes/media/_TO_BID,
     }
   ]
 }
 ```
 
-In this case, the file brief\_v001.pdf will be sent first, then material.rar. accsyn priorities range from 1000 (highest) to 1 (lowest) and the default value is 500.
+<sup>- *In this case, the file brief_v001.pdf will be sent first, then material.rar. accsyn priorities range from 1000 (highest) to 1 (lowest) and the default value is 500.*<sup>
 
   
 
@@ -531,14 +563,13 @@ In some situations, a job needs to be created beforehand, to enable tasks to be 
   "tasks":[
     {
       "source":"site=cloud:null",
-      "destination":"site=hq",
       "status":"excluded"
     }
   ]
 }
 ``` 
 
-*Note: Soure and destination parties must match the upcoming task parties.*
+<sup>- *Soure and destination parties must match the upcoming task parties.*</sup>
 
 The job will immediately be set to done, with no files actually transferred.
 
@@ -554,12 +585,12 @@ accsyn not only supports rendering for example a single Houdini scene, splitting
   "name": "Mocap shoot pipeline job - 260217",
   "engine": "pipeline",
   "settings": {
-    "task\_bucketsize": 1
+    "task_bucketsize": 1
   },
   "filters": "",
   "description": "Daily shoot post processing pipeline job.",
   "tasks": {
-    "EP000\_SC0110\_SL02\_PS01\_TK01": {
+    "EP000_SC0110_SL02_PS01_TK01": {
       "tasks": {
         "pickup": {
           "compute": {
@@ -593,24 +624,24 @@ accsyn not only supports rendering for example a single Houdini scene, splitting
               "description": "Pickup and name studio recorded audio."
             }
           },
-          "description": "Pickup and name files for take: EP000\_SC0110\_SL02\_PS01\_TK01"
+          "description": "Pickup and name files for take: EP000_SC0110_SL02_PS01_TK01"
         },
         "notify-pickup-done": {
           "description": "Notify someone that we are done.",
           "deps": [
-            "EP000\_SC0110\_SL02\_PS01\_TK01/pickup"
+            "EP000_SC0110_SL02_PS01_TK01/pickup"
           ]
         }
       },
       "metadata": {
-        "take\_name": "EP000\_SC0110\_SL02\_PS01\_TK01",
-        "take\_metadata\_path": "Z:\\HFSUR\\06\_Harvest\\260217\\EP000\_SC0110\_SL02\_PS01\_TK01.json"
+        "take_name": "EP000_SC0110_SL02_PS01_TK01",
+        "take_metadata_path": "Z:\\HFSUR\\06_Harvest\\260217\\EP000_SC0110_SL02_PS01_TK01.json"
       },
-      "description": "Post process take: EP000\_SC0110\_SL02\_PS01\_TK01"
+      "description": "Post process take: EP000_SC0110_SL02_PS01_TK01"
     }
   },
   "metadata": {
-    "daily\_path": "Z:\\HFSUR\\06\_Harvest\\260217"
+    "daily_path": "Z:\\HFSUR\\06_Harvest\\260217"
   }
 } 
 ```
@@ -618,17 +649,16 @@ accsyn not only supports rendering for example a single Houdini scene, splitting
 Explanation of the job JSON:
 
 - Top level engine attribute;  tells accsyn to run all tasks using the engine "pipeline" (API code identifier).
-- Task EP000\_SC0110\_SL02\_PS01\_TK01; The main parent task to execute, in this example it relates to a take in a motion capture studio pipeline.
-- EP000\_SC0110\_SL02\_PS01\_TK01 "tasks" attribute; Tells accsyn that this task has sub tasks (nested), that will be executed instead of the task itself.
-- EP000\_SC0110\_SL02\_PS01\_TK01/pickup; Sub-task of EP000\_SC0110\_SL02\_PS01\_TK01, its compute parameters will be aggregated and made available to all subsequent tasks.
-- EP000\_SC0110\_SL02\_PS01\_TK01/pickup/0; Leaf task, will be executed first (bucket size = 1)
-- EP000\_SC0110\_SL02\_PS01\_TK01/pickup/1 & 2; Subsequent sub tasks.
-- EP000\_SC0110\_SL02\_PS01\_TK01/notify-pickup-done; Has a dependency on the "pickup" task, and will not execute until the pickup task (and all its sub tasks) have executed successfully.
+- Task EP000_SC0110_SL02_PS01_TK01; The main parent task to execute, in this example it relates to a take in a motion capture studio pipeline.
+- EP000_SC0110_SL02_PS01_TK01 "tasks" attribute; Tells accsyn that this task has sub tasks (nested), that will be executed instead of the task itself.
+- EP000_SC0110_SL02_PS01_TK01/pickup; Sub-task of EP000_SC0110_SL02_PS01_TK01, its compute parameters will be aggregated and made available to all subsequent tasks.
+- EP000_SC0110_SL02_PS01_TK01/pickup/0; Leaf task, will be executed first (bucket size = 1)
+- EP000_SC0110_SL02_PS01_TK01/pickup/1 & 2; Subsequent sub tasks.
+- EP000_SC0110_SL02_PS01_TK01/notify-pickup-done; Has a dependency on the "pickup" task, and will not execute until the pickup task (and all its sub tasks) have executed successfully.
 - Metadata; Are aggregated upstream and supplied upon execution, the same way compute data is.
 
-## Best practices and limitations
 
-  
+## Best practices and limitations
 
 ### Source and destination party
 
@@ -681,7 +711,7 @@ accsyn transfers files using the same algorithm as \*NIX rsync which means that 
 
 For very large file transfers containing a lot of smaller files in deep lengthy folder structures, accsyn might run out of RAM during file transfer init and in those cases it is recommended to split a job into multiple tasks. 
 
-For example, when doing a project backup with accsyn, instead of sending the entire root share or directory - send each project directory as individual tasks and set the "task\_bucketsize" setting to "1":
+For example, when doing a project backup with accsyn, instead of sending the entire root share or directory - send each project directory as individual tasks and set the "task_bucketsize" setting to "1":
 
 ```json
 {
@@ -705,6 +735,6 @@ For example, when doing a project backup with accsyn, instead of sending the ent
        "destination":"site=backup"
      },
   ],
-  "settings":{"task\_bucketsize":"1"}
+  "settings":{"task_bucketsize":"1"}
 }
 ```

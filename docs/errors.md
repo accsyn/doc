@@ -32,7 +32,7 @@ A complete listing of all accsyn error codes that can appear as:
 | E#J013 | An error occurred when listing ... | The file transfer process is having problems listing and accessing files on disk - check file permissions, file locks and such. |
 | E#J014 | An error occurred when reading object during control channel communication: ... | An error occurred when reading data arriving over the network, make sure no firewall on the route is blocking/interfering with the traffic and no antivirus software is intercepting the traffic. |
 | E#J020 | An internal error occured during accsyn transfer, we are sorry for this and hope take the time to send this log to support@accsyn.com. | accsyn crashed without being able to give proper feedback about the error, contact accsyn support so we can investigate the issue and provide better feedback in the future. |
-| E#J050 | Job is corrupt and cannot be dispatched. | This is due to an internal error/bug in accsyn, please contact accsyn support. |
+| E#J050 | Job could not be dispatched: ... | This could be due to an internal race condition or an internal error/bug in accsyn - please contact accsyn support in that case. |
 | E#J051 | User '..' not enabled. | Enable the user in order to get the job running again. |
 | E#J052 | An internal error occurred when spawning transfer at .. | Contact accsyn support. |
 | E#J053 | Could not create parent directory ..! | Make sure accsyn has write permission on the share. |
