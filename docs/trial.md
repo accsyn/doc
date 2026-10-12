@@ -38,16 +38,14 @@ accsyn supports self hosted storage, this is called a BYOS Workspace (Bring-Your
 - You serve files from your own storage  ([File Sharing](file-sharing/index.md) / [Delivery](delivery/index.md) features), with no limits on used space.
 - Enables advanced [Workflows](developer/index.md) including [Site sync](tutorials/remote-office-sync.md), Hooks, Publishing and Compute(render) farms.
 
-  
 
-Important note: Media Vault features, including streaming and transcoding, are not available with BYOS deployments.
+*Important note: Media Vault features, including streaming and transcoding, are not available with BYOS deployments.*
 
 #### LITE
 
 accsyn is offered as a BYOS LITE workspace, at a reduced price and with reduced capabilites:
 
 - API functionality is not available.
-- Hooks/automisations/publish is unavailable.
 - Additional operators, site servers and compute servers can still be aquired.
 
 
@@ -63,9 +61,7 @@ These are special deals offered on request only:
 
 ## How do I launch the trial?
 
-Here follows a step-by-step walkthrough on how to launch your own accsyn trial Workspace:
-
-  
+To be able to create an accsyn workspace you need to create a personal accsyn account if you not alreay possess one, you can choose to register either by email-password or register using your existing Google account.
 
 ### Create personal account
 
@@ -75,9 +71,8 @@ Before you can launch the trial, you need a personal accsyn user account.  That
 
 - Full documentation on how to create your account
 
-### Launch the Cloud Workspace trial
 
-  
+### Launch the Cloud Workspace trial
 
 1. Log on to accsyn and click START 30 DAYS FREE TRIAL in the lower left corner, or visit: <https://accsyn.io/trial>.
 2. Go to the Cloud tab
@@ -87,16 +82,11 @@ Before you can launch the trial, you need a personal accsyn user account.  That
 6. To further help us understand your needs, choose the main accsyn feature you intend to use.
 7. Read our [Terms and conditions](https://download.accsyn.com/terms.html) and tick the box if you agree.
 8. Click the CREATE WORKSPACE button when you are ready.
-
   
 
 Your cloud workspace will then be created in the background, this might take up to a minute to complete.
 
-  
-
 When ready, you will be directed to the page relevant to the main feature chosen previously.
-
-  
 
 You are now all set to start trying out accsyn for the first time!
 
@@ -119,7 +109,7 @@ You are now all set to start trying out accsyn for the first time!
 
   
 
-*Note: The trial includes full BYOS functionality. When you later convert to a paid subscription, you choose between **LITE** (reduced price and capabilities — see above) and **PRO**. Both include one (1) storage server and two (2) operator users.*
+*Note: The trial includes full BYOS functionality. When you later convert to a paid subscription, you choose between standard **PRO** workspace or a **LITE** (reduced price and capabilities — see above). Both include one (1) storage server and two (2) operator users.*
 
 
 Further resources:
@@ -142,31 +132,27 @@ Yes, send an email to support@ [accsyn.com](http://accsyn.com) stating for how l
 
 To sign up for a paid accsyn subscription, follow these instructions.
 
-  
 
 ### Cloud Workspace
 
 1. Open the workspace menu and go to the Subscription / Sign up page, or visit <https://accsyn.io/signup>.
 2. On the Cloud tab, choose the plan you want:
    - **ESSENTIALS** — value plan for small teams (500GB, 1 operator). API is not available.
-   - **PRO Pay As You Go** — flexible pricing for professionals (1TB included, 2 operators), with Media Vault streaming and related features.
+   - **PRO PAYG** — flexible pricing for professionals (1TB included, 2 operators), with Media Vault streaming and related features.
 3. Click the sign up button and finalise payment via Stripe to activate the subscription.
 
-  
 
 ### BYOS Workspace
 
 1. Open the workspace menu and go to the Subscription / Sign up page (BYOS tab), or visit <https://accsyn.io/signup?byos=true>.
 2. Choose the BYOS plan you want:
    - **LITE** — reduced price for on-prem teams. API and Hooks are not available. One (1) storage server and two (2) operator users included.
-   - **PRO** — full on-prem feature set. One (1) storage server and two (2) operator users included.
+   - **PRO PAYG** — full on-prem feature set. One (1) storage server and two (2) operator users included.
 3. Click the sign up button and finalise payment via Stripe to activate the subscription.
 
-  
 
 For additional storage servers, site/compute licenses or Premium Support, reach out to [sales@accsyn.com](mailto:sales@accsyn.com) or [support@accsyn.com](mailto:support@accsyn.com).
 
-  
 
 ### Enterprise
 

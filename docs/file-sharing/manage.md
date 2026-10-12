@@ -1,237 +1,240 @@
-# Manage File sharing
+# Manage file sharing
 
-This guide explains how to utilise accsyn as a file sharing service, similar to a standard FTP server, giving users permanent access to files and folders on your BYOS or cloud hosted storage. 
+This guide explains how to use accsyn as a file-sharing service — similar in role to an FTP server, but with fine-grained ACLs and transfers over the secure, accelerated [ASC](../whitepaper.md) protocol.
 
-  
+You can expose **specific subfolders of a project tree on production storage** to external users and partners without giving them the whole volume. That is the usual pattern for integrating vendors into production safely.
 
-*Note: File sharing is currently not available in the web browser, this is subject to be improved in future versions of accsyn.*
+*Note: File sharing is managed in the Desktop App today, not fully in the web browser. Browser management may improve in future versions.*
 
 ## Storage view
 
-Preparations
+### Preparations
 
-1. To manage your accsyn Storage, you will need to download and [install the accsyn Desktop app](../desktop-app.md).
-2. Log in with the desktop app as an elevated user - admin with full access or as an employee with access to at least one volume.
+1. Download and [install the accsyn Desktop App](../desktop-app.md).
+2. Sign in as an elevated user — an administrator, or an employee with access to at least one volume.
 
-  
-
-File sharing happens within the Storage view:
+File sharing is driven from the **Storage** view:
 
 ![](../assets/file-sharing_manage.png)
-*Example screenshot of the storage view within the accsyn Desktop app.*
 
-Here you can browse your storage and find out who has access, the view is divided into three areas:
+*Example screenshot of the Storage view in the Desktop App.*
 
-  
+The view has three areas:
 
 ### Share list
 
-On the left hand side you find the Share view, it displays:
+On the left, the share list shows:
 
-- Recent; The five (5) most recently visited shares.
-- Volumes; Root folders/drives exposed to accsyn, the default cloud hosted volume is named "storage". In a BYOS setup, you are free to create and configure as many volumes as needed.
-- Shared folders; A folder beneath a volume that can be shared with other users.
-- Collections; Virtual folders containing files and folders collected from one or more volumes.
-- Homes; Shared home folders for users.
+- **Recent** — the five most recently visited shares.
+- **Volumes** — root folders/drives exposed to accsyn. The default cloud volume is often named `storage`. BYOS setups may define as many volumes as needed.
+- **Shared folders** — folders beneath a volume shared with users.
+- **Collections** — virtual folders of files/folders from one or more volumes.
+- **Homes** — per-user home shares.
 
-To modify a share, right click it to bring up a context menu with options. 
-
-Click the eye icon to show/hide a share type section, by default user homes are hidden.
-
-  
+Right-click a share for its context menu. Use the eye icon to show or hide share-type sections (homes are hidden by default).
 
 ### File list
 
-The middle area contains the file and folder listing for the selected share on the left hand side. This file browser behaves the same as a normal file browser, having context menu options and a toolbar for basic file operations such as directory creation, move, rename and delete.
+The centre pane lists files and folders for the selected share. It behaves like a normal file browser, with a toolbar and context menu for create, move, rename, and delete.
 
-When you rename, move, or delete folders and files **inside accsyn** (this file browser), share paths, ACL paths, and collection file references are kept in sync where possible. See [Renaming and moving shared content](#renaming-and-moving-shared-content) below.
-
-  
+When you rename, move, or delete content **inside accsyn**, share paths, ACL paths, and collection references are updated where possible. See [Renaming and moving shared content](#renaming-and-moving-shared-content).
 
 ### Access info
 
-On the right hand side, you find the access info panel displaying info about which user(s) have access to the current share and path.
+On the right, the access panel shows which users have access to the current share and path.
 
 ## Sharing a volume with employees
 
-*Note: to give administrators access to your workspace, invite them using the INVITE USER tool in the desktop app or go to <https://accsyn.io/users>.*
+*Note: To invite administrators, use **INVITE USER** in the Desktop App or go to <https://accsyn.io/users>.*
 
-  
+To grant employees access to a volume:
 
-Here are the steps to give employees access to a volume:
-
-1. Select the volume on the left hand side (this cannot be done while browsing a Shared folder/Collection/Home).
-2. In the access panel, click the blue Share button and choose Grant employees access or click the green + button in the "Employees with access to volume" header. This will bring up the accsyn ACL dialog:
+1. Select the volume on the left (not while browsing a shared folder, collection, or home).
+2. In the access panel, click **Share** and choose **Grant employees access**, or click the green **+** under **Employees with access to volume**. The ACL dialog opens:
 
 ![](../assets/file-sharing_manage_grant-employee-access.png)
 
-3. Enter the user email or click the blue list icon to select an existing employee within your workspace. New employees can be invited here.
+3. Enter an email or use the list icon to pick an existing employee. You can invite new employees here.
+4. Choose permissions: **Read** (download only) or **Write** (upload and modify).
+5. (Optional) **Notify employee** — enter a message, or clear the option to skip email.
+6. Click **Grant access**.
 
-4. Choose which permissions they should have - only download files (Read), or also be able to upload and modify files (Write).
+The ACL appears under **Currently shared with:**. The **ACK** column shows whether the user has dismissed the in-app notification.
 
-5. (Optional) Notify employee; Enter a message to the user, de-select this to prevent an email notification from being dispatched.
-
-6. Click the green Grant access button to give access.
-
-An entry will be added to the ACL beneath "Currently shared with:". It lists the ACL bound to the volume, the "ACK" column signals that the user has seen and dismissed the notification in the app.
-
-To revoke access for an employee, click the trashcan button on the right hand side of each ACL entry.
+To revoke access, use the trash can on the ACL entry.
 
 ## Sharing a folder with standard users
 
-*Note: accsyn does not support sharing single files as a link. To share a single file, add it to a collection (see below).*
+*Note: accsyn does not share a single file as a bare link. Put the file in a [collection](#creating-a-collection) instead.*
 
-The base is a shared folder, ACLs are then applied to this folder, granting users access to the entire folder (/ path) or a subfolder for either downloading files and/or uploading files.
+Typical production pattern: create a **shared folder** on a project path, then grant ACLs on the whole share or only a **subfolder** (for example a vendor drop zone). Partners see only what you grant; transfers run over ASC.
 
 ### Create a shared folder
 
-1. In the Storage view, select the volume and browse to the folder you wish to share.
-2. Click the blue Share button in the toolbar and select Create shared folder, or click Create shared folder in the access panel to the right.
+1. In Storage view, select the volume and browse to the folder to share.
+2. Click **Share** in the toolbar and choose **Create shared folder**, or use **Create shared folder** in the access panel.
+
 ![](../assets/file-sharing_manage_create-share.png)
+
 3. Give the share a name.
-4. (Optional) Define the share code - the API identifier the share should have when performing API operations.
-5. (Optional) Bind a queue to the share - have all file transfers involving the share go to a certain queue.
-6. (Optional) Grant user(s) access to the entire Shared folder, note that user can also be granted access only to a subfolder beneath a shared folder.
+4. (Optional) Set the share **code** — API identifier for automation.
+5. (Optional) Bind a **queue** so transfers involving the share use that queue.
+6. (Optional) Grant user(s) access to the whole shared folder now. You can also grant only a subpath later.
 
-When done, click Create to create the shared folder.
+Click **Create**. If users were granted access, the folder appears as a download and/or upload target for them.
 
-The folder is now a Shared folder, if user(s) were granted access it will appear as a download and/or upload target. 
+### Grant access to a shared folder
 
-
-
-### Grant access too a shared folder
-
-1. In the Storage view, select the shared folder you created on the left hand side.
-2. Browse to the subfolder you want to share, or stay in the root to share the entire folder.
-3. Click the blue Share button and choose Grant user access, or click the green Grant access button on the share in the access info panel to the right.  This will bring up the accsyn ACL dialog:
+1. Select the shared folder in the share list.
+2. Browse to the subfolder to share, or stay at the root to share the entire folder.
+3. Click **Share** → **Grant user access**, or **Grant access** in the access panel. The ACL dialog opens:
 
 ![](../assets/file-sharing_manage_grant-user-access.png)
 
-4. Enter the email address of the new user you want to invite, or select an existing one by clicking the blue list button.
+4. Enter an email or pick an existing user from the list.
+5. Choose permissions: **Read** (list and download) or **Write** (upload and modify — create directories, rename, move, delete).
+6. (Optional) **Notify user** and optionally a custom message.
 
-5. Choose which permissions the user should have; Read means they will be able to list files and download, Write means they will be able to upload files, and alter files on storage - create directories, rename, move and delete files and folders.
+Click **Grant access**. The ACL appears under **Currently shared with:** and in the access panel while you browse.
 
-6. (Optional) Check Notify user to have an email dispatched, notifying the user of the new shared folder. You can supply a custom message if you want.
-
-Click Grant access to create the ACL entry, it should appear in the ACL list below "Currently shared with:". The ACL entry will also appear in the access info panel while browsing your storage.
-
-To revoke access for a user, click the trashcan button on the right hand side of each ACL entry.
+To revoke access, use the trash can on the ACL entry.
 
 ### Modify a shared folder
 
-Right click the share in the share list and choose edit.
+Right-click the share in the share list and choose **Edit**.
 
 ### Removing a shared folder
 
-Right click the shared folder in the share list and choose delete. If you wish to keep the shared folder for audit later, choose inactivate (archive). To bring back inactive collections later, go to the share settings page (<https://accsyn.io/amin/volumes>).
+Right-click the shared folder and choose **Delete**. To keep it for audit, choose **Inactivate** (archive). Restore inactive shares from the share settings page (<https://accsyn.io/admin/volumes>).
 
 ## Creating a collection
 
-To create a collection, browse and select the file(s) and/or folder(s) to add and either:
+To create a collection, select the file(s) and/or folder(s) and either:
 
-- Click the blue Share button and choose Create new collection
-- Right click and do Share>Create new collection.
-- Click the NEW button in the collections section within the share list.
+- Click **Share** → **Create new collection**
+- Right-click → **Share → Create new collection**
+- Click **NEW** in the collections section of the share list
 
-The Create collection dialog will appear, give the collection a name and then click Create to have it created.
+Name the collection and click **Create**.
 
-You can proceed adding more files and folders to the collection by selecting them and doing Share>Add to collection>(your collection). Remove files from a collection by either right clicking and choosing Remove or clicking the trashcan icon on the right hand side of the file entry.
+Add more items with **Share → Add to collection → (your collection)**. Remove items via right-click **Remove** or the trash can on the entry.
 
 ### Share a collection with users
 
-Sharing collections, for users to download the files within, is very similar to sharing a folder: Select the collection and then choose Grant access to bring up the standard ACL dialog.
+Select the collection and **Grant access** — the same ACL dialog as for folders.
 
 ### Removing a collection
 
-Right click the collection and choose delete. If you wish to keep the collection for audit later, choose inactivate (archive). To bring back inactive collections later, go to the share settings page (<https://accsyn.io/shares>).
+Right-click → **Delete**, or **Inactivate** to archive. Restore from <https://accsyn.io/shares>.
 
 ## Accessing a shared folder
 
-For standard users, there is a separate guide on how to access a shared folder with the accsyn Desktop app [here](access.md).
+Standard users: see [Access shared folders](access.md).
 
-  
-
-For elevated users like administrators and employees, open the Download tool from the top menu bar.
-
-The basic download dialog will appear, allowing you to select the file(s) and folder(s) you wish to download and where to download them (Download to). To configure the download, click the Settings button. To use the more advanced NC (Norton Commander)-like mode, click Switch to advanced download mode.
-
-The same applies to uploads - open the Upload tool from the top menu bar.
-
-You can also download/upload from/to shares using the Transfer tool.
+Administrators and employees: open **Download** from the top menu, pick files/folders and a local destination. Use **Settings** for options, or **Switch to advanced download mode** for an NC-style dual pane. Use **Upload** the same way, or the **Transfer** tool for both directions — all powered by ASC when using the Desktop App.
 
 ## Remove access for a folder or collection
 
-To stop a user from accessing a folder, follow these steps:
+1. Select the shared folder or collection.
+2. In the access panel, click the trash can on the ACL entries to revoke.
+3. Or open **Grant access** and remove entries from the ACL list there.
 
-1. Select the shared folder or collection in the Storage view.
-2. In the access info panel on the right hand side, click the trashcan icon on the folders you want to revoke user access to.
-3. You can also click the Grant access button and revoke access by clicking the trashcan icon on the entry in the ACL list view.
+Users are not notified when access is revoked.
 
-The user will not get a notification when access has been revoked.
-
-*Note: If a user does not have access to any shared folder or collection anymore, they will not be able to log in to the Desktop app and access your workspace anymore.*
+*Note: If a standard user no longer has access to any shared folder or collection, they cannot sign in to the Desktop App for your workspace.*
 
 ## Create a home
 
-Creating a shared home folder is a convenient way to quickly get users into your workspace and upload files to a place of their own.
+A home share gives a user a personal upload/download area. Accsyn can create homes automatically — see **Storage** under Workspace → Administrate → Settings.
 
-accsyn can be configured to always create a home share automatically, go to Storage tab beneath  Workspace>Administrate>Settings. 
+### Create a home from the Desktop App
 
-### Create a home from desktop app
+Click **NEW** under Homes, or **+** in the homes section header:
 
-To create a home share for a new user, click the NEW button beneath the homes section or click the + icon in the home section header:
+1. Choose the user (or invite a new one).
+2. Click **Next**.
+3. (Optional) Add a description.
+4. Click **Create**.
 
-1. The create share dialog will appear, prompting for user.
-2. Choose the user from the list or invite a new user.
-3. Click next.
-4. (Optional) Give a description of the share.
-5. When done click Create to have the home created.
-
-The home folder will be created on the default volume and the default home folder as configured in accsyn.
-
-ACLs will be automatically created, giving the user read(download) and write(upload, modify files) permission to the home folder on storage, and a notification email will be dispatched.
+The home is created on the default volume under the configured home path. Read/write ACLs are created and a notification email is sent.
 
 ### Create a home from the browser
 
-1. Logon to the browser as an administrator or an employee having write access to the default volume.
-2. Go to Workspace>Storage and expand the default volume.
-3. Go to Homes tab.
-4. Click CREATE HOME to the right.
-5. Select the user from the list, users already having a home will not be listed.
-6. Click Create to have it created.
+1. Sign in as an administrator or an employee with write access to the default volume.
+2. Go to Workspace → Storage and expand the default volume.
+3. Open the **Homes** tab.
+4. Click **CREATE HOME**.
+5. Select a user (users who already have a home are omitted).
+6. Click **Create**.
 
 ## Renaming and moving shared content
 
-Shared folders, homes, ACLs, and collection entries all store paths relative to storage. If those paths change, accsyn needs to update its records so users keep access to the right place.
+Shared folders, homes, ACLs, and collection entries store paths relative to storage. When those paths change, accsyn must update its records so access stays correct.
 
 ### Inside accsyn
 
-When you rename, move, or delete a folder or file using the Storage view file browser (or equivalent file operations through accsyn):
+When you rename, move, or delete via the Storage file browser (or equivalent accsyn file operations):
 
-- **Shared folders and homes** whose folder is renamed or moved (including when a parent folder moves) have their share path updated automatically. If the folder is **deleted**, the share is inactivated (related ACLs on that share are inactivated as well).
-- **ACLs** on shared folders and homes that target a renamed or moved subfolder have their path updated. If a folder is moved *out* of the share it belonged to, or a folder beneath the share is **deleted**, those ACLs are removed and the change is written to the share audit log.
-- **Collection** entries that point at renamed or moved files or folders have their paths updated. Entries for **deleted** files or folders are removed from the collection.
+- **Shared folders and homes** — path updates if the folder (or a parent) is renamed or moved. If the folder is **deleted**, the share is inactivated (related ACLs too).
+- **ACLs** — paths update when their target subfolder is renamed or moved. If a folder moves *out* of the share, or a folder beneath the share is **deleted**, those ACLs are removed and the change is logged.
+- **Collection** entries — paths update for renamed/moved items; entries for **deleted** items are removed.
 
-Prefer renaming, moving, and deleting shared content inside accsyn so these references stay consistent.
+Prefer changing shared content inside accsyn so references stay consistent.
 
 ### Outside accsyn
 
-If the same folders or files are renamed, moved, or deleted on disk outside accsyn (for example in Finder, Explorer, or another tool on the storage host), accsyn does **not** learn about the change. Share paths, ACL paths, and collection file entries can then point at locations that no longer exist — becoming orphaned or broken until you fix them manually (edit the share path, recreate ACLs, or update/remove collection files).
+If the same paths change on disk outside accsyn (Finder, Explorer, tools on the storage host), accsyn does **not** learn about it. Shares, ACLs, and collection entries can become orphaned until you fix them manually.
 
-*Note: Deleting a share in accsyn does not delete files on storage. Conversely, deleting or relocating files on storage outside accsyn does not remove or repair the related shares and ACLs.*
+*Note: Deleting a share in accsyn does not delete files on disk. Deleting or moving files outside accsyn does not remove or repair related shares and ACLs.*
 
-## Modify a share (folder, collection or home)
+## Modify a share (folder, collection, or home)
 
-To modify a share, right click it in the share list and choose Edit.
+Right-click the share → **Edit**.
 
-*Note: If you change the share code attribute, update your API workflows accordingly.*
+*Note: If you change the share code, update API workflows that use it.*
 
 ## Removing a share
 
-To remove a share, right click it in the share list and choose Delete.
+Right-click → **Delete**.
 
-*Note: files on storage will NOT be affected, and will have to be manually deleted in the file browser.*
+*Note: Files on storage are not deleted; remove them manually in the file browser if needed.*
+
+## Manage shares with the Python API
+
+Shared folders, homes, collections, and volume ACLs can be automated with the [accsyn Python API](../developer/python-api.md). A common pattern is to create a shared folder on a project path, then grant a partner access to a **subfolder** only.
+
+Example — create a shared folder, then grant read/write on a vendor subpath:
+
+```python
+share = session.create("Folder", {
+    "parent": "664b6d76e43eb396e5e55419",
+    "path": "projects/theproject",
+    "name": "Shared project assets",
+})
+
+acl = session.grant(
+    "User", "61779c54b80099ea066b0604",
+    "Folder", share["id"],
+    {
+        "path": "FROM_VENDORS/acmevfx",
+        "read": True,
+        "write": True,
+        "notify": True,
+        "message": "Please upload your files here.",
+    },
+)
+```
+
+Omit `path` (or use `"/"`) to grant the entire shared folder. Transfers to and from these shares use ASC when clients run the Desktop App or a User server.
+
+For volumes, collections, revoke/deactivate, and more, see the full [File Sharing](https://accsyn-python-api.readthedocs.io/en/latest/filesharing.html) chapter. API keys and installation: [Developer Hub — Python API](../developer/python-api.md).
+
+*Note: The API is not available for Cloud Essentials or BYOS Lite workspaces.*
 
 ### Related articles
 
 [BYOS](../admin/byos/index.md)
+
+[Python API](../developer/python-api.md)
+
+[Access shared folders](access.md)

@@ -1,6 +1,6 @@
 # Publish Workflow
 
-*NOTE: This feature is exposed to BYOS workspaces only.*
+*NOTE: This feature is exposed to [BYOS](../admin/byos/index.md) workspaces only.*
 
 [BYOS](../admin/byos/index.md)
 

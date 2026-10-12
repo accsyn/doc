@@ -1,89 +1,57 @@
 # Export
 
-The media exporter is designed to package video together with subtitles and other data, to provide a package that can be imported by VOD streaming services.
+Package tagged video with subtitles and related assets into packages that VOD platforms can ingest.
 
-  
+Currently supported natively:
 
-Currently these platforms are supported natively in the platform:
+- **Allente**
 
-- Allente
-
-  
-
-Refer to the [accsyn Lab](media-lab.md) for exporting to other popular platforms.
-
-  
+For other popular platforms, see [Media Lab](media-lab.md).
 
 ## Allente
 
-  
-
-1. Start by transcoding the VOD media, this can be done from a high resolution master using the [Processor](process.md) tooling. Recommended quality is HD 25Mbit H.264 with 256Kbit stereo sound.
-2. For each region (language) to include in export, make sure you have logged landscape, portrait and shot post images. Also make sure that subtitles are logged for the language, and optionally a trailer with the subtitles.
-3. Choose the VOD media and run the processor.
-4. Go to "VOD export" tab and choose the Allente exporter:
+1. Transcode VOD media from a high-resolution master with the [Processor](process.md). Recommended: HD ~25 Mbit H.264 with ~256 kbit stereo.
+2. For each region (language), log landscape, portrait, and shot poster images; log subtitles for that language; optionally a trailer with subtitles.
+3. Select the VOD media and open the processor.
+4. Open the **VOD export** tab and choose the Allente exporter:
 
 ![](../assets/vault_export-d99a76e311fd.png)
 
-The exporter window consists of a media preview at the top, and then below that four tabs:
-
-  
+The exporter shows a media preview and four tabs:
 
 ### Update title
 
-Here you can update the title with additional metadata, that was not entered during title creation, required for the export to work out. 
-
-  
+Add title metadata that was missing at creation but is required for export.
 
 ### Settings
 
-- Customer; N/A
-- Type; The type of export: SVOD, TVOD or EST.
-- Trailer; The trailer to include in export.
-
-  
+- **Customer** — N/A
+- **Type** — SVOD, TVOD, or EST
+- **Trailer** — Trailer to include
 
 ### Regions
 
-Choose the region (language) to add to export:
+Per language / region:
 
-- <language> title; The title in the given language.
-- <language> short summary; A short summary written in the given language.
-- <language> long summary; A long summary written in the given language.
-- Licensing; The date range the platform can stream the title.
-- <language> price; The price for viewing/renting the title.
-- Subtitles; Main subtitles, and optional trailer subtitles, for the region.
-- Posters; The poster images in the language of the region.
-- Remove region; Remove the region again.
+- Title, short summary, long summary in that language
+- **Licensing** — Date range the platform may stream
+- Price for viewing / renting
+- **Subtitles** — Main (and optional trailer) subtitles
+- **Posters** — Region-language posters
+- **Remove region**
 
-  
+### Output
 
-Output
+- **Deliver (temp)** — Deliver to recipients from a temporary folder deleted when the delivery expires
+- **Deliver (custom)** — Store permanently on storage, then deliver from there
+- **Custom** — Store on storage only
 
-Define what to do with the export:
+Click **Export** to run on the farm. Missing required fields are reported.
 
-- Deliver (temp); Deliver to one or more recipients. Output export to temporary folder that will be deleted when delivery expires.
-- Deliver (custom); Choose a location on storage where the export is permanently stored, and then deliver from that location.
-- Custom; Just store the export on storage, do nothing more.
-
-  
-
-When done, click Export button to kick off export on the accsyn farm. You will be alerted on any missing entries.
-
-  
-
-*Note: not all entries are required with the Allente exporter, for example the trailer might not be necessary to include in some scenarios.*
-
-  
+*Note: Not every field is required for Allente (for example a trailer may be optional).*
 
 ### Monitoring export
 
-  
-
-Check the farm - JOBS tab - at the bottom of the app GUI for progress on export, do not hesitate to reach out to the accsyn support if you encounter any oddities with the export.
-
-  
-  
-  
+Watch the **JOBS** tab at the bottom of the app. Contact support if something looks wrong.
 
 Back to [processor](process.md).

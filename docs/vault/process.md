@@ -1,122 +1,107 @@
 # Process title media
 
-This guide shows how to process media files with accsyn - utilising the built-in transcoder engine to produce media variants and proxies of all forms and shapes.
+Process tagged Vault media with the built-in transcoder — proxies, VOD variants, clip extraction, and related jobs on the Cloud farm.
 
 ## The media processor
 
-Preparations:
+**Preparations**
 
-- Make sure you have a title and master/high res media logged.
-- Remove any media that collides with media created by the processor.
+- Have a title and master / high-resolution media logged.
+- Remove any existing media that would collide with processor output.
 
-Login to the accsyn Desktop app (and select a non-BYOS workspace), then select the title you want to process.
-
-Then select the media files you want to deliver and either click the Process button in the toolbar, or right click and choose Process:
+Sign in to the Desktop App on a Cloud (non-BYOS) workspace, open the title, select media, then click **Process** (or right-click → **Process**):
 
 ![](../assets/vault_process-33c9c12efced.png)
 
-The selected media are listed in the top section, below are tabs with different available actions (click Cancel to abort processing):
+Selected media appears at the top; tabs below list actions (**Cancel** aborts).
 
 ## Extract
 
-Tool to extract sub clips and still images from a single media file. This processor is also reachable from the proxy player through the extract clip & still buttons.
+Extract subclips and stills from a single media file. Also available from the proxy player via extract clip / still controls.
 
-  
-
-Head over to [Clip & Still image extraction](clip-extract.md) section to learn how to use the feature.
+See [Clip and still image extraction](clip-extract.md).
 
 ## VOD export
 
-Tool for exporting media to packages that VOD streaming platforms can ingest.
+Package media for VOD platform ingest.
 
-  
-
-Head over to [Export](export.md) section to learn how to use the feature.
+See [Export](export.md).
 
 ## Transcode
 
-  
-
-Standard transcode of media producing new media that are ingested back to the title.
+Standard transcode produces new media that is ingested back onto the title.
 
 ### Lowres transcode
 
-This is a basic transcode, useful for producing a lowres proxy out of high resolution masters, suitable for previews and for example subtitling:
+Low-resolution proxy for previews and e.g. subtitling:
 
-- Codec: h264 (mp4)
-- Bitrate: 2Mbps
-- Resolution: 1024x576
+- Codec: H.264 (MP4)
+- Bitrate: 2 Mbps
+- Resolution: 1024×576
 
-A lowres media asset will be logged, with status "TRANSCODING" that will be set to ONLINE once transcode has finished.
+A lowres asset is logged with status **TRANSCODING**, then **ONLINE** when finished.
 
 ### VOD transcode
 
-Transcode master media to VOD media, optimised for SVOD/TVOD deliveries and further web streaming (see Proxy below):
+Master → VOD media for SVOD/TVOD and further streaming proxies:
 
-- Codec: h264 (mp4)
-- Bitrate: 25Mbps
+- Codec: H.264 (MP4)
+- Bitrate: 25 Mbps
 - Resolution: native
 
-A VOD media asset will be logged, with status "TRANSCODING" that will be set to ONLINE once transcode has finished.
+A VOD asset is logged **TRANSCODING** → **ONLINE**.
 
 ## Proxy
 
-Create proxies of existing logged media, to be used in various ways within the accsyn platform.
+Create or recreate proxies used elsewhere in the platform.
 
 ### Streamable proxy
 
-Create an HLS streamable HD proxy of VOD media, tailored for web streaming with the accsyn platform:
+HLS HD proxy of VOD media for web streaming:
 
 - Codec: HLS
-- High quality stream: 1080 @ 12Mbps
-- Medium quality stream: 1080 @ 6Mbps
-- Low quality stream: 720 @ 2.8Mbps
-- Mobile quality stream: 480 @ 800kbps
-- Audio: Stereo (2.0)
+- High: 1080 @ 12 Mbps
+- Medium: 1080 @ 6 Mbps
+- Low: 720 @ 2.8 Mbps
+- Mobile: 480 @ 800 kbps
+- Audio: stereo (2.0)
 
-A "hddef" proxy will be created on media, with status "TRANSCODING" that will be set to ONLINE once transcode has finished.
-
-*Note: Streaming proxies are only available on video type media.*
+Creates an `hddef` proxy (**TRANSCODING** → **ONLINE**). Video type only.
 
 ### Video proxy
 
-A video proxy is always created by default when videos are ingested into the vault, use this processor option to re-create it:
+Created by default on video ingest; use this to recreate:
 
 - Codec: MP4
-- Standard quality: 720 @ 2.8Mbps
-- Audio: Stereo (2.0)
+- Standard: 720 @ 2.8 Mbps
+- Audio: stereo (2.0)
 
-A "hd720" proxy will be created on media, with status "TRANSCODING" that will be set to ONLINE once transcode has finished.
-
-*Note: Video proxies are only available on video type media.*
+Creates an `hd720` proxy. Video type only.
 
 ### Image proxy
 
-An image proxy is always created by default when images are ingested into the vault, use this processor option to re-create it:
+Created by default on image ingest; use this to recreate:
 
 - Codec: JPG
-- Standard quality: 320px max width or height, aspect ratio preserved.
+- Standard: max 320 px on the long side, aspect preserved
 
-A "lr" proxy will be created on media, with status "TRANSCODING" that will be set to ONLINE once transcode has finished.
-
-*Note: Image proxies are only available on image type media.*
+Creates an `lr` proxy. Image type only.
 
 ## Misc
 
 ### Probe
 
-Re-run ffprobe on the selected media, useful for repairing or updating media metadata within the accsyn platform.
+Re-run ffprobe to repair or refresh technical metadata.
 
 ### Update
 
-Re-probe metadata, check for physical existence on disk, check and re-sync with proxies.
+Re-probe metadata, verify the file on disk, and re-sync proxies.
 
 ## Troubleshooting
 
-- I cannot transcode VOD, it complains media is not a master? To be able to transcode VOD, you need to select video media that has the Cat(egory) tag set to "MAS". Edit the media and set this tag to enable VOD transcode.
+- **Cannot transcode VOD — “not a master”** — Select video with **Category** = MAS. Edit media tags if needed.
+- **Transcode never finishes** — Check **JOBS** at the bottom of the app for progress. Cloud farms run continuously; contact support if a job appears stuck.
 
-- Transcoding takes forever and does not complete? The accsyn backend currently contains 10 high performance transcoding machines running 24/7 crunching media. If you reckon something is stuck, check the JOBS tab at the bottom area of the app. It shows your transcode job(s) and progress.
+Questions you cannot resolve: chat or email support.
 
-Having issues or questions you cannot resolve on your own, do not hesitate to reach out to our support team through Chat or email.
-
-Next, learn how to send a [web stream](stream.md) to your recipients.
+Next: [Web stream](stream.md) to recipients.

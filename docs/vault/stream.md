@@ -1,68 +1,50 @@
 # Stream title media
 
-This guide covers media streaming within the accsyn platform - send VOD web streams to users for playback in the web browser.
+Send VOD web streams so recipients can play tagged Vault media in a browser. Optional file downloads still use link-based delivery and [ASC](../whitepaper.md) when recipients use the Desktop App.
 
-  
-
-*Note: Web streaming comes with an initial amount of free views, after which additional views are charged in arrears. Check accsyn [pricing](https://accsyn.com/pricing) for more information.*
+*Note: Web streaming includes an initial allowance of free views; further views are billed in arrears. See [pricing](https://accsyn.com/pricing).*
 
 ## Prepare streaming
 
-To be able to stream a title, the following criteria must be fulfilled:
-
-1. A title must have been [created](create.md).
-2. Video media (Type tag set to value VID) must be [logged](log-media.md) on title.
-3. If subtitles are to be supported, Content tag must be set and match subtitles. Subtitles must have Subtitles tag set.
+1. A title has been [created](create.md).
+2. Video media is [logged](log-media.md) with **Type** = VID.
+3. For subtitles: matching **Content** on video and subtitle assets, and a **Subtitles** language tag on the subtitle media.
 
 ## Create stream
 
-1. Start by logging in to the accsyn Desktop app (and select a non-BYOS workspace), as an employee or administrator.
-2. Next choose the title you wish to stream, filter on "VOD" category, and choose the VOD media file(s) you wish to stream. You can actually stream any video file, in that case click the Video type filter.
-3. Click the Stream button, or right click media and choose Stream.
-4. The VOD media is put into the streaming "cart" panel on the right hand side:
+1. Sign in to the Desktop App on a Cloud (non-BYOS) workspace as an employee or administrator.
+2. Open the title. Filter by **VOD** category and select the VOD media to stream — or use the Video type filter to stream other video.
+3. Click **Stream**, or right-click → **Stream**.
+4. Media appears in the streaming cart on the right:
 
 ![](../assets/vault_stream-867e15151578.png)
 
-Screenshot showing a streamable media added to the cart ready to be submitted as a web stream delivery to recipients.
+*Streamable media in the cart, ready to submit.*
 
-5. Continue to add additional media to the stream, and/or add additional files with the streaming delivery - user will be able to download these alongside watching the stream.
+5. Add more media or ordinary files (recipients can download those while watching).
+6. Remove items with the trash can.
+7. Click **NEXT — RECIPIENTS**. If no HD HLS streaming proxy exists yet, transcoding starts on the farm; recipients may see a placeholder until it finishes.
 
- 6. Remove items from the cart by clicking the trashcan icon on the right hand side.
-
- 7. When done, click NEXT-RECIPIENTS button at the bottom. If no HD HLS streamable proxy exists for the selected video file(s), they will start transcoding on the farm at this point. A placeholder image will be displayed when recipient opens the stream until it has finished transcoding. 
-
-A browser window will open, taking you to the accsyn standard delivery page where you can finish up the stream delivery - add recipients and set expiry date and access options. 
-
-  
+A browser window opens on the standard delivery page for recipients, expiry, and access options.
 
 ### Restricting download access
 
-  
-
-By default the download of the VOD media is disabled, meaning that recipients will only be able to watch the stream and not download it. Enable download by checking Enable media download option:
+By default, VOD download is disabled — recipients can watch but not download. Enable **Enable media download** if they should also download:
 
 ![](../assets/vault_stream-d3b97948a86d.png)
 
 ## Subtitles
 
-  
+Accsyn finds subtitle media that share the video’s **Content** tag and have **Subtitles** set to the language.
 
-The accsyn streaming platform supports subtitles, it does so by locating subtitles media asset matching the video Content tag and with Subtitles tag properly set to the corresponding language.
+Example:
 
-  
+- Log `Festival_feature_4444_stream.mov` with **Content** = FTR (Feature).
+- Log `Festival_feature_4444_stream_swe.srt` with **Content** = FTR and **Subtitles** = swe.
+- Repeat for other languages.
 
- Giving an example:
-
-- You log the (textless) media file "Festival\_feature\_4444\_stream.mov" with tag Content = FTR (Feature).
-- To make subtitles available to the user in the web stream player, log "Festival\_feature\_4444\_stream\_swe.srt" with tags Content set to FTR (Feature) and Subtitles = swe.
-- Repeat logging of subtitles until done.
-
-  
-
-In the web browser, available subtitles are listed on each playable media file. Example video with English subtitles:
+In the browser player, available subtitles appear on each playable file. Example with English subtitles:
 
 ![](../assets/vault_stream-cba415948fae.png)
 
-Videos showing how to tag your media to support subtitles:
-
-Find more detailed information on how to create deliveries in [this guide](../delivery/create.md), have your recipients follow [this guide](../delivery/receive.md) if they need to learn how to receive a stream.
+More on deliveries: [Create a delivery](../delivery/create.md). Recipients: [Receive a delivery](../delivery/receive.md).

@@ -1,91 +1,83 @@
 # Receive a delivery
 
-This guide is for you that are expecting a delivery or upload request sent with accsyn.
+This guide is for anyone expecting an accsyn delivery or upload request.
 
-  
+A delivery link can represent anything from a single file to a **large folder with many files at terabyte scale**. Using the Desktop App, the download runs in the background over the secure, accelerated [ASC](../whitepaper.md) protocol — with folder support and resume if the transfer is interrupted.
 
-*Note: If you have been granted access to a shared folder or collection, please head over to this guide:*
-
-[Access Shared Folders](../file-sharing/access.md)
+*Note: If you were granted access to a shared folder or collection instead, see [Access shared folders](../file-sharing/access.md).*
 
 This video shows how to download a delivery:
 
-If you are expecting a delivery, a first step is to check your email and look for a delivery email coming from accsyn:
+If you expect a delivery, check your email for a message from accsyn:
 
 ![](../assets/delivery_receive-17799457e794.png)
 
-Click the Download now (or Upload now, if it is an upload request) button to open the delivery in your standard web browser.
+Click **Download now** (or **Upload now** for an upload request) to open the delivery in your browser.
 
-If you have not received an email, check your spam filters to make sure it has not been caught there. Also, you can open <https://accsyn.io> in your web browser and log in with the email that the delivery has been sent to - it should be listed in the Downloads section.
+If you did not receive an email, check spam filters. You can also open <https://accsyn.io>, sign in with the email address the delivery was sent to, and find it under **Downloads**.
 
 ### Using accsyn for the first time
 
-If you have no accsyn account, you will need to register one. 
+If you do not have an accsyn account yet, register one.
 
-*Note: Anonymous access to the platform is not allowed due to security reasons and if you believe you need access to a delivery - reach out and ask the sender to be added as a recipient.*
+*Note: Anonymous access is not available for ordinary deliveries. If you need access, ask the sender to add your email as a recipient.*
 
-You can choose to sign up with email or log in with Google (recommended if applicable)
+You can sign up with email or sign in with Google (recommended when applicable).
 
 ### Downloading the delivery
 
-Once registered, you will be presented with the delivery view with information about the files in the package. The delivery can also be found by clicking Downloads in the menu on the left hand side of the accsyn web page.
+After you sign in, you see the delivery view with the package contents. You can also open it anytime from **Downloads** in the left menu.
 
-Click the DOWNLOAD NOW button:
+Click **DOWNLOAD NOW**:
 
 ![](../assets/delivery_receive-e2ba6513a004.png)
 
-Screenshot of a delivery and the options for download.
+*Screenshot of a delivery and download options.*
 
-A prompt will be displayed with two options:
+You are offered two options:
 
-- USE ACCSYN FOR MAC; As accsyn is designed to provide stable, secure and accelerated deliveries, we recommend installing and using the desktop app to download the delivery in the background. Downloads through the app go much faster and also support folders and resume where left off if interrupted.
-- PROCEED WITH BROWSER; Download the file(s) in browser - secure but not accelerated and resumable.
+- **USE ACCSYN … (Desktop App)** — Recommended for stable, secure, accelerated deliveries. The app downloads in the background over ASC, supports full folders (including very large packages), and resumes if interrupted.
+- **PROCEED WITH BROWSER** — Secure browser download, but not accelerated or resumable in the same way.
 
-Important note: Web browsers do not support download of multiple files or folders, if the delivery is not a single file accsyn will attempt to compress (ZIP) the delivery first. This can take considerable time, instead switch to using the desktop app to get a much smoother experience.
+**Important:** Web browsers do not download multiple files or folders natively. If the delivery is not a single file, accsyn may try to ZIP the package first — which can take a long time for large folders. Prefer the Desktop App for multi-file or large deliveries.
 
-  
-
-Once the download method is chosen, a prompt will ask you where to save the file. Once confirmed, the download will initiate and run in the background:
+After you choose a method, you are asked where to save. Confirm to start the download:
 
 ![](../assets/delivery_receive-4d026ca9f0c4.png)
 
-Screenshot of a delivery being downloaded.
+*Screenshot of a delivery being downloaded.*
 
 *Notes:*
 
-- *If downloading through the web browser, remember to not close or reload the browser until finished.*
-- *If downloading with the app, you can safely close the web browser and open it later to check for progress. But if you log out of your computer and/or quit the desktop app, the transfer will be interrupted but resume again as soon as you log in and start the desktop app again.*
+- *Browser download — do not close or reload the page until the transfer finishes.*
+- *Desktop App — you can close the browser and reopen it later to check progress. If you log out of the computer or quit the app, the transfer pauses and resumes when you sign in and start the app again.*
 
 ### Upload to a request
 
-In a similar way, if you receive an upload request, you will be displayed a view with files uploaded so far by yourself or other users, and the UPLOAD NOW button. Click it to go through the same procedure of choosing browser or app method, the same rules apply here with the difference that browser upload is somewhat accelerated and supports multiple files.
+For an upload request, you see files already uploaded (by you or others) and an **UPLOAD NOW** button. Use the same browser-or-app choice; browser upload is somewhat accelerated and supports multiple files, but large folder trees are still best handled with the Desktop App and ASC.
 
-Upload requests can also be found in the Uploads menu on the left hand side.
+Upload requests also appear under **Uploads** in the left menu.
 
-Watch this video that shows how to action an upload request:
+Watch this video on actioning an upload request:
 
 ### Watch a stream
 
-Streams are part of the accsyn Media Vault feature, allowing recipients to watch a movie in their web browser without any additional software needed. Follow the email dispatched to open the stream shared with you and click the green play button located on the VOD media file. 
+Streams are part of the Media Vault: watch a movie in the browser with no extra software. Open the stream from the email, then click the green play button on the VOD media file.
 
-  
+All streams shared with you are listed under **Watch** in the left menu.
 
-You can find all streams shared with you by clicking the Watch menu item on the left hand side.
-
-  
-
-Files supplied with the stream can also be downloaded, in the same way you would download files from a normal delivery, if they are made available by the sender.
+If the sender included downloadable files with the stream, download them the same way as a normal delivery.
 
 ### Troubleshooting a delivery
 
-If you have issues with a delivery and it cannot download/upload, a first step is to examine the log - it will give clues on what the issue could be. The log can be opened by clicking the log icon on the right hand side of the transfer:
+If download or upload fails, start with the transfer log — click the log icon on the right of the transfer:
 
 ![](../assets/delivery_receive-ec1f4aa02893.png)
 
-Common problems that can  occur with file transfers:
+Common issues:
 
-- Cannot install the app due to lack of permissions or local policies: The accsyn desktop app does not require administrative permissions to install, nevertheless local policies can block the app installation. Check with your IT department to try to whitelist the application so you can utilise it properly. If that is not an option, you might need to switch to the web browser delivery method.
-- The app has problems connecting to accsyn,  or it connects but traffic gets interrupted: This can occur when you have a local antivirus and/or firewall software that interferes with the communication between the app and accsyn infrastructure servers. Talk to your IT department to whitelist the accsyn executable and/or allow accsyn to communicate over the Internet. accsyn uses TCP ports starting from 45190 and upwards for its communication.
-- The app reports that it has problems writing the file: This can happen when either your local disk is full, or there is a permissions error - your user cannot write to the folder or antivirus software blocks the accsyn app from writing to the destination folder. Check free disk space and check with your IT department to have the accsyn app whitelisted when it comes to writing to the download locations.
+- **Cannot install the app (permissions or policy)** — The Desktop App does not require administrator rights to install, but local policy may still block it. Ask IT to whitelist the application. If that is not possible, use browser delivery for smaller packages.
+- **App cannot connect, or transfers are interrupted** — Local antivirus or firewall software may interfere. Ask IT to whitelist the accsyn executable and allow Internet communication. ASC uses TCP ports starting at 45190 and upwards.
+- **App cannot write the file** — Disk may be full, the destination folder may deny write access, or antivirus may block writes. Check free space and ask IT to whitelist accsyn for the download location.
 
-Having further issues with file transfers? Do not hesitate to reach out to our support team through chat or email.
+Still stuck? Contact support via chat or email.

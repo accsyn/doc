@@ -35,7 +35,17 @@ A host can be configured to automatically download deliveries to a folder, this 
 
 ### Local file sharing
 
-By mapping shared folders locally,  and exposing them as readable and writeable, elevated workspace users can get access to your local storage for both downloading material to you and uploading from your computer. This is useful in a working from home scenario or for vendors that need to provide a local work area for storing file assets, with the same folder structure as on your cloud or on-prem accsyn storage.
+By mapping shared folders locally, and exposing them as readable and writeable, elevated workspace users can get access to your local storage for both downloading material to you and uploading from your computer. This is useful in a working from home scenario or for vendors that need to provide a local work area for storing file assets, with the same folder structure as on your cloud or on-prem accsyn storage.
+
+With **read** access, operators can **pull** (upload from your mapped folder onto main storage or a site). With **write** access, they can **push** (download from main storage or a site onto your mapped folder). Transfers require your Desktop App or User server client to be online — see [Map shares locally](#map-shares-locally) below.
+
+### Sites — permanent remote office or cloud push and pull
+
+Local share mappings are ideal for a single machine. If you need a more permanent push and pull setup for a **remote office or cloud location** — shared storage at that place, hq-to-site sync, and transfers that do not depend on one user's laptop — use **sites** and **site servers** instead.
+
+In a [BYOS](byos/index.md) (or Enterprise) workspace you define a site, install a site server there, and serve volumes at that location. Operators can then sync and transfer between the main (HQ) site and the remote site in a durable way. Clients on the site can also have downloads/uploads routed through the site server so work continues when individual Desktop Apps are closed.
+
+See [Site administration](byos/site.md) and the [Remote office sync](../tutorials/remote-office-sync.md) tutorial. An overview of both approaches is in [File sharing](../file-sharing/index.md#can-i-share-files-and-folders-on-a-remote-office-or-cloud-site).
 
 ## The Hosts page
 
@@ -269,9 +279,11 @@ To remedy this, change ownership of these files:
 
 MAC:
 
+```bash
 sudo chown -R <UserName> /var/log/accsyn "/Library/Application Support/com.accsyn" /tmp/.accsyn
+```
 
-Hint: Replace <UserName> with the user account ID as configured in the daemon plist (e.g. myloginname from the plist example above)
+<sup>Hint: Replace <UserName> with the user account ID as configured in the daemon plist (e.g. myloginname from the plist example above)</sup>
 
   
 
@@ -286,9 +298,11 @@ Set ownership of these folders to the same user account that is running the accs
 
 LINUX:
 
+```bash
 sudo chown -R <UserName> /var/log/accsyn /etc/accsyn /tmp/.accsyn
+```
 
-Hint: Replace <UserName> with the user account ID that is configured for the systemctl service.
+<sup>Hint: Replace <UserName> with the user account ID that is configured for the systemctl service.</sup>
 
   
   

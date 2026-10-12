@@ -1,6 +1,6 @@
 # Engine administration
 
-*NOTE: This feature is exposed to [BYOS](index.md) and Enterprise licensed workspaces only.*
+*NOTE: This feature is exposed to [BYOS](index.md) workspaces only.*
 
 
 This guide walks through how to create and configure engines within an accsyn workspace.

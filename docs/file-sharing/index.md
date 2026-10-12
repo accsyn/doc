@@ -1,64 +1,79 @@
-# File sharing - Introduction
+# File sharing — introduction
 
-This page serves as an introduction to the accsyn File Sharing subsystem - the standalone feature available on Cloud or On-prem storage, integrated into the accsyn [Media Vault](../vault/index.md).
+This page introduces the accsyn File Sharing subsystem — available on Cloud or on-premises (BYOS) storage, and integrated with the [Media Vault](../vault/index.md).
+
+The core idea: **share specific subfolders of a project tree on production storage** — not the whole volume — so external users and partners can work inside production safely. Access is controlled with ACLs; transfers use the secure, accelerated [ASC](../whitepaper.md) protocol via the Desktop App.
 
 ## Get started
 
-We recommend watching this 1:30 minute video, providing an introduction to file sharing:
+We recommend this short video introducing file sharing:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PqQLXAfZF5M" title="accsyn File Sharing introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Tutorial
 
-Learn how to setup accsyn File Sharing step by step by following this tutorial:
+Set up file sharing step by step with this tutorial:
 
 [FTP server replacement](../tutorials/ftp-server-replacement.md)
 
 ## What is accsyn File Sharing?
 
-In principle, it is an FTP replacement combining powerful ACL mechanisms with fast, secure and resumable file transfers / deliveries.
+In short, it is an FTP replacement: strong ACL-based access control combined with fast, secure, resumable transfers over ASC — without exposing broad production disks to partners.
 
-## Why File Sharing?
+## Why file sharing?
 
-With film production, and basically any type of workflow that involves files, large file sets need to be uploaded and further distributed/delivered to remote teams.
+Film and media production move large file sets between studios, vendors, and remote teams. Operators need precise control over *who* sees *which* folder, with audit trails when access must be reviewed later.
 
-  
-
-accsyn has been streamlined for sharing folders efficiently, giving operators full control of who has access, combined with audit functions so file access can be backtracked.
+accsyn is built for that: share only the project subfolders partners need (for example `FROM_VENDORS/acme` beneath a larger project tree), keep the rest of production storage private, and still give them a seamless download/upload experience over ASC.
 
 ## How does file sharing work with accsyn?
 
-The most basic form of file sharing is making a delivery - collecting the files and/or folders to send to a user, available for a limited time. Learn about file deliveries [here](../delivery/index.md).
+The simplest one-shot transfer is a [delivery](../delivery/index.md) — a time-limited package. **File sharing** is for ongoing access: permanent (or long-lived) folders, homes, and collections on your storage.
 
-To understand how accsyn file sharing works we first declare some terms used throughout this guide:
+Terms used throughout this guide:
 
-- **ACL** Access Control List, defines which employees have access to volumes, and which standard users have access to Shared folders.
-- **Share** Is a common abbreviation and the internal accsyn entity for a container that contains files and folders sharable with users, a share could be a volume, shared folder, collection or home share (see below). Share API code identifier must be unique within the workspace and cannot have the same code as another share. When using the accsyn API, shares are usually targeted using the common "share=<ident>/.." notation.
-- **Volume**; A volume is the root folder exposed to accsyn on a file server. accsyn cannot access files outside this root folder, and all file sharing (and delivering, title management and so on) happens within this folder. In a BYOS setup, you can have as many volumes as you need. Administrators have full access to volumes, employees have full access to the volumes they have been granted access to. Standard users do not have direct access to a volume.
-- **Shared folder** A folder beneath a volume, or the volume root folder, intended to be shared with standard users through ACLs.
-- **Collection** Files and folders collected from one or more volumes and put into a virtual folder that can be shared with users the same way a shared folder would.
-- **Home** A special shared folder, named as the user (email), giving users a place to upload and download material outside the default production area. By default, this feature is turned off and can be turned on in Settings.
+- **ACL** — Access Control List; defines which employees may access volumes, and which standard users may access shared folders (or specific subpaths beneath them).
+- **Share** — Internal accsyn entity for a container of sharable files and folders: a volume, shared folder, collection, or home. The share API `code` must be unique within the workspace. In the API, paths often use `share=<ident>/…` notation.
+- **Volume** — Root folder exposed to accsyn on a file server. accsyn cannot reach files outside this root. All sharing, delivery, and title management happens inside volumes. BYOS workspaces may define many volumes. Administrators have full volume access; employees only to volumes they are granted; standard users never get direct volume access.
+- **Shared folder** — A folder beneath a volume (or the volume root) shared with standard users through ACLs. You can grant access to the whole share or only a **subfolder** — ideal for integrating vendors into one project area without opening the rest of the tree.
+- **Collection** — A virtual folder of files and folders gathered from one or more volumes, shared like a shared folder.
+- **Home** — A per-user shared folder (named after the user email) for upload/download outside the main production area. Off by default; enable in Settings.
 
+Access by role:
 
-Users get access to shared files depending on their role:
+- **Administrators** — Full access to all volumes. Invite admins carefully.
+- **Employees** — Access to volumes granted by administrators; can create shares, deliveries, and audit activity.
+- **Standard users** — Apart from deliveries sent to them, only shared folders, homes, and collections they are granted via ACL.
 
-- **Administrators** Have full access to all volumes, be careful who you invite to be an administrator.
-- **Employees** Are granted access to one or more volumes by administrators, giving them full access to the files and folders - create shares, deliveries, monitor and audit.
-- **(Standard) Users**; Except for deliveries sent to them, standard users only have access to shared folders/homes beneath a volume or collections.
+## Can I share titles and media in the vault?
 
-## Can I share Titles and associated media within the vault?
+Yes. The title library sits on a normal folder structure on storage, so you can share folders and create collections as with any other content.
 
-Yes, the title library just sits on top of a basic folder structure on your accsyn storage, allowing for sharing folders and creating collections just as you would do with any regular content.
-
-A good example is to create a permanent "DCP" collection, with a set of DCPs to permanently share with one or more users.
+A common pattern is a permanent **DCP** collection shared with selected users.
 
 ## Can I share files on my own local or cloud storage?
 
-Yes, accsyn provides a BYOS licensing option allowing you to install on-prem our cloud servers facilitating file sharing and delivery on your storage solutions. For more information see [BYOS](../admin/byos/index.md).
+Yes. With [BYOS](../admin/byos/index.md) you install on-premises or cloud servers so file sharing and delivery run against your own storage.
 
-## Can my clients share folders on their local machine
+## Can my clients share folders on their local machine?
 
-Yes, accsyn supports mapping shares locally on a client (Desktop App or User server) and then grant read and write access. See [Hosts](../admin/hosts.md) for more information.
-  
+Yes. This is **local file sharing**: a user maps a shared folder (or volume path) to a folder on their computer and grants workspace operators read and/or write on that mapping.
+
+While their client is online, elevated users (administrators and employees) can:
+
+- **Pull** — with read access, upload from the mapped folder onto main storage or a site.
+- **Push** — with write access, download from main storage or a site onto the mapped folder.
+
+Typical uses: working from home, or vendors keeping a local work area that mirrors production folder structure. Transfers use ASC when the Desktop App or User server is the endpoint.
+
+Configure mappings in the **Desktop App** (app running and user signed in). For 24/7 access without a logged-in desktop session, install a **User server** (accsyn daemon/service). See [Hosts](../admin/hosts.md).
+
+## Can I share files and folders on a remote office or cloud site?
+
+Yes. In a [BYOS](../admin/byos/index.md) (or Enterprise) workspace you define **sites** — remote offices or cloud locations — usually with one or more **site servers**. Assign servers and elevated clients so accsyn knows where they are.
+
+Site servers sync material between HQ and the remote site, serve shared storage there, and can take over transfers initiated by clients on that site so jobs continue when individual Desktop Apps close.
+
+See [Site administration](../admin/byos/site.md) and the [Remote office sync](../tutorials/remote-office-sync.md) tutorial.
 
 Next: [Work with accsyn File Sharing](manage.md)

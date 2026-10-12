@@ -1,6 +1,6 @@
 # Render farm
 
-*NOTE: This feature is exposed to standard (not Lite) [BYOS](../admin/byos/index.md) workspaces only.*
+*NOTE: This feature is exposed to [BYOS](../admin/byos/index.md) workspaces only.*
 
 This guide walks through how to set up a render farm with your accsyn Workspace.
 

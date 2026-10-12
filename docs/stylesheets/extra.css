@@ -22,6 +22,15 @@
   --md-accent-fg-color: #5ff7ac;
 }
 
+/* Green checkmarks in feature comparison tables */
+.md-typeset .feature-yes {
+  color: #0ba159;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .feature-yes {
+  color: #11f185;
+}
+
 /* Status banner card - green background with white ONLINE text */
 .md-typeset .status-online li {
   background-color: #00a100;

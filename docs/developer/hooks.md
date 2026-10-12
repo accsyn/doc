@@ -1,6 +1,6 @@
 # Hooks
 
-*Important Note: This feature is exposed to BYOS PRO workspaces only.*
+*Important Note: This feature is exposed to [BYOS](../admin/byos/index.md) workspaces only.*
 
 [BYOS](../admin/byos/index.md)
 

@@ -2,7 +2,7 @@
 
 The accsyn Python API facilitates programmable file transfers with Python (v3).
 
-*Important Note: API:s are not available for Essentials and Lite type workspaces.*
+*Important Note: API: is NOT available for Cloud Essentials or [BYOS](../admin/byos/index.md) Lite type workspaces.*
 
 ## How to create and manage API keys
 

@@ -205,7 +205,7 @@ Advanced transfer settings, see [accsyn Internal settings](../settings.md) for d
 
 ## Site
 
-*Note: Site settings are available for [BYOS](byos/index.md) and Enterprise licensed workspaces only.*
+*Note: Site settings are available for [BYOS](byos/index.md) workspaces only.*
 
 ### Route transfers via site server
 

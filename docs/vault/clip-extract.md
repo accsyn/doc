@@ -1,119 +1,72 @@
-# Clip & still image extraction
+# Clip and still image extraction
 
-The clip and still image extractor enables you to quickly have selections transcoded and sent to you, directly from the accsyn Media Vault, without needing to download the masters and process them locally.
+Extract clips and stills from tagged Vault media without downloading masters to process locally. Results can be delivered back over the usual delivery / [ASC](../whitepaper.md) path or written to storage.
 
-  
-
-Watch this video to learn how to extract clips:
+Watch this video to learn clip extraction:
 
 ### Accessing
 
-There are two ways to initiate the clip extraction:
-
-1. Playing a proxy from the vault.
-2. Selecting media and running the [Media Processor](process.md).
-
-  
+1. Play a proxy from the Vault, or
+2. Select media and open the [Media processor](process.md).
 
 ### Layout
 
-The clip extraction processor is built into the proxy player, making it fast and straightforward to make a selection of clips and still images:
+Extraction is built into the proxy player:
 
 ![](../assets/vault_clip-extract-c3665d3c6a0f.png)
 
-Seek bar
+**Seek bar** — Current position in the movie:
 
-Beneath the player window is the seek bar, reflecting the current position in the movie: 
+- In edit mode: frame steps of 1 frame, 1 s, 3 s, and 5 s
+- Selected clip range shown in green
+- When selecting a clip, the bar jumps to the in point
 
-- In edit mode it has additional frame step buttons featuring 1 frame, 1 second, 3 seconds and finally 5 second jumps.
-- The selected clip range is rendered at the seek bar in green.
-- When selecting a clip, the seek bar jumps to the in point.
+**Player controls** — Play, pause, stop, volume.
 
-  
+**Clip bin** (right):
 
-Player controls
+- List of clips and stills
+- Add clip / still buttons
+- **Destination** — what to do with output
+- **Submit**
 
-These are the standard player controls featuring play, pause, stop and volume control.
+**Clip editor** (under the player):
 
-  
-
-Clip bin
-
-On the right hand side you find the panel containing the clip list:
-
-- Clip list; A list of your clips and images is located at the top.
-- Add clip and still buttons are located beneath the list.
-- Destination; What to do with the transcoded material.
-- Submit button.
-
-  
-
-Clip editor
-
-Beneath the player controls is the clip editor:
-
-- SET IN - Set the clip or still image in point to the current seek bar frame position.
-- |< - Go to the in point
-- Time code display
-- Copy time code to operating system clipboard, so you can paste it in a text document or similar.
-- . . . - Set time code, enter time code or frame manually.
-- TC(Timecode) or FR(Frames) display selection.
-- >| - Go to the out point
-- SET OUT - Set the clip out point.
-- High quality - Check this to have a high quality video or still image exported.
-- High quality preset select - Choose the high quality transcoding preset.
-- Medium quality - Check this to have a medium quality video or still image exported.
-- Medium quality preset select - Choose the medium quality transcoding preset.
-
-  
+- **SET IN** — Set in point to the current frame
+- **|<** — Go to in point
+- Timecode display
+- Copy timecode to the clipboard
+- **…** — Enter timecode or frame manually
+- **TC** / **FR** display mode
+- **>|** — Go to out point
+- **SET OUT** — Set out point
+- **High quality** — Enable high-quality export and choose preset
+- **Medium quality** — Enable medium-quality export and choose preset
 
 ### Adding a clip
 
-  
-
-1. Position yourself on the timeline where you want the clip in point to be.
-2. Click the CLIP button.
-3. A clip will be added, with the out point set automatically +1s in time.
-4. Adjust the out point, and in point, as needed. This is done by moving the play head to the new position and either clicking SET IN or SET OUT. The clip will be updated automatically, no need to save.
-5. Adjust high res / medium res quality options.
-
-  
+1. Move to the desired in point.
+2. Click **CLIP**.
+3. A clip is added with out point at +1 s by default.
+4. Adjust in/out with the playhead and **SET IN** / **SET OUT** (updates immediately).
+5. Set high / medium quality options.
 
 ### Adding a still image
 
-  
-
-1. Position yourself on the timeline where you want the still image to be captured.
-2. Click the STILL button on the right.
-3. A still image will be added.
-4. Adjust the time position as needed. This is done by moving the play head to the new position and clicking SET FRAME. The still will be updated automatically, no need to save.
-5. Adjust high res / medium res quality options.
-
-  
+1. Move to the desired frame.
+2. Click **STILL**.
+3. Adjust position with the playhead and **SET FRAME** if needed.
+4. Set quality options.
 
 ### Removing a clip
 
-  
-
-Click the trashcan icon located on the right hand side of the clip in the bin.
-
-  
-  
+Use the trash can on the clip in the bin.
 
 ### Destination
 
-- Deliver; Have the result delivered back to either you or a custom set of recipients.
-- Custom: Choose a folder on storage where to store the result.
+- **Deliver** — Deliver results to you or chosen recipients.
+- **Custom** — Write results to a folder on storage.
 
-  
-  
+### Start extraction
 
-### Initiate clip extraction
-
-  
-
-Click Submit button to start transcoding on the farm, an email confirmation will be sent upon finish. 
-
-  
-
-Check the MY JOBS section at the bottom of the accsyn main GUI for progress.
+Click **Submit** to queue farm transcoding. You receive email when finished. Track progress under **MY JOBS** at the bottom of the app.

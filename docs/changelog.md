@@ -4,7 +4,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
-## v3.6-7 <small>October 7, 2026</small>
+## v3.6-7 <small>October 8, 2026</small>
 
 **Minor features**
 
@@ -12,12 +12,15 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [WEB/AUDIT] Optimised dispatcher performance and memory consumption.
 - [DOC] Updated job specification and site documentation.
 - [COMPUTE/RENDER] Provided Hello World sample engine and updated render farm documentation.
+- [WEB/APP] Enabled WAN connectivity tests for site servers, allow upload and download with sites as well as user push and pull.
 
 **Bug fixes**
 
 - [CORE/SUBMIT] Fixed permission vulnerabilities related to push and pull to/from remote user mapped shares.  
 - [APP] Fixed bugs with transfer party destination evaluations.
 - [APP] Fixed bugs with configuring client site, general app polishes and improvements.
+- [APP/DAEMON] Fixed hook exec bug - wrong mangling of backslash:es (Windows paths) when input JSON were written.  
+- [APP/SUBMIT] Fixed bug when a permission check blocked upload from/download to a recognized volume or share path.
 
 **Changes**
 

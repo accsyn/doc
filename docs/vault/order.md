@@ -1,64 +1,54 @@
-# Media Lab Order
+# Media Lab order
 
-Here we walk through how to place an accsyn Media Lab order directly from within the accsyn Desktop app - get help from our senior staff with 25+ years of media industry experience.
+Place a Media Lab order from the Desktop App — senior staff with 25+ years of media industry experience can help organise, tag, and process deliverables on your Cloud Vault.
 
-  
+Services and pricing: [Lab services](https://accsyn.com/lab)
 
-To learn about the accsyn media lab and get updated prices, go to our home page:
+**Preparations**
 
-[Lab services](https://www.google.com/url?q=https%3A%2F%2Faccsyn.com%2Flab&sa=D&sntz=1&usg=AOvVaw0uSRNiScRP_q_QRr6HHP5b)
-
-Preparations:
-
-1. Log on to your workspace using the accsyn Desktop app.
+1. Sign in with the Desktop App.
 2. Have a [title created](create.md).
-3. Make sure to upload the associated lab order media.
-4. Some lab services only work with ingested/tagged media, see below.
+3. Upload the media related to the order (ASC via Desktop App for large packages).
+4. Some services require ingested / tagged media — see below.
 
 ## Media Vault ingestion
 
-In this guide, we are going to illustrate how to use our lab services by ordering a Media Vault ingest lab job - have the accsyn staff organise(tag) and ingest the media you have uploaded:
+Example: order a **Media Vault ingestion** job so lab staff organise (tag) and ingest uploaded files.
 
-1. Open the title in the app.
-2. Click Show title folder contents button in lower right corner to bring up upload files.
-3. Choose the folder or specific files you want to have ingested and click the purple Order button in the toolbar.
+1. Open the title.
+2. Click **Show title folder contents** (lower right) to work with uploads.
+3. Select the folder or files to ingest and click the purple **Order** button.
 
-This will bring up the order dialog, click "Media Vault ingestion" choice:
+Choose **Media Vault ingestion**:
 
 ![](../assets/vault_order-644b8d23c358.png)
 
-Screenshot of the accsyn Media Lab order dialog
+*Media Lab order dialog.*
 
-Enter a message giving more information about how you want the files ingested - for example the purpose of the media in the future:
+Describe how you want files ingested (purpose, categories, and so on):
 
 ![](../assets/vault_order-9cda038d0996.png)
 
-Click Place Order button when done, an email will be dispatched to you and the lab staff with order# and information. 
+Click **Place Order**. You and the lab team receive email with an order number and details.
 
-  
-
-The staff will then come back to you within a business day, with a quote and more information on expected delivery.
-
-  
-
-We will also provide you a Google sheet, from where you can track your order progress.
+Within one business day you typically receive a quote and expected delivery information, plus a spreadsheet to track progress.
 
 ## Manage my orders
 
 ### How do I update my lab order?
 
-Just reply to the email sent and give us updated information.
+Reply to the order email with updated information.
 
-How do I cancel a lab order?
+### How do I cancel a lab order?
 
-Unless work on the order has started, you can reply in the email thread just stating that you want to cancel the lab order.
+If work has not started, reply in the thread and ask to cancel.
 
-### How do I pay for my order?
+### How do I pay?
 
-We use Stripe card payments and will issue an invoice covering the work. In some cases we grant credit and the lab work will be added to the next standard accsyn Workspace invoice.
+Stripe card payment and/or invoice. In some cases cost is added to the next standard workspace invoice.
 
-### How will I receive the processed files?
+### How will I receive processed files?
 
-When you place the lab order, you can choose where the files will be output. In the example above, it is clear that files should be ingested into their correct Media Vault location. But with some orders, you can choose to have files delivered to you or you can choose a folder at storage where files will be uploaded by the lab staff.
+When placing the order you choose output: ingest into the correct Vault location, delivery to you, or upload to a folder on storage.
 
-Having further questions, feel free to reach out to our team using the chat in the lower right corner or drop an email to [support@accsyn.com](mailto:support@accsyn.com).
+More questions: chat (lower right) or [support@accsyn.com](mailto:support@accsyn.com).

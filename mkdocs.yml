@@ -39,10 +39,15 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - tables
   - toc:
       permalink: true
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
 
 plugins:
   - search
@@ -88,7 +93,7 @@ nav:
       - Queues: admin/queue.md
       - Workspace Settings: admin/settings.md
       - Clients: admin/client.md
-      - Jobs: manage/job.md
+      - Jobs: admin/job.md
       - Internal settings: settings.md
       - BYOS:
           - admin/byos/index.md

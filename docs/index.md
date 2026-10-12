@@ -1,5 +1,9 @@
 # Home
 
+Documentation and support for the accsyn file I/O platform — deliveries, file sharing, Media Vault, BYOS, and developer automation — underpinned by the accelerated [ASC](whitepaper.md) protocol.
+
+New here? Start with the [Introduction](introduction.md) or a [free trial](trial.md).
+
 ## Status
 
 <div class="grid cards status-online" markdown>
@@ -30,13 +34,13 @@
 
     ---
 
-    99.94% - 5h outage recent year
+    99.94% — 5 h outage in the recent year
 
 -   **Guaranteed uptime**
 
     ---
 
-    99.3% - Max 61h outage a year
+    99.3% — max 61 h outage per year
 
 </div>
 
@@ -46,9 +50,9 @@
 
     ---
 
-    - 26.04.22 (10min); Auth0 DNS outage.
-    - 26.01.28 (5min); Cloud accsyn server outage.
-    - 25.08.13 (5h); Certificate upgrade issues.
+    - 26.04.22 (10 min) — Auth0 DNS outage
+    - 26.01.28 (5 min) — Cloud accsyn server outage
+    - 25.08.13 (5 h) — Certificate upgrade issues
 
 </div>
 
@@ -58,83 +62,65 @@ Identity provider status: [Auth0 status page](https://status.auth0.com/)
 
 ### Guidelines
 
-Please respect our support guidelines:
+Please follow these guidelines so we can help quickly:
 
-- We are a small company without a huge support organisation, support is currently answered by our lead developer during office hours and we intend to only have developers with full insight into the code base as a first point of contact - this is to ensure the fastest possible problem solving.
-- Answers to common questions can usually be found in our knowledge base below, please try to have a look there before you attempt to contact our support channels.
-- Use a descriptive subject, "Need help" is a bad example of an email subject. A good subject looks like "Crash when trying to write file to my disk".
-- Supply screenshots and log files when possible, this speeds up the support ticket handling. Find standard log file locations below.
-- We answer support emails in the order they come in. If you have an urgent matter that has put your production to a stop - begin subject with the word "URGENT" in capital letters and we will prioritise the matter.
-- We answer support emails during office hours (see below), outside these times we answer sporadically without any guarantee on response times.
-
-  
+- We are a small company. Support is answered by developers who know the codebase — usually the fastest route to a real fix.
+- Check this knowledge base first; many common questions are already covered below.
+- Use a descriptive subject. Prefer *Crash when writing file to disk* over *Need help*.
+- Attach screenshots and log files when you can (locations below).
+- We answer emails in order received. If production is blocked, start the subject with **URGENT** so we can prioritise.
+- We respond during office hours (below). Outside those hours responses are best-effort.
 
 ### Office hours
 
-We typically answer within one (1) business day,  office hours:
+Typical response within one (1) business day. Office hours:
 
-  
-
-08.00-18.00 CET+1 ([Swedish holidays](https://www.officeholidays.com/countries/sweden))
-
-  
+08:00–18:00 CET ([Swedish holidays](https://www.officeholidays.com/countries/sweden))
 
 ### Chat support
 
-The quickest way to get help is using the live chat located in the bottom right corner. 
+The fastest channel is the live chat in the bottom-right corner of the site.
 
 ### Email support
 
-Feel free to drop an email to our support team:
-
 [support@accsyn.com](mailto:support@accsyn.com)
 
-### Premium Support user or Enterprise Workspace
+### Premium Support and Enterprise
 
-As an Enterprise customer or if subscribing to our Premium Support service, you are entitled to prioritised support through email, a private chat channel and by telephone. We use Slack as our chat solution and you will be invited to your Slack channel during sign on. 
+Enterprise customers and Premium Support subscribers get prioritised email, a private chat channel, and telephone support. We use Slack by default and invite you during onboarding.
 
-*Note: If you cannot use Slack and/or have your own chat solution we are open to other arrangements.*
+*Note: If Slack is not an option, we can arrange another channel.*
 
-For urgent matters, if chat/telephone does not respond in time, please also send an urgent email to [support@accsyn.com](mailto:support@accsyn.com). Find more information about our email support below.
-
-  
+For urgent matters when chat or phone does not respond in time, also email [support@accsyn.com](mailto:support@accsyn.com) with **URGENT** in the subject.
 
 ### Log file locations
 
-Server (daemon/service):
+**Server (daemon / service)**
 
-- Windows: "C:\ProgramData\accsyn\log"
-- Mac OS X: "/var/log/accsyn"
-- Linux: "/var/log/accsyn"
+- Windows: `C:\ProgramData\accsyn\log`
+- macOS: `/var/log/accsyn`
+- Linux: `/var/log/accsyn`
 
-Desktop app:
+**Desktop App**
 
-- Windows: "%appdata%\accsyn\log"
-- Mac OS X: "~/Library/Logs/accsyn" directory.
-- Linux: "~/.accsyn/log"
+- Windows: `%APPDATA%\accsyn\log` (typically `AppData\Roaming\accsyn\log`)
+- macOS: `~/Library/Logs/accsyn`
+- Linux: `~/.accsyn/log`
 
-%appdata% usually points to the AppData\Roaming folder beneath your system account. "~" means your system account folder.
+`~` is your user home directory.
 
 ### Terms
 
-accsyn SaaS is provided "as is" which means it is a best effort service. If you have questions regarding our support obligations, have a look at our [terms and conditions](https://accsyn.com/terms) and our [privacy policy](https://accsyn.com/policy).
+accsyn SaaS is provided on a best-effort basis. See [Terms and conditions](https://accsyn.com/terms) and [Privacy policy](https://accsyn.com/policy).
 
-  
+### Login and website
 
-### Login - access personal accsyn account and your workspace
-
-<https://accsyn.io>
-
-  
-
-### Web page- general information and resources
-
-<https://accsyn.com>
-
+- Workspace and account: <https://accsyn.io>
+- Product site: <https://accsyn.com>
 
 ## Knowledge base
 
-Documentation targeting end users, employees, administrators and developers
+Guides for end users, operators, administrators, and developers.
 
 ### For end users
 
@@ -146,15 +132,15 @@ Documentation targeting end users, employees, administrators and developers
 
     ---
 
-    How to sign up and manage your personal accsyn account.
+    Sign up and manage your personal accsyn account.
 
 -   ![](assets/index-f98c49c9650b.png)
 
-    **[How to download a delivery](delivery/receive.md)**
+    **[Download a delivery](delivery/receive.md)**
 
     ---
 
-    Learn how to action an accsyn delivery.
+    Action an accsyn delivery or upload request.
 
 -   ![](assets/index-8f6c501ebf13.png)
 
@@ -162,15 +148,15 @@ Documentation targeting end users, employees, administrators and developers
 
     ---
 
-    Learn how to access shared folders using the accsyn Desktop app.
+    Access shared folders with the Desktop App (ASC transfers).
 
 -   ![](assets/index-1917f2c8f89d.png)
 
-    **[Automated deliveries](admin/hosts.md)**
+    **[Automated deliveries & local shares](admin/hosts.md)**
 
     ---
 
-    Learn how to set up the accsyn app for automated deliveries and locally mapped shares.
+    User server, automated deliveries, and locally mapped shares.
 
 </div>
 
@@ -184,7 +170,7 @@ Documentation targeting end users, employees, administrators and developers
 
     ---
 
-    Learn about accsyn.
+    Platform overview for production (BYOS) and distribution (Cloud Vault).
 
 -   ![](assets/index_asc-protocol.png)
 
@@ -192,7 +178,7 @@ Documentation targeting end users, employees, administrators and developers
 
     ---
 
-    Learn about security and the ASC file transfer protocol.
+    ASC protocol, security architecture, and transfer lifecycle.
 
 -   ![](assets/index-5581beaab5c9.png)
 
@@ -200,7 +186,7 @@ Documentation targeting end users, employees, administrators and developers
 
     ---
 
-    Detailed list of accsyn features.
+    Technical feature and platform specifications.
 
 -   ![](assets/index-67d4a6eb784d.png)
 
@@ -208,7 +194,7 @@ Documentation targeting end users, employees, administrators and developers
 
     ---
 
-    What is new in the latest version.
+    What is new in recent releases.
 
 </div>
 
@@ -216,7 +202,7 @@ Documentation targeting end users, employees, administrators and developers
 
 #### Deliveries
 
-How to deliver files and folders to external users, or request an upload.
+Send large folders over a link, or request uploads — ASC-accelerated with the Desktop App.
 
 <div class="grid cards" markdown>
 
@@ -226,7 +212,7 @@ How to deliver files and folders to external users, or request an upload.
 
     ---
 
-    Learn about the accsyn high speed file Delivery subsystem.
+    High-speed file delivery subsystem.
 
 -   ![](assets/index-4b07fa129aa3.png)
 
@@ -234,7 +220,7 @@ How to deliver files and folders to external users, or request an upload.
 
     ---
 
-    Learn how to create a file delivery / upload request.
+    Create a delivery or upload request (including API).
 
 -   ![](assets/index-93cbc8a542b9.png)
 
@@ -242,13 +228,13 @@ How to deliver files and folders to external users, or request an upload.
 
     ---
 
-    Learn how to monitor and manage a file delivery / upload request.
+    Monitor and manage deliveries and upload requests.
 
 </div>
 
 #### File sharing
 
-How to share folders with users.
+Share specific project subfolders on production storage with partners — ACL-controlled, ASC transfers.
 
 <div class="grid cards" markdown>
 
@@ -258,21 +244,21 @@ How to share folders with users.
 
     ---
 
-    Learn about File sharing in accsyn, leveraging the accsyn high speed file transfer protocol.
+    File sharing as an FTP replacement on Cloud or BYOS.
 
 -   ![](assets/index-f7999a9ec454.png)
 
-    **[File sharing](file-sharing/manage.md)**
+    **[Manage file sharing](file-sharing/manage.md)**
 
     ---
 
-    Learn how to share files and folders on your accsyn storage.
+    Shares, ACLs, collections, homes, and API automation.
 
 </div>
 
 #### Media Vault
 
-How to manage your master media
+Tag and manage masters on accsyn Cloud — proxies, streaming, delivery, and lab workflows.
 
 <div class="grid cards" markdown>
 
@@ -282,15 +268,15 @@ How to manage your master media
 
     ---
 
-    An introduction to the accsyn Media Vault feature
+    Media Vault overview (Cloud only).
 
 -   ![](assets/index-c85f325cbf6d.png)
 
-    **[Create title project](vault/create.md)**
+    **[Create title](vault/create.md)**
 
     ---
 
-    Getting started creating your first title and uploading media to accsyn.
+    Create your first title and folder layout.
 
 -   ![](assets/index-5c8d745c5b20.png)
 
@@ -298,7 +284,7 @@ How to manage your master media
 
     ---
 
-    Getting started logging your first media beneath your title.
+    Upload and tag media into the Vault.
 
 -   ![](assets/index-92a05344ad02.png)
 
@@ -306,7 +292,7 @@ How to manage your master media
 
     ---
 
-    Learn how to manage your titles and associated media.
+    Browse and manage titles and tagged media.
 
 -   ![](assets/index-390bdef6cc76.png)
 
@@ -314,7 +300,7 @@ How to manage your master media
 
     ---
 
-    Learn how to deliver title media, and request upload to a title.
+    Deliver Vault media and request uploads to a title.
 
 -   ![](assets/index-0448d96daf4f.png)
 
@@ -322,7 +308,7 @@ How to manage your master media
 
     ---
 
-    Learn how to transcode title media using the accsyn Media Processor.
+    Proxies, VOD, and the Media Processor.
 
 -   ![](assets/index-ceab9ad46018.png)
 
@@ -330,29 +316,29 @@ How to manage your master media
 
     ---
 
-    Learn how to create web streamable deliveries from a title.
+    Browser streaming deliveries from a title.
 
 -   ![](assets/index-cfd38cd1a082.png)
 
-    **[Media lab services](vault/media-lab.md)**
+    **[Media Lab services](vault/media-lab.md)**
 
     ---
 
-    Learn about our media lab services.
+    Partner lab services for mastering, VOD, QC, and more.
 
 </div>
 
-#### General Management
+#### General management
 
 <div class="grid cards" markdown>
 
 -   ![](assets/index-f385b76f1d64.png)
 
-    **[Job monitoring & management](manage/job.md)**
+    **[Job monitoring & queues](admin/job.md)**
 
     ---
 
-    Inspect and manage jobs.
+    Inspect, prioritise, and manage transfer and compute jobs.
 
 -   ![](assets/index-06f6c6fd2a0e.png)
 
@@ -360,13 +346,13 @@ How to manage your master media
 
     ---
 
-    Learn how to find and resolve errors that occur in runtime.
+    Find and resolve runtime issues.
 
 </div>
 
-### Administrating
+### Administration
 
-#### Trials & General Administration
+#### Trials and workspace admin
 
 <div class="grid cards" markdown>
 
@@ -376,7 +362,7 @@ How to manage your master media
 
     ---
 
-    Get started with accsyn - try it out with your own business.
+    Try accsyn with your organisation.
 
 -   ![](assets/index-948bb56a9908.png)
 
@@ -384,7 +370,7 @@ How to manage your master media
 
     ---
 
-    Learn how to manage your workspace users.
+    Manage workspace users and roles.
 
 -   ![](assets/index-3cbbdd39bf58.png)
 
@@ -392,7 +378,7 @@ How to manage your master media
 
     ---
 
-    Learn how to set up and manage workspace queues.
+    Configure workspace queues and priorities.
 
 -   ![](assets/index-2c68add78ff4.png)
 
@@ -400,7 +386,7 @@ How to manage your master media
 
     ---
 
-    Learn how to audit registered workspace file transfer clients.
+    Audit registered file-transfer clients.
 
 -   ![](assets/index-7c8a8bc2e8d1.png)
 
@@ -408,7 +394,7 @@ How to manage your master media
 
     ---
 
-    Learn how to configure your accsyn volumes and shared folders.
+    Configure volumes and shared folders.
 
 -   ![](assets/index-fdf91b00d07e.png)
 
@@ -416,23 +402,23 @@ How to manage your master media
 
     ---
 
-    Learn how to configure your workspace global settings.
+    Global workspace settings.
 
 </div>
 
-#### BYOS
+#### BYOS — Bring Your Own Storage
 
-Bring Your Own Storage
+Run servers on your office or cloud premises for production I/O.
 
 <div class="grid cards" markdown>
 
 -   ![](assets/index-c7948a14edef.png)
 
-    **[Setup BYOS](admin/byos/index.md)**
+    **[Set up BYOS](admin/byos/index.md)**
 
     ---
 
-    Set up accsyn servers on your own office or cloud premises.
+    Install and licence BYOS workspaces.
 
 -   ![](assets/index-8a99ee601ff1.png)
 
@@ -440,7 +426,7 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to install and manage accsyn servers.
+    Install and manage storage and site servers.
 
 -   ![](assets/index-6d4e93031185.png)
 
@@ -448,7 +434,7 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to set up and manage accsyn sites.
+    Remote offices and cloud sites.
 
 -   ![](assets/index-f7c60344d030.png)
 
@@ -456,19 +442,21 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to create engines enabling render farm functionality.
+    Engines for render/compute farms.
 
 </div>
 
 ### For developers
 
+Automate transfers, hooks, publish workflows, and multi-site farms.
+
 <div class="grid cards" markdown>
 
--   **[Developer hub](developer/index.md)**
+-   **[Developer Hub](developer/index.md)**
 
     ---
 
-    Automate file transfers and compute within your production pipeline.
+    Automate file transfers and compute in your pipeline.
 
 -   ![](assets/index-074cc716c6be.png)
 
@@ -476,7 +464,7 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to develop with accsyn, using the default Python API.
+    API keys, install, and getting started with Python.
 
 -   ![](assets/index-e4f521ef2ead.png)
 
@@ -484,7 +472,7 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to have accsyn execute custom applications/scripts upon file transfer events.
+    Run scripts on transfer and job events.
 
 -   ![](assets/index-84bf08d8d859.png)
 
@@ -492,7 +480,7 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to set up accsyn as a render farm across one or more remote sites.
+    Deploy compute across one or more sites.
 
 -   ![](assets/index-357bb722b099.png)
 
@@ -500,13 +488,13 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to set up accsyn to validate and ingest material produced by external users/vendors.
+    Validate and ingest vendor submissions.
 
 -   **[Job JSON specification](developer/job-specification.md)**
 
     ---
 
-    Explore the accsyn job create JSON payload syntax.
+    Job create payload syntax and examples.
 
 </div>
 
@@ -518,19 +506,19 @@ Bring Your Own Storage
 
     ---
 
-    Learn about the different warning codes that appear within accsyn.
+    Warning codes shown in the product.
 
 -   **[Error codes](errors.md)**
 
     ---
 
-    Learn about the different error codes that appear within accsyn.
+    Error codes shown in the product.
 
 -   **[Internal settings](settings.md)**
 
     ---
 
-    Documentation of accsyn internal entity settings
+    Internal entity and workspace settings reference.
 
 </div>
 
@@ -544,7 +532,7 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to set up accsyn in a similar way as an FTP server with superior performance and security.
+    Replace FTP with ACL sharing and ASC performance.
 
 -   ![](assets/index-766af812d1b7.jpg)
 
@@ -552,7 +540,7 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to build a fully automated outsourcing pipeline, sending work files to a remote vendor unattended and ingesting published assets back into the production management tools.
+    Unattended vendor send and publish ingest.
 
 -   ![](assets/index-6d179258cb70.png)
 
@@ -560,7 +548,7 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to use the accsyn Python API to automate file synchronisation between your offices and/or cloud storage.
+    Automate sync between offices and cloud with the Python API.
 
 -   ![](assets/index-9b4e5ebdf324.jpg)
 
@@ -568,47 +556,36 @@ Bring Your Own Storage
 
     ---
 
-    Learn how to set up accsyn as your main Film Festival file management platform.
+    Festival file management with deliveries and Vault.
 
 </div>
 
 ## Terminology
 
-- Learn about the different terms and notations used with accsyn
-
-- accsyn Cloud backend; The part of the software running in the cloud, scheduling transfer jobs and hosting media. Each customer has its own isolated backend  instance and database which are totally separated from other customers.
-- accsyn daemon app; The Java application installed at your file server, or other computer with direct access to the network share/disk that data is to be copied to and from. Can also be installed on a remote office - "site" for office-to-office sync, or by a user for a more stable experience. This is also called the "server" in file transfer context, and provides a daemon type host instance.
-- accsyn desktop app; (Or simply the "accsyn app") The Java desktop app, available on PC, Mac and Linux, run by accsyn users for downloading and uploading files to your organisation. This is also called the "client" in file transfer context, and provides an app host instance.
-- accsyn server TCP ports; The data ports used by processes, usually in the range 45190-45210 plus one or more low (<1024) ports. Required to be forwarded to the server running on your premises, and allowed to reach the Internet/corporate WAN IP @ client side.
-- accsyn server proxy; A server running in a DMZ or in the cloud acting as a file staging area, for either faster intercontinental delivery of files using Google/Amazon/Azure or for high security corporate LANs that would not allow ports being forwarded to the internal server but rather to a server in the DMZ zone.
-- accsyn network proxy; Have a server also act as a network proxy for accsyn clients/API endpoints not having Internet access.
-- ACL; Access Control Lists - telling what subdirectories, on a given share, a user has access to.
-- ASC; accsyn Copy Protocol - the fast and secure proprietary file transfer protocol used by the accsyn platform.
-- Cloud storage; The volume provided by default by accsyn, available to standard Cloud Workspace deployments.
-- Compute app; A Python wrapper script defining and executing an accsyn compute app in a render farm/compute setup.
-- Delivery; One or more files and/or directories, packaged as a single unit, for delivery using ASC or HTTPS protocol to one or more recipients.
-- Download; The term for initiating a file transfer from a workspace server to a client.
-- Dropoff; Term used for uploading a file or directory without browsing a destination - to a default shared folder.
-- Hook; A configurable application to be run when a job has reached a certain state, allows for advanced workflow features.
-- Host; An instance (process) of the accsyn app or daemon running at a physical computer (web browser sessions not included).
-- HQ (headquarters); A term used to identify your main office site where your central storage available to accsyn is located.
-- Job; A transfer package of one or more files/directories(tasks) to be sent from a client to server or server to client. May involve multiple servers on the organisation side.  A job can carry custom metadata stored as JSON.
-- Media; A file or folder on the cloud storage tagged as media content, having a proxy and additional metadata including quality.
-- Metadata; A JSON dict that can be attached to all entities of accsyn, merged together and supplied when hooks are run.
-- Process; Temporarily spawned instances of the accsyn app, one running at server and one running at client, initiated to copy a list of files/folders from one computer to another, utilising the accsyn fast file copy TCP protocol.
-- Path; A local absolute standard file system path or the "accsyn path" notation used to identify a file residing on accsyn storage, on the form "volume=storage/path/to/file" for a volume path or more generic: "share=myshare/path" for any type of share - volume, folder, home or collection.
-- Pull; The term for sending files from a site server back to the hq main server, paths mirrored.
-- Push; The term for sending files from the hq main server to a site server, paths mirrored.
-- Queue; A container for jobs that can have a priority number assigned [1..1000]. Three queues: low@prio 1, medium@prio 500 & high@999 are always created initially. New jobs are submitted to  the "medium" queue by default.
-- Roaming site; The built-in "roaming" site, assigned to standard user clients and elevated clients by default if they are not assigned a specific site (physical location).
-- Server; The computer serving a share (configurable). The computer serving the default share is also running configured job hook scripts. Needs to have the TCP port range (default: 45190-45210) forwarded from the gateway in order to be reachable from the Internet/remote network.
-- Shared folder; A subfolder beneath a volume that can be given read and write access to clients, using ACLs. It can also be abbreviated "workspace" or "workarea" and is suitable for giving a set of users a collaborative space to upload to and download from.
-- Site; A site is a remote office, having its own infrastructure. A site is typically connected to the main office through VPN, dedicated Internet connection or by other means.  The site being the "main" site is designated your main premises and is named "hq" by default, all clients are assigned to the hq site if not stated otherwise. A server can be installed and assigned to serve a volume for a given site, allowing transfers to/from main office servers to a site server.
-- Stream; A variant of a delivery, containing streamable media that recipients can watch in their web browser - no additional software required.
-- Transfer; The term for sending a package between two endpoints, not necessarily the main hq server involved. Currently accsyn supports transfers between sites.
-- Upload; The term for sending a file from a client to a workspace storage server.
-- Upload request; A reversed delivery, requesting users to upload file(s)/folder(s) to a temporary or well-defined location on your workspace storage.
-- User/username; An accsyn account identified by an E-mail address. (For example: "john@mail.com"). Three different user roles are defined: admins (full access+invite employees), employees (full access to volumes+invite users) and standard users (access to ACL defined shares only & homes).
-- Volume; The network share/disk at your premises which accsyn users can get access to. Identified by a code (For example "nas" or "projects") and at least one absolute path prefix assigned (For example "/Volumes/RAID" or "\\server\data").  At least one share must be the default share(configurable), this is where A) files get uploaded by default if no share specified as destination B) user home shares are created by default.
-- Volume path prefix; The leading part of a path for a file residing on a share. (For example: "/Volumes/nas", "P:" or "\\10.10.10.1\raid").
-- Workspace(Domain/Organisation); Your company, possessing an accsyn licence. Identified by a unique short domain name and a full length descriptive name (For example: "acmefilm"/"Acme Film Productions").
+- **accsyn Cloud backend** — Cloud software that schedules transfer jobs and hosts media. Each customer has an isolated backend instance and database.
+- **accsyn daemon** — Background Java service on a file server or machine with disk access (also a “server” endpoint). Used for BYOS, sites, and User servers.
+- **accsyn Desktop App** — Java desktop app (Windows, macOS, Linux) for users to upload and download (a “client” endpoint).
+- **ASC** — Accsyn Copy Protocol — proprietary accelerated, encrypted file transfer protocol.
+- **ACL** — Access Control List — which users may access which paths on a share.
+- **Cloud storage** — Default volume on standard Cloud workspaces.
+- **Delivery** — Package of files/folders for one or more recipients (ASC or HTTPS).
+- **Download / upload** — Transfer from workspace server to client, or client to server.
+- **Dropoff** — Upload without browsing a destination (default shared folder / date folder).
+- **Hook** — Script or app run when a job reaches a given state.
+- **Host** — Running app or daemon process on a computer (browser sessions excluded).
+- **HQ** — Main site (default code `hq`) where central storage is served.
+- **Job** — Transfer or compute package of one or more tasks; may carry JSON metadata.
+- **Media** — File or folder on Cloud storage tagged in the Vault (proxies and metadata).
+- **Path** — Absolute filesystem path, or accsyn path such as `volume=storage/…` or `share=myshare/…`.
+- **Push / pull** — HQ→site or site→HQ mirrored sync.
+- **Queue** — Ordered job container with priority (default Medium @ 500; also Low @ 1, High @ 999).
+- **Roaming site** — Built-in site for standard (and unassigned elevated) clients.
+- **Server** — Client role that serves a volume; main server serves the default volume and may run hooks. Needs TCP ports (default 45190–45210) reachable as required.
+- **Shared folder** — Subfolder of a volume shared via ACLs.
+- **Site** — Remote office or cloud location; may have its own site server.
+- **Stream** — Delivery variant with browser-playable media.
+- **Transfer** — Job moving data between two endpoints (not always via HQ).
+- **Upload request** — Reverse delivery asking users to upload to a temp or fixed path.
+- **User** — Account identified by email; roles admin, employee, or standard.
+- **Volume** — Root disk/share exposed to accsyn (code + OS paths); one default volume for temp uploads and homes.
+- **Workspace** — Customer organisation / domain with an accsyn licence.

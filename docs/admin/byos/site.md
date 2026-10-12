@@ -1,6 +1,6 @@
 # Site administration
 
-* NOTE: This feature is exposed to [BYOS](index.md) and Enterprise licensed workspaces only.*
+*NOTE: This feature is exposed to [BYOS](index.md) workspaces only.*
 
 
 This guide walks through how to add and configure remote sites within your accsyn workspace.
@@ -56,6 +56,18 @@ Configure this under Admin → Settings → Site. See [Workspace Settings](../se
 ### Sites and compute/render jobs
 
 For more information, see [Workflows](../../developer/index.md) compute section.
+
+### Local hosts and share mappings
+
+Sites are the durable way to connect a **remote office or cloud location** — typically with a site server serving storage at that place. For individual machines (home offices, vendors, single workstations), a lighter option is **local file sharing** via [Hosts](../hosts.md):
+
+1. The user maps a shared folder (or volume path) to a folder on their computer in the Desktop App share mappings.
+2. They grant **read** and/or **write** access on that mapping.
+3. While their client is online, workspace operators can **pull** (upload from the mapped folder onto main storage or a site) and **push** (download from main storage or a site onto the mapped folder).
+
+Mappings can run through the Desktop App (user logged in) or a **User server** daemon for unattended 24/7 access. That model suits a single machine; for an entire office or cloud VPC with shared storage and sync, prefer a site and site server as described on this page.
+
+See also [File sharing — local machines](../../file-sharing/index.md#can-my-clients-share-folders-on-their-local-machine).
 
 ## Site list
 
@@ -169,6 +181,10 @@ To delete a site, open the site's menu (three dots icon) on the right hand side 
 [Server admin](server.md)
 
 Install a site server, enabling hq-to-site file synchronisation and backups.
+
+[Hosts](../hosts.md)
+
+Map shares locally on a user machine for operator push and pull, or install a User server for unattended access.
 
 [Tutorial | Remote Office Sync](../../tutorials/remote-office-sync.md)
 
