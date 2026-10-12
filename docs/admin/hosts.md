@@ -120,41 +120,27 @@ You will need to edit the launchctl config to have it run as the specific user a
 
 /Library/LaunchDaemons/com.accsyn.daemon.plist:
 
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 
 <plist version="1.0">
-
 <dict>
-
     <key>Label</key>
-
     <string>com.accsyn.daemon</string>
-
     <key>ProgramArguments</key>
-
     <array>
-
         <string>/Applications/Accsyn/accsyndaemon</string>
-
         <string>start-launchd</string>
-
     </array>
-
     <key>KeepAlive</key>
-
     <false/>
-
     <key>RunAtLoad</key>
-
     <true/>
-
     <key>UserName</key>
-
     <string>myloginname</string>
-
 </dict>
+```
 
 Example launchctl configuration for running accsyn daemon in user space as system user "myloginname"
 
@@ -238,20 +224,18 @@ If the user should have the entire volume folder structure mirrored locally, it 
 
 1. Reach out to the workspace admins and request the volume API code attribute, default: storage.
 2. Shut down all accsyn processes (desktop app and background daemon/services).
-3. Set this environment variable globally, or by configuring the accsyn client startup environment: ACCSYN\_STORAGE\_PATH=/Path/To/Local/Storage. "STORAGE" should match the volume API code attribute in this example, /Path/To/Local/Storage is the local path where the volume should be mapped.
+3. Set this environment variable globally, or by configuring the accsyn client startup environment: ACCSYN_STORAGE_PATH=/Path/To/Local/Storage. "STORAGE" should match the volume API code attribute in this example, /Path/To/Local/Storage is the local path where the volume should be mapped.
 4. Start the background daemon/service and desktop app again. From this point on, downloads of files from the volume will be preset to the local path with mirrored paths enabled and the same applies for uploads from that path - if it matches a shared folder or home path.
 5. In desktop app share mapping preferences, the volume should now appear. Enable "Read" and "Write" permissions, this will now enable workspace operators (admins and employees with access to volume) to push and pull files to/from the local path [/Path/To/Local/Storage].
 
   
 
-For information on how to set environment variables so they apply to the accsyn daemon running process, see [Server admin](byos/server.md) page.
+For information on how to set environment variables so they apply to the accsyn daemon running process, see [Setting environment variables](byos/server.md#setting-environment-variables) on the Server admin page. Variables configured in the Mac launchd plist or Linux systemd unit are preserved when you reinstall or upgrade the daemon — you do not need to re-enter them after the installer finishes.
 
 ## Troubleshooting
 
-The host does not show up after I finished installation?
-
+**The host does not show up after I finished installation?**
   
-
 Check the log file for clues, start at the bottom and iterate backwards until you find error or warning messages.
 
   
@@ -262,20 +246,13 @@ Log file locations:
 - Mac & Linux log file location: /var/log/accsyn/accsyn-daemon-log.txt
 
   
-  
-  
 
-I changed the user the daemon is running as but it will not start?
+**I changed the user the daemon is running as but it will not start?**
 
-  
 
 Most likely it is a permission error, due to previous run causing files to have different ownership than the new user.
 
-  
-
 To remedy this, change ownership of these files:
-
-  
 
 MAC:
 
@@ -285,7 +262,6 @@ sudo chown -R <UserName> /var/log/accsyn "/Library/Application Support/com.accsy
 
 <sup>Hint: Replace <UserName> with the user account ID as configured in the daemon plist (e.g. myloginname from the plist example above)</sup>
 
-  
 
 PC:
 
@@ -293,7 +269,6 @@ Set ownership of these folders to the same user account that is running the accs
 
 - C:\ProgramData\accsyn
 - C:\Windows\TEMP\.accsyn
-
   
 
 LINUX:
@@ -304,11 +279,4 @@ sudo chown -R <UserName> /var/log/accsyn /etc/accsyn /tmp/.accsyn
 
 <sup>Hint: Replace <UserName> with the user account ID that is configured for the systemctl service.</sup>
 
-  
-  
 
-I had local share mappings configured in the app, but after installing the user server it does not appear as a transfer destination?
-
-  
-
-This is a known issue and is subject to be fixed in the future, meanwhile launch the app on the same machine and reconfigure the share mappings in settings - just change something, and the configuration will be migrated also to the newly installed server.

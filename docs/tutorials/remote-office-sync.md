@@ -142,9 +142,9 @@ We are not going to cover how to implement this task, as it varies a lot dependi
 
 ### accsyn sync script
 
-This is the script that does the heavy lifting, and is either implemented directly as a module within the tool above by extracting the 'site\_sync' function or executed as a standalone CLI tool in the shell - suitable if the in-house tool is not written in Python / cannot use the accsyn Python API directly.
+This is the script that does the heavy lifting, and is either implemented directly as a module within the tool above by extracting the 'site_sync' function or executed as a standalone CLI tool in the shell - suitable if the in-house tool is not written in Python / cannot use the accsyn Python API directly.
 
-Prepare the local script environment so the API can authenticate with the accsyn backend, we recommend setting the ACCSYN\_API\_USER and ACCSYN\_API\_KEY environment variables locally on the machine, or store it locally in a hidden file. Hard-coding the API key in your Python script and then pushing it to Github can be a security hazard and is strongly discouraged.
+Prepare the local script environment so the API can authenticate with the accsyn backend, we recommend setting the ACCSYN_API_USER and ACCSYN_API_KEY environment variables locally on the machine, or store it locally in a hidden file. Hard-coding the API key in your Python script and then pushing it to Github can be a security hazard and is strongly discouraged.
 
 Here is a working example CLI implementation of the sync script, that takes that list of shot assets as arguments and downloads the files using the fast and secure ASC protocol to the site - (code is available on Github, see resources below):
 
@@ -152,7 +152,7 @@ Breakdown of the script:
 
   
 
-1. Command line arguments are read and passed on the site\_sync function.
+1. Command line arguments are read and passed on the site_sync function.
 2. The accsyn API session object is created.
 3. The share, queue and site entities are loaded from accsyn and verified.
 4. The list of tasks is built, with paths mirrored on the destination end.

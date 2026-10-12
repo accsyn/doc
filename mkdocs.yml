@@ -55,8 +55,6 @@ plugins:
 nav:
   - Home: index.md
   - Introduction: introduction.md
-  - Whitepaper: whitepaper.md
-  - Starting a trial: trial.md
   - Delivery:
       - delivery/index.md
       - Create: delivery/create.md
@@ -78,14 +76,11 @@ nav:
       - Export: vault/export.md
       - Order: vault/order.md
       - Lab: vault/media-lab.md
-  - Developer Hub:
-      - developer/index.md
-      - Python API: developer/python-api.md
-      - Hooks: developer/hooks.md
-      - Render farm: developer/farm.md
-      - Publish: developer/publish.md
-      - Job specification: developer/job-specification.md
-  - Admin:
+  - Manage:
+      - manage/index.md
+      - Transfer: manage/transfer.md
+      - Jobs: manage/job.md
+  - Administration:
       - admin/index.md
       - Hosts: admin/hosts.md
       - Users: admin/user.md
@@ -93,16 +88,24 @@ nav:
       - Queues: admin/queue.md
       - Workspace Settings: admin/settings.md
       - Clients: admin/client.md
-      - Jobs: admin/job.md
       - Internal settings: settings.md
       - BYOS:
           - admin/byos/index.md
           - Server: admin/byos/server.md
           - Site: admin/byos/site.md
           - Engine: admin/byos/engine.md
+  - Developer Hub:
+      - developer/index.md
+      - Python API: developer/python-api.md
+      - Hooks: developer/hooks.md
+      - Render farm: developer/farm.md
+      - Publish: developer/publish.md
+      - Job specification: developer/job-specification.md
   - Account: account.md
   - Desktop App: desktop-app.md
   - Specifications: specifications.md
+  - Whitepaper: whitepaper.md
+  - Starting a trial: trial.md
   - Tutorials:
     - FTP server replacement: tutorials/ftp-server-replacement.md
     - Outsourcing pipeline: tutorials/outsourcing-pipeline.md

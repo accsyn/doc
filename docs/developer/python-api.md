@@ -65,7 +65,7 @@ poetry install
 ### From source
 
 - Download the source code from GitHub (see link below).
-- Copy the "accsyn\_api" folder from within the "source" folder to your PYTHONPATH.
+- Copy the "accsyn_api" folder from within the "source" folder to your PYTHONPATH.
 - Install dependencies: [requests](https://pypi.org/project/requests)
 
 ## Using
@@ -74,7 +74,7 @@ poetry install
 
   
 
-session = accsyn\_api.Session(workspace='acmefilm',username='john@user.com', api\_key='BlrPCfxLIRZEdhL6LXotwXRmDWbPRsPgLYcpa7ubyu97gxpqSC4130Adfh968Low')
+session = accsyn_api.Session(workspace='acmefilm',username='john@user.com', api_key='BlrPCfxLIRZEdhL6LXotwXRmDWbPRsPgLYcpa7ubyu97gxpqSC4130Adfh968Low')
 
   
 
@@ -82,7 +82,7 @@ session = accsyn\_api.Session(workspace='acmefilm',username='john@user.com', api
 
   
 
-job = session.create("transfer",{"source":"volume=projects/A001\_C064\_09224Y\_001.mp4","destination":"client=664f53b16aa9149860da9d9c:/tmp/A001\_C064\_09224Y\_001.mp4"})
+job = session.create("transfer",{"source":"volume=projects/A001_C064_09224Y_001.mp4","destination":"client=664f53b16aa9149860da9d9c:/tmp/A001_C064_09224Y_001.mp4"})
 
   
 

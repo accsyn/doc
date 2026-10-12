@@ -175,7 +175,7 @@ The methods accsyn should use to determine if a file is out of sync and needs to
 
 ### File resume size limit
 
-File size, in megabytes (MB), at which single file resume ('transfer\_resume') should start to apply. Files below this limit in size will never be resumed if interrupted mid-transfer.
+File size, in megabytes (MB), at which single file resume ('transfer_resume') should start to apply. Files below this limit in size will never be resumed if interrupted mid-transfer.
 
 Giving a value of -1 means that no limits should apply - limits disabled.
 

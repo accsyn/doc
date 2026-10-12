@@ -334,11 +334,19 @@ Tag and manage masters on accsyn Cloud — proxies, streaming, delivery, and lab
 
 -   ![](assets/index-f385b76f1d64.png)
 
-    **[Job monitoring & queues](admin/job.md)**
+    **[Job monitoring & queues](manage/job.md)**
 
     ---
 
     Inspect, prioritise, and manage transfer and compute jobs.
+
+-   ![](assets/index_transfer.png)
+
+    **[Transfer](manage/transfer.md)**
+
+    ---
+
+    Push/pull between HQ, sites, and users with mapped shares.
 
 -   ![](assets/index-06f6c6fd2a0e.png)
 
@@ -356,13 +364,6 @@ Tag and manage masters on accsyn Cloud — proxies, streaming, delivery, and lab
 
 <div class="grid cards" markdown>
 
--   ![](assets/index-9172cbe36fa4.png)
-
-    **[Start a free trial](trial.md)**
-
-    ---
-
-    Try accsyn with your organisation.
 
 -   ![](assets/index-948bb56a9908.png)
 
@@ -404,6 +405,14 @@ Tag and manage masters on accsyn Cloud — proxies, streaming, delivery, and lab
 
     Global workspace settings.
 
+-   ![](assets/index-9172cbe36fa4.png)
+
+    **[Start a free trial](trial.md)**
+
+    ---
+
+    Try accsyn with your organisation.
+    
 </div>
 
 #### BYOS — Bring Your Own Storage

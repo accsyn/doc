@@ -70,7 +70,7 @@ The publish feature is 100% code driven, you will need basic Python developer ex
 
 ### Developing the pre publish hook script
 
-Here follows example hook input JSON, from a user publishing a folder "proj\_task001\_v001\_completed" containing an image sequence:
+Here follows example hook input JSON, from a user publishing a folder "proj_task001_v001_completed" containing an image sequence:
 
 A breakdown of the input:
 
@@ -80,8 +80,8 @@ A breakdown of the input:
 - metadata; The user metadata, aggregated with workspace metadata.
 - hook; The name of the hook being executed.
 - user; The ID of the user.
-- user\_hr; The user's unique code identifier (email).
-- files; The file(s)/folder(s) to be published, each file corresponding to one item/entry to be published and having a unique id. Folder items recursively contain another "files" entry. Folder sizes are provided as the sum of file sizes within a folder. is\_dir attributes directories.
+- user_hr; The user's unique code identifier (email).
+- files; The file(s)/folder(s) to be published, each file corresponding to one item/entry to be published and having a unique id. Folder items recursively contain another "files" entry. Folder sizes are provided as the sum of file sizes within a folder. is_dir attributes directories.
 
   
 
@@ -91,7 +91,7 @@ Breakdown of the output:
 
 - guidelines; (optional) Plain text, or HTML, formatted instructions to the remote user giving guidance on how to publish their data into your production pipeline.
 - comment; If true, user must provide a comment - e.g. add a note describing work that has been done.
-- time\_report; If true, user must report time spent on the work task.
+- time_report; If true, user must report time spent on the work task.
 - statuses; A list of statuses user is allowed to choose among. The default proposed status should have the "default": true key set.
 - files; File entries, augmented with feedback data. See below.
 
@@ -102,11 +102,11 @@ File entry format:
 - rejected; If true, the file entry is rejected with the warning provided. Entries below have no effect.
 
 - ident; An unique entry identifier for the publish entry, provided as a label/human readable identifier to the remote user. Defaults to the filename.
-- can\_publish; If true, the publish entry is approved as is.
-- can\_upload; If true and can_publish is false, file/folder are still allowed to be uploaded. E.g. the entry was not technically approved, but "panic" upload is allowed - typicall to a staging area for manual hands on by staff.
-- path; If approved, or can be uploaded, this is the destination path that will be used for that entry during upload phase. Can be given as an absolute path that accsyn understands (derived from configured volume platform paths), or in accsyn notation (ex: volume=projects/staging/proj\_task001\_v001\_completed)
+- can_publish; If true, the publish entry is approved as is.
+- can_upload; If true and can_publish is false, file/folder are still allowed to be uploaded. E.g. the entry was not technically approved, but "panic" upload is allowed - typicall to a staging area for manual hands on by staff.
+- path; If approved, or can be uploaded, this is the destination path that will be used for that entry during upload phase. Can be given as an absolute path that accsyn understands (derived from configured volume platform paths), or in accsyn notation (ex: volume=projects/staging/proj_task001_v001_completed)
 - info; (optional) Additional feedback to the user on this entry.
-- comment\_label; (Optional) The label to precede the comment input field, defaults to: "Comment:".
+- comment_label; (Optional) The label to precede the comment input field, defaults to: "Comment:".
 
 *Note: additional entries provided by the pre-publish are preserved and provided as-is to the publish/ingest hook*
 
@@ -118,14 +118,14 @@ The data is very similar to the standard data passed on to a job lifecycle hook 
 
 Breakdown of entries in the files JSON data sub-structure:
 
-- time\_report; The time (in seconds) reported by user.
+- time_report; The time (in seconds) reported by user.
 - path; The destination path, as dictated earlier by the pre publish hook (see above).
 - filename; The last path entry.
-- is\_dir; If true, the entry is a directory.
+- is_dir; If true, the entry is a directory.
 - v; The internal accsyn ID of the destination volume.
-- v\_hr; The name of the destination volume.
+- v_hr; The name of the destination volume.
 - ident; As provided by the pre publish hook(see above).
-- can\_publish: As provided by the pre publish hook (see above).
+- can_publish: As provided by the pre publish hook (see above).
 - comment; The comment entered by the user.
 - status; The status entered by the user.
 - ..; Additional entries provided by from the pre-publish hook.
@@ -134,20 +134,20 @@ Breakdown of entries in the files JSON data sub-structure:
 
 Assuming you have implemented the initial pre publish Python script and it is ready for testing:
 
-1. Store the pre publish script on the server, for example /mnt/pipeline/accsyn\_scripts/pre\_publish.py.
+1. Store the pre publish script on the server, for example /mnt/pipeline/accsyn_scripts/pre_publish.py.
 2. Log on to [accsyn.io/admin/settings](http://accsyn.io/admin/settings) as an administrator and go to the Publish tab.
 3. Check Enable publish, it will give an alert that publish hooks are not setup which is fine.
 4. Go to Hooks tab and edit the Hook configuration.
 5. Go to the pre-publish-server tab and locate the script entry that corresponds to the operating system the server is running.
-6. Enter the script command line, for example "python3 /mnt/pipeline/accsyn\_scripts/pre\_publish.py ${PATH\_JSON\_INPUT} ${PATH\_JSON\_OUTPUT}" (replace python3 with full path to venv executable if applicable).
+6. Enter the script command line, for example "python3 /mnt/pipeline/accsyn_scripts/pre_publish.py ${PATH_JSON_INPUT} ${PATH_JSON_OUTPUT}" (replace python3 with full path to venv executable if applicable).
 7. Click save.
 
   
 
 Important notes:
 
-- The expression ${PATH\_JSON\_INPUT} will be replaced at runtime with the path to the JSON data file (located in the default accsyn temp location). Set up your script to read publish data from this path (sys.argv[1]).
-- ${PATH\_JSON\_OUTPUT}  will point to a JSON output file where your script is expected to save the data returned to the user's accsyn desktop app. Set up your script to output data to this path (sys.argv[2]).
+- The expression ${PATH_JSON_INPUT} will be replaced at runtime with the path to the JSON data file (located in the default accsyn temp location). Set up your script to read publish data from this path (sys.argv[1]).
+- ${PATH_JSON_OUTPUT}  will point to a JSON output file where your script is expected to save the data returned to the user's accsyn desktop app. Set up your script to output data to this path (sys.argv[2]).
 - Try to make the script fairly quick to execute, maximum 30s, so as not to keep the remote user waiting too long for the response.
 
   
@@ -158,17 +158,17 @@ Now test the pre publish hook by publishing a file and/or folder, the stdout and
 
 This is an optional step, and can be left out if no post-processing of files is needed on arrival.
 
-1. Store the publish script on the server, for example /mnt/pipeline/accsyn\_scripts/publish.py.
+1. Store the publish script on the server, for example /mnt/pipeline/accsyn_scripts/publish.py.
 2. Log on to [accsyn.io/admin/settings](http://accsyn.io/admin/settings) as an administrator and go to the Hooks tab and edit the Hook configuration.
 3. Go to the publish-server tab and locate the script entry that corresponds to the operating system the server is running.
-4. Enter the script command line, for example "python3 /mnt/pipeline/accsyn\_scripts/publish.py ${PATH\_JSON\_INPUT}" (replace python3 with full path to venv executable if applicable).
+4. Enter the script command line, for example "python3 /mnt/pipeline/accsyn_scripts/publish.py ${PATH_JSON_INPUT}" (replace python3 with full path to venv executable if applicable).
 5. Click save.
 
   
 
 Important notes:
 
-- The expression ${PATH\_JSON\_INPUT} will be replaced at runtime with the path to the JSON data file (located in the default accsyn temp location). Set up your script to read publish data from this path (sys.argv[1]).
+- The expression ${PATH_JSON_INPUT} will be replaced at runtime with the path to the JSON data file (located in the default accsyn temp location). Set up your script to read publish data from this path (sys.argv[1]).
 - The script should not execute long running tasks, it is best practice to run such tasks by a background process executor server like a render farm or similar.
 
   

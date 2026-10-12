@@ -71,11 +71,11 @@ In this tutorial, we assume the following:
 - The company and workspace name is "Acme VFX" (API code: acmevfx, API workspace endpoint: https://acmevfx.accsyn.com).
 - A Linux storage server configured with an accsyn volume named "proj", having project "Something Completely Different" located at /mnt/proj/scd.
 - An active workspace admin (or employee user with access to proj volume) user: "pipeline@acmevfx.co.uk". Script API sessions will run as this user.
-- The project SCD has a shot with a cleanup task, with conformed source plates in the folder "scd\_0010\_0010\_src" located at /mnt/proj/scd/0010/0010/src/plates.
+- The project SCD has a shot with a cleanup task, with conformed source plates in the folder "scd_0010_0010_src" located at /mnt/proj/scd/0010/0010/src/plates.
 - ftrack is used as the project management tool, holding all information about colourspace, delivery format, handles and so on. This could be any database such as Excel sheets, Autodesk Flow or even text/markup files on disk.
 - The remote vendor "Compers Inc" has a Windows file server where work files should be downloaded and performed on the share "clients" on "server", subfolder AcmeVFX.
 - At the remote vendor, the coordinator user email is "emma@compersinc.com".
-- The asset produced by the vendor should be transferred back to /mnt/proj/\_VENDORS/CompersInc/FROM\_CLIENT.
+- The asset produced by the vendor should be transferred back to /mnt/proj/_VENDORS/CompersInc/FROM_CLIENT.
 
 ## Setting up your workspace
 
@@ -122,7 +122,7 @@ In this tutorial, we assume the vendor has a Windows file server named server, w
 Send these additional instructions to the vendor for setting up a mapped share:
 
 1. Shut down the accsyn daemon service on the Windows server.
-2. Edit system environment variables and set variable "ACCSYN\_PROJ\_PATH" to "\\server\clients\AcmeVFX". Note: "PROJ" element must align with the unique volume code attribute.
+2. Edit system environment variables and set variable "ACCSYN_PROJ_PATH" to "\\server\clients\AcmeVFX". Note: "PROJ" element must align with the unique volume code attribute.
 3. Start the accsyn daemon again.
 4. Launch and log on to the accsyn desktop app, on the same server machine, as the vendor [emma@compersinc.com].
 5. Open Settings dialog by clicking the user account button in upper right corner.
@@ -177,7 +177,7 @@ This approach puts the labour on the remote vendor, to download work assets them
 
 The user will get a notification by email on how to use the app to download the source material themselves. 
 
-*Note: In case accsyn Publish is not to be used and no Home share is created for the vendor, grant access to an output folder beneath the project where the user can upload the final work done [scd/\_VENDORS/compersinc] (remember to also give write access otherwise they will not be able to upload)*
+*Note: In case accsyn Publish is not to be used and no Home share is created for the vendor, grant access to an output folder beneath the project where the user can upload the final work done [scd/_VENDORS/compersinc] (remember to also give write access otherwise they will not be able to upload)*
 
   
 
@@ -191,7 +191,7 @@ In this tutorial we will focus on API driven automated transfers, controlled fro
 2. Create a task on shot 0010 named cleanup and assign the vendor to it.
 3. Craft a ftrack action script named "Outsource", for detailed information see [ftrack Actions Documentation](https://www.ftrack.com/en/actions).
 4. Design the script to operate on one or more selected tasks, have it produce a list of file asset paths relative to the proj volume that should be sent to the remote vendor.
-5. Generate work description (notes) and technical metadata (colourspace, frame range, handles etc) to a file named scd\_0010\_0010\_cleanup\_description.txt.
+5. Generate work description (notes) and technical metadata (colourspace, frame range, handles etc) to a file named scd_0010_0010_cleanup_description.txt.
 
   
 
@@ -217,9 +217,9 @@ Implement code that collect/generate outsourcing file asset paths.
 
   
 
-#### Assume the list of file paths calculated from ftrack are generated and stored in the variable source\_files:
+#### Assume the list of file paths calculated from ftrack are generated and stored in the variable source_files:
 
-source\_files = ["scd/0010/0010/src/plates/scd\_0010\_0010\_src", "scd/0010/0010/cleanup/scd\_0010\_0010\_cleanup\_description.txt"]
+source_files = ["scd/0010/0010/src/plates/scd_0010_0010_src", "scd/0010/0010/cleanup/scd_0010_0010_cleanup_description.txt"]
 
 ### Import and create the accsyn session object
 
@@ -263,7 +263,7 @@ job_name = f"Outsource - download - {project_name} - {vendor_name} - {datetime.n
 tasks = []
 for path_rel in source_files:
     tasks.append(dict(
-        source=f"volume=proj/{path\_rel}",
+        source=f"volume=proj/{path_rel}",
         destination="emma@compersinc.com"
     ))   
 ```
@@ -272,7 +272,7 @@ for path_rel in source_files:
 # Locate daily sync transfer:
 
 ```python
-job = session.find(f'Transfer where name="{job\_name}"')
+job = session.find(f'Transfer where name="{job_name}"')
 ```
   
 
@@ -282,11 +282,11 @@ job = session.find(f'Transfer where name="{job\_name}"')
 if not job:
     job = session.create("Transfer", dict(
         tasks=tasks,
-        mirror\_paths=True
+        mirror_paths=True
     ))
 else:
     # Append tasks to existing sync job, will resume/retry finished job and retry(resend) existing duplicate tasks
-    tasks = session.create("Task", tasks, entityid=job['id'], allow\_duplicates=True)
+    tasks = session.create("Task", tasks, entityid=job['id'], allow_duplicates=True)
 
 # (Optional) End script with feedback to ftrack web UI session that outsource transfer were dispatched, providing job['name']/job['id'] for reference
 ```
@@ -325,9 +325,9 @@ We recommend designing a pipeline where the remote vendor publishes one folder p
 
   
 
-scd\_0010\_0010\_cleanup\_v001
+scd_0010_0010_cleanup_v001
 
-scd\_0010\_0020\_rotoscoping\_v003
+scd_0010_0020_rotoscoping_v003
 
 ..
 

@@ -68,6 +68,12 @@ All streams shared with you are listed under **Watch** in the left menu.
 
 If the sender included downloadable files with the stream, download them the same way as a normal delivery.
 
+### Automatic download with a User server
+
+If you receive deliveries regularly (for example a cinema, showroom, or office drop-off machine), install accsyn as a **User server** (daemon/service) and set a local download folder for that host. Deliveries sent to your account are then downloaded automatically over ASC while the machine is on — without opening the Desktop App or staying logged into an interactive session.
+
+See [Hosts](../admin/hosts.md) for daemon install and automated delivery setup.
+
 ### Troubleshooting a delivery
 
 If download or upload fails, start with the transfer log — click the log icon on the right of the transfer:

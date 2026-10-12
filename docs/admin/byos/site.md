@@ -102,7 +102,7 @@ Site menu:
 
 To create a new site, click the NEW SITE button in the upper right corner.
 
-Give a name (code) for the site, it must be unique within the workspace and contain letters a-zA-Z0-9\_.- only with a maximum length of 32 chars.
+Give a name (code) for the site, it must be unique within the workspace and contain letters a-zA-Z0-9_.- only with a maximum length of 32 chars.
 
 Description (optional); Give the site a description, for display only.
 

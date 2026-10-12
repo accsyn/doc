@@ -118,7 +118,7 @@ Default pre-emption by job type:
 - **File transfers** — Interrupted immediately so higher-priority jobs can run.
 - **Renders** — Allowed to finish the current work before yielding.
 
-Configure workspace queues in [Queue administration](queue.md).
+Configure workspace queues in [Queue administration](/admin/queue.md).
 
 ### (Advanced) Manage task states
 

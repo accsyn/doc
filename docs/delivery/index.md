@@ -74,6 +74,14 @@ Yes. The **Upload request** feature (Inbound / Requested) sends upload links to 
 
 Yes. From the accsyn Desktop App you can deliver files and folders from accsyn Cloud storage or your own BYOS storage.
 
+## Can deliveries download automatically without someone at the computer?
+
+Yes. Install accsyn as a **User server** (daemon/service) on the receiving machine and configure a local download folder for that host. Deliveries sent to that account are then pulled automatically over ASC whenever the machine is on and the User server is running — no Desktop App GUI or interactive login required.
+
+Typical use cases: cinema or showroom drop-off, unattended vendor machines, and office endpoints that should receive packages overnight.
+
+Setup steps: [Hosts](../admin/hosts.md) (daemon install and automated deliveries).
+
 ## Can recipients preview files or media with a delivery?
 
 accsyn does not generate thumbnails for arbitrary files. With the Media Vault, however, you can create a title stream delivery so recipients watch high-quality, bandwidth-aware streaming in the browser. Learn how to [create a stream](../vault/stream.md).

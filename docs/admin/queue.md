@@ -48,7 +48,7 @@ To create a new queue, click the NEW QUEUE button in the upper right corner.
 
   
 
-- Code (name); The workspace unique name to give the queue, can contain letters, numbers, dot(.), underscore(\_) or hyphen(-).
+- Code (name); The workspace unique name to give the queue, can contain letters, numbers, dot(.), underscore(_) or hyphen(-).
 - Priority; The priority to give queue.
 - Description; (Optional) The description to give queue.
 

@@ -8,7 +8,7 @@ A setting is a key=value pair defining the behaviour of an accsyn entity.
 
   
 
-An example of a setting is "transfer\_speedlimit" that defines the maximum bandwidth a transfer can consume.
+An example of a setting is "transfer_speedlimit" that defines the maximum bandwidth a transfer can consume.
 
   
 

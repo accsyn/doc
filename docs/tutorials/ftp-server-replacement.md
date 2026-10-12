@@ -120,7 +120,7 @@ Find more information about the accsyn Delivery feature [here](../delivery/index
 
 ## Share a project folder with users
 
-In this example we assume we have a project called proj001 in the folder \_PROJECTS on your default accsyn storage volume that needs to be shared with an external collaborator - source material they should download in the "source" subfolder and then have them upload their contribution to the "FROM\_VENDOR" subfolder.
+In this example we assume we have a project called proj001 in the folder _PROJECTS on your default accsyn storage volume that needs to be shared with an external collaborator - source material they should download in the "source" subfolder and then have them upload their contribution to the "FROM_VENDOR" subfolder.
 
   
 
@@ -128,21 +128,21 @@ In this example we assume we have a project called proj001 in the folder \_PROJE
 
 In this tutorial we assume the accsyn default storage volume has this folder structure:
 
-\_TOOLS
+_TOOLS
 
-\_PROJECTS
+_PROJECTS
 
 proj001    <= The shared project folder
 
-      \_ADMIN
+      _ADMIN
 
 source<= The subfolder user can download from, not upload
 
-     FROM\_VENDOR
+     FROM_VENDOR
 
 monique<= The subfolder where user can upload to
 
-\_LIBRARY
+_LIBRARY
 
   
 
@@ -182,7 +182,7 @@ Next we want to give the remote vendor "monique" access to the source folder:
 Finally we give the user access to upload files back to the project folder:
 
 1. Go to the "proj001" shared folder by clicking it in the list on the left hand side.
-2. Browse down into/create the "FROM\_VENDOR/monique" folder.
+2. Browse down into/create the "FROM_VENDOR/monique" folder.
 3. Click Grant access to source button on the right hand side.
 4. Choose existing user [[io@monique-post.nl](mailto:io@monique-post.nl)]
 5. Choose both Read and Write permissions.
@@ -192,9 +192,9 @@ Finally we give the user access to upload files back to the project folder:
 
 ### What will the user see?
 
-When they log on to the desktop app, they will get notifications about the two shared folders. In their file browser they will see "proj001" as a shared folder, with only the "source" and "FROM\_VENDOR" folders visible.
+When they log on to the desktop app, they will get notifications about the two shared folders. In their file browser they will see "proj001" as a shared folder, with only the "source" and "FROM_VENDOR" folders visible.
 
-They will be able to only download from the source folder, and only see the "monique" folder beneath FROM\_VENDOR where they can upload files.
+They will be able to only download from the source folder, and only see the "monique" folder beneath FROM_VENDOR where they can upload files.
 
 ## Conclusions
 

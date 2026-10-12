@@ -76,15 +76,15 @@ You can install accsyn on most major Linux distributions using the appropriate p
 - RHEL/CentOS 7 and earlier; sudo yum install java-1.8.0-openjdk-headless.
 - RHEL/CentOS 8 or later: dnf install java-17-openjdk-headless.
 - Ubuntu: sudo apt install openjdk-17-jdk.
-- OpenSUSE: sudo zypper --non-interactive install java-1\_8\_0-openjdk-headless.
+- OpenSUSE: sudo zypper --non-interactive install java-1_8_0-openjdk-headless.
 
-2. Download the installer;  For .deb (Debian-based): accsyn\_3.6-5\_5.all.deb, for .rpm (Red Hat-based): accsyn-3.6-5\_5.x86\_64.rpm (replace the version with the current release)
+2. Download the installer;  For .deb (Debian-based): accsyn_3.6-5_5.all.deb, for .rpm (Red Hat-based): accsyn-3.6-5_5.x86_64.rpm (replace the version with the current release)
 3. Install
 
-- Debian/Ubuntu (.deb):  sudo apt install ./yourapp\_1.2.3.deb (or extract and then move to a folder of choice: sudo dpkg -x accsyn\_3.6-5\_5.all.deb && sudo mv usr/local/accsyn <folder>.
-- Fedora (.rpm): sudo dnf install accsyn-3.6-5\_5.x86\_64.rpm.
-- RHEL (.rpm): sudo yum localinstall accsyn-3.6-5\_5.x86\_64.rpm.
-- OpenSUSE  (.rpm):  sudo zypper install accsyn-3.6-5\_5.x86\_64.rpm.
+- Debian/Ubuntu (.deb):  sudo apt install ./yourapp_1.2.3.deb (or extract and then move to a folder of choice: sudo dpkg -x accsyn_3.6-5_5.all.deb && sudo mv usr/local/accsyn <folder>.
+- Fedora (.rpm): sudo dnf install accsyn-3.6-5_5.x86_64.rpm.
+- RHEL (.rpm): sudo yum localinstall accsyn-3.6-5_5.x86_64.rpm.
+- OpenSUSE  (.rpm):  sudo zypper install accsyn-3.6-5_5.x86_64.rpm.
 
   
 
@@ -102,21 +102,16 @@ Ubuntu:
 
 Create  ~/.local/share/applications/accsyn.desktop (system wide: /usr/share/applications)
 
+```ini
 [Desktop Entry]
-
 Name=accsyn
-
 Comment=Launch accsyn
-
 Exec=/usr/local/accsyn/accsyn App
-
-Icon=/usr/local/accsyn/accsyn\_icon\_512.png
-
+Icon=/usr/local/accsyn/accsyn_icon_512.png
 Terminal=false
-
 Type=Application
-
 Categories=Utility
+```
 
 ## Manage
 
@@ -150,7 +145,9 @@ The log files can contain useful hints during troubleshooting:
 
 Windows
 
+```bash
 %APPDATA%\accsyn\log
+```
 
 Mac
 
@@ -158,8 +155,9 @@ Mac
 
 Linux
 
+```bash
 ~/.accsyn/log
-
+```
   
 
 ### Local preferences
@@ -168,15 +166,20 @@ The app stores local preferences and user data at these locations: 
 
 Windows
 
+```bash
 %APPDATA%\accsyn\data
+```
 
 Mac
 
+```bash
 ~/Library/Logs/com.accsyn/data
+```
 
 Linux
-
+```bash
 ~/.accsyn/data
+```
 
 ## Troubleshooting
 

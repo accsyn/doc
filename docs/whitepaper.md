@@ -304,7 +304,7 @@ Task priority and dependencies are task attributes rather than `task_*` settings
 ## Related documentation
 
 - [Internal settings](settings.md)
-- [Manage jobs](admin/job.md)
+- [Manage jobs](manage/job.md)
 - [Queue administration](admin/queue.md)
 - [Job specification](developer/job-specification.md)
 - [Client administration](admin/client.md)

@@ -30,8 +30,8 @@ A hook is a configured command line that points to a script on your servers, tha
 When a hook execution event triggers, accsyn executes the configured hook script on the server:
 
 1. Data related to the specific hook is compiled and written to a temp JSON file, see syntax below.
-2. The configured script command line is loaded and the expression "${PATH\_JSON\_INPUT}" is replaced with the full absolute path to the temp JSON input file. This enables the script to load the metadata from arguments.
-3. When required (pre-publish-server hook), a temp path is generated and replaces  "${PATH\_JSON\_OUTPUT}". This enables the script to write back data to accsyn as needed.
+2. The configured script command line is loaded and the expression "${PATH_JSON_INPUT}" is replaced with the full absolute path to the temp JSON input file. This enables the script to load the metadata from arguments.
+3. When required (pre-publish-server hook), a temp path is generated and replaces  "${PATH_JSON_OUTPUT}". This enables the script to write back data to accsyn as needed.
 4. The script is executed by the same system user as accsyn (daemon) is running on the server.
 
 ## Hook data input format
@@ -47,20 +47,20 @@ Breakdown of JSON data:
 3. client.metadata; Client metadata, aggregated upstream over workspace.
 4. code & name; The job's human readable identifier.
 5. source; accsyn raw source party ident, in the form "<entitytype>:<entityid>".
-6. source\_hr; Source party in human readable form.
+6. source_hr; Source party in human readable form.
 7. destination; accsyn raw destination party ident, in the form "<entitytype>:<entityid>".
-8. destination\_hr; Destination party in human readable form.
+8. destination_hr; Destination party in human readable form.
 9. version; The accsyn backend version.
 10. hook; The name of the hook.
 11. size; The size of the job - sum of non-excluded task sizes.
 12. engine; The engine ID.
-13. engine\_hr; The engine name (code).
+13. engine_hr; The engine name (code).
 14. id; The ID of the job.
 15. user; The ID of the user that created the job.
-16. user\_hr; The email address of the user creating the job.
+16. user_hr; The email address of the user creating the job.
 17. created; The date the job was created.
 18. queue; The ID of the parent queue the job is in.
-19. queue\_hr; The name of the parent queue the job is in.
+19. queue_hr; The name of the parent queue the job is in.
 20. tasks; Job tasks dictionary, providing detailed information about transfer source and destination (full path and share/volume relative paths).
 21. status; The status of the job during hook execution.
 
@@ -87,7 +87,7 @@ To configure hooks globally, log on as an administrator to <https://accsyn.io/ad
 
 6. Click Enable.
 
-7. Choose the entry matching the operating system your server is running, enter the local full path to your script. Keep the token "${PATH\_JSON\_INPUT}" - it will be replaced with the path to the temp JSON input data at runtime. (Same goes for ${PATH\_JSON\_OUTPUT} with the pre-publish-server hook)
+7. Choose the entry matching the operating system your server is running, enter the local full path to your script. Keep the token "${PATH_JSON_INPUT}" - it will be replaced with the path to the temp JSON input data at runtime. (Same goes for ${PATH_JSON_OUTPUT} with the pre-publish-server hook)
 
   
 

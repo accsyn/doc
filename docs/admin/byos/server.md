@@ -93,7 +93,7 @@ Compute server prep
 
   
 
-The Python path can also be overridden if you need to point out a dedicated Python environment, set the environment variable ACCSYN\_PYTHON\_EXECUTABLE to point to the interpreter executable (full path).
+The Python path can also be overridden if you need to point out a dedicated Python environment, set the environment variable ACCSYN_PYTHON_EXECUTABLE to point to the interpreter executable (full path).
 
   
 
@@ -104,7 +104,7 @@ The installer relies on Java being present at the host, as Java is not bundled w
 - RHEL / CentOS (7) / Oracle Linux: sudo yum install -y java-17-openjdk-headless
 - RHEL/CentOS 8 or later: dnf install java-17-openjdk-headless
 - Ubuntu/Debian: sudo apt-get install -y default-jre-headless
-- openSUSE: sudo zypper --non-interactive install java-1\_8\_0-openjdk-headless
+- openSUSE: sudo zypper --non-interactive install java-1_8_0-openjdk-headless
 - Fedora: sudo dnf install -y java-17-openjdk-headless
 - Arch Linux / Manjaro: sudo pacman -S --noconfirm jre-openjdk-headless
 - Amazon Linux 2 / 2023: sudo dnf install -y java-17-amazon-corretto-headless
@@ -388,41 +388,27 @@ Mac
 
 Example launchdaemon plist for configuring  accsyn to be run as user "anna":
 
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 
 <plist version="1.0">
-
 <dict>
-
     <key>Label</key>
-
     <string>com.accsyn.daemon</string>
-
     <key>ProgramArguments</key>
-
     <array>
-
         <string>/Applications/Accsyn/accsyndaemon</string>
-
         <string>start-launchd</string>
-
     </array>
-
     <key>KeepAlive</key>
-
     <false/>
-
     <key>RunAtLoad</key>
-
     <true/>
-
     <key>UserName</key>
-
     <string>anna</string>
-
 </dict>
+```
 
 Linux
 
@@ -437,38 +423,23 @@ Linux
 Example systemd config file for having accsyn run as user "anna":
 
   
-
+```ini
 [Unit]
-
 Description=AccsynDaemon
-
 Before=multi-user.target graphical.target
-
 After=network-online.target remote-fs.target time-sync.target
-
 Wants=network-online.target
 
-  
-
 [Service]
-
 Type=simple
-
 ExecStart="/usr/local/accsyn/accsyndaemon" start-launchd
-
 User=anna
-
 SuccessExitStatus=0 143
-
 KillMode=process
 
-  
-
 [Install]
-
 WantedBy=multi-user.target graphical.target
-
-  
+```
 
 ### Setting environment variables
 
@@ -484,31 +455,27 @@ Mac
 - Stop the daemon: sudo launchctl unload /Library/LaunchDaemons/com.accsyn.daemon.plist
 - Edit the launchdaemon plist and add the keys:
 
+```xml
 <dict>
-
     <key>EnvironmentVariables</key>
-
     <dict>
-
-        <key>MY\_VAR</key>
-
-        <string>my\_value</string>
-
+        <key>MY_VAR</key>
+        <string>my_value</string>
+   </dict>
 </dict>
-
-</dict>
+```
 
 - Load & start the daemon again: sudo launchctl load /Library/LaunchDaemons/com.accsyn.daemon.plist
 
 Linux
 
-- Edit /etc/systemctl/system/accsyndaemon.service and add the environment, one line per item:
+- Edit /etc/systemd/system/accsyndaemon.service and add the environment, one line per item:
 
 [Service]
 
 ..
 
-Environment="MY\_VAR=my\_value"
+Environment="MY_VAR=my_value"
 
 - Reload daemons: sudo systemctl daemon-reload
 - Restart accsyn daemon: sudo systemctl restart accsyndaemon
@@ -516,21 +483,31 @@ Environment="MY\_VAR=my\_value"
 
   
 
+**Preserved on install / upgrade:** Environment variables configured in the Mac launchd plist (`EnvironmentVariables`) or the Linux systemd unit (`Environment=`) are detected by the daemon installer and written back after the service definition is replaced. You do not need to re-apply them after a normal reinstall or version upgrade. On Windows, system environment variables are outside the service definition and are unaffected by the installer.
+
+  
+
 ### Enabling low port file transfers
 
 To be able to have the server bind to a port < 1024, permission needs to be granted in the operating system. Launch a terminal as root and run:
 
-setcap 'cap\_net\_bind\_service=+ep' /usr/lib/jvm/jre/bin/java
+```bash
+setcap 'cap_net_bind_service=+ep' /usr/lib/jvm/jre/bin/java
+```
 
 *Note: the Java path might be different based on your Linux distribution, find out the executable path by running "ps aux" while the accsyn daemon is running.*
 
- Combined with running as a standard non-privileged user account, Java can refuse to start with this error:
+Combined with running as a standard non-privileged user account, Java can refuse to start with this error:
 
+```bash
 /usr/lib/jvm/jre/bin/java: error while loading shared libraries: libjli.so: cannot open shared object file: No such file or directory
+```
 
 If that is the case, add the libjli location as a trusted runtime loader path by creating /etc/ld.so.conf.d/java.conf with the content:  
 
-[JRE\_HOME]/lib/amd64/jli
+```ini
+[JRE_HOME]/lib/amd64/jli
+```
 
 Then restart the machine to have configuration take effect.
 
@@ -542,7 +519,7 @@ accsyn also installs a watchdog that checks the daemon every 5 min and restarts 
 
   
 
- To disable this behaviour, set environment variable ACCSYN\_DISABLE\_WATCHDOG=1. You can also uninstall the watchdog using the CLI (as root/elevated): accsyn daemon check\_uninstall
+ To disable this behaviour, set environment variable ACCSYN_DISABLE_WATCHDOG=1. You can also uninstall the watchdog using the CLI (as root/elevated): accsyn daemon check_uninstall
 
 ### Update server
 
@@ -568,6 +545,8 @@ To update the server, perform the same routine as when updating the desktop app 
 2. Download the corresponding daemon installer from <https://accsyn.io/getapp>
 3. Run the installer and start the daemon, see platform specific instructions above.
 4. Perform some basic tests to make sure the server is functioning as expected.
+
+Custom daemon user, umask, and environment variable settings (Mac plist / Linux systemd) are preserved by the installer during the upgrade — see [Setting environment variables](#setting-environment-variables) above.
 
   
 

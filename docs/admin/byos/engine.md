@@ -49,7 +49,7 @@ The engine list shows active engines within your workspace:
 
 To create a new engine, click the NEW ENGINE button in the upper right corner.
 
-- Code; Give a name for the engine, it must be unique within the workspace and contain letters a-zA-Z0-9\_.- with a maximum length of 32 chars.
+- Code; Give a name for the engine, it must be unique within the workspace and contain letters a-zA-Z0-9_.- with a maximum length of 32 chars.
 - Enable; Define if engine should be created enabled or disabled.
 - Python script; Input/paste the engine Python script here, it will be validated (Python 3.10).
 - Description; (Optional) Give the engine a description, for display only.
