@@ -4,9 +4,9 @@
 
   
 
-The accsyn app is a desktop application primarily for providing accelerated accsyn p2p file transfers running in the background (tray), but also has a GUI enabling advanced functionality that includes extended [Delivery](delivery/index.md), [File Sharing](file-sharing/index.md) and [Media Vault](vault/index.md) management.
+The accsyn app is a desktop application primarily for providing accelerated accsyn p2p file transfers running in the background (tray), but also has a GUI enabling advanced functionality that includes extended [Delivery](/delivery/), [File Sharing](/file-sharing/) and [Media Vault](/vault/) management.
 
-![](assets/admin_desktop-app-fa39d7dd7bb8.png)
+![](/assets/admin_desktop-app-fa39d7dd7bb8.png)
 
 Screenshot - manage title projects.
 
@@ -16,7 +16,7 @@ The app is required to facilitate accelerated and resumable file transfers - the
 
   
 
-When creating a [delivery](delivery/index.md), or actioning a delivery on the web, the app installation is guided from the browser - no manual installation is required. The app will then run in the background (system tray / menu bar) as needed during transfer, and can then be closed.
+When creating a [delivery](/delivery/), or actioning a delivery on the web, the app installation is guided from the browser - no manual installation is required. The app will then run in the background (system tray / menu bar) as needed during transfer, and can then be closed.
 
   
 
@@ -25,12 +25,12 @@ Besides this, the app is mandatory when:
   
 
 - Detailed monitoring and audit of jobs (deliveries, transfers, queues).
-- Managing [file sharing](file-sharing/index.md) on your cloud or on-prem storage.
-- [Access](file-sharing/access.md) shared folders.
-- Manage the accsyn [Media Vault](vault/index.md) - ingest and manage your media, as a manager.
-- Submit render jobs and publish files in BYOS configurations - part of [workflows](developer/index.md).
+- Managing [file sharing](/file-sharing/) on your cloud or on-prem storage.
+- [Access](/file-sharing/access/) shared folders.
+- Manage the accsyn [Media Vault](/vault/) - ingest and manage your media, as a manager.
+- Submit render jobs and publish files in BYOS configurations - part of [workflows](/developer/).
 
-*Note: the desktop app is also included in the accsyn Daemon(service) installation, used for setting up [BYOS servers](admin/byos/server.md).*
+*Note: the desktop app is also included in the accsyn Daemon(service) installation, used for setting up [BYOS servers](/admin/byos/server/).*
 
 ## Where to download
 
@@ -208,8 +208,8 @@ Having further issues? Please reach out to support providing your logs folder co
 
 ### Related articles
 
-[Daemon(service)](admin/byos/server.md)
+[Daemon(service)](/admin/byos/server/)
 
-[File Sharing](file-sharing/index.md)
+[File Sharing](/file-sharing/)
 
-[Media Vault](vault/index.md)
+[Media Vault](/vault/)

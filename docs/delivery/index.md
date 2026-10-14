@@ -1,8 +1,8 @@
 # File Delivery — an introduction
 
-This page introduces the accsyn File Delivery subsystem. Delivery is available as a standalone tool, built into [File Sharing](../file-sharing/index.md) and the [Media Vault](../vault/index.md), or driven through [automations](../developer/index.md).
+This page introduces the accsyn File Delivery subsystem. Delivery is available as a standalone tool, built into [File Sharing](/file-sharing/) and the [Media Vault](/vault/), or driven through [automations](/developer/).
 
-The core benefit: send **terabyte-scale folders with large numbers of files** using a simple link. Recipients download with the secure, accelerated [ASC](../whitepaper.md) protocol — no FTP servers, no fragile browser ZIPs for huge packages.
+The core benefit: send **terabyte-scale folders with large numbers of files** using a simple link. Recipients download with the secure, accelerated [ASC](/whitepaper/) protocol — no FTP servers, no fragile browser ZIPs for huge packages.
 
 ## Get started
 
@@ -35,7 +35,7 @@ Browser transfer is supported for convenience, but large deliveries are designed
 
 The first time, the user chooses the web browser or the Desktop App. App installation is streamlined. Benefits of the Desktop App over the browser:
 
-- **Accelerated ASC transfers** — proprietary TCP file transfer with strong encryption (see the [Whitepaper](../whitepaper.md)).
+- **Accelerated ASC transfers** — proprietary TCP file transfer with strong encryption (see the [Whitepaper](/whitepaper/)).
 - **Native folders** — transfer folder trees without compressing them first; browsers do not support folder download/upload the same way.
 - **Resume** — if a transfer is interrupted mid-file, the app continues where it left off.
 - **Control** — pause, resume, and prioritise transfers as needed.
@@ -80,10 +80,10 @@ Yes. Install accsyn as a **User server** (daemon/service) on the receiving machi
 
 Typical use cases: cinema or showroom drop-off, unattended vendor machines, and office endpoints that should receive packages overnight.
 
-Setup steps: [Hosts](../admin/hosts.md) (daemon install and automated deliveries).
+Setup steps: [Hosts](/admin/hosts/) (daemon install and automated deliveries).
 
 ## Can recipients preview files or media with a delivery?
 
-accsyn does not generate thumbnails for arbitrary files. With the Media Vault, however, you can create a title stream delivery so recipients watch high-quality, bandwidth-aware streaming in the browser. Learn how to [create a stream](../vault/stream.md).
+accsyn does not generate thumbnails for arbitrary files. With the Media Vault, however, you can create a title stream delivery so recipients watch high-quality, bandwidth-aware streaming in the browser. Learn how to [create a stream](/vault/stream/).
 
-Next: [Create your first delivery](create.md).
+Next: [Create your first delivery](/delivery/create/).

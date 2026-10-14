@@ -4,21 +4,21 @@ Documentation for operators (admin and employee roles).
 
 ### Delivery
 
-Manage deliveries and upload requests: [Delivery](../delivery/manage.md).
+Manage deliveries and upload requests: [Delivery](/delivery/manage/).
 
-### File sharing
+### Collaboration
 
-Manage shares and ACLs: [File sharing](../file-sharing/manage.md).
+Manage shares and ACLs: [Collaboration](/file-sharing/manage/).
 
 ### Media Vault
 
-Manage media: [Media Vault](../vault/index.md).
+Manage media: [Media Vault](/vault/).
 
 
 ### Transfer
 
-Create transfer jobs that synchronise main storage with sites and remote users: [Transfer](transfer.md).
+Create transfer jobs that synchronise main storage with sites and remote users: [Transfer](/manage/transfer/).
 
 ### Jobs
 
-Monitor and manage ongoing jobs: [Job & Queue management](job.md).
+Monitor and manage ongoing jobs: [Job & Queue management](/manage/job/).

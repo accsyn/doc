@@ -10,6 +10,12 @@ By default, new accsyn workspaces are 100% cloud hosted in terms of storage and 
 
 To facilitate on-prem storage, an accsyn workspace can be set up or converted into a "BYOS" (Bring-Your-Own-Storage) workspace. This enables you to move the default storage to a server that is installed on a machine (bare metal or virtual) located at your premises or in the cloud.
 
+## Get started
+
+Watch this video get started with all major features of accsyn BYOS:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D9Ng_yDVW1Y" title="accsyn Delivery introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Which additional features become available?
 
 Primarily, these core features are migrated to your premises:
@@ -23,11 +29,11 @@ With BYOS, remote Sites are supported - install servers on additional remote phy
 
   
 
-Additionally, these [Workflow](../../developer/index.md) features will be enabled:
+Additionally, these [Workflow](/developer/) features will be enabled:
 
-- [Hooks](../../developer/hooks.md); Have scripts run on your server when a job is submitted, finished, and so on.
-- [Compute](../../developer/farm.md); Set up a render farm with Python script engines for common apps such as ffmpeg, Houdini, Unreal MRQ render and much more.
-- [Publish](../../developer/publish.md); Set up a publish workflow, enabling remote vendor ingest of files within your production pipeline.
+- [Hooks](/developer/hooks/); Have scripts run on your server when a job is submitted, finished, and so on.
+- [Compute](/developer/farm/); Set up a render farm with Python script engines for common apps such as ffmpeg, Houdini, Unreal MRQ render and much more.
+- [Publish](/developer/publish/); Set up a publish workflow, enabling remote vendor ingest of files within your production pipeline.
 
   
 
@@ -84,7 +90,7 @@ Go to BYOS tab and click Setup BYOS Now button.
 
 You will be presented with an intro, read through carefully.
 
-![](../../assets/admin_byos-0b410ade930c.png)
+![](/assets/admin_byos-0b410ade930c.png)
 
 Click Next when ready to install the server. 
 
@@ -100,7 +106,7 @@ Hint: Hover the download buttons to copy the link to the installer.
 
   
 
-For detailed instructions on how to install and configure servers, please refer to [server documentation](server.md).
+For detailed instructions on how to install and configure servers, please refer to [server documentation](/admin/byos/server/).
 
   
 
@@ -140,7 +146,7 @@ Enter the absolute path on the server, the path must exist and be writeable by t
 
   
 
-*Note: To change the user that the server runs as, please refer to [server documentation](server.md).*
+*Note: To change the user that the server runs as, please refer to [server documentation](/admin/byos/server/).*
 
   
 
@@ -186,18 +192,18 @@ Checklist:
 
 ## Steps to take from here
 
-[Servers](server.md)
+[Servers](/admin/byos/server/)
 
 Install a server, for serving volumes on a remote site, running hooks or compute processes.
 
-[Sites](site.md)
+[Sites](/admin/byos/site/)
 
 Install accsyn on a remote office or cloud endpoint, to facilitate remote file sync/backups.
 
-[Engines](engine.md)
+[Engines](/admin/byos/engine/)
 
 Configure Python scripted engines, for render/compute farm deployments.
 
-[Developer Hub](../../developer/index.md)
+[Developer Hub](/developer/)
 
 You can now set up advanced Workflows with Hooks, Publishing and Render farm processing.

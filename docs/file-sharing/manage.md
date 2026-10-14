@@ -1,6 +1,6 @@
 # Manage file sharing
 
-This guide explains how to use accsyn as a file-sharing service — similar in role to an FTP server, but with fine-grained ACLs and transfers over the secure, accelerated [ASC](../whitepaper.md) protocol.
+This guide explains how to use accsyn as a file-sharing service — similar in role to an FTP server, but with fine-grained ACLs and transfers over the secure, accelerated [ASC](/whitepaper/) protocol.
 
 You can expose **specific subfolders of a project tree on production storage** to external users and partners without giving them the whole volume. That is the usual pattern for integrating vendors into production safely.
 
@@ -10,12 +10,12 @@ You can expose **specific subfolders of a project tree on production storage** t
 
 ### Preparations
 
-1. Download and [install the accsyn Desktop App](../desktop-app.md).
+1. Download and [install the accsyn Desktop App](/desktop-app/).
 2. Sign in as an elevated user — an administrator, or an employee with access to at least one volume.
 
 File sharing is driven from the **Storage** view:
 
-![](../assets/file-sharing_manage.png)
+![](/assets/file-sharing_manage.png)
 
 *Example screenshot of the Storage view in the Desktop App.*
 
@@ -52,7 +52,7 @@ To grant employees access to a volume:
 1. Select the volume on the left (not while browsing a shared folder, collection, or home).
 2. In the access panel, click **Share** and choose **Grant employees access**, or click the green **+** under **Employees with access to volume**. The ACL dialog opens:
 
-![](../assets/file-sharing_manage_grant-employee-access.png)
+![](/assets/file-sharing_manage_grant-employee-access.png)
 
 3. Enter an email or use the list icon to pick an existing employee. You can invite new employees here.
 4. Choose permissions: **Read** (download only) or **Write** (upload and modify).
@@ -74,7 +74,7 @@ Typical production pattern: create a **shared folder** on a project path, then g
 1. In Storage view, select the volume and browse to the folder to share.
 2. Click **Share** in the toolbar and choose **Create shared folder**, or use **Create shared folder** in the access panel.
 
-![](../assets/file-sharing_manage_create-share.png)
+![](/assets/file-sharing_manage_create-share.png)
 
 3. Give the share a name.
 4. (Optional) Set the share **code** — API identifier for automation.
@@ -89,7 +89,7 @@ Click **Create**. If users were granted access, the folder appears as a download
 2. Browse to the subfolder to share, or stay at the root to share the entire folder.
 3. Click **Share** → **Grant user access**, or **Grant access** in the access panel. The ACL dialog opens:
 
-![](../assets/file-sharing_manage_grant-user-access.png)
+![](/assets/file-sharing_manage_grant-user-access.png)
 
 4. Enter an email or pick an existing user from the list.
 5. Choose permissions: **Read** (list and download) or **Write** (upload and modify — create directories, rename, move, delete).
@@ -129,7 +129,7 @@ Right-click → **Delete**, or **Inactivate** to archive. Restore from <https://
 
 ## Accessing a shared folder
 
-Standard users: see [Access shared folders](access.md).
+Standard users: see [Access shared folders](/file-sharing/access/).
 
 Administrators and employees: open **Download** from the top menu, pick files/folders and a local destination. Use **Settings** for options, or **Switch to advanced download mode** for an NC-style dual pane. Use **Upload** the same way, or the **Transfer** tool for both directions — all powered by ASC when using the Desktop App.
 
@@ -201,7 +201,7 @@ Right-click → **Delete**.
 
 ## Manage shares with the Python API
 
-Shared folders, homes, collections, and volume ACLs can be automated with the [accsyn Python API](../developer/python-api.md). A common pattern is to create a shared folder on a project path, then grant a partner access to a **subfolder** only.
+Shared folders, homes, collections, and volume ACLs can be automated with the [accsyn Python API](/developer/python-api/). A common pattern is to create a shared folder on a project path, then grant a partner access to a **subfolder** only.
 
 Example — create a shared folder, then grant read/write on a vendor subpath:
 
@@ -227,14 +227,14 @@ acl = session.grant(
 
 Omit `path` (or use `"/"`) to grant the entire shared folder. Transfers to and from these shares use ASC when clients run the Desktop App or a User server.
 
-For volumes, collections, revoke/deactivate, and more, see the full [File Sharing](https://accsyn-python-api.readthedocs.io/en/latest/filesharing.html) chapter. API keys and installation: [Developer Hub — Python API](../developer/python-api.md).
+For volumes, collections, revoke/deactivate, and more, see the full [File Sharing](https://accsyn-python-api.readthedocs.io/en/latest/filesharing.html) chapter. API keys and installation: [Developer Hub — Python API](/developer/python-api/).
 
 *Note: The API is not available for Cloud Essentials or BYOS Lite workspaces.*
 
 ### Related articles
 
-[BYOS](../admin/byos/index.md)
+[BYOS](/admin/byos/)
 
-[Python API](../developer/python-api.md)
+[Python API](/developer/python-api/)
 
-[Access shared folders](access.md)
+[Access shared folders](/file-sharing/access/)

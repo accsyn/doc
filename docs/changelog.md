@@ -9,7 +9,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 **Minor features**
 
 - [WEB/AUDIT] Dispatcher audit page - evaluate decisions mede by the accsyn job/task dispatcher. Useful for debugging compute filter evaluations.
-- [WEB/AUDIT] Optimised dispatcher performance and memory consumption.
+- [CORE] Optimised dispatcher performance and memory consumption.
 - [DOC] Updated job specification and site documentation.
 - [COMPUTE/RENDER] Provided Hello World sample engine and updated render farm documentation.
 - [WEB/APP] Enabled WAN connectivity tests for site servers, allow upload and download with sites as well as user push and pull.

@@ -2,7 +2,7 @@
 
 This guide shows how to create an accsyn file delivery and send it to recipients — including temporary uploads for a single delivery, and delivering files or title media already on accsyn Cloud or BYOS storage.
 
-With a delivery link you can send **large folders — including terabyte-scale packages with many files** — for recipients to pull securely over the accelerated [ASC](../whitepaper.md) protocol (Desktop App recommended).
+With a delivery link you can send **large folders — including terabyte-scale packages with many files** — for recipients to pull securely over the accelerated [ASC](/whitepaper/) protocol (Desktop App recommended).
 
 ### Prerequisites
 
@@ -19,13 +19,13 @@ A temporary delivery uploads one or more files and/or folders to a temporary loc
 2. Open **Outbound** under the workspace menu on the left.
 3. Click **NEW DELIVERY**.
 
-![](../assets/delivery_create-451ffedea6d9.png)
+![](/assets/delivery_create-451ffedea6d9.png)
 
 *Screenshot of the delivery create page.*
 
 4. To add content, click **DROP FILES OR PRESS HERE TO ADD CONTENT**. Choose either uploading from your computer to a temporary directory on accsyn storage, or browsing files and folders already on your accsyn storage:
 
-![](../assets/delivery_create-cab61300168d.png)
+![](/assets/delivery_create-cab61300168d.png)
 
 ### Upload from this computer
 
@@ -44,7 +44,7 @@ To use the browser instead, choose **PROCEED WITH BROWSER** and upload files one
 
 ### Public delivery
 
-![](../assets/delivery_create-bf77743175fa.png)
+![](/assets/delivery_create-bf77743175fa.png)
 
 *Screenshot of delivery access options.*
 
@@ -70,7 +70,7 @@ Watch this video to see how to send a folder from storage:
 
 A file browser lists your accsyn storage. Select the file(s) and/or folder(s) to send, then click **ADD TO DELIVERY**:
 
-![](../assets/delivery_create-983924dcc160.png)
+![](/assets/delivery_create-983924dcc160.png)
 
 ## How to create an upload request
 
@@ -84,13 +84,13 @@ This video shows creating an upload request to a temporary folder:
 2. Open **Requested** under the workspace menu on the left.
 3. Click **NEW REQUEST**. Choose whether recipients upload to a temporary folder or to a folder on your accsyn storage:
 
-![](../assets/delivery_create-ea26b59c82c4.png)
+![](/assets/delivery_create-ea26b59c82c4.png)
 
 ### Upload to a folder on accsyn storage
 
 A file browser lets you choose the destination folder. Create a new folder by entering a name and clicking the plus (+) button:
 
-![](../assets/delivery_create-8e262200e5c2.png)
+![](/assets/delivery_create-8e262200e5c2.png)
 
 4. Enter the email address(es) of users who should upload. Multiple recipients are supported; previous recipients are remembered.
 5. Set the **Expiry** date (default: one month / 30 days).
@@ -102,12 +102,12 @@ When ready, click **SEND REQUEST** to email recipients with upload instructions.
 
 You can also create deliveries from permanent accsyn Cloud storage, or from BYOS volumes and shared folders.
 
-1. Download and install the [accsyn Desktop App](../desktop-app.md) and sign in to your workspace as an admin or employee.
+1. Download and install the [accsyn Desktop App](/desktop-app/) and sign in to your workspace as an admin or employee.
 2. Open the **Storage** view.
 3. Upload files and folders to permanent storage if needed.
 4. Select the files/folders, then click **Share** in the action bar and choose **Deliver**, or right-click and choose **Share → Deliver**.
 
-![](../assets/delivery_create-f5721007308e.png)
+![](/assets/delivery_create-f5721007308e.png)
 
 *Screenshot of the Desktop App when choosing a file for delivery.*
 
@@ -118,11 +118,11 @@ You can also create deliveries from permanent accsyn Cloud storage, or from BYOS
 
 Media in the Media Vault can be delivered the same way:
 
-1. Install the [Desktop App](../desktop-app.md) and sign in as an admin or employee.
+1. Install the [Desktop App](/desktop-app/) and sign in as an admin or employee.
 2. Create the title and log the media to deliver.
 3. Select the media file(s) and choose **Deliver** from the action bar, or right-click and choose **Deliver**:
 
-![](../assets/delivery_create-f5adaf144b74.png)
+![](/assets/delivery_create-f5adaf144b74.png)
 
 *Screenshot of the Desktop App when choosing media for delivery.*
 
@@ -133,7 +133,7 @@ Media in the Media Vault can be delivered the same way:
 
 Upload requests can also be created from the Desktop App, targeting a permanent folder on accsyn Cloud or BYOS storage.
 
-1. Install the [Desktop App](../desktop-app.md) and sign in as an admin or employee.
+1. Install the [Desktop App](/desktop-app/) and sign in as an admin or employee.
 2. Open the **Storage** view.
 3. Browse to the destination folder (create folders via the toolbar or right-click **Create new folder**).
 4. Click **Share** and choose **Request upload here**, or right-click and choose **Share → Request upload here**.
@@ -141,7 +141,7 @@ Upload requests can also be created from the Desktop App, targeting a permanent 
 
 ## Create a delivery with the Python API
 
-Deliveries can also be created programmatically with the [accsyn Python API](../developer/python-api.md). Files already on accsyn storage can be submitted in one call with recipients; temporary deliveries can be created in `init` state, populated via a transfer job, then submitted.
+Deliveries can also be created programmatically with the [accsyn Python API](/developer/python-api/). Files already on accsyn storage can be submitted in one call with recipients; temporary deliveries can be created in `init` state, populated via a transfer job, then submitted.
 
 Example — create and submit a delivery from existing files on storage:
 
@@ -155,14 +155,14 @@ delivery = session.create("Delivery", {
 
 Paths resolve on the default volume unless you qualify them (for example `folder=…` or `volume=…`). The delivery is submitted immediately and recipients receive an email with a download link — the same link-driven flow used for large ASC downloads in the app.
 
-For temporary deliveries, upload requests, recipients, abort/finish, and download/upload transfer jobs, see the full [Deliveries](https://accsyn-python-api.readthedocs.io/en/latest/deliveries.html) chapter. API keys and installation are covered in [Developer Hub — Python API](../developer/python-api.md).
+For temporary deliveries, upload requests, recipients, abort/finish, and download/upload transfer jobs, see the full [Deliveries](https://accsyn-python-api.readthedocs.io/en/latest/deliveries.html) chapter. API keys and installation are covered in [Developer Hub — Python API](/developer/python-api/).
 
 *Note: The API is not available for Cloud Essentials or BYOS Lite workspaces.*
 
-Next: [Monitor and manage a delivery](manage.md).
+Next: [Monitor and manage a delivery](/delivery/manage/).
 
 **Related articles:**
 
-[Introduction to accsyn](../introduction.md)
+[Introduction to accsyn](/introduction/)
 
-[Python API](../developer/python-api.md)
+[Python API](/developer/python-api/)

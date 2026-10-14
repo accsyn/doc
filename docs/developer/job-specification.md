@@ -17,7 +17,7 @@ When submitting a job through the API or using a file with the CLI, the correct 
 
 Hint: the job JSON payload can be inspected from within the accsyn Desktop app, by clicking the "JSON" button beneath the green submit button in NC mode:
 
-![](../assets/developer_job-specification-25cca5b7a58f.png)
+![](/assets/developer_job-specification-25cca5b7a58f.png)
 
 ### Structure of transfer job JSON payload
 
@@ -36,7 +36,7 @@ The general structure:
 
 - Job attributes; (optional) Typically name of job, queue, initial status and so on. For detailed information, please refer to the [accsyn Python API documentation](https://accsyn-python-api.readthedocs.io/en/latest/transfers.html).
 - Tasks: List or dictionary of tasks - files and directories to transfer, see party and path notation below.
-- Settings; (optional) Additional job settings, see [accsyn Settings documentation](../settings.md) for a complete listing.
+- Settings; (optional) Additional job settings, see [accsyn Settings documentation](/settings/) for a complete listing.
 - Metadata; (optional) Additional job metadata.
 
   
@@ -125,8 +125,8 @@ For a detailed breakdown of parties and paths, please refer to the [accsyn Pytho
 
 Example party definitions:
 
-- myworkspacecode; THe workspace API unique identifier (code). Denotes the workspace party, the main site (hq), as source or destination. Resolves to the [Server](../admin/byos/server.md) hosting the file (through volume) identified by the path.
-- john@user.com; Denotes a user as a source or destination, they must have a (running) client ([Desktop App](../desktop-app.md) or [User Server](../admin/hosts.md) instance) that can be resolved by accsyn. The most recent online client will be chosen.
+- myworkspacecode; THe workspace API unique identifier (code). Denotes the workspace party, the main site (hq), as source or destination. Resolves to the [Server](/admin/byos/server/) hosting the file (through volume) identified by the path.
+- john@user.com; Denotes a user as a source or destination, they must have a (running) client ([Desktop App](/desktop-app/) or [User Server](/admin/hosts/) instance) that can be resolved by accsyn. The most recent online client will be chosen.
 - john@user.com@Hostname; A user source and destination resolving to a client having a specific hostname. 
 - site=london; Denotes the site with (unique) API "code" identifier "london".
 - client=6611fbca3f8c4d3e7a3b678a; Denotes an explicit client, for example if a user is running multiple clients.
@@ -161,7 +161,7 @@ Path examples:
 When submitting a job, accsyn tries to resolve a client-server combo based on the party and path given. The rules vary depending on the type of party:
 
 - Workspace; Here accsyn tries to resolve the server that serves the volume pointed out by the path, or indirectly by paths on a shared folder or collection.
-- User; accsyn tries to find a file transfer client belonging to the user, this might be the default client created when using the desktop app or a user server. For more information, see [Hosts](../admin/hosts.md).
+- User; accsyn tries to find a file transfer client belonging to the user, this might be the default client created when using the desktop app or a user server. For more information, see [Hosts](/admin/hosts/).
 - Site; accsyn tries to find a site server, that serves the volume pointed out by the path at the remote site, or indirectly by paths on a shared folder or collection.
 
   
@@ -175,9 +175,9 @@ If no server or client can be resolved, an error will be given with appropriate 
 
 A user is only allowed to access files and folders on an accsyn site (workspace/main hq premises or remote site) given explicit access through ACLs.
 
-When downloading or uploading a file, only the user owning the API/CLI session is allowed to specify local absolute paths (e.g. C:\Users\ John\Downloads); to send a file to a user you must create a Delivery where the user then chooses where to download (or what to upload if it is an upload request). For more information, see [Delivery](../delivery/index.md).
+When downloading or uploading a file, only the user owning the API/CLI session is allowed to specify local absolute paths (e.g. C:\Users\ John\Downloads); to send a file to a user you must create a Delivery where the user then chooses where to download (or what to upload if it is an upload request). For more information, see [Delivery](/delivery/).
 
-There is an exception to this: if the user has mapped a share locally and has given explicit write permissions to it, an elevated user is allowed to push files to the user's client using mirror path option or explicit path notation (see examples below). Same goes for upload - an elevated user can pull files from a remote user's computer and upload them to a workspace volume if the user has given explicit read access to the corresponding locally mapped share. For more information on how to set up locally mapped shares, see [Hosts](../admin/hosts.md).
+There is an exception to this: if the user has mapped a share locally and has given explicit write permissions to it, an elevated user is allowed to push files to the user's client using mirror path option or explicit path notation (see examples below). Same goes for upload - an elevated user can pull files from a remote user's computer and upload them to a workspace volume if the user has given explicit read access to the corresponding locally mapped share. For more information on how to set up locally mapped shares, see [Hosts](/admin/hosts/).
 
   
 
@@ -472,7 +472,7 @@ Sync a folder on share "projects"  from site "berlin" back to hq, deleting file
 }
 ```
 
-<sup>- *Settings are always supplied as strings, please refer to [Settings documentation](../settings.md).*</sup>
+<sup>- *Settings are always supplied as strings, please refer to [Settings documentation](/settings/).*</sup>
 
   
 

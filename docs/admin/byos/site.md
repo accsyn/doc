@@ -1,6 +1,6 @@
 # Site administration
 
-*NOTE: This feature is exposed to [BYOS](index.md) workspaces only.*
+*NOTE: This feature is exposed to [BYOS](/admin/byos/) workspaces only.*
 
 
 This guide walks through how to add and configure remote sites within your accsyn workspace.
@@ -15,7 +15,7 @@ Prerequisites:
 
 Learn how to setup sites in accsyn and have assets synced using the API:
 
-[Remote office sync](../../tutorials/remote-office-sync.md)
+[Remote office sync](/tutorials/remote-office-sync/)
 
 ## What is a site?
 
@@ -29,7 +29,7 @@ Servers and clients owned by elevated (admin or employee role) users can be assi
 
 ### Site types
 
-- Main site; This is the default site within a workspace, servers are assigned to this site by default and the server on main site serving the default volume is called the main server. See [servers](server.md) for more in-depth information. A workspace must have exactly one main site.
+- Main site; This is the default site within a workspace, servers are assigned to this site by default and the server on main site serving the default volume is called the main server. See [servers](/admin/byos/server/) for more in-depth information. A workspace must have exactly one main site.
 - Roaming; This is a built-in site to which all standard role user clients are assigned, this can also be called the road warrior site.
 - accsyn; This is the accsyn cloud storage site, and is primarily assigned to new workspaces in the default accsyn setup before moving to BYOS. The accsyn site can be used in tandem with on-prem storage.
 
@@ -49,17 +49,17 @@ When a download or upload is initiated from a machine assigned to a site, or det
 
 When the setting is disabled, the initiating client remains the transfer endpoint.
 
-Configure this under Admin → Settings → Site. See [Workspace Settings](../settings.md#site).
+Configure this under Admin → Settings → Site. See [Workspace Settings](/settings/#site).
 
   
 
 ### Sites and compute/render jobs
 
-For more information, see [Workflows](../../developer/index.md) compute section.
+For more information, see [Workflows](/developer/) compute section.
 
 ### Local hosts and share mappings
 
-Sites are the durable way to connect a **remote office or cloud location** — typically with a site server serving storage at that place. For individual machines (home offices, vendors, single workstations), a lighter option is **local file sharing** via [Hosts](../hosts.md):
+Sites are the durable way to connect a **remote office or cloud location** — typically with a site server serving storage at that place. For individual machines (home offices, vendors, single workstations), a lighter option is **local file sharing** via [Hosts](/admin/hosts/):
 
 1. The user maps a shared folder (or volume path) to a folder on their computer in the Desktop App share mappings.
 2. They grant **read** and/or **write** access on that mapping.
@@ -67,11 +67,11 @@ Sites are the durable way to connect a **remote office or cloud location** — t
 
 Mappings can run through the Desktop App (user logged in) or a **User server** daemon for unattended 24/7 access. That model suits a single machine; for an entire office or cloud VPC with shared storage and sync, prefer a site and site server as described on this page.
 
-See also [File sharing — local machines](../../file-sharing/index.md#can-my-clients-share-folders-on-their-local-machine).
+See also [File sharing — local machines](/file-sharing/#can-my-clients-share-folders-on-their-local-machine).
 
 ## Site list
 
-![](../../assets/admin_byos_site-ecad93b51789.png)
+![](/assets/admin_byos_site-ecad93b51789.png)
 
 Toolbar:
 
@@ -112,7 +112,7 @@ When created, you can take the following actions:
 
 - Install a new server at site, go to <https://accsyn.io/admin/servers/new>.
 - Serve volume(s) at site, go to <https://accsyn.io/admin/volumes>, edit the volume that should be served by the server and then go to the "Servers" tab where you can set the server. Make sure storage is available at the site at the same physical disk locations as configured at the volume, you can override the paths if needed.
-- Assign compute engines to server lanes, to enable remote office/cloud rendering capabilities. For more information, see [Workflows](../../developer/index.md).
+- Assign compute engines to server lanes, to enable remote office/cloud rendering capabilities. For more information, see [Workflows](/developer/).
 
 ## Edit a site
 
@@ -155,7 +155,7 @@ Settings
 
 - Route transfers via site server (`site_route_transfers`); Override the workspace setting for this site. When enabled, download and upload transfers initiated by clients on this site will be redirected to the site server. This offloads the client so it can be turned off and transfers will proceed. Note that transfers might queue up on the site server and not schedule immediately as would be the case if the client were used as transfer endpoint.
 
-Workspace-level defaults are configured under Admin → Settings → Site. See [Workspace Settings](../settings.md#site).
+Workspace-level defaults are configured under Admin → Settings → Site. See [Workspace Settings](/settings/#site).
 
   
 
@@ -178,14 +178,14 @@ To delete a site, open the site's menu (three dots icon) on the right hand side 
 
 ### Related resources
 
-[Server admin](server.md)
+[Server admin](/admin/byos/server/)
 
 Install a site server, enabling hq-to-site file synchronisation and backups.
 
-[Hosts](../hosts.md)
+[Hosts](/admin/hosts/)
 
 Map shares locally on a user machine for operator push and pull, or install a User server for unattended access.
 
-[Tutorial | Remote Office Sync](../../tutorials/remote-office-sync.md)
+[Tutorial | Remote Office Sync](/tutorials/remote-office-sync/)
 
 Learn how to use the accsyn Python API to automate file synchronisation between your offices and/or cloud storage.

@@ -1,6 +1,6 @@
 # Engine administration
 
-*NOTE: This feature is exposed to [BYOS](index.md) workspaces only.*
+*NOTE: This feature is exposed to [BYOS](/admin/byos/) workspaces only.*
 
 
 This guide walks through how to create and configure engines within an accsyn workspace.
@@ -24,7 +24,7 @@ The accsyn compute/render farm feature allows for creating additional engines to
 
 ## Engine list
 
-![](../../assets/admin_byos_engine-10f12175d59e.png)
+![](/assets/admin_byos_engine-10f12175d59e.png)
 
 Toolbar:
 
@@ -113,10 +113,10 @@ To delete an engine, click the red trashcan button on the engine in the listing.
 
 ### Related resources
 
-[Server admin](server.md)
+[Server admin](/admin/byos/server/)
 
 Install and assign engines to a  render/compute server.
 
-[Tutorial | Remote Office Sync](../../tutorials/remote-office-sync.md)
+[Tutorial | Remote Office Sync](/tutorials/remote-office-sync/)
 
 Learn how to use the accsyn Python API to automate file synchronisation between your offices and/or cloud storage.

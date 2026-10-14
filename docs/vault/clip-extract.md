@@ -1,19 +1,19 @@
 # Clip and still image extraction
 
-Extract clips and stills from tagged Vault media without downloading masters to process locally. Results can be delivered back over the usual delivery / [ASC](../whitepaper.md) path or written to storage.
+Extract clips and stills from tagged Vault media without downloading masters to process locally. Results can be delivered back over the usual delivery / [ASC](/whitepaper/) path or written to storage.
 
 Watch this video to learn clip extraction:
 
 ### Accessing
 
 1. Play a proxy from the Vault, or
-2. Select media and open the [Media processor](process.md).
+2. Select media and open the [Media processor](/vault/process/).
 
 ### Layout
 
 Extraction is built into the proxy player:
 
-![](../assets/vault_clip-extract-c3665d3c6a0f.png)
+![](/assets/vault_clip-extract-c3665d3c6a0f.png)
 
 **Seek bar** — Current position in the movie:
 

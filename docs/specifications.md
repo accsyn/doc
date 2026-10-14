@@ -18,7 +18,7 @@ Rev 1.004, 08.10.26
 |---|---|
 | Hosting | VPC (isolated virtual private cloud instance), ISO 9001/14001/27001 certified hosting. |
 | Internal communication | TLS/SSL REST & GraphQL (HTTPS on port 443). |
-| File transfer | Software-firewalled server endpoint, 256-bit PSK authorisation, encrypted using 128-bit Advanced Encryption Standard (AES-128, default) or AES-256 (configurable). More information in the [Whitepaper](whitepaper.md). |
+| File transfer | Software-firewalled server endpoint, 256-bit PSK authorisation, encrypted using 128-bit Advanced Encryption Standard (AES-128, default) or AES-256 (configurable). More information in the [Whitepaper](/whitepaper/). |
 | Authentication provider | Identity delegated to a configured identity service (accsyn accounts and supported external providers such as Google and Microsoft). No user passwords are stored with or distributed by accsyn to transfer peers. |
 | Certification(s) | HBO® (Home Box Office), for use in sensitive film production. |
 | Signup and authorisation | Self signup and workspace creation, with email verification. Login to accsyn is mandatory for all users before they can access any data. |
@@ -34,7 +34,7 @@ Rev 1.004, 08.10.26
 | Office-to-office | Supports site servers for push and pull between main headquarters and satellite offices, or employees working from home. |
 | Web deliveries | Deliver files securely in the browser, with ZIP compression of folders and multiple files. Upload requests feature an accelerated browser uploader supporting multiple files. |
 
-### File sharing
+### Collaboration/File sharing
 
 | Item | Specification |
 |---|---|

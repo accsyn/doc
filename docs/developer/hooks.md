@@ -1,8 +1,8 @@
 # Hooks
 
-*Important Note: This feature is exposed to [BYOS](../admin/byos/index.md) workspaces only.*
+*Important Note: This feature is exposed to [BYOS](/admin/byos/) workspaces only.*
 
-[BYOS](../admin/byos/index.md)
+[BYOS](/admin/byos/)
 
 This documentation explains accsyn hooks and walks through how to configure them within your Workspace.
 
@@ -18,8 +18,8 @@ A hook is a configured command line that points to a script on your servers, tha
 - post-failed-client;  Executed on the remote elevated\* client every time a job fails, with job data provided.
 - post-done-server;  Executed on the server when a job has finished, with job data provided.
 - post-done-client;  Executed on the elevated\* client after a job has finished, with job data provided.
-- pre-publish-server;  Executed on the server when a remote user requests to publish one or more files, with publish file data provided and expecting feedback to be provided back to accsyn (see [Publish workflow](publish.md))
-- publish-server;  Executed on the server when the published files from the remote user have been uploaded, with publish file data provided (see [Publish workflow](publish.md))
+- pre-publish-server;  Executed on the server when a remote user requests to publish one or more files, with publish file data provided and expecting feedback to be provided back to accsyn (see [Publish workflow](/developer/publish/))
+- publish-server;  Executed on the server when the published files from the remote user have been uploaded, with publish file data provided (see [Publish workflow](/developer/publish/))
 
   
 
@@ -66,7 +66,7 @@ Breakdown of JSON data:
 
 ### Publish hooks
 
-For detailed information about the publish hooks, head over to the [Publish documentation](publish.md).
+For detailed information about the publish hooks, head over to the [Publish documentation](/developer/publish/).
 
 ## Configure hooks
 
@@ -75,7 +75,7 @@ To configure hooks globally, log on as an administrator to <https://accsyn.io/ad
 1. Click on the Hooks settings tab.
 2. Click the edit(pen) icon on Hook configuration setting.
 
-![](../assets/developer_hooks-29bd8cf120a1.png)
+![](/assets/developer_hooks-29bd8cf120a1.png)
 
 3. Click Enable hooks to have the hook subsystem enabled.
 
@@ -97,14 +97,14 @@ Click [ Save ] when done to apply your hooks configuration. Test the hook by sub
 
 ### Configure queue hooks
 
-Hooks can be overridden, or just be configured on a queue. See [Queue administration](../admin/queue.md).
+Hooks can be overridden, or just be configured on a queue. See [Queue administration](/admin/queue/).
 
 ## Further resources
 
-[Python API](python-api.md)
+[Python API](/developer/python-api/)
 
 Use the Python API within your hook, for example to program chained file transfer workflows.
 
-[Outsourcing Pipeline](../tutorials/outsourcing-pipeline.md)
+[Outsourcing Pipeline](/tutorials/outsourcing-pipeline/)
 
 A tutorial going through how to set up an outsourcing pipeline with accsyn, using publish hooks.

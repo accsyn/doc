@@ -1,8 +1,8 @@
 # accsyn Media Vault — introduction
 
-The Media Vault lets you **tag deliverable media** on accsyn Cloud storage so you can manage masters and related assets with structure, proxies, streaming, export, and lab workflows — while large uploads and deliveries still run over the secure, accelerated [ASC](../whitepaper.md) protocol.
+The Media Vault lets you **tag deliverable media** on accsyn Cloud storage so you can manage masters and related assets with structure, proxies, streaming, export, and lab workflows — while large uploads and deliveries still run over the secure, accelerated [ASC](/whitepaper/) protocol.
 
-Use it to host film masters and deliverables with media proxies, transcoding, streaming, export tooling, [lab services](media-lab.md), and more.
+Use it to host film masters and deliverables with media proxies, transcoding, streaming, export tooling, [lab services](/vault/media-lab/), and more.
 
 *Important: Media Vault is available on accsyn Cloud storage only — not on BYOS (on-premises) workspaces at this time.*
 
@@ -16,20 +16,20 @@ Watch this video to get up and running with the Media Vault:
 
 Set up a vault workflow step by step:
 
-[Film Festival](../tutorials/film-festival.md)
+[Film Festival](/tutorials/film-festival/)
 
 ## What is the Media Vault?
 
 accsyn adds media-management capabilities on top of files that live on **accsyn Cloud storage**. You organise deliverables under **titles** (movies, TV series, short films, general projects, and so on) and **tag** associated media so the platform can drive:
 
 - Structured title libraries that are easy to search, with IMDb linkage where applicable
-- Streamlined, accelerated [delivery](../delivery/index.md) of DCPs, masters, sound, sales material, pictures, and video — via ASC when using the Desktop App
+- Streamlined, accelerated [delivery](/delivery/) of DCPs, masters, sound, sales material, pictures, and video — via ASC when using the Desktop App
 - Accelerated upload of media into titles (ASC)
-- [File sharing](../file-sharing/index.md) for collaboration with vendors, partners, and clients
+- [Collaboration](/file-sharing/) for collaboration with vendors, partners, and clients
 - Web streaming so recipients can watch title media in a browser — no extra player software
 - Clip and still extraction — transcode selected ranges from masters to ProRes, H.264, or TIFF/JPEG
 - Export tooling aimed at established SVOD/TVOD vendors
-- Optional [Lab services](media-lab.md) when you need partners to refine assets
+- Optional [Lab services](/vault/media-lab/) when you need partners to refine assets
 
 Tagging is what turns ordinary files on cloud storage into managed deliverables; ASC is what keeps moving those large packages fast and secure.
 
@@ -50,7 +50,7 @@ An accsyn **title** is a root folder on Cloud storage that holds media for a spe
 
 On creation, accsyn can fetch movie metadata from IMDb to bootstrap the library. Titles support a cover image and an optional banner for clearer listing and richer delivery presentation:
 
-![](../assets/vault-e79b295ea116.png)
+![](/assets/vault-e79b295ea116.png)
 
 *Example title listing in the Desktop App.*
 
@@ -76,7 +76,7 @@ Tagged media is easy to find without relying only on deep folder trees or opaque
 
 Media delivery is enriched by the proxy engine — title cover and banner, plus thumbnail and video proxies. A delivery can mix tagged media with ordinary files and folders. Large packages still benefit from ASC through the Desktop App.
 
-With a [host daemon / User server](../admin/hosts.md), deliveries to remote endpoints (clients, cinemas, showrooms) can complete without someone at the receiving machine operating the Desktop App.
+With a [host daemon / User server](/admin/hosts/), deliveries to remote endpoints (clients, cinemas, showrooms) can complete without someone at the receiving machine operating the Desktop App.
 
 ## Transcoding
 
@@ -92,13 +92,13 @@ Accsyn Cloud storage is backed by an ffmpeg farm for proxy-style transcodes; pro
 
 ## Web streaming
 
-Video media can be sent as a [streaming delivery](stream.md) to one or more recipients. They receive an email with a link for account- and/or password-protected playback in the browser. A streaming delivery may mix streams, other media, and standard files and folders.
+Video media can be sent as a [streaming delivery](/vault/stream/) to one or more recipients. They receive an email with a link for account- and/or password-protected playback in the browser. A streaming delivery may mix streams, other media, and standard files and folders.
 
 Once an HD streaming proxy has been transcoded, recipients can watch in a normal web browser.
 
 ## Lab services
 
-The media add-on was first built in-house for a major customer to support [streamlined lab services](media-lab.md). Those services are now provided with partner FyraK media and include:
+The media add-on was first built in-house for a major customer to support [streamlined lab services](/vault/media-lab/). Those services are now provided with partner FyraK media and include:
 
 1. General media work — guidance on the Vault and help importing an existing library
 2. DCP mastering (Digital Cinema Packaging)
@@ -113,12 +113,12 @@ The media add-on was first built in-house for a major customer to support [strea
 
 Contact us via chat (lower right) or [support@accsyn.com](mailto:support@accsyn.com) to learn more.
 
-Next: [Create your first title](create.md).
+Next: [Create your first title](/vault/create/).
 
 **Related articles:**
 
-[Delivery](../delivery/index.md) — file delivery subsystem.
+[Delivery](/delivery/) — file delivery subsystem.
 
-[File sharing](../file-sharing/index.md) — share titles with sales teams, vendors, partners, and end users.
+[Collaboration](/file-sharing/) — share titles with sales teams, vendors, partners, and end users.
 
-[Lab services](media-lab.md) — experienced media lab staff for deliverables.
+[Lab services](/vault/media-lab/) — experienced media lab staff for deliverables.

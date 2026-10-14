@@ -25,7 +25,7 @@ The tutorial will walk through:
 
 ## Schematics
 
-![](../assets/tutorials_remote-office-sync-829e238ba01e.png)
+![](/assets/tutorials_remote-office-sync-829e238ba01e.png)
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ The tutorial will walk through:
 - At least one active storage and one active site server license.
 - An elevated admin accsyn account for setting up the site [admin@acmepost.com]
 - An employee account for the operator initiating the sync [coordinator@acmepost.com]
-- A valid API key for the operator, see [Python API documentation](../developer/python-api.md) for instructions on how to create one.
+- A valid API key for the operator, see [Python API documentation](/developer/python-api/) for instructions on how to create one.
 
   
 
@@ -41,7 +41,7 @@ Hint: find out your workspace API code identifier @ <https://accsyn.io/admin/set
 
 ## Setting up site
 
-We are not going into great detail on how to set up remote sites with accsyn, this is well covered in the [site documentation](../admin/byos/site.md):
+We are not going into great detail on how to set up remote sites with accsyn, this is well covered in the [site documentation](/admin/byos/site/):
 
 1. Create the site @ <https://accsyn.io/admin/sites/new> that will represent the remote office in accsyn [london]
 2. Install a server on the site @ <https://accsyn.io/admin/servers/new>, acting as the endpoint for all p2p ASC file transfer between the main hq site and the office.
@@ -168,10 +168,10 @@ Breakdown of the script:
 
 View and download the source code on Github
 
-[Python API](../developer/python-api.md)
+[Python API](/developer/python-api/)
 
 accsyn Python API support main page.
 
-[Site admin](../admin/byos/site.md)
+[Site admin](/admin/byos/site/)
 
 accsyn site management documentation.

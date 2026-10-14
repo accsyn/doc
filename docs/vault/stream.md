@@ -1,13 +1,13 @@
 # Stream title media
 
-Send VOD web streams so recipients can play tagged Vault media in a browser. Optional file downloads still use link-based delivery and [ASC](../whitepaper.md) when recipients use the Desktop App.
+Send VOD web streams so recipients can play tagged Vault media in a browser. Optional file downloads still use link-based delivery and [ASC](/whitepaper/) when recipients use the Desktop App.
 
 *Note: Web streaming includes an initial allowance of free views; further views are billed in arrears. See [pricing](https://accsyn.com/pricing).*
 
 ## Prepare streaming
 
-1. A title has been [created](create.md).
-2. Video media is [logged](log-media.md) with **Type** = VID.
+1. A title has been [created](/vault/create/).
+2. Video media is [logged](/vault/log-media/) with **Type** = VID.
 3. For subtitles: matching **Content** on video and subtitle assets, and a **Subtitles** language tag on the subtitle media.
 
 ## Create stream
@@ -17,7 +17,7 @@ Send VOD web streams so recipients can play tagged Vault media in a browser. Opt
 3. Click **Stream**, or right-click → **Stream**.
 4. Media appears in the streaming cart on the right:
 
-![](../assets/vault_stream-867e15151578.png)
+![](/assets/vault_stream-867e15151578.png)
 
 *Streamable media in the cart, ready to submit.*
 
@@ -31,7 +31,7 @@ A browser window opens on the standard delivery page for recipients, expiry, and
 
 By default, VOD download is disabled — recipients can watch but not download. Enable **Enable media download** if they should also download:
 
-![](../assets/vault_stream-d3b97948a86d.png)
+![](/assets/vault_stream-d3b97948a86d.png)
 
 ## Subtitles
 
@@ -45,6 +45,6 @@ Example:
 
 In the browser player, available subtitles appear on each playable file. Example with English subtitles:
 
-![](../assets/vault_stream-cba415948fae.png)
+![](/assets/vault_stream-cba415948fae.png)
 
-More on deliveries: [Create a delivery](../delivery/create.md). Recipients: [Receive a delivery](../delivery/receive.md).
+More on deliveries: [Create a delivery](/delivery/create/). Recipients: [Receive a delivery](/delivery/receive/).

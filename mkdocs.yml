@@ -60,7 +60,7 @@ nav:
       - Create: delivery/create.md
       - Manage: delivery/manage.md
       - Receive: delivery/receive.md
-  - File sharing:
+  - Collaboration:
       - file-sharing/index.md
       - Manage: file-sharing/manage.md
       - Access: file-sharing/access.md

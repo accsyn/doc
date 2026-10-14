@@ -11,7 +11,7 @@ Process tagged Vault media with the built-in transcoder — proxies, VOD variant
 
 Sign in to the Desktop App on a Cloud (non-BYOS) workspace, open the title, select media, then click **Process** (or right-click → **Process**):
 
-![](../assets/vault_process-33c9c12efced.png)
+![](/assets/vault_process-33c9c12efced.png)
 
 Selected media appears at the top; tabs below list actions (**Cancel** aborts).
 
@@ -19,13 +19,13 @@ Selected media appears at the top; tabs below list actions (**Cancel** aborts).
 
 Extract subclips and stills from a single media file. Also available from the proxy player via extract clip / still controls.
 
-See [Clip and still image extraction](clip-extract.md).
+See [Clip and still image extraction](/vault/clip-extract/).
 
 ## VOD export
 
 Package media for VOD platform ingest.
 
-See [Export](export.md).
+See [Export](/vault/export/).
 
 ## Transcode
 
@@ -104,4 +104,4 @@ Re-probe metadata, verify the file on disk, and re-sync proxies.
 
 Questions you cannot resolve: chat or email support.
 
-Next: [Web stream](stream.md) to recipients.
+Next: [Web stream](/vault/stream/) to recipients.

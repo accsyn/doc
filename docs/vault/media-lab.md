@@ -10,7 +10,7 @@ Media lab services operated by senior staff with 25+ years of media industry exp
 
 Accsyn partners with Swedish provider FyraK Media / FilmTech to offer lab services alongside the Cloud Vault and delivery platform.
 
-Work rides on accsyn Delivery — smooth handoff of material and a straightforward experience for large packages (including [ASC](../whitepaper.md) when using the Desktop App).
+Work rides on accsyn Delivery — smooth handoff of material and a straightforward experience for large packages (including [ASC](/whitepaper/) when using the Desktop App).
 
 ## Get started
 
@@ -48,4 +48,4 @@ Paying workspace customers can run lab jobs in a more controlled way:
 
 Explore offerings at <https://accsyn.com/lab>.
 
-Related: [Place a Media Lab order](order.md) from the Desktop App.
+Related: [Place a Media Lab order](/vault/order/) from the Desktop App.

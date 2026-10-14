@@ -1,8 +1,8 @@
 # Home
 
-Documentation and support for the accsyn file I/O platform — deliveries, file sharing, Media Vault, BYOS, and developer automation — underpinned by the accelerated [ASC](whitepaper.md) protocol.
+Documentation and support for the accsyn file I/O platform — deliveries, file sharing, Media Vault, BYOS, and developer automation — underpinned by the accelerated [ASC](/whitepaper/) protocol.
 
-New here? Start with the [Introduction](introduction.md) or a [free trial](trial.md).
+New here? Start with the [Introduction](/introduction/) or a [free trial](/trial/).
 
 ## Status
 
@@ -126,33 +126,33 @@ Guides for end users, operators, administrators, and developers.
 
 <div class="grid cards" markdown>
 
--   ![](assets/index-6e20a48ac536.png)
+-   ![](/assets/index-6e20a48ac536.png)
 
-    **[Account](account.md)**
+    **[Account](/account/)**
 
     ---
 
     Sign up and manage your personal accsyn account.
 
--   ![](assets/index-f98c49c9650b.png)
+-   ![](/assets/index-f98c49c9650b.png)
 
-    **[Download a delivery](delivery/receive.md)**
+    **[Download a delivery](/delivery/receive/)**
 
     ---
 
     Action an accsyn delivery or upload request.
 
--   ![](assets/index-8f6c501ebf13.png)
+-   ![](/assets/index-8f6c501ebf13.png)
 
-    **[Access shared material](file-sharing/access.md)**
+    **[Access shared material](/file-sharing/access/)**
 
     ---
 
     Access shared folders with the Desktop App (ASC transfers).
 
--   ![](assets/index-1917f2c8f89d.png)
+-   ![](/assets/index-1917f2c8f89d.png)
 
-    **[Automated deliveries & local shares](admin/hosts.md)**
+    **[Automated deliveries & local shares](/admin/hosts/)**
 
     ---
 
@@ -164,33 +164,33 @@ Guides for end users, operators, administrators, and developers.
 
 <div class="grid cards" markdown>
 
--   ![](assets/index-972c270a41d9.png)
+-   ![](/assets/index-972c270a41d9.png)
 
-    **[Introduction](introduction.md)**
+    **[Introduction](/introduction/)**
 
     ---
 
     Platform overview for production (BYOS) and distribution (Cloud Vault).
 
--   ![](assets/index_asc-protocol.png)
+-   ![](/assets/index_asc-protocol.png)
 
-    **[Whitepaper](whitepaper.md)**
+    **[Whitepaper](/whitepaper/)**
 
     ---
 
     ASC protocol, security architecture, and transfer lifecycle.
 
--   ![](assets/index-5581beaab5c9.png)
+-   ![](/assets/index-5581beaab5c9.png)
 
-    **[Specifications](specifications.md)**
+    **[Specifications](/specifications/)**
 
     ---
 
     Technical feature and platform specifications.
 
--   ![](assets/index-67d4a6eb784d.png)
+-   ![](/assets/index-67d4a6eb784d.png)
 
-    **[Changelog](changelog.md)**
+    **[Changelog](/changelog/)**
 
     ---
 
@@ -202,29 +202,29 @@ Guides for end users, operators, administrators, and developers.
 
 #### Deliveries
 
-Send large folders over a link, or request uploads — ASC-accelerated with the Desktop App.
+Send large folders over a link, or request uploads - fast and secure.
 
 <div class="grid cards" markdown>
 
--   ![](assets/index-a8966b1aa43f.png)
+-   ![](/assets/index-a8966b1aa43f.png)
 
-    **[Introduction](delivery/index.md)**
+    **[Introduction](/delivery/)**
 
     ---
 
     High-speed file delivery subsystem.
 
--   ![](assets/index-4b07fa129aa3.png)
+-   ![](/assets/index-4b07fa129aa3.png)
 
-    **[Create delivery](delivery/create.md)**
+    **[Create delivery](/delivery/create/)**
 
     ---
 
     Create a delivery or upload request (including API).
 
--   ![](assets/index-93cbc8a542b9.png)
+-   ![](/assets/index-93cbc8a542b9.png)
 
-    **[Manage deliveries](delivery/manage.md)**
+    **[Manage deliveries](/delivery/manage/)**
 
     ---
 
@@ -232,23 +232,23 @@ Send large folders over a link, or request uploads — ASC-accelerated with the 
 
 </div>
 
-#### File sharing
+#### Collaboration
 
-Share specific project subfolders on production storage with partners — ACL-controlled, ASC transfers.
+Share specific project subfolders on production storage with partners, powered by the ASC protocol.
 
 <div class="grid cards" markdown>
 
--   ![](assets/index-111204e33993.jpg)
+-   ![](/assets/index-111204e33993.jpg)
 
-    **[Introduction](file-sharing/index.md)**
+    **[Introduction](/file-sharing/)**
 
     ---
 
     File sharing as an FTP replacement on Cloud or BYOS.
 
--   ![](assets/index-f7999a9ec454.png)
+-   ![](/assets/index-f7999a9ec454.png)
 
-    **[Manage file sharing](file-sharing/manage.md)**
+    **[Manage file sharing](/file-sharing/manage/)**
 
     ---
 
@@ -262,65 +262,65 @@ Tag and manage masters on accsyn Cloud — proxies, streaming, delivery, and lab
 
 <div class="grid cards" markdown>
 
--   ![](assets/index-f3877d251eda.png)
+-   ![](/assets/index-f3877d251eda.png)
 
-    **[Introduction](vault/index.md)**
+    **[Introduction](/vault/)**
 
     ---
 
     Media Vault overview (Cloud only).
 
--   ![](assets/index-c85f325cbf6d.png)
+-   ![](/assets/index-c85f325cbf6d.png)
 
-    **[Create title](vault/create.md)**
+    **[Create title](/vault/create/)**
 
     ---
 
     Create your first title and folder layout.
 
--   ![](assets/index-5c8d745c5b20.png)
+-   ![](/assets/index-5c8d745c5b20.png)
 
-    **[Log title media](vault/log-media.md)**
+    **[Log title media](/vault/log-media/)**
 
     ---
 
     Upload and tag media into the Vault.
 
--   ![](assets/index-92a05344ad02.png)
+-   ![](/assets/index-92a05344ad02.png)
 
-    **[Work with media](vault/work.md)**
+    **[Work with media](/vault/work/)**
 
     ---
 
     Browse and manage titles and tagged media.
 
--   ![](assets/index-390bdef6cc76.png)
+-   ![](/assets/index-390bdef6cc76.png)
 
-    **[Deliver title media](vault/deliver.md)**
+    **[Deliver title media](/vault/deliver/)**
 
     ---
 
     Deliver Vault media and request uploads to a title.
 
--   ![](assets/index-0448d96daf4f.png)
+-   ![](/assets/index-0448d96daf4f.png)
 
-    **[Transcode media](vault/process.md)**
+    **[Transcode media](/vault/process/)**
 
     ---
 
     Proxies, VOD, and the Media Processor.
 
--   ![](assets/index-ceab9ad46018.png)
+-   ![](/assets/index-ceab9ad46018.png)
 
-    **[Stream title](vault/stream.md)**
+    **[Stream title](/vault/stream/)**
 
     ---
 
     Browser streaming deliveries from a title.
 
--   ![](assets/index-cfd38cd1a082.png)
+-   ![](/assets/index-cfd38cd1a082.png)
 
-    **[Media Lab services](vault/media-lab.md)**
+    **[Media Lab services](/vault/media-lab/)**
 
     ---
 
@@ -332,25 +332,25 @@ Tag and manage masters on accsyn Cloud — proxies, streaming, delivery, and lab
 
 <div class="grid cards" markdown>
 
--   ![](assets/index-f385b76f1d64.png)
+-   ![](/assets/index-f385b76f1d64.png)
 
-    **[Job monitoring & queues](manage/job.md)**
+    **[Job monitoring & queues](/manage/job/)**
 
     ---
 
     Inspect, prioritise, and manage transfer and compute jobs.
 
--   ![](assets/index_transfer.png)
+-   ![](/assets/index_transfer.png)
 
-    **[Transfer](manage/transfer.md)**
+    **[Transfer](/manage/transfer/)**
 
     ---
 
     Push/pull between HQ, sites, and users with mapped shares.
 
--   ![](assets/index-06f6c6fd2a0e.png)
+-   ![](/assets/index-06f6c6fd2a0e.png)
 
-    **[Troubleshooting](troubleshooting.md)**
+    **[Troubleshooting](/troubleshooting/)**
 
     ---
 
@@ -365,54 +365,54 @@ Tag and manage masters on accsyn Cloud — proxies, streaming, delivery, and lab
 <div class="grid cards" markdown>
 
 
--   ![](assets/index-948bb56a9908.png)
+-   ![](/assets/index-948bb56a9908.png)
 
-    **[Users](admin/user.md)**
+    **[Users](/admin/user/)**
 
     ---
 
     Manage workspace users and roles.
 
--   ![](assets/index-3cbbdd39bf58.png)
+-   ![](/assets/index-3cbbdd39bf58.png)
 
-    **[Queues](admin/queue.md)**
+    **[Queues](/admin/queue/)**
 
     ---
 
     Configure workspace queues and priorities.
 
--   ![](assets/index-2c68add78ff4.png)
+-   ![](/assets/index-2c68add78ff4.png)
 
-    **[Clients](admin/client.md)**
+    **[Clients](/admin/client/)**
 
     ---
 
     Audit registered file-transfer clients.
 
--   ![](assets/index-7c8a8bc2e8d1.png)
+-   ![](/assets/index-7c8a8bc2e8d1.png)
 
-    **[Storage](admin/storage.md)**
+    **[Storage](/admin/storage/)**
 
     ---
 
     Configure volumes and shared folders.
 
--   ![](assets/index-fdf91b00d07e.png)
+-   ![](/assets/index-fdf91b00d07e.png)
 
-    **[Workspace settings](admin/settings.md)**
+    **[Workspace settings](/admin/settings/)**
 
     ---
 
     Global workspace settings.
 
--   ![](assets/index-9172cbe36fa4.png)
+-   ![](/assets/index-9172cbe36fa4.png)
 
-    **[Start a free trial](trial.md)**
+    **[Start a free trial](/trial/)**
 
     ---
 
     Try accsyn with your organisation.
-    
+
 </div>
 
 #### BYOS — Bring Your Own Storage
@@ -421,33 +421,33 @@ Run servers on your office or cloud premises for production I/O.
 
 <div class="grid cards" markdown>
 
--   ![](assets/index-c7948a14edef.png)
+-   ![](/assets/index-c7948a14edef.png)
 
-    **[Set up BYOS](admin/byos/index.md)**
+    **[Set up BYOS](/admin/byos/)**
 
     ---
 
     Install and licence BYOS workspaces.
 
--   ![](assets/index-8a99ee601ff1.png)
+-   ![](/assets/index-8a99ee601ff1.png)
 
-    **[Servers](admin/byos/server.md)**
+    **[Servers](/admin/byos/server/)**
 
     ---
 
     Install and manage storage and site servers.
 
--   ![](assets/index-6d4e93031185.png)
+-   ![](/assets/index-6d4e93031185.png)
 
-    **[Sites](admin/byos/site.md)**
+    **[Sites](/admin/byos/site/)**
 
     ---
 
     Remote offices and cloud sites.
 
--   ![](assets/index-f7c60344d030.png)
+-   ![](/assets/index-f7c60344d030.png)
 
-    **[Engines](admin/byos/engine.md)**
+    **[Engines](/admin/byos/engine/)**
 
     ---
 
@@ -461,45 +461,47 @@ Automate transfers, hooks, publish workflows, and multi-site farms.
 
 <div class="grid cards" markdown>
 
--   **[Developer Hub](developer/index.md)**
+-   ![](/assets/index_developer_hub.png)
+
+    **[Developer Hub](/developer/)**
 
     ---
 
     Automate file transfers and compute in your pipeline.
 
--   ![](assets/index-074cc716c6be.png)
+-   ![](/assets/index-074cc716c6be.png)
 
-    **[Python API](developer/python-api.md)**
+    **[Python API](/developer/python-api/)**
 
     ---
 
     API keys, install, and getting started with Python.
 
--   ![](assets/index-e4f521ef2ead.png)
+-   ![](/assets/index-e4f521ef2ead.png)
 
-    **[Hooks (BYOS)](developer/hooks.md)**
+    **[Hooks (BYOS)](/developer/hooks/)**
 
     ---
 
     Run scripts on transfer and job events.
 
--   ![](assets/index-84bf08d8d859.png)
+-   ![](/assets/index-84bf08d8d859.png)
 
-    **[Render farm (BYOS)](developer/farm.md)**
+    **[Render farm (BYOS)](/developer/farm/)**
 
     ---
 
     Deploy compute across one or more sites.
 
--   ![](assets/index-357bb722b099.png)
+-   ![](/assets/index-357bb722b099.png)
 
-    **[Publish (BYOS)](developer/publish.md)**
+    **[Publish (BYOS)](/developer/publish/)**
 
     ---
 
     Validate and ingest vendor submissions.
 
--   **[Job JSON specification](developer/job-specification.md)**
+-   **[Job JSON specification](/developer/job-specification/)**
 
     ---
 
@@ -511,19 +513,19 @@ Automate transfers, hooks, publish workflows, and multi-site farms.
 
 <div class="grid cards" markdown>
 
--   **[Warning codes](warnings.md)**
+-   **[Warning codes](/warnings/)**
 
     ---
 
     Warning codes shown in the product.
 
--   **[Error codes](errors.md)**
+-   **[Error codes](/errors/)**
 
     ---
 
     Error codes shown in the product.
 
--   **[Internal settings](settings.md)**
+-   **[Internal settings](/settings/)**
 
     ---
 
@@ -535,33 +537,33 @@ Automate transfers, hooks, publish workflows, and multi-site farms.
 
 <div class="grid cards" markdown>
 
--   ![](assets/index-2811350bd190.png)
+-   ![](/assets/index-2811350bd190.png)
 
-    **[FTP server replacement](tutorials/ftp-server-replacement.md)**
+    **[FTP server replacement](/tutorials/ftp-server-replacement/)**
 
     ---
 
     Replace FTP with ACL sharing and ASC performance.
 
--   ![](assets/index-766af812d1b7.jpg)
+-   ![](/assets/index-766af812d1b7.jpg)
 
-    **[Outsourcing pipeline](tutorials/outsourcing-pipeline.md)**
+    **[Outsourcing pipeline](/tutorials/outsourcing-pipeline/)**
 
     ---
 
     Unattended vendor send and publish ingest.
 
--   ![](assets/index-6d179258cb70.png)
+-   ![](/assets/index-6d179258cb70.png)
 
-    **[Remote office sync](tutorials/remote-office-sync.md)**
+    **[Remote office sync](/tutorials/remote-office-sync/)**
 
     ---
 
     Automate sync between offices and cloud with the Python API.
 
--   ![](assets/index-9b4e5ebdf324.jpg)
+-   ![](/assets/index-9b4e5ebdf324.jpg)
 
-    **[Film festival](tutorials/film-festival.md)**
+    **[Film festival](/tutorials/film-festival/)**
 
     ---
 
@@ -574,7 +576,7 @@ Automate transfers, hooks, publish workflows, and multi-site farms.
 - **accsyn Cloud backend** — Cloud software that schedules transfer jobs and hosts media. Each customer has an isolated backend instance and database.
 - **accsyn daemon** — Background Java service on a file server or machine with disk access (also a “server” endpoint). Used for BYOS, sites, and User servers.
 - **accsyn Desktop App** — Java desktop app (Windows, macOS, Linux) for users to upload and download (a “client” endpoint).
-- **ASC** — Accsyn Copy Protocol — proprietary accelerated, encrypted file transfer protocol.
+- **ASC** — Accelerated Secure Copy protocol — proprietary accelerated, encrypted file transfer protocol.
 - **ACL** — Access Control List — which users may access which paths on a share.
 - **Cloud storage** — Default volume on standard Cloud workspaces.
 - **Delivery** — Package of files/folders for one or more recipients (ASC or HTTPS).

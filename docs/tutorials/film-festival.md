@@ -13,7 +13,7 @@ This tutorial will walk through how to set up accsyn for acting as the central f
 - Creating a stream.
 - Deliver to cinema.
 
-![](../assets/tutorials_film-festival-942b784126bc.png)
+![](/assets/tutorials_film-festival-942b784126bc.png)
 
 Example film festival workflow from Stockholm Film Festival.  
 
@@ -21,7 +21,7 @@ Example film festival workflow from Stockholm Film Festival.
 
 ## Creating your new accsyn workspace
 
-The first step would be to create an accsyn Cloud Workspace, detailed instructions can be found [here](../trial.md):
+The first step would be to create an accsyn Cloud Workspace, detailed instructions can be found [here](/trial/):
 
 - Open <https://accsyn.io/trial>.
 - You will first be asked to sign up for your personal accsyn account. If you already have one, click Log in link.
@@ -42,7 +42,7 @@ An accsyn title is a project folder beneath the default cloud storage volume des
 
 ### Install the accsyn Desktop app
 
-To start managing your festival titles and media, download the accsyn desktop app. Go to <https://accsyn.io/vault> and you will be given download links and clear directions. If you have problems installing or using the app, find more detailed assistance [here](../desktop-app.md).
+To start managing your festival titles and media, download the accsyn desktop app. Go to <https://accsyn.io/vault> and you will be given download links and clear directions. If you have problems installing or using the app, find more detailed assistance [here](/desktop-app/).
 
 *NOTE: Currently, the accsyn web app does not support managing media. This is subject to change in the near future.*
 
@@ -60,7 +60,7 @@ To start managing your festival titles and media, download the accsyn desktop ap
 - [Non IMDb] Enter a name of the project folder, try to avoid using non-US letters such as å, ô and so on to maintain compatibility with transcoding software and file systems. The folder can be renamed afterwards. [MyShortFilm]
 - Check Apply title template folder structure to have a set of well-defined subfolders created (recommended). Click Next.
 
-![](../assets/tutorials_film-festival-07df73589de7.png)
+![](/assets/tutorials_film-festival-07df73589de7.png)
 
 - Enter/check the full Name of the movie [Babystar]
 - (Optional) Fill in more title metadata as needed, this can be changed at any time.
@@ -115,19 +115,19 @@ Now you want the contributor to upload the movie to you - DCP and Master, here w
 - (Optional) Set the expiry date.
 - Click Send request to have the user invited to your workspace and have a link with clear upload instructions sent to them.
 
-![](../assets/tutorials_film-festival-b2c48748be06.png)
+![](/assets/tutorials_film-festival-b2c48748be06.png)
 
 Go to <https://accsyn.io/requested> to get an overview of your current upload requests, open a request to monitor progress of DCP upload:
 
-![](../assets/tutorials_film-festival-20c53b706cd7.png)
+![](/assets/tutorials_film-festival-20c53b706cd7.png)
 
 ## Ingest uploaded media
 
-Once the material is uploaded it is time to ingest it into the vault as media, with metadata extraction and validation. Media in accsyn is simply a file or a folder that denotes final deliverable/archivable media of any kind such as a master, screening media, subtitles or sales material. More information about the media vault feature in accsyn can be found [here](../vault/index.md).
+Once the material is uploaded it is time to ingest it into the vault as media, with metadata extraction and validation. Media in accsyn is simply a file or a folder that denotes final deliverable/archivable media of any kind such as a master, screening media, subtitles or sales material. More information about the media vault feature in accsyn can be found [here](/vault/).
 
   
 
-At this stage, before ingesting media, you might involve your lab provider if you need to perform additional mastering. Use [File Sharing](../file-sharing/index.md) within accsyn to collaborate with your lab, providing a simple yet effective file transfer workflow similar to FTP.
+At this stage, before ingesting media, you might involve your lab provider if you need to perform additional mastering. Use [File Sharing](/file-sharing/) within accsyn to collaborate with your lab, providing a simple yet effective file transfer workflow similar to FTP.
 
   
 
@@ -165,7 +165,7 @@ In the same spirit, you ingest the media for screening:
 
 An H264 low resolution (1280x720) proxy will be transcoded for preview in the app and the web.
 
-![](../assets/tutorials_film-festival-348bdc328cd9.png)
+![](/assets/tutorials_film-festival-348bdc328cd9.png)
 
 To monitor the proxy transcode / validation progress, go to Jobs at the bottom area of desktop app. You can also monitor the transcode jobs at <https://accsyn.io/jobs>.
 
@@ -186,7 +186,7 @@ Go through this procedure if you need to stream the title at your festival, eith
 5. The stream will be created and you will be redirected to the web browser to finish it up - enter recipient email addresses.
 6. If you want anyone to watch the stream using the link - check Allow any accsyn user with a link to watch this stream.
 
-![](../assets/tutorials_film-festival-0d137c46e295.png)
+![](/assets/tutorials_film-festival-0d137c46e295.png)
 
 Click Send stream to send the stream to recipients. In parallel, a streaming proxy (HLS format) will be transcoded in the background and made available to recipients as soon as it has finished transcoding.
 

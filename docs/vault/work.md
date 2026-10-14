@@ -1,6 +1,6 @@
 # Work with titles and media
 
-This guide describes the Vault view in the Desktop App — how to navigate, find titles and tagged media, and manage your library on Cloud storage. Uploads and downloads of large packages use [ASC](../whitepaper.md) through the app.
+This guide describes the Vault view in the Desktop App — how to navigate, find titles and tagged media, and manage your library on Cloud storage. Uploads and downloads of large packages use [ASC](/whitepaper/) through the app.
 
 *Note: The Vault view is not available on BYOS workspaces.*
 
@@ -8,7 +8,7 @@ This guide describes the Vault view in the Desktop App — how to navigate, find
 
 After sign-in you land in the Vault, with titles in a grid:
 
-![](../assets/vault_work-00d61103c78c.png)
+![](/assets/vault_work-00d61103c78c.png)
 
 *Breakdown of the Media Vault UI.*
 
@@ -38,8 +38,8 @@ Top left: home and path within the Vault (usually starting at the selected title
 
 ### 6 — Titles toolbar
 
-- **NEW TITLE** — Create a title/project; see [Create title](create.md).
-- **Order** — Place a Media Lab order; see [Media Lab](media-lab.md).
+- **NEW TITLE** — Create a title/project; see [Create title](/vault/create/).
+- **Order** — Place a Media Lab order; see [Media Lab](/vault/media-lab/).
 - Reload titles.
 - Help — opens this documentation.
 
@@ -63,7 +63,7 @@ Filter the listing by type.
 
 ### 10 — Title listing
 
-Titles matching type, search, and grouping. Click a title to open it; use **+** to [create a title](create.md).
+Titles matching type, search, and grouping. Click a title to open it; use **+** to [create a title](/vault/create/).
 
 Edit a title by clicking its name when the pen icon appears on hover.
 
@@ -71,13 +71,13 @@ Edit a title by clicking its name when the pen icon appears on hover.
 
 At the bottom of the listing, click the placeholder to create a title/project:
 
-![](../assets/vault_work-9899f8837d88.png)
+![](/assets/vault_work-9899f8837d88.png)
 
 ## Title view — files
 
 Default title view: banner plus file browser.
 
-![](../assets/vault_work-c341bdb04f3d.png)
+![](/assets/vault_work-c341bdb04f3d.png)
 
 *Example: title Files view.*
 
@@ -113,7 +113,7 @@ Files in the current title folder.
 
 - Create folder
 - **Request upload** — send an upload link to this folder
-- **Order** — Media Lab order for this title; see [Media Lab](media-lab.md)
+- **Order** — Media Lab order for this title; see [Media Lab](/vault/media-lab/)
 - **Upload** — upload and ingest media
 - Search files
 - Reload (the view also refreshes about every 10 seconds)
@@ -128,21 +128,21 @@ Files in the current title folder.
 
 **File and media actions** (when items are selected):
 
-![](../assets/vault_work-aab802a7f751.png)
+![](/assets/vault_work-aab802a7f751.png)
 
 - **×** — Clear selection
 - Rename / Move / Delete (media can also be un-ingested from Media view without deleting the file)
-- **Deliver** — see [Deliver media](deliver.md)
-- **Stream** — see [Stream media](stream.md)
-- **Process** — see [Media processor](process.md)
-- **Order** — see [Media Lab](media-lab.md)
+- **Deliver** — see [Deliver media](/vault/deliver/)
+- **Stream** — see [Stream media](/vault/stream/)
+- **Process** — see [Media processor](/vault/process/)
+- **Order** — see [Media Lab](/vault/media-lab/)
 - **Download** — download to your computer (ASC via Desktop App)
 
 ## Title view — media
 
 All media ingested under the title:
 
-![](../assets/vault_work-0337f5d79363.png)
+![](/assets/vault_work-0337f5d79363.png)
 
 ### Search media
 
@@ -213,8 +213,8 @@ Browse and manage the whole Cloud volume — folders outside titles for deliveri
 
 Browse all tagged media across titles — advanced search and library-wide monitoring.
 
-Next: [Process / export](process.md) media from the Vault.
+Next: [Process / export](/vault/process/) media from the Vault.
 
 **Related articles:**
 
-[Lab services](media-lab.md) — help with ingest, deliverables, QC, transcoding, and SVOD/TVOD export.
+[Lab services](/vault/media-lab/) — help with ingest, deliverables, QC, transcoding, and SVOD/TVOD export.

@@ -2,9 +2,9 @@
 
 <button type="button" class="md-button whitepaper-print-button" onclick="window.print()">Print / Save as PDF</button>
 
-ASC (accsyn Copy) is accsyn's proprietary, accelerated peer-to-peer file transfer protocol. It is designed to move large files and large file sets efficiently between accsyn endpoints while the accsyn cloud control plane handles orchestration, authorization, scheduling, and audit.
+ASC (Accelerated Secure Copy) is accsyn's proprietary, accelerated peer-to-peer file transfer protocol. It is designed to move large files and large file sets efficiently between accsyn endpoints while the accsyn cloud control plane handles orchestration, authorization, scheduling, and audit.
 
-This page consolidates the ASC protocol reference and the former accsyn Security Whitepaper. It describes the protocol, security architecture, transfer lifecycle, job model, and operational tuning for technical decision-makers. For the complete setting reference, see [Internal settings](settings.md).
+This page consolidates the ASC protocol reference and the former accsyn Security Whitepaper. It describes the protocol, security architecture, transfer lifecycle, job model, and operational tuning for technical decision-makers. For the complete setting reference, see [Internal settings](/settings/).
 
 ## Scope and security objectives
 
@@ -32,7 +32,7 @@ When no transfer is active, ASC endpoints maintain outbound HTTPS/TLS control-pl
 
 Authentication is delegated to the configured identity service, including accsyn accounts and supported external identity providers such as Google and Microsoft. The endpoint presents an identity token when communicating with the control plane; accsyn does not distribute a reusable user password to transfer peers.
 
-![](assets/whitepaper_transfer-schematics_standby-mode.png)
+![](/assets/whitepaper_transfer-schematics_standby-mode.png)
 
 ### File-transfer state
 
@@ -48,7 +48,7 @@ A transfer is initiated as follows:
 
 This on-demand model avoids exposing a permanently listening ASC service.
 
-![](assets/whitepaper_transfer-schematics_active-mode.png)
+![](/assets/whitepaper_transfer-schematics_active-mode.png)
 
 
 ### Data location and transfer paths
@@ -134,7 +134,7 @@ Cloud infrastructure is hosted within the European Union in ISO/IEC 27001-certif
 
 User authentication is handled through the configured identity provider. Accsyn supports its own account flow and federation with Google and Microsoft. Authentication produces a time-limited token used by clients when calling the control plane; users do not send their account password to the remote transfer endpoint.
 
-Workspace roles, share permissions, endpoint authorization, and job policy determine whether a user may initiate or receive a transfer. Multi-factor authentication can be enforced at workspace or role level. See [Internal settings](settings.md) for the current authentication controls.
+Workspace roles, share permissions, endpoint authorization, and job policy determine whether a user may initiate or receive a transfer. Multi-factor authentication can be enforced at workspace or role level. See [Internal settings](/settings/) for the current authentication controls.
 
 ### On-demand listener
 
@@ -303,8 +303,8 @@ Task priority and dependencies are task attributes rather than `task_*` settings
 
 ## Related documentation
 
-- [Internal settings](settings.md)
-- [Manage jobs](manage/job.md)
-- [Queue administration](admin/queue.md)
-- [Job specification](developer/job-specification.md)
-- [Client administration](admin/client.md)
+- [Internal settings](/settings/)
+- [Manage jobs](/manage/job/)
+- [Queue administration](/admin/queue/)
+- [Job specification](/developer/job-specification/)
+- [Client administration](/admin/client/)

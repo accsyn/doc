@@ -7,7 +7,7 @@ Services and pricing: [Lab services](https://accsyn.com/lab)
 **Preparations**
 
 1. Sign in with the Desktop App.
-2. Have a [title created](create.md).
+2. Have a [title created](/vault/create/).
 3. Upload the media related to the order (ASC via Desktop App for large packages).
 4. Some services require ingested / tagged media — see below.
 
@@ -21,13 +21,13 @@ Example: order a **Media Vault ingestion** job so lab staff organise (tag) and i
 
 Choose **Media Vault ingestion**:
 
-![](../assets/vault_order-644b8d23c358.png)
+![](/assets/vault_order-644b8d23c358.png)
 
 *Media Lab order dialog.*
 
 Describe how you want files ingested (purpose, categories, and so on):
 
-![](../assets/vault_order-9cda038d0996.png)
+![](/assets/vault_order-9cda038d0996.png)
 
 Click **Place Order**. You and the lab team receive email with an order number and details.
 

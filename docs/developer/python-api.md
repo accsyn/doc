@@ -2,13 +2,13 @@
 
 The accsyn Python API facilitates programmable file transfers with Python (v3).
 
-*Important Note: API: is NOT available for Cloud Essentials or [BYOS](../admin/byos/index.md) Lite type workspaces.*
+*Important Note: API: is NOT available for Cloud Essentials or [BYOS](/admin/byos/) Lite type workspaces.*
 
 ## How to create and manage API keys
 
 To create a new API key, open <https://accsyn.io/developer> in your browser. This page is available from the user menu in the top right corner, "Developer" menu entry:
 
-![](../assets/developer_python-api-bc7465802785.png)
+![](/assets/developer_python-api-bc7465802785.png)
 
 1. Click Create API Key button.
 2. (Optional) Choose the lifetime of the key, the IP(s) to restrict it to and permissions.
@@ -102,10 +102,10 @@ Access source code on GitHub:
 
 ## Further resources
 
-[Job JSON Spec](job-specification.md)
+[Job JSON Spec](/developer/job-specification/)
 
 Specification of accsyn job JSON format
 
-[Tutorial | Remote Office Sync](../tutorials/remote-office-sync.md)
+[Tutorial | Remote Office Sync](/tutorials/remote-office-sync/)
 
 Learn how to use the accsyn Python API to automate file synchronisation between your offices and/or cloud storage.

@@ -2,15 +2,15 @@
 
 This guide is for end users who have been granted download and/or upload access to an accsyn shared folder or collection, and who are using the Desktop App for the first time.
 
-You typically get access to a **specific project subfolder** on production storage — not the whole disk. Downloads and uploads run over the secure, accelerated [ASC](../whitepaper.md) protocol.
+You typically get access to a **specific project subfolder** on production storage — not the whole disk. Downloads and uploads run over the secure, accelerated [ASC](/whitepaper/) protocol.
 
-**Important:** If you received a **delivery**, use the link in the delivery email and follow [Receive a delivery](../delivery/receive.md). The Desktop App here is for **permanent** (or long-lived) shared folders and collections on accsyn storage.
+**Important:** If you received a **delivery**, use the link in the delivery email and follow [Receive a delivery](/delivery/receive/). The Desktop App here is for **permanent** (or long-lived) shared folders and collections on accsyn storage.
 
 ## Email notification
 
 When someone grants you access to a folder in an accsyn workspace, you should receive an email:
 
-![](../assets/file-sharing_access-076839f5d814.png)
+![](/assets/file-sharing_access-076839f5d814.png)
 
 *Example of a file-sharing email notification.*
 
@@ -22,14 +22,14 @@ If you received no email, sign up at <https://accsyn.com/signup> with the same a
 
 ## Installing the accsyn Desktop App
 
-Follow [Install Desktop App](../desktop-app.md).
+Follow [Install Desktop App](/desktop-app/).
 
 ## Downloading files
 
 1. Launch the Desktop App.
 2. Sign in with the email address the share was sent to. You should see notifications for accessible items:
 
-![](../assets/file-sharing_access.png)
+![](/assets/file-sharing_access.png)
 
 *Example: Desktop App with two newly accessible shared folders.*
 
@@ -39,7 +39,7 @@ Follow [Install Desktop App](../desktop-app.md).
 
 4. Select which files and folders to download and the local destination:
 
-![](../assets/file-sharing_access-33132e3cb1c5.png)
+![](/assets/file-sharing_access-33132e3cb1c5.png)
 
 *Example: accsyn download dialog.*
 
@@ -51,7 +51,7 @@ Monitor progress in **My jobs** at the bottom of the app — ETR, and clues if t
 
 Launch the app, sign in, and click **Upload**:
 
-![](../assets/file-sharing_access-c37c9de72a51.png)
+![](/assets/file-sharing_access-c37c9de72a51.png)
 
 *Example: upload tool.*
 
@@ -61,7 +61,7 @@ Choose the file(s) and/or folder(s), set **Destination** to the shared folder, t
 
 If you are used to FTP clients, use the **Transfer** view:
 
-![](../assets/file-sharing_access-b1192ae573ec.png)
+![](/assets/file-sharing_access-b1192ae573ec.png)
 
 Source on the left, destination on the right. Click the green arrow in the middle to start the transfer.
 
@@ -143,7 +143,7 @@ Yes. Access lasts until revoked. You may install the app on as many machines as 
 
 **Is the transfer encrypted?**
 
-Yes. Accsyn uses AES encryption (AES-128 by default) and accelerates transfers with the proprietary [ASC](../whitepaper.md) protocol — suited to large folders and many files.
+Yes. Accsyn uses AES encryption (AES-128 by default) and accelerates transfers with the proprietary [ASC](/whitepaper/) protocol — suited to large folders and many files.
 
 **The Desktop App freezes or crashes**
 
@@ -153,8 +153,8 @@ Further questions: chat or [support@accsyn.com](mailto:support@accsyn.com).
 
 **Related articles:**
 
-[File sharing](index.md) — share folders with employees and external users.
+[Collaboration](/file-sharing/) — share folders with employees and external users.
 
-[Hosts](../admin/hosts.md) — automated deliveries and locally mapped shares.
+[Hosts](/admin/hosts/) — automated deliveries and locally mapped shares.
 
-[Python API](../developer/python-api.md) — automate shares and ACLs.
+[Python API](/developer/python-api/) — automate shares and ACLs.

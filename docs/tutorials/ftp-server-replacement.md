@@ -56,14 +56,14 @@ This tutorial will cover:
 
 ## Schematics
 
-![](../assets/tutorials_ftp-server-replacement-0e81a7fe8702.png)
+![](/assets/tutorials_ftp-server-replacement-0e81a7fe8702.png)
 
 ## Setting up your workspace
 
 The first step is to create your own accsyn Workspace in trial mode, the whole process is described in detail [here](https://sites.google.com/filmhubsoftware.com/help/trial):
 
 1. Open <https://accsyn.io/trial> in your web browser, you will be asked to sign up for your personal accsyn account (email address identifier).
-2. Download and log on to the accsyn [Desktop app](../desktop-app.md), the app is used for managing file sharing.
+2. Download and log on to the accsyn [Desktop app](/desktop-app/), the app is used for managing file sharing.
 
 ## Setting up your own storage server (BYOS)
 
@@ -75,7 +75,7 @@ We assume you start off from the cloud workspace trial, skip this step if you al
 2. Click Setup BYOS now.
 3. You will be guided through the process of setting up your own server, you will be able to choose which network ports to use and the path to the local storage that will be deployed with accsyn.
 
-More detailed information on BYOS workspace setup, can be found [here](../admin/byos/index.md).
+More detailed information on BYOS workspace setup, can be found [here](/admin/byos/).
 
 ## Introduction to accsyn File Sharing
 
@@ -102,7 +102,7 @@ The accsyn Delivery subsystem goes hand-in-hand with File Sharing, and provides 
 
 accsyn Delivery also supports upload requests - a link sent to a user where they are instructed to upload files and/or folders to your storage.
 
-Find more information about the accsyn Delivery feature [here](../delivery/index.md).
+Find more information about the accsyn Delivery feature [here](/delivery/).
 
 ## Inviting an employee to your volume
 

@@ -1,12 +1,12 @@
 # Monitoring and queue management
 
-This guide explains how to monitor and manage ongoing accsyn jobs — file transfers and render/compute jobs. Transfers run over the secure, accelerated [ASC](../whitepaper.md) protocol (or HTTPS for web transfers).
+This guide explains how to monitor and manage ongoing accsyn jobs — file transfers and render/compute jobs. Transfers run over the secure, accelerated [ASC](/whitepaper/) protocol (or HTTPS for web transfers).
 
 Covered elsewhere:
 
-- [Monitor deliveries and upload requests](../delivery/manage.md)
-- [Monitor web streams](../vault/stream.md)
-- Render/compute farm monitoring — see [Developer Hub](../developer/index.md) and [Render farm](../developer/farm.md)
+- [Monitor deliveries and upload requests](/delivery/manage/)
+- [Monitor web streams](/vault/stream/)
+- Render/compute farm monitoring — see [Developer Hub](/developer/) and [Render farm](/developer/farm/)
 
 **Prerequisites**
 
@@ -19,7 +19,7 @@ Covered elsewhere:
 
 On the web, your current running job appears in the upper-right activity icon:
 
-![](../assets/manage_job-f038b0847e7d.png)
+![](/assets/manage_job-f038b0847e7d.png)
 
 It shows progress and ETR. If several jobs are running, the oldest (first submitted) is shown. Click the icon to open a drawer of your active and finished jobs.
 
@@ -30,14 +30,14 @@ In the Desktop App, open **MY JOBS** in the expandable bottom panel.
 Jobs are created when:
 
 - Someone uploads or downloads from a delivery, upload request, or web stream
-- You use the Desktop App for [File Sharing](../file-sharing/index.md) or submit a compute/render job
-- You use the API (Python/JS) — see [Developer Hub](../developer/index.md)
+- You use the Desktop App for [File Sharing](/file-sharing/) or submit a compute/render job
+- You use the API (Python/JS) — see [Developer Hub](/developer/)
 
 To monitor all ongoing and finished transfers, open the Jobs page at <https://accsyn.io/jobs>.
 
 The page lists file transfers and compute jobs, grouped by queue:
 
-![](../assets/manage_job-8cae36b217c6.png)
+![](/assets/manage_job-8cae36b217c6.png)
 
 Switch between active and finished (including aborted) jobs, group by queue (default) or status, and search.
 
@@ -93,7 +93,7 @@ Every job — including deliveries — is placed in a queue. If none is specifie
 Three standard queues ship with accsyn:
 
 1. **High** — priority 999  
-2. **Medium** — priority 500 (default)  
+2. **Medium** — priority 500 (default)
 3. **Low** — priority 1  
 
 ### Concurrent file transfers
@@ -118,7 +118,7 @@ Default pre-emption by job type:
 - **File transfers** — Interrupted immediately so higher-priority jobs can run.
 - **Renders** — Allowed to finish the current work before yielding.
 
-Configure workspace queues in [Queue administration](/admin/queue.md).
+Configure workspace queues in [Queue administration](/admin/queue/).
 
 ### (Advanced) Manage task states
 
@@ -138,11 +138,11 @@ Accsyn transfers are built to self-heal: after an interruption they retry with a
 - A transfer endpoint (client) goes offline or loses network
 - The storage volume goes offline, files disappear, or the volume runs out of space
 
-Retry count and delay are configured with `job_max_retries` and `job_autoretry_delay_s` at queue and workspace level. See [Internal settings](../settings.md) and the [Whitepaper](../whitepaper.md).
+Retry count and delay are configured with `job_max_retries` and `job_autoretry_delay_s` at queue and workspace level. See [Internal settings](/settings/) and the [Whitepaper](/whitepaper/).
 
 ## Manage transfers with the Python API
 
-File transfer jobs can be listed, created, paused, resumed, and aborted with the [accsyn Python API](../developer/python-api.md). Transfers use ASC (or HTTPS for web) between endpoints you specify with party and path notation.
+File transfer jobs can be listed, created, paused, resumed, and aborted with the [accsyn Python API](/developer/python-api/). Transfers use ASC (or HTTPS for web) between endpoints you specify with party and path notation.
 
 Example — create a transfer downloading from a shared folder to a local path:
 
@@ -162,6 +162,6 @@ session.update("Transfer", transfer["id"], {"status": "aborted"})
 
 List active transfers with `session.find("Transfer")`; pass `finished=True` for completed or aborted jobs.
 
-For source/destination notation, mirror paths, tasks, and queries, see the full [File Transfers](https://accsyn-python-api.readthedocs.io/en/latest/transfers.html) chapter. Getting started: [Developer Hub — Python API](../developer/python-api.md). Job submit examples also appear in [Job specification](../developer/job-specification.md).
+For source/destination notation, mirror paths, tasks, and queries, see the full [File Transfers](https://accsyn-python-api.readthedocs.io/en/latest/transfers.html) chapter. Getting started: [Developer Hub — Python API](/developer/python-api/). Job submit examples also appear in [Job specification](/developer/job-specification/).
 
 *Note: The API is not available for Cloud Essentials or BYOS Lite workspaces.*

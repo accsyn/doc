@@ -1,6 +1,6 @@
 # Server administration
 
-*NOTE: This feature is exposed to [BYOS](index.md) licensed workspaces only.*
+*NOTE: This feature is exposed to [BYOS](/admin/byos/) licensed workspaces only.*
 
 
 This guide outlines how to install different types of servers and manage existing ones.
@@ -11,8 +11,8 @@ A server is a physical or virtual machine that runs the accsyn app in background
 
   
 
-- A server is primarily designed to serve [volumes](../storage.md) - download and upload of files with associated file operations.
-- A server can also execute hooks and compute/render jobs as part of [Workflows](../../developer/index.md).
+- A server is primarily designed to serve [volumes](/admin/storage/) - download and upload of files with associated file operations.
+- A server can also execute hooks and compute/render jobs as part of [Workflows](/developer/).
 - The daemon installer can be downloaded from <https://accsyn.io/getapp>.
 
   
@@ -25,7 +25,7 @@ A server is a physical or virtual machine that runs the accsyn app in background
 
   
 
-*NOTE: There is also the user server type, which is installed by end users as part of [hosts](../hosts.md), facilitating 24/7 unattended delivery and file sharing.*
+*NOTE: There is also the user server type, which is installed by end users as part of [hosts](/admin/hosts/), facilitating 24/7 unattended delivery and file sharing.*
 
 ## Server list
 
@@ -33,7 +33,7 @@ Prerequisites:
 
 - Logged on as an administrator to <https://accsyn.io/admin/servers>.
 
-![](../../assets/admin_byos_server-724fc2b5844f.png)
+![](/assets/admin_byos_server-724fc2b5844f.png)
 
 The server list shows all active servers within your workspace:
 
@@ -125,7 +125,7 @@ First, choose the site the server should be at. Default is the main site ("hq").
 Next choose the type of server:
 
 - Serve one or more volumes at site; Server should act as a Storage server (if at main site) or Site server (if other site chosen), choose which volume(s) to serve.
-- Compute/render server; The server should run compute jobs and/or hooks as part of [Workflows](../../developer/index.md).
+- Compute/render server; The server should run compute jobs and/or hooks as part of [Workflows](/developer/).
 
 Click Initiate installation to generate the server ID used with the installer. Installation instructions:
 
@@ -209,7 +209,7 @@ Displays a list of all volumes served by this server, go to the volume configura
 
 ### Lanes & Engines
 
-The accsyn compute feature is a part of [Workflows](../../developer/index.md) and enables you to run long-running resource-intensive computational tasks on your servers, e.g. render jobs in the context of media production.
+The accsyn compute feature is a part of [Workflows](/developer/) and enables you to run long-running resource-intensive computational tasks on your servers, e.g. render jobs in the context of media production.
 
 Compute jobs can only run on lanes, a lane is a virtual sub-server allowing parallelism.
 

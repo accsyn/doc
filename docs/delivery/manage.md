@@ -13,7 +13,7 @@ Whether the package is a handful of files or a **terabyte-scale folder tree**, t
 
 Sign in to accsyn in your browser, open **Outbound**, and click the delivery you want to monitor.
 
-![](../assets/delivery_manage-1245ed300e63.png)
+![](/assets/delivery_manage-1245ed300e63.png)
 
 *Screenshot of the delivery status view.*
 

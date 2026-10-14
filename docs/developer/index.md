@@ -19,19 +19,19 @@ This developer hub covers four main areas:
 
 Before diving into the accsyn API, we recommend learning about the terms and definitions used in accsyn. Here is a schematic covering the basic internal accsyn entities and their relationships:
 
-![](../assets/developer-049170eb0ce9.png)
+![](/assets/developer-049170eb0ce9.png)
 
 For a complete list of accsyn terms, please refer to the [API glossary page](https://accsyn-python-api.readthedocs.io/en/latest/glossary.html).
 
 ## Python API
 
-[Python API](python-api.md)
+[Python API](/developer/python-api/)
 
 Learn how to programmatically launch and manage file transfers, create deliveries and manage file sharing.
 
 ### Job JSON specification
 
-[Job JSON Spec](job-specification.md)
+[Job JSON Spec](/developer/job-specification/)
 
 Learn the accsyn job JSON format, for use with the Python API and workflows in general.
 
@@ -39,18 +39,18 @@ Learn the accsyn job JSON format, for use with the Python API and workflows in g
 
 ## Hooks
 
-[Hooks](hooks.md)
+[Hooks](/developer/hooks/)
 
 Configure scripts that will be executed by an accsyn server on events such as job submit and job done.
 
 ## Publish
 
-[Publish](publish.md)
+[Publish](/developer/publish/)
 
 Enable controlled validation and ingest of data into your production pipeline.
 
 ## Rendering/compute
 
-[Compute](farm.md)
+[Compute](/developer/farm/)
 
 Set up a render farm driven by highly configurable Python scripted engines, multi-site enabled.

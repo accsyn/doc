@@ -15,8 +15,8 @@ An example of a setting is "transfer_speedlimit" that defines the maximum bandwi
 ### How to modify settings:
 
 - Settings can be modified from the accsyn webapp, log in to access: <https://accsyn.io>
-- Job settings can be modified from the [accsyn Desktop app](desktop-app.md).
-- Settings can be read, created and modified with the [accsyn Python API](developer/python-api.md).
+- Job settings can be modified from the [accsyn Desktop app](/desktop-app/).
+- Settings can be read, created and modified with the [accsyn Python API](/developer/python-api/).
 
 ## Global (Workspace) settings
 

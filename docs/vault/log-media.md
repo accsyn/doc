@@ -1,11 +1,11 @@
 # Log title media
 
-Log media beneath a title: upload files into the title folder and ingest them into the Media Vault database. Tagging turns files on Cloud storage into managed deliverables; uploads run over [ASC](../whitepaper.md) via the Desktop App.
+Log media beneath a title: upload files into the title folder and ingest them into the Media Vault database. Tagging turns files on Cloud storage into managed deliverables; uploads run over [ASC](/whitepaper/) via the Desktop App.
 
 ### Prerequisites
 
 - Sign in to the Desktop App as an administrator or employee.
-- Have a [title created](create.md).
+- Have a [title created](/vault/create/).
 
 ### Understanding Vault ingest
 
@@ -23,11 +23,11 @@ Logging usually starts with masters. Example: log a trailer master.
 
 1. Open the title. Use **Files** or **Media** view. Logging from **Files** tends to preserve the current folder path; logging from **Media** lets accsyn suggest a folder from type, content, and category tags. This example uses **Media**:
 
-![](../assets/vault_log-media-d13d08a021ad.png)
+![](/assets/vault_log-media-d13d08a021ad.png)
 
 2. Drag and drop the master onto accsyn. The ingest dialog appears:
 
-![](../assets/vault_log-media-1f76ea03e8ff.png)
+![](/assets/vault_log-media-1f76ea03e8ff.png)
 
 **Destination folder** — how the destination path is chosen:
 
@@ -73,8 +73,8 @@ After logging, adjust tags:
 3. Use the editor panel on the right.
 4. Adjust tags (including the tail tag if needed). Changes save as you edit.
 
-When the title’s media is logged, continue with [Working with titles and media](work.md).
+When the title’s media is logged, continue with [Working with titles and media](/vault/work/).
 
 **Related articles:**
 
-[Create title](create.md) — create a new title in the library.
+[Create title](/vault/create/) — create a new title in the library.

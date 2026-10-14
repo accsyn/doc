@@ -35,7 +35,7 @@ The user count is evaluated every day at midnight 00:00 CET, and the monthly top
 
 To list all members of your workspace, click the Workspace button on the left hand side and choose Users from the pulldown menu. The list of users will be shown, one list per role:
 
-![](../assets/admin_users_list.png)
+![](/assets/admin_users_list.png)
 
 Presentation:
 
@@ -60,7 +60,7 @@ Filters:
 
 To invite another administrator, employee or standard user, click the +INVITE USER in the upper right corner. This will bring up the invitation page:
 
-![](../assets/admin_users_invite.png)
+![](/assets/admin_users_invite.png)
 
 ### Email ###
 
@@ -81,7 +81,7 @@ Choose one or more volume(s) the user should be granted access to. With no volum
 
 Check this if a home folder should be created on the default storage volume, with full access for the user, providing a place to upload material available immediately on account registration.
 
-The default behaviour defining if a home share shall be created or not can be configured in [Workspace Settings](settings.md).
+The default behaviour defining if a home share shall be created or not can be configured in [Workspace Settings](/admin/settings/).
 
 ### Message to user ###
 

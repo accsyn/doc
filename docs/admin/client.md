@@ -29,7 +29,7 @@ Hint: accsyn servers are also actually client instances internally, they just ha
 
 ## Client list
 
-![](../assets/admin_client-aab667ab4a11.png)
+![](/assets/admin_client-aab667ab4a11.png)
 
 The client list shows all clients within your workspace: 
 
@@ -60,4 +60,4 @@ Any job(s) that reside in the queue will be moved to the default queue. If this 
 
 Related articles
 
-[Desktop App](../desktop-app.md)
+[Desktop App](/desktop-app/)

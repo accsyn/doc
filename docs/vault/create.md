@@ -1,10 +1,10 @@
 # Create a title
 
-Create your first accsyn title (project) and prepare it for tagged deliverable media on Cloud storage. Large uploads use the Desktop App and the secure, accelerated [ASC](../whitepaper.md) protocol.
+Create your first accsyn title (project) and prepare it for tagged deliverable media on Cloud storage. Large uploads use the Desktop App and the secure, accelerated [ASC](/whitepaper/) protocol.
 
 ### Preparations
 
-- [Install the accsyn Desktop App](../desktop-app.md).
+- [Install the accsyn Desktop App](/desktop-app/).
 - Launch the app.
 - Sign in as an administrator or employee.
 
@@ -15,7 +15,7 @@ Create your first accsyn title (project) and prepare it for tagged deliverable m
 1. Open the **VAULT** tab. On a new workspace it may be empty.
 2. Click the empty **New title or project** card, or **NEW TITLE** in the toolbar:
 
-![](../assets/vault_create-2e8faec72622.png)
+![](/assets/vault_create-2e8faec72622.png)
 
 ### Type
 
@@ -31,11 +31,11 @@ If the title already exists in accsyn, prefer **Select an existing accsyn title*
 
 4. Choose the folder for the title. Accsyn suggests a name matching the title; you can also pick an existing folder. Enable **Apply title template folder structure** to create standard category folders (see below).
 
-![](../assets/vault_create-6c1e5e7f0426.png)
+![](/assets/vault_create-6c1e5e7f0426.png)
 
 5. Click **Next** to open the title editor. Fill in attributes now or later. Many fields are required for exporters to work correctly.
 
-![](../assets/vault_create-6de162d7fdf9.png)
+![](/assets/vault_create-6de162d7fdf9.png)
 
 *Example: title creation in accsyn.*
 
@@ -60,8 +60,8 @@ When you apply the template, accsyn creates a standard layout for organising del
 
 If you skip the template, folders are created later when you upload in the Media view, based on type, content, and category tags.
 
-You are ready to [upload and tag your first media](log-media.md).
+You are ready to [upload and tag your first media](/vault/log-media/).
 
 ## Related articles
 
-[Media Vault introduction](index.md)
+[Media Vault introduction](/vault/)

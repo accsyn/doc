@@ -17,12 +17,12 @@ A volume is the topmost folder on a server where accsyn is allowed to access fil
 - More than one volume may exist within a workspace.
 - accsyn cannot access anything outside volumes, admins can access all volumes whereas employees and standard users must be given explicit access.
 - One volume must be the "default" volume, the default volume is where home shares are created and new temp deliveries live.
-- A volume must be served by a [server](byos/server.md), the server that is serving the default volume is called the main server.
+- A volume must be served by a [server](/admin/byos/server/), the server that is serving the default volume is called the main server.
 - Volumes can be served on other sites,  as proxy volumes, enabling replication across physical or cloud locations.
 
 ## Volume list
 
-![](../assets/admin_storage-9ea46a0561b4.png)
+![](/assets/admin_storage-9ea46a0561b4.png)
 
 The volume list shows all active volumes within your workspace:
 
@@ -68,7 +68,7 @@ A home folder is a special type of personal shared folder that can be created up
 
   
 
-Hint: For more information about operating shared folders and storage in general, see [File Sharing](../file-sharing/index.md).
+Hint: For more information about operating shared folders and storage in general, see [File Sharing](/file-sharing/).
 
   
 
@@ -160,7 +160,7 @@ Edit volume attributes such as server, paths and name.
 
 Transfer settings
 
-Override global accsyn copy protocol (ASC) file transfer settings for the volume.
+Override global accsyn protocol (ASC) file transfer settings for the volume.
 
 *NOTE: Transfer settings can be further overridden on share, queue and individual job level.*
 

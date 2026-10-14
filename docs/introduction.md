@@ -1,63 +1,91 @@
 # An introduction to accsyn
 
-accsyn is a complete **file I/O platform** for film and media — deliveries, collaboration, sites, automation, and master archival — underpinned by the high-speed encrypted **[ASC](whitepaper.md)** (accsyn Copy) protocol.
+accsyn is a complete **file I/O platform** for film and media — underpinned by the high-speed encrypted **[ASC](/whitepaper/)** (Accelerated Secure Copy) protocol.
 
-Use it to move **large folders and many files** between locations securely and efficiently, whether you keep storage on your own infrastructure or manage masters in the cloud.
+It is offered as **two product variants**, each aimed at a different stage of the media life-cycle. Most organisations use one or the other; if you need both production I/O and a cloud master archive, sign up for **two workspaces** (BYOS + Cloud) rather than combining them in one.
 
-## Who is accsyn for?
+| Variant | Stage | Storage model |
+| --- | --- | --- |
+| **[accsyn for media production](#accsyn-for-media-production)** *(default)* | Shoot, DIT, post, VFX, collaboration, site sync, automation | [BYOS](/admin/byos/) — your on-premises or cloud VPC storage |
+| **[accsyn for media distribution](#accsyn-for-media-distribution)** | Masters, archival, streaming, sales/festival delivery, lab | [accsyn Cloud](/vault/) — hosted vault storage |
 
-Two primary paths, one platform:
+Both move **large folders and many files** securely and efficiently over ASC. Product videos for each variant are planned under the same names.
 
-### Media production — expose your own storage (BYOS)
+## accsyn for media production
 
-Post houses, VFX, DITs, and studios that need accelerated, secure file I/O on **production storage they already own** — on-premises or in their cloud VPC.
+**Default path for studios and post.** Expose production storage you already own — on-premises or in your cloud VPC — with accelerated, secure file I/O. This is the [BYOS](/admin/byos/) (Bring Your Own Storage) workspace.
 
-- Deliver and receive multi-terabyte packages over a link ([Delivery](delivery/index.md))
-- Share **specific project subfolders** with vendors and partners via ACLs ([File sharing](file-sharing/index.md))
-- Sync remote offices and cloud sites ([Sites](admin/byos/site.md))
-- Push/pull with remote users via mapped shares and User servers ([Hosts](admin/hosts.md))
-- Automate with [hooks](developer/hooks.md), [publish](developer/publish.md), [Python API](developer/python-api.md), and [render/compute](developer/farm.md)
+Watch video to get started:
 
-Start with [BYOS](admin/byos/index.md) and a [free trial](trial.md).
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D9Ng_yDVW1Y" title="accsyn Delivery introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Media distribution — master archive in the cloud
+Main features:
 
-Distributors, festivals, sales agents, and archives that need a **secure cloud location** for masters and deliverables, with built-in streaming, delivery, collaboration, and lab handoff.
+- Deliver and receive multi-terabyte packages over a link ([Delivery](/delivery/))
+- Share **specific project subfolders** with vendors and partners via ACLs ([Collaboration](/file-sharing/))
+- Sync remote offices and cloud sites ([Sites](/admin/byos/site/)); push/pull with operators via [Transfer](/manage/transfer/)
+- Push/pull with remote users via mapped shares and User servers ([Hosts](/admin/hosts/))
+- Automate with [hooks](/developer/hooks/), [publish](/developer/publish/), [Python API](/developer/python-api/), and [render/compute](/developer/farm/)
+- Central monitoring with [Job & Wueue management](/manage/job/)
 
-- Tag and organise masters in the [Media Vault](vault/index.md) (IMDb linkage, proxies, QC-oriented workflows)
-- Stream and deliver to cinemas, buyers, and partners ([Stream](vault/stream.md), [Delivery](delivery/index.md))
-- Collaborate on sales and festival packages ([File sharing](file-sharing/index.md))
-- Optional [Lab services](vault/media-lab.md) for mastering, VOD export, QC, and more
+Start with [BYOS](/admin/byos/) and a [free trial](/trial/) (one storage server).
 
-Cloud Vault runs on accsyn Cloud storage only (not BYOS). To combine on-prem production storage with Vault archival, use two workspaces — see the note under [Media Vault](vault/index.md).
+*Media Vault (tagging, proxies, browser streaming of masters) is not available on BYOS. For that, use a separate Cloud workspace — see below.*
+
+## accsyn for media distribution
+
+**For distributors, festivals, sales agents, and archives.** Host masters and deliverables in a **secure cloud location**, with tagging, streaming, delivery, collaboration, and lab handoff. This is an accsyn **Cloud** workspace with [Media Vault](/vault/).
+
+Typical capabilities:
+
+- Tag and organise masters in the Media Vault (IMDb linkage, proxies, QC-oriented workflows)
+- Stream and deliver to cinemas, buyers, and partners ([Stream](/vault/stream/), [Delivery](/delivery/))
+- Collaborate on sales and festival packages ([Collaboration](/file-sharing/))
+- Transcode deliverables, validate media including DCP check.
+- Central monitoring with [Job & Wueue management](/manage/job/)
+- Professional [Lab services](/vault/media-lab/) for mastering, VOD export, QC, and more
+
+Start with a [Cloud trial](/trial/) (500 GB) and the [Media Vault](/vault/) guides.
+
+### Production + distribution together?
+
+There is no benefit today to combining BYOS production storage and Media Vault in a **single** workspace. If you need both:
+
+1. A **BYOS** workspace for production I/O on your own storage  
+2. A separate **Cloud** workspace for the master archive, streaming, and lab  
+
+See also the note under [Media Vault](/vault/).
 
 ## Why accsyn?
 
-Slow transfers and fragmented tools still dominate media pipelines. Accsyn is built as the **file hub from set to screen** — cinema or streaming — with ASC for accelerated peer-to-peer transfers, central orchestration, and audit.
+Slow transfers and fragmented tools still dominate media pipelines. Accsyn is the **file hub from set to screen** — cinema or streaming — with ASC for accelerated peer-to-peer transfers, central orchestration, and audit.
 
-Security highlights: HTTPS for control-plane traffic; AES-encrypted ASC for data; on-demand listeners (no ASC port open 24/7). Full detail: [Whitepaper](whitepaper.md).
+Security highlights: HTTPS for control-plane traffic; AES-encrypted ASC for data; on-demand listeners (no ASC port open 24/7). Full detail: [Whitepaper](/whitepaper/).
 
 ## How does it work?
 
-The accsyn cloud backend orchestrates high-speed P2P transfers, compute jobs, and media management. The Desktop App (and background daemon/User server) acts as the transfer endpoint on each machine.
+The accsyn cloud backend orchestrates high-speed P2P transfers, compute jobs, and (on Cloud) media management. The Desktop App (and background daemon / User server / BYOS storage server) acts as the transfer endpoint on each machine.
 
-![](assets/introduction-679212a60583.png)
+![](/assets/introduction-679212a60583.png)
 
 ## Free trial
 
-Start a **30-day trial** (500 GB Cloud or one BYOS storage server) at <https://accsyn.io/trial> — full features, no credit card.
+Start a **30-day trial** at <https://accsyn.io/trial> — full features, no credit card:
+
+- **Media production (BYOS)** — one storage server on your premises or VPC  
+- **Media distribution (Cloud)** — 500 GB hosted storage  
 
 1. Register at <https://accsyn.io> and verify your email.
-2. Click **Start 30 days free trial** and create your workspace.
-3. Send a [delivery](delivery/index.md), [share a folder](file-sharing/index.md), or explore [BYOS](admin/byos/index.md) / [Media Vault](vault/index.md).
+2. Click **Start 30 days free trial** and create the workspace type you need.
+3. For production: [BYOS setup](/admin/byos/), [delivery](/delivery/), or [file sharing](/file-sharing/). For distribution: [Media Vault](/vault/).
 
-Step-by-step: [Trial](trial.md).
+Step-by-step: [Trial](/trial/).
 
 ## Licensing and pricing
 
 An accsyn licence includes unlimited traffic, bandwidth, and standard users (delivery recipients and file-sharing users). Operator seats and storage (Cloud) or servers (BYOS) are licensed separately.
 
-| | **accsyn Cloud** | **Cloud Essentials** | **accsyn BYOS** | **BYOS Lite** |
+| | **accsyn Cloud** *(distribution)* | **Cloud Essentials** | **accsyn BYOS** *(production)* | **BYOS Lite** |
 | --- | --- | --- | --- | --- |
 | Storage | 1 TB + PAYG | 500 GB | Unlimited (your disk) | Unlimited (your disk) |
 | Operators | 2 + PAYG | 1 | 2 + PAYG | 2 + PAYG |
@@ -77,11 +105,11 @@ Usage is measured at midnight CET; peak usage bills into the next cycle. Price l
 
 ## Lab and professional services
 
-**[Media Lab](vault/media-lab.md)** — Partner lab work (mastering, VOD export, QC, grading, and more), charged per order item, hours, and deliverable. Place orders from the Desktop App on Cloud workspaces.
+**[Media Lab](/vault/media-lab/)** — Partner lab work (mastering, VOD export, QC, grading, and more), charged per order item, hours, and deliverable. Place orders from the Desktop App on **Cloud** (distribution) workspaces.
 
 **Professional services** — With **25+ years of media IT experience**, billed hourly for:
 
-- Deploying and configuring accsyn (cloud, BYOS, or hybrid)
+- Deploying and configuring accsyn (BYOS production, Cloud distribution, or hybrid with two workspaces)
 - Integration and pipeline design (deliveries, sharing, sites, hooks, compute)
 - Media IT advice (storage, networking, security, operations)
 - Education and onboarding
@@ -90,14 +118,15 @@ Usage is measured at midnight CET; peak usage bills into the next cycle. Price l
 
 | Goal | Start here |
 | --- | --- |
-| Send / receive large packages over a link | [Delivery](delivery/index.md) |
-| Share project subfolders with partners | [File sharing](file-sharing/index.md) |
-| Host and tag masters in the cloud | [Media Vault](vault/index.md) |
-| Run on your own storage | [BYOS](admin/byos/index.md) |
-| Automate transfers and farms | [Developer Hub](developer/index.md) |
-| Protocol and security deep dive | [Whitepaper](whitepaper.md) |
-| Desktop App install | [Desktop App](desktop-app.md) |
-| Specs and platforms | [Specifications](specifications.md) |
+| **accsyn for media production** (BYOS) | [BYOS](/admin/byos/) |
+| **accsyn for media distribution** (Cloud Vault) | [Media Vault](/vault/) |
+| Send / receive large packages over a link | [Delivery](/delivery/) |
+| Share project subfolders with partners | [Collaboration](/file-sharing/) |
+| Sync HQ ↔ sites / mapped users | [Transfer](/manage/transfer/) |
+| Automate transfers and farms | [Developer Hub](/developer/) |
+| Protocol and security deep dive | [Whitepaper](/whitepaper/) |
+| Desktop App install | [Desktop App](/desktop-app/) |
+| Specs and platforms | [Specifications](/specifications/) |
 
 ## What does “accsyn” mean?
 

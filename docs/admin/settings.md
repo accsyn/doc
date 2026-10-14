@@ -101,7 +101,7 @@ When listing files on a volume with the desktop app, the cached results will fir
 
 ### Advanced
 
-Advanced storage settings, see [accsyn Internal settings](../settings.md) for details.
+Advanced storage settings, see [accsyn Internal settings](/settings/) for details.
 
 ## Job
 
@@ -201,11 +201,11 @@ What accsyn should log during transfer. The transfer log is stored per-task and 
 
 ### Advanced
 
-Advanced transfer settings, see [accsyn Internal settings](../settings.md) for details.
+Advanced transfer settings, see [accsyn Internal settings](/settings/) for details.
 
 ## Site
 
-*Note: Site settings are available for [BYOS](byos/index.md) workspaces only.*
+*Note: Site settings are available for [BYOS](/admin/byos/) workspaces only.*
 
 ### Route transfers via site server
 
@@ -213,7 +213,7 @@ If enabled, download and upload transfers initiated by clients on the same site 
 
 Can be overridden per site under Admin → Sites → Settings.
 
-See [Site administration](byos/site.md) for more information about sites and file transfers.
+See [Site administration](/admin/byos/site/) for more information about sites and file transfers.
 
 ## Email
 
@@ -293,11 +293,11 @@ Currently not used.
 
 ## Hooks
 
-See [Hooks documentation](../developer/hooks.md).
+See [Hooks documentation](/developer/hooks/).
 
 ## Compute
 
-In general, refer to [Render farm documentation](../developer/farm.md).
+In general, refer to [Render farm documentation](/developer/farm/).
 
   
 
@@ -329,7 +329,7 @@ Define server pools, that can be targeted in different ways during job submissio
 
 ## Publish
 
-See [Publish documentation](../developer/publish.md).
+See [Publish documentation](/developer/publish/).
 
 ## Metadata
 
@@ -342,6 +342,6 @@ Define global workspace metadata, these are passed on to hooks and compute jobs.
 
 Related articles
 
-[Desktop App](../desktop-app.md)
+[Desktop App](/desktop-app/)
 
-[accsyn Internal Settings](../settings.md)
+[accsyn Internal Settings](/settings/)

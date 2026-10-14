@@ -36,9 +36,9 @@ From here on, accsyn attempts to give feedback on why a transfer cannot be final
 
 The software can detect most of the common errors that occur, they are listed as either job warning codes or job error codes and each has a number identification assigned.  They are included in log messages as a suffix on the form W#Jnnn for warnings and E#Jnnn for errors, and are described in detail in separate support articles:
 
-- [Job warning codes](warnings.md).
+- [Job warning codes](/warnings/).
 
-- [Job error codes](errors.md). 
+- [Job error codes](/errors/). 
 
 If no log messages are presented or have no code attached, accsyn service personnel attempt to teach accsyn about the issue and include it in the next upgrade cycle. Please help us map these issues for us to make accsyn a better software experience - making it easy for all users out there to find and remedy transfer issues!
 
@@ -202,10 +202,10 @@ Solutions:
 
 Complete list of accsyn error and warning codes:
 
-[Error codes](errors.md)
+[Error codes](/errors/)
 
-[Warning codes](warnings.md)
+[Warning codes](/warnings/)
 
 ## Having further issues?
 
-Do not hesitate to contact [support](mailto:support@accsyn.com), be sure to describe your matter as thoroughly as possible and supply screenshots when possible. This shortens our response times and saves your time considerably.  For more guidelines on how to deal with the accsyn support, please head over [here](index.md).
+Do not hesitate to contact [support](mailto:support@accsyn.com), be sure to describe your matter as thoroughly as possible and supply screenshots when possible. This shortens our response times and saves your time considerably.  For more guidelines on how to deal with the accsyn support, please head over [here](/).

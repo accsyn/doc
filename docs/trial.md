@@ -19,7 +19,7 @@ There are no limitations when it comes to functionality with an accsyn trial - w
 The default type of accsyn workspace is called a Cloud workspace. Suitable both for media production and distribution - sales, film festivals, archival:
 
 - Storage is securely hosted within the ISO 27001 certified premises in Stockholm, Sweden.
-- Suitable for both media production ([File Sharing](file-sharing/index.md) / [Delivery](delivery/index.md) features) and media distribution ([Media Vault](vault/index.md) feature).
+- Suitable for both media production ([File Sharing](/file-sharing/) / [Delivery](/delivery/) features) and media distribution ([Media Vault](/vault/) feature).
 
 #### ESSENTIALS
 
@@ -35,8 +35,8 @@ accsyn is offered as an ESSENTIALS cloud workspace, at a reduced price and with 
 accsyn supports self hosted storage, this is called a BYOS Workspace (Bring-Your-Own-Storage) and is tailored for media production - shoot, DIT, post, delivery:
 
 - You install accsyn on your own premises, be it a physical location or cloud.
-- You serve files from your own storage  ([File Sharing](file-sharing/index.md) / [Delivery](delivery/index.md) features), with no limits on used space.
-- Enables advanced [Workflows](developer/index.md) including [Site sync](tutorials/remote-office-sync.md), Hooks, Publishing and Compute(render) farms.
+- You serve files from your own storage  ([File Sharing](/file-sharing/) / [Delivery](/delivery/) features), with no limits on used space.
+- Enables advanced [Workflows](/developer/) including [Site sync](/tutorials/remote-office-sync/), Hooks, Publishing and Compute(render) farms.
 
 
 *Important note: Media Vault features, including streaming and transcoding, are not available with BYOS deployments.*
@@ -67,7 +67,7 @@ To be able to create an accsyn workspace you need to create a personal accsyn ac
 
 Before you can launch the trial, you need a personal accsyn user account.  That is done by opening the following URL in your browser: <https://accsyn.io/signup>
 
-[Account](account.md)
+[Account](/account/)
 
 - Full documentation on how to create your account
 
@@ -114,7 +114,7 @@ You are now all set to start trying out accsyn for the first time!
 
 Further resources:
 
-- How to get started: [BYOS Documentation](admin/byos/index.md)
+- How to get started: [BYOS Documentation](/admin/byos/)
 
 ## Can I get help setting up a trial?
 

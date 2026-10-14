@@ -1,6 +1,6 @@
 # accsyn warning codes
 
-Error codes are listed [here](errors.md). Get help troubleshooting through [this](troubleshooting.md) article.
+Error codes are listed [here](/errors/). Get help troubleshooting through [this](/troubleshooting/) article.
 
 A complete listing of all accsyn warning codes that can appear as:
 

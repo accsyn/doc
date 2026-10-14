@@ -6,16 +6,16 @@ Currently supported natively:
 
 - **Allente**
 
-For other popular platforms, see [Media Lab](media-lab.md).
+For other popular platforms, see [Media Lab](/vault/media-lab/).
 
 ## Allente
 
-1. Transcode VOD media from a high-resolution master with the [Processor](process.md). Recommended: HD ~25 Mbit H.264 with ~256 kbit stereo.
+1. Transcode VOD media from a high-resolution master with the [Processor](/vault/process/). Recommended: HD ~25 Mbit H.264 with ~256 kbit stereo.
 2. For each region (language), log landscape, portrait, and shot poster images; log subtitles for that language; optionally a trailer with subtitles.
 3. Select the VOD media and open the processor.
 4. Open the **VOD export** tab and choose the Allente exporter:
 
-![](../assets/vault_export-d99a76e311fd.png)
+![](/assets/vault_export-d99a76e311fd.png)
 
 The exporter shows a media preview and four tabs:
 
@@ -54,4 +54,4 @@ Click **Export** to run on the farm. Missing required fields are reported.
 
 Watch the **JOBS** tab at the bottom of the app. Contact support if something looks wrong.
 
-Back to [processor](process.md).
+Back to [processor](/vault/process/).

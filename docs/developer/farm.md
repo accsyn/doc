@@ -1,6 +1,6 @@
 # Render farm
 
-*NOTE: This feature is exposed to [BYOS](../admin/byos/index.md) workspaces only.*
+*NOTE: This feature is exposed to [BYOS](/admin/byos/) workspaces only.*
 
 This guide walks through how to set up a render farm with your accsyn Workspace.
 
@@ -14,7 +14,7 @@ accsyn has built-in render farm functionality, providing execution of render app
 
 ## How does it work?
 
-The accsyn render farm feature is API centric and is designed to be integrated into other Python enabled applications such as DCC (Digital Content Creation) software (Maya, Unreal, Houdini etc.), although render jobs can be submitted using the [accsyn Desktop app](../desktop-app.md) to some extent.
+The accsyn render farm feature is API centric and is designed to be integrated into other Python enabled applications such as DCC (Digital Content Creation) software (Maya, Unreal, Houdini etc.), although render jobs can be submitted using the [accsyn Desktop app](/desktop-app/) to some extent.
 
   
 
@@ -159,7 +159,7 @@ Notes/hints: 
 
 In this guide, we will just submit a text (.txt) file to be processed by the Hello World engine:
 
-1. Download and install the [accsyn Desktop app](../desktop-app.md).
+1. Download and install the [accsyn Desktop app](/desktop-app/).
 2. Log in with a user that has permission to access the input files at the volume, and submit render jobs.
 3. Open the Render tab.
 4. Create/copy a text file to your accsyn storage. Drag and drop the input text file [README.text] on the area or click "Browse Storage" button to select the file.
@@ -221,7 +221,7 @@ Detailed information about the Python API and how to submit render jobs is avail
 
 Compute job JSON payload examples can be found here:
 
-[Job JSON Specification](job-specification.md)
+[Job JSON Specification](/developer/job-specification/)
 
 You can also find an API example below in the section Building your own submitter.
 
@@ -656,7 +656,7 @@ Breakdown of the engine script:
 
 ## Other resources
 
-[Python API](python-api.md)
+[Python API](/developer/python-api/)
 
 Get to learn more about the accsyn Python API.
 

@@ -53,11 +53,11 @@ This tutorial will cover:
 
 ## Workflow
 
-![](../assets/tutorials_outsourcing-pipeline-3e6852fff862.png)
+![](/assets/tutorials_outsourcing-pipeline-3e6852fff862.png)
 
 ## Schematics
 
-![](../assets/tutorials_outsourcing-pipeline-ffc536722488.png)
+![](/assets/tutorials_outsourcing-pipeline-ffc536722488.png)
 
 The schematics visualise two different scenarios:
 
@@ -79,7 +79,7 @@ In this tutorial, we assume the following:
 
 ## Setting up your workspace
 
-The first step is to create your own accsyn workspace trial, the whole process is described in detail [here](https://-/trial):
+The first step is to create your own accsyn workspace trial, the whole process is described in detail [here](/trial/):
 
 1. Open <https://accsyn.io/trial> in your web browser, you will be asked to sign up for your personal accsyn account (email address identifier).
 2. Create a BYOS Workspace.
@@ -113,7 +113,7 @@ Send these vendor instructions on how to install the accsyn user server:
 
   
 
-More detailed information on how to set up a host & user server [here](../admin/hosts.md).
+More detailed information on how to set up a host & user server [here](/admin/hosts/).
 
 As a final step, we want to define the path at the vendor where all deliveries should be stored - with mirrored (preserved) folder structure.  
 
@@ -219,17 +219,21 @@ Implement code that collect/generate outsourcing file asset paths.
 
 #### Assume the list of file paths calculated from ftrack are generated and stored in the variable source_files:
 
+```python
 source_files = ["scd/0010/0010/src/plates/scd_0010_0010_src", "scd/0010/0010/cleanup/scd_0010_0010_cleanup_description.txt"]
+```
 
 ### Import and create the accsyn session object
 
 It requires the following environment variables set:
 
+```bash
 ACCSYN_WORKSPACE=acmevfx
 
 ACCSYN_API_USER=pipeline@acmevfx.co.uk
 
 ACCSYN_API_KEY=...
+```
 
 **Note: Create a new API key @ <https://accsyn.io/developer>**
 
@@ -342,7 +346,7 @@ And then let each folder contain all the file sequences, geometry, documents etc
 
 We are not going into great detail on how to design the publish script, for detailed information on how to create the scripts with examples, check out:
 
-[Developer Hub - Publish](../developer/publish.md)
+[Developer Hub - Publish](/developer/publish/)
 
 The documentation provides links to our Github where template publish scripts can be downloaded. The scripts contain clear pointers on where to integrate into a production management tool like ftrack, for validating asset names against tasks and creating a version upload with a reviewable and notes/time report.
 

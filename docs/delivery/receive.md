@@ -2,15 +2,15 @@
 
 This guide is for anyone expecting an accsyn delivery or upload request.
 
-A delivery link can represent anything from a single file to a **large folder with many files at terabyte scale**. Using the Desktop App, the download runs in the background over the secure, accelerated [ASC](../whitepaper.md) protocol — with folder support and resume if the transfer is interrupted.
+A delivery link can represent anything from a single file to a **large folder with many files at terabyte scale**. Using the Desktop App, the download runs in the background over the secure, accelerated [ASC](/whitepaper/) protocol — with folder support and resume if the transfer is interrupted.
 
-*Note: If you were granted access to a shared folder or collection instead, see [Access shared folders](../file-sharing/access.md).*
+*Note: If you were granted access to a shared folder or collection instead, see [Access shared folders](/file-sharing/access/).*
 
 This video shows how to download a delivery:
 
 If you expect a delivery, check your email for a message from accsyn:
 
-![](../assets/delivery_receive-17799457e794.png)
+![](/assets/delivery_receive-17799457e794.png)
 
 Click **Download now** (or **Upload now** for an upload request) to open the delivery in your browser.
 
@@ -30,7 +30,7 @@ After you sign in, you see the delivery view with the package contents. You can 
 
 Click **DOWNLOAD NOW**:
 
-![](../assets/delivery_receive-e2ba6513a004.png)
+![](/assets/delivery_receive-e2ba6513a004.png)
 
 *Screenshot of a delivery and download options.*
 
@@ -43,7 +43,7 @@ You are offered two options:
 
 After you choose a method, you are asked where to save. Confirm to start the download:
 
-![](../assets/delivery_receive-4d026ca9f0c4.png)
+![](/assets/delivery_receive-4d026ca9f0c4.png)
 
 *Screenshot of a delivery being downloaded.*
 
@@ -72,13 +72,13 @@ If the sender included downloadable files with the stream, download them the sam
 
 If you receive deliveries regularly (for example a cinema, showroom, or office drop-off machine), install accsyn as a **User server** (daemon/service) and set a local download folder for that host. Deliveries sent to your account are then downloaded automatically over ASC while the machine is on — without opening the Desktop App or staying logged into an interactive session.
 
-See [Hosts](../admin/hosts.md) for daemon install and automated delivery setup.
+See [Hosts](/admin/hosts/) for daemon install and automated delivery setup.
 
 ### Troubleshooting a delivery
 
 If download or upload fails, start with the transfer log — click the log icon on the right of the transfer:
 
-![](../assets/delivery_receive-ec1f4aa02893.png)
+![](/assets/delivery_receive-ec1f4aa02893.png)
 
 Common issues:
 

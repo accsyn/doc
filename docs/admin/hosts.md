@@ -1,6 +1,6 @@
-# Hosts
+# Hosts - Automated deliveries and Local Share Mappings
 
-This guide explains how to use hosts and servers to enable automated deliveries and expose local shared storage with accsyn.
+This guide explains how to use hosts and servers to enable automated deliveries and expose remote user local shared storage with accsyn.
 
 ### What is a host?
 
@@ -33,7 +33,7 @@ A host can be configured to automatically download deliveries to a folder, this 
 
   
 
-### Local file sharing
+### Local share mapping
 
 By mapping shared folders locally, and exposing them as readable and writeable, elevated workspace users can get access to your local storage for both downloading material to you and uploading from your computer. This is useful in a working from home scenario or for vendors that need to provide a local work area for storing file assets, with the same folder structure as on your cloud or on-prem accsyn storage.
 
@@ -43,15 +43,15 @@ With **read** access, operators can **pull** (upload from your mapped folder ont
 
 Local share mappings are ideal for a single machine. If you need a more permanent push and pull setup for a **remote office or cloud location** — shared storage at that place, hq-to-site sync, and transfers that do not depend on one user's laptop — use **sites** and **site servers** instead.
 
-In a [BYOS](byos/index.md) (or Enterprise) workspace you define a site, install a site server there, and serve volumes at that location. Operators can then sync and transfer between the main (HQ) site and the remote site in a durable way. Clients on the site can also have downloads/uploads routed through the site server so work continues when individual Desktop Apps are closed.
+In a [BYOS](/admin/byos/) (or Enterprise) workspace you define a site, install a site server there, and serve volumes at that location. Operators can then sync and transfer between the main (HQ) site and the remote site in a durable way. Clients on the site can also have downloads/uploads routed through the site server so work continues when individual Desktop Apps are closed.
 
-See [Site administration](byos/site.md) and the [Remote office sync](../tutorials/remote-office-sync.md) tutorial. An overview of both approaches is in [File sharing](../file-sharing/index.md#can-i-share-files-and-folders-on-a-remote-office-or-cloud-site).
+See [Site administration](/admin/byos/site/) and the [Remote office sync](/tutorials/remote-office-sync/) tutorial. An overview of both approaches is in [Collaboration](/file-sharing/#can-i-share-files-and-folders-on-a-remote-office-or-cloud-site).
 
 ## The Hosts page
 
 The hosts page in accsyn displays all hosts associated with your account and the workspace clients for each host, open it by choosing Hosts from the user menu in top right corner:
 
-![](../assets/admin_hosts-63bb2d772deb.png)
+![](/assets/admin_hosts-63bb2d772deb.png)
 
 Example screenshot of the hosts page in accsyn webapp.
 
@@ -69,7 +69,7 @@ To facilitate automated deliveries and local file sharing, you need to set up an
 1. Go to the hosts page and switch to the Daemon instances tab.
 2. Click INSTALL DAEMON:
 
-![](../assets/admin_hosts-53744ca08773.png)
+![](/assets/admin_hosts-53744ca08773.png)
 
 3. Download the suitable daemon installer for your platform - Windows, Mac or Linux.
 
@@ -77,7 +77,7 @@ To facilitate automated deliveries and local file sharing, you need to set up an
 
 5. When prompted, enter the ID displayed in the web page:
 
-![](../assets/admin_hosts-4c3cecae26d0.png)
+![](/assets/admin_hosts-4c3cecae26d0.png)
 
 6. Background services/daemons run as the system user by default, and that account does NOT in general have access to mounted storage volumes and such. If you reckon you will need to change the user, follow the next step below but DO NOT launch the daemon/service yet when asked. Then follow the instructions in the corresponding Running the host as a specific user section  below before proceeding with the launch.
 
@@ -163,7 +163,7 @@ When the host has been installed you will be brought to the host edit page, if n
 
 1. Enter the local path on your computer where you wish to have deliveries be downloaded to. A subfolder will be created for each sending workspace on transmit:
 
-![](../assets/admin_hosts-9517d13227aa.png)
+![](/assets/admin_hosts-9517d13227aa.png)
 
 2. Click Save when done.
 
@@ -186,7 +186,7 @@ Here is how to get going with local file sharing on your computer, for unattende
 1. Go to the hosts page and switch to the Daemon instances tab and install the daemon following the same steps as outlined above. If you do not need automated deliveries, skip the step where you configure the download path.
 2. Go back to Hosts page and the Daemon instances tab. Click on NEW button beneath the newly installed machine host:
 
-![](../assets/admin_hosts-36a8188bbd1f.png)
+![](/assets/admin_hosts-36a8188bbd1f.png)
 
 3. Choose the workspace to install the client for, the same that has shared folders with you in case you have access to multiple workspaces.
 
@@ -204,7 +204,7 @@ Here is how to get going with local file sharing on your computer, for unattende
 
 10. Choose the shared folder you want to map locally, where you want to map it and if remote elevated workspace users should be able to read (upload from your mapped folder, pull material) or write (download to your shared folder, push material):
 
-![](../assets/admin_hosts-ce53c04370db.png)
+![](/assets/admin_hosts-ce53c04370db.png)
 
 11. A list of all clients on the same machine (matching host ID -  network card MAC addresses) is presented, your daemon client should be present there and the share mapping should apply to them all.
 
@@ -230,7 +230,7 @@ If the user should have the entire volume folder structure mirrored locally, it 
 
   
 
-For information on how to set environment variables so they apply to the accsyn daemon running process, see [Setting environment variables](byos/server.md#setting-environment-variables) on the Server admin page. Variables configured in the Mac launchd plist or Linux systemd unit are preserved when you reinstall or upgrade the daemon — you do not need to re-enter them after the installer finishes.
+For information on how to set environment variables so they apply to the accsyn daemon running process, see [Setting environment variables](/admin/byos/server/#setting-environment-variables) on the Server admin page. Variables configured in the Mac launchd plist or Linux systemd unit are preserved when you reinstall or upgrade the daemon — you do not need to re-enter them after the installer finishes.
 
 ## Troubleshooting
 

@@ -20,7 +20,7 @@ A queue is an accsyn job entity acting as a container for ordered jobs having a 
 
 ## Queue list
 
-![](../assets/admin_queue-f40fcd9e2f21.png)
+![](/assets/admin_queue-f40fcd9e2f21.png)
 
 The queue list shows all active queues within your workspace:
 
@@ -70,7 +70,7 @@ Edit queue attributes such as code, priority and default.
 
 Transfer settings
 
-Override global accsyn copy protocol (ASC) file transfer settings for the queue.
+Override global accsyn protocol (ASC) file transfer settings for the queue.
 
 *NOTE: Transfer settings can be further overridden on individual job level.*
 

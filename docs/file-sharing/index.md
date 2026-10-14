@@ -1,8 +1,8 @@
-# File sharing — introduction
+# Collaboration - File sharing — introduction
 
-This page introduces the accsyn File Sharing subsystem — available on Cloud or on-premises (BYOS) storage, and integrated with the [Media Vault](../vault/index.md).
+This page introduces the accsyn File Sharing subsystem — available on Cloud or on-premises (BYOS) storage, and integrated with the [Media Vault](/vault/).
 
-The core idea: **share specific subfolders of a project tree on production storage** — not the whole volume — so external users and partners can work inside production safely. Access is controlled with ACLs; transfers use the secure, accelerated [ASC](../whitepaper.md) protocol via the Desktop App.
+The core idea: **share specific subfolders of a project tree on production storage** — not the whole volume — so external users and partners can work inside production safely. Access is controlled with ACLs; transfers use the secure, accelerated [ASC](/whitepaper/) protocol via the Desktop App.
 
 ## Get started
 
@@ -14,7 +14,7 @@ We recommend this short video introducing file sharing:
 
 Set up file sharing step by step with this tutorial:
 
-[FTP server replacement](../tutorials/ftp-server-replacement.md)
+[FTP server replacement](/tutorials/ftp-server-replacement/)
 
 ## What is accsyn File Sharing?
 
@@ -28,7 +28,7 @@ accsyn is built for that: share only the project subfolders partners need (for e
 
 ## How does file sharing work with accsyn?
 
-The simplest one-shot transfer is a [delivery](../delivery/index.md) — a time-limited package. **File sharing** is for ongoing access: permanent (or long-lived) folders, homes, and collections on your storage.
+The simplest one-shot transfer is a [delivery](/delivery/) — a time-limited package. **File sharing** is for ongoing access: permanent (or long-lived) folders, homes, and collections on your storage.
 
 Terms used throughout this guide:
 
@@ -53,7 +53,7 @@ A common pattern is a permanent **DCP** collection shared with selected users.
 
 ## Can I share files on my own local or cloud storage?
 
-Yes. With [BYOS](../admin/byos/index.md) you install on-premises or cloud servers so file sharing and delivery run against your own storage.
+Yes. With [BYOS](/admin/byos/) you install on-premises or cloud servers so file sharing and delivery run against your own storage.
 
 ## Can my clients share folders on their local machine?
 
@@ -66,14 +66,14 @@ While their client is online, elevated users (administrators and employees) can:
 
 Typical uses: working from home, or vendors keeping a local work area that mirrors production folder structure. Transfers use ASC when the Desktop App or User server is the endpoint.
 
-Configure mappings in the **Desktop App** (app running and user signed in). For 24/7 access without a logged-in desktop session, install a **User server** (accsyn daemon/service). See [Hosts](../admin/hosts.md).
+Configure mappings in the **Desktop App** (app running and user signed in). For 24/7 access without a logged-in desktop session, install a **User server** (accsyn daemon/service). See [Hosts](/admin/hosts/).
 
 ## Can I share files and folders on a remote office or cloud site?
 
-Yes. In a [BYOS](../admin/byos/index.md) (or Enterprise) workspace you define **sites** — remote offices or cloud locations — usually with one or more **site servers**. Assign servers and elevated clients so accsyn knows where they are.
+Yes. In a [BYOS](/admin/byos/) (or Enterprise) workspace you define **sites** — remote offices or cloud locations — usually with one or more **site servers**. Assign servers and elevated clients so accsyn knows where they are.
 
 Site servers sync material between HQ and the remote site, serve shared storage there, and can take over transfers initiated by clients on that site so jobs continue when individual Desktop Apps close.
 
-See [Site administration](../admin/byos/site.md) and the [Remote office sync](../tutorials/remote-office-sync.md) tutorial.
+See [Site administration](/admin/byos/site/) and the [Remote office sync](/tutorials/remote-office-sync/) tutorial.
 
-Next: [Work with accsyn File Sharing](manage.md)
+Next: [Work with accsyn File Sharing](/file-sharing/manage/)
