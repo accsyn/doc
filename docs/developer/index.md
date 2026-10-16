@@ -8,12 +8,13 @@ accsyn is designed from the ground up to facilitate API-driven file transfers an
 
   
 
-This developer hub covers four main areas:
+This developer hub covers:
 
-- The accsyn Python API; Being API-first, all you can do within an accsyn GUI can be done through the API; in fact, all internal communication within accsyn is API-driven.
-- Hooks; Have scripts run on your server on specific events (BYOS only)
-- Publish; Set up a publishing workflow, facilitating ingestion of remote work into your production pipeline (BYOS only)
-- Rendering/compute; Use accsyn for heavy compute processing, such as 3D image rendering, 2D compositing render, GPU processing (ML) or any custom resource-intensive calculation that needs to run in the background (BYOS only)
+- The accsyn Python API. Being API-first, all you can do within an accsyn GUI can be done through the API; in fact, all internal communication within accsyn is API-driven.
+- The accsyn JavaScript API. The same session API for Node.js and browsers.
+- Hooks. Have scripts run on your server on specific events (BYOS only).
+- Publish. Set up a publishing workflow, facilitating ingestion of remote work into your production pipeline (BYOS only).
+- Rendering/compute. Use accsyn for heavy compute processing, such as 3D image rendering, 2D compositing render, GPU processing (ML) or any custom resource-intensive calculation that needs to run in the background (BYOS only).
 
 ## Developing with accsyn
 
@@ -29,7 +30,13 @@ For a complete list of accsyn terms, please refer to the [API glossary page](htt
 
 Learn how to programmatically launch and manage file transfers, create deliveries and manage file sharing.
 
-### Job JSON specification
+## JavaScript API
+
+[JavaScript API](/developer/javascript-api/)
+
+The same workspace API for Node.js 18+ and browsers.
+
+## Job JSON specification
 
 [Job JSON Spec](/developer/job-specification/)
 
