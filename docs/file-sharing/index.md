@@ -30,14 +30,18 @@ accsyn is built for that: share only the project subfolders partners need (for e
 
 The simplest one-shot transfer is a [delivery](/delivery/) — a time-limited package. **File sharing** is for ongoing access: permanent (or long-lived) folders, homes, and collections on your storage.
 
-Terms used throughout this guide:
+A **share** is an accsyn entity you can expose long term to one or more users. It is similar to a delivery, except a share stays active for as long as the project (or collaboration) needs it, while a delivery can expire. Shares are often thought of as **projects** — typically mapped 1:1 to production projects — in a way that is comparable to a Windows SMB share: a named place on storage that people connect to with controlled permissions.
 
-- **ACL** — Access Control List; defines which employees may access volumes, and which standard users may access shared folders (or specific subpaths beneath them).
-- **Share** — Internal accsyn entity for a container of sharable files and folders: a volume, shared folder, collection, or home. The share API `code` must be unique within the workspace. In the API, paths often use `share=<ident>/…` notation.
-- **Volume** — Root folder exposed to accsyn on a file server. accsyn cannot reach files outside this root. All sharing, delivery, and title management happens inside volumes. BYOS workspaces may define many volumes. Administrators have full volume access; employees only to volumes they are granted; standard users never get direct volume access.
-- **Shared folder** — A folder beneath a volume (or the volume root) shared with standard users through ACLs. You can grant access to the whole share or only a **subfolder** — ideal for integrating vendors into one project area without opening the rest of the tree.
-- **Collection** — A virtual folder of files and folders gathered from one or more volumes, shared like a shared folder.
-- **Home** — A per-user shared folder (named after the user email) for upload/download outside the main production area. Off by default; enable in Settings.
+There are four types of shares:
+
+- **Volume** — Disk storage or network share: the root folder. Accsyn cannot access files outside this folder. Administrators have full access. Employees can be granted read (download) and/or write (upload) on a volume. A workspace can have multiple volumes, served by different storage servers.
+- **Shared folder** — A folder beneath a volume (or the volume itself) shared with standard-role users. You can share the entire folder or only a particular subfolder. Administrators and employees may create shares beneath volumes they can access.
+- **Home** — A special shared folder designated and tied to a single user (typically named after their email), for personal upload/download outside the main production tree. Off by default; enable in Settings.
+- **Collection** — A virtual shared folder: a named set of files and folders picked from across a volume, or even spanning multiple volumes, shared like a shared folder.
+
+Accsyn uses **ACLs** (Access Control Lists) on shares to define what each user may do. The share API `code` must be unique within the workspace; in the API, paths often use `share=<ident>/…` notation.
+
+That model means you do **not** need to copy files into a temporary account folder just to share them (as you often would with FTP). Instead you can share a project folder and use ACLs so partners only get download and/or upload on specific subfolders — keeping the rest of the tree private.
 
 Access by role:
 

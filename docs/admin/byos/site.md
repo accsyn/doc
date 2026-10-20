@@ -75,7 +75,7 @@ See also [File sharing — local machines](/file-sharing/#can-my-clients-share-f
 
 Toolbar:
 
-- Show all sites; Display hidden built-in sites such as the accsyn and roaming sites.
+- Show all; Display hidden built-in sites such as the accsyn and roaming sites.
 
   
 

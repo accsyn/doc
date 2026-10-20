@@ -77,23 +77,24 @@ We assume you start off from the cloud workspace trial, skip this step if you al
 
 More detailed information on BYOS workspace setup, can be found [here](/admin/byos/).
 
-## Introduction to accsyn File Sharing
+## Introduction to accsyn Collaboration / File Sharing
 
-accsyn uses ACLs - Access Control List, on folders to define what kind of access an individual user has. There are two levels/types of folders:
+A "share" is an entity in accsyn that can be shared long term with one or more users, it is similar to a delivery with the difference that a share is meant to be active as long as an project is active but a delivery can set to expire. An accsyn share is meant to map 1:1 on projects, and is similar to the term "SMB Share" in Windows operating system.
 
-  
 
-- Volume; Also denoted disk or network share, is the root folder and accsyn cannot access files outside this folder. Users with the "administrator" base role automatically have full access to a volume. Users with the "employee" base role can be given read(download) and/or write(upload) access to a volume. Multiple volumes can exist within an accsyn workspace, and they can be mapped to different servers.
-- Shared folder; A folder beneath the volume, or the volume itself, to be shared with "standard" role (default) users. Either the entire folder is shared, or a particular sub folder. Administrators and employees own the right to share folders beneath a volume. The Collection is a virtual shared folder containing a set of files picked across the entire volume or even spanning multiple volumes.
+There are four types of shares:
 
-  
+- **Volume**; E.g disk storage or network share, is the root folder and accsyn cannot access files outside this folder. Users with the "administrator" base role automatically have full access to a volume. Users with the "employee" base role can be given read(download) and/or write(upload) access to a volume. Multiple volumes can exist within an accsyn workspace, and they can be served by different storage servers.
+- **Shared Folder**; A folder beneath the volume, or the volume itself, to be shared with "standard" role (default) users. Either the entire folder is shared, or a particular sub folder. Administrators and employees own the right to share folders beneath a volume. The Collection is a virtual shared folder containing a set of files picked across the entire volume or even spanning multiple volumes.
+- **Home**; A special shared folder designated and tied to a user.
+- **Collection**; A set of files from different locations (volumes/shares/homes) that constitutes a named "virtual share". 
+
+accsyn uses **ACL**s - Access Control Lists, on shares to define what kind of access an individual user has
 
 This definition means that you do not need to move files into a temporary folder just to share it like you would need with an FTP when you create an account folder, instead you can for example share the entire project folder and then use ACLs to only give access to particular subfolders for download and/or upload. More on that below.
 
-  
 
 Throughout this tutorial, we will assume there exists one default volume named "storage".
-
   
 
 ### Delivery
@@ -118,32 +119,27 @@ Find more information about the accsyn Delivery feature [here](/delivery/).
 6. (Optional) Enter a personal message to the user.
 7. Click Invite button to create user and send an invitation link to user with clear instructions on how to sign up their personal accsyn account and access the volume.
 
+*Note: employee counts as an operator user and might be charged for on a monthly basis*
+
 ## Share a project folder with users
 
 In this example we assume we have a project called proj001 in the folder _PROJECTS on your default accsyn storage volume that needs to be shared with an external collaborator - source material they should download in the "source" subfolder and then have them upload their contribution to the "FROM_VENDOR" subfolder.
 
-  
 
 ### Example folder structure
 
 In this tutorial we assume the accsyn default storage volume has this folder structure:
 
+```bash
 _TOOLS
-
 _PROJECTS
-
-proj001    <= The shared project folder
-
+   proj001    <= The accsyn shared folder
       _ADMIN
-
-source<= The subfolder user can download from, not upload
-
-     FROM_VENDOR
-
-monique<= The subfolder where user can upload to
-
-_LIBRARY
-
+      source   <= The subfolder user can download from, not upload
+      FROM_VENDOR
+         monique   <= The subfolder where user can upload to
+_LIBRARY 
+```
   
 
 ### Creating the shared project folder
@@ -156,12 +152,9 @@ Login to the desktop app as an administrator or an employee having read & write 
 4. In the action bar, choose Share > Share folder. The create share dialog will open.
 5. Give the shared folder a name [proj001].
 6. Click Create to have share created.
-
   
-
 *Note: if you want to share the entire project folder with a user, you can also grant access directly from the share dialog as needed.*
 
-  
 
 ### Sharing the source folder
 
