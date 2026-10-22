@@ -4,6 +4,22 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
+## v3.6-8 <small>upcoming</small>
+
+**Minor features**
+
+- [WEB/CORE] Duplicate queue.
+- [APP] Send deliveries and upload requests directly from the app, no need anymore to roundtrip the web browser to finish up.
+
+**Bug fixes**
+
+- [APP] Extend REST timout to 60s, were previously set too low (10s).
+- [MAPPED SHARES] Fixed bugs where volume mapped share were resolved instead of of share and override flag not were respected.
+- [MAPPED SHARES] Fixed bug were a mapped destination volume/share were involved by mistake on download.
+- [APP] Small improvements to hook display and bug fixes with showing viewing incoming deliveries.
+- [APP/WEB] Fixed bug where sensitive local paths were not properly obscured.
+
+
 ## v3.6-7 <small>October 8, 2026</small>
 
 **Minor features**

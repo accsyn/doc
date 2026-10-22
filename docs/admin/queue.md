@@ -66,9 +66,9 @@ Enter a name for the new queue and confirm. The following attributes are copied 
 - Priority and status
 - Description
 - Metadata and config (including transfer, job and email overrides, and hooks)
-- Parent and compute-default flag
+- Parent
 
-The new queue is **not** marked as the workspace default queue. Its API code is generated from the name you enter; if that code already exists, a number (`1`, `2`, …) is appended until it is unique.
+The new queue is **not** marked as the workspace default or compute-default queue. Its API code is generated from the name you enter; if that code already exists, a number (`1`, `2`, …) is appended until it is unique.
 
 ## Edit a queue
 
