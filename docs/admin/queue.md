@@ -39,6 +39,7 @@ Queue menu:
 - Edit; Bring up queue editor.
 - Disable; Disable the queue.
 - Enable; Enable the queue.
+- Duplicate; Create a copy of the queue (settings, priority, status, description, metadata and config). You will be asked for a name for the new queue; its API code is generated from that name and made unique among existing queues.
 - Logs; Show log events related to the queue.
 - Delete; Delete the queue.
 
@@ -55,6 +56,19 @@ To create a new queue, click the NEW QUEUE button in the upper right corner.
   
 
 When done, click CREATE to have the queue created. Click the cross (X) icon in upper right corner to cancel creation.
+
+## Duplicate a queue
+
+To duplicate a queue, open the menu (three dots icon) on the right hand side and choose Duplicate.
+
+Enter a name for the new queue and confirm. The following attributes are copied from the source queue:
+
+- Priority and status
+- Description
+- Metadata and config (including transfer, job and email overrides, and hooks)
+- Parent and compute-default flag
+
+The new queue is **not** marked as the workspace default queue. Its API code is generated from the name you enter; if that code already exists, a number (`1`, `2`, …) is appended until it is unique.
 
 ## Edit a queue
 

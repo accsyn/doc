@@ -100,7 +100,7 @@ When ready, click **SEND REQUEST** to email recipients with upload instructions.
 
 ## Deliver from Cloud or on-premises storage
 
-You can also create deliveries from permanent accsyn Cloud storage, or from BYOS volumes and shared folders.
+You can also create deliveries from permanent accsyn Cloud storage, or from BYOS volumes and shared folders — entirely in the Desktop App, without opening the browser.
 
 1. Download and install the [accsyn Desktop App](/desktop-app/) and sign in to your workspace as an admin or employee.
 2. Open the **Storage** view.
@@ -112,11 +112,14 @@ You can also create deliveries from permanent accsyn Cloud storage, or from BYOS
 *Screenshot of the Desktop App when choosing a file for delivery.*
 
 5. Selected items appear in the cart on the right; add more as needed.
-6. Click **NEXT RECIPIENTS** to finish the delivery in the browser (same recipient and options steps as above).
+6. Click **NEXT - RECIPIENTS** to open the **Send delivery** dialog in the app (no browser handoff).
+7. Review the file list, add recipients, set **Expires**, and optionally enter a message.
+8. For a public delivery, enable **Public**. Optionally set a **Password** and/or **Anonymous** access (anyone with the link can download without signing in).
+9. Click **Send**. Recipients are emailed a download link. For a public delivery, the app shows a **Public download link** you can copy.
 
 ## Deliver from the Media Vault
 
-Media in the Media Vault can be delivered the same way:
+Media in the Media Vault can be delivered the same way — cart and **Send delivery** dialog stay in the Desktop App:
 
 1. Install the [Desktop App](/desktop-app/) and sign in as an admin or employee.
 2. Create the title and log the media to deliver.
@@ -127,17 +130,20 @@ Media in the Media Vault can be delivered the same way:
 *Screenshot of the Desktop App when choosing media for delivery.*
 
 4. Media is added to the delivery cart; repeat until the package is complete.
-5. Click **Next recipients** to finish in the browser, as for any other delivery.
+5. Click **NEXT - RECIPIENTS** to open the **Send delivery** dialog and finish recipients, expiry, message, and public options as above — no browser step.
 
 ## Request upload to Cloud storage
 
-Upload requests can also be created from the Desktop App, targeting a permanent folder on accsyn Cloud or BYOS storage.
+Upload requests can also be created from the Desktop App, targeting a permanent folder on accsyn Cloud or BYOS storage. Recipients and options are set in an in-app dialog (not in the browser).
 
 1. Install the [Desktop App](/desktop-app/) and sign in as an admin or employee.
-2. Open the **Storage** view.
+2. Open the **Storage** view (or a Media Vault title’s storage browser).
 3. Browse to the destination folder (create folders via the toolbar or right-click **Create new folder**).
 4. Click **Share** and choose **Request upload here**, or right-click and choose **Share → Request upload here**.
-5. The upload request opens in your browser so you can finish recipients and options (see above).
+5. If the folder is not empty, confirm that you still want to proceed.
+6. In the **Send upload request** dialog, confirm the destination folder path, add recipients, set **Expires**, and optionally enter a message.
+7. For a public request, enable **Public**. Optionally set a **Password** and/or **Anonymous** access (anyone with the link can upload without signing in).
+8. Click **Send**. Recipients are emailed upload instructions. For a public request, the app shows a **Public request link** you can copy.
 
 ## Create a delivery with the Python API
 
