@@ -63,11 +63,13 @@
   margin: 1.4rem 0;
 }
 
-.md-typeset .release-card > h2 {
+.md-typeset .release-card > h2,
+.md-typeset .release-card > h3 {
   margin: 0.6rem 0;
 }
 
-.md-typeset .release-card > h2 small {
+.md-typeset .release-card > h2 small,
+.md-typeset .release-card > h3 small {
   color: var(--md-default-fg-color--light);
   font-size: 0.6em;
   font-weight: 400;

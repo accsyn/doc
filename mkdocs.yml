@@ -98,6 +98,7 @@ nav:
       - developer/index.md
       - Python API: developer/python-api.md
       - JavaScript API: developer/javascript-api.md
+      - MCP Server: developer/mcp-server.md
       - Hooks: developer/hooks.md
       - Render farm: developer/farm.md
       - Publish: developer/publish.md

@@ -37,6 +37,50 @@ On Node, `workspace`, `username`, and `apiKey` can be omitted when `ACCSYN_WORKS
 
 The API queues transfers. It does not move the file bytes itself.
 
+## Reading logs
+
+`logs` returns backend logs for a scope, or for one entity. The return value is the backend response, with the rows in `result`.
+
+```javascript
+// Workspace log
+const { result } = await session.logs({ entityType: "workspace" });
+
+// Log of one job, filtered by text
+const job = await session.logs({ entityType: "job", entityId: "6aad45ce991535260e495da9", search: "error" });
+```
+
+The backend sorts a log oldest first. To read it in pages, use `paginationStart` and `paginationSize`. `paginationStart` is the first row, counted from 1, and `-1` returns the last page, that is the newest `paginationSize` rows. The response has `pagination` with `start`, `end` and `total`. The options `paginationPage`, `paginationLimit` and `paginationSkip` exist for parity with the Python API, but the backend does not read them.
+
+```javascript
+// The newest 50 rows of the workspace log
+const { result, pagination } = await session.logs({ paginationStart: -1, paginationSize: 50 });
+console.log(`${result.length} of ${pagination.total} rows`);
+```
+
+### Process logs
+
+`processLogs` returns the detailed process log (console output) of a job, for example the detailed transfer log. The job is identified by its ID.
+
+```javascript
+// Log of the first task of the job that has been processed, latest try
+const response = await session.processLogs("6aad45ce991535260e495da9");
+console.log(response.text_master);
+console.log(`Tries: ${response.try_count}`);
+```
+
+The console output of the master process is in `text_master` and in `text_slave`for the slave (file server) process. The returned try is in `try`, the total number of tries in `try_count`, and earlier tries in `process_history`, if there are any.
+
+Without `uri`, the log of the first task that has been processed is returned. Give `uri` to read the log of a specific task, and `tryNum` (counted from 0) to read an earlier try. The latest try is the default.
+
+```javascript
+// The first try of a specific task
+const first = await session.processLogs("6aad45ce991535260e495da9", { uri: "<task uri>", tryNum: 0 });
+
+// The slave (file server party) log. Only operators can read it, and only for transfer jobs.
+const slave = await session.processLogs("6aad45ce991535260e495da9", { master: false, slave: true });
+console.log(slave.text_slave);
+```
+
 ## Source code
 
 [https://github.com/accsyn/javascript-api](https://github.com/accsyn/javascript-api)
@@ -46,6 +90,36 @@ The API queues transfers. It does not move the file bytes itself.
 [Job JSON Spec](/developer/job-specification/)
 
 [Tutorial | Remote Office Sync](/tutorials/remote-office-sync/)
+
+## Changelog
+
+Changes to the JavaScript API, most recent release first. The accsyn platform changelog is [here](/changelog/).
+
+<div class="release-card" markdown>
+
+### v3.6-8 <small>October 23, 2026</small>
+
+**Minor features**
+
+- [JS API] Support for reading process logs - `session.processLogs()` returns the detailed console output of a job task, for example the detailed transfer log. Select task and try, and read the master or slave process log.
+- [JS API] Page through logs with `paginationStart` and `paginationSize` in `session.logs()`, for example the newest 50 rows of a log.
+
+**Changes**
+
+- [JS API] Aligned versioning with accsyn. The package version now follows the accsyn release instead of the Python API version. This release is published to npm as `3.6.8`, because npm versions cannot contain a hyphen.
+
+</div>
+
+<div class="release-card" markdown>
+
+### v3.4.0 <small>October 16, 2026</small>
+
+**Minor features**
+
+- [JS API] Initial version, published to npm as [`accsyn`](https://www.npmjs.com/package/accsyn). Mirrored from the Python API 3.4.0, with the same session, entity, access, file, setting and log operations as async methods.
+- [JS API] Works in Node.js 18+ and in browsers, as ES module and CommonJS, with TypeScript types included.
+
+</div>
 
 <!-- api-reference:start -->
 
@@ -846,6 +920,31 @@ Pre-process a publish file list. Directory sizes are filled in when omitted.
 
 `Promise`\<`unknown`\>
 
+###### processLogs()
+
+> **processLogs**(`entityId`, `options?`): `Promise`\<[`JsonObject`](#jsonobject)\>
+
+The detailed process log (console output) of a job task, for example the detailed transfer log.
+
+The console output is in `text_master` for the master process and `text_slave` for the slave process. The returned
+try is in `try`, the total number of tries in `try_count` and earlier tries in `process_history`, if any.
+
+####### Parameters
+
+####### entityId
+
+`string`
+
+ID of the job to read the process log of.
+
+####### options?
+
+[`ProcessLogOptions`](#processlogoptions) = `{}`
+
+####### Returns
+
+`Promise`\<[`JsonObject`](#jsonobject)\>
+
 ###### rename()
 
 > **rename**(`path`, `pathTo`): `Promise`\<`unknown`\>
@@ -1187,9 +1286,25 @@ When querying attributes, return update attributes.
 
 > `optional` **paginationPage?**: `number`
 
+Accepted for parity with the Python API. The backend does not read `page`, `limit` and `skip`, use
+`paginationStart` and `paginationSize` instead.
+
+###### paginationSize?
+
+> `optional` **paginationSize?**: `number`
+
+Number of rows to return. All rows are returned when omitted.
+
 ###### paginationSkip?
 
 > `optional` **paginationSkip?**: `number`
+
+###### paginationStart?
+
+> `optional` **paginationStart?**: `number`
+
+First row to return, counted from 1 in the sort order (oldest first by default). `-1` returns the last page,
+that is the newest `paginationSize` rows.
 
 ###### search?
 
@@ -1202,6 +1317,36 @@ When querying attributes, return update attributes.
 ###### sortReverse?
 
 > `optional` **sortReverse?**: `boolean`
+
+***
+
+#### ProcessLogOptions
+
+##### Properties
+
+###### master?
+
+> `optional` **master?**: `boolean`
+
+Fetch the master process log, the main process. Defaults to true.
+
+###### slave?
+
+> `optional` **slave?**: `boolean`
+
+Fetch the slave process log, the file server party process. Can only be done by operators, for transfer jobs.
+
+###### tryNum?
+
+> `optional` **tryNum?**: `number`
+
+Zero-based try (attempt) number. Defaults to the latest try.
+
+###### uri?
+
+> `optional` **uri?**: `string`
+
+URI of the task to read the log of. Defaults to the first task of the job that has been processed.
 
 ***
 
@@ -1220,6 +1365,12 @@ API key. Falls back to ACCSYN_API_KEY.
 > `optional` **connectTimeout?**: `number`
 
 Connection timeout in seconds. Defaults to 10. Recorded for parity; fetch uses `timeout` as the abort deadline.
+
+###### dev?
+
+> `optional` **dev?**: `boolean`
+
+Talk to a local backend on 127.0.0.1:8181. Falls back to AS_DEV.
 
 ###### ~~domain?~~
 
