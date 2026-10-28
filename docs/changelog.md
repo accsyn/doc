@@ -4,7 +4,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
-## v3.6-8 <small>October 27, 2026</small>
+## v3.6-8 <small>October 27-28, 2026</small>
 
 **Minor features**
 
@@ -14,6 +14,8 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [JS] First public release of the new accsyn Javascript API, in feature parity with the accsyn Python API. Removed the old JS browser transfer API for now.
 - [MCP] First release of accsyn MCP server, supporting quering transfers, their logs and modifying state.
 - [DAEMON INSTALLER] Preserve environment variable definitions in Linux init/systemd / Mac plist on upgrade.
+- [WEB] Properly show job hooks, with hook exec log viewer.
+- [WEB] Possbility to edit local share path mappings from the hosts page. 
 
 **Bug fixes**
 
@@ -22,7 +24,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [MAPPED SHARES] Fixed bug were a mapped destination volume/share were involved by mistake on download.
 - [APP] Small improvements to hook display and bug fixes with viewing incoming deliveries.
 - [APP/WEB] Fixed bug where sensitive local paths were not properly obscured, properly show accsyn paths on source & destination.
-
+- [CORE] Fixed bug causing delay on transfer start.
 
 ## v3.6-7 <small>October 8, 2026</small>
 

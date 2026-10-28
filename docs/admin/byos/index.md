@@ -16,30 +16,26 @@ Watch this video get started with all major features of accsyn BYOS:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/D9Ng_yDVW1Y" title="accsyn Delivery introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Which additional features become available?
+## Which core features become available?
 
 Primarily, these core features are migrated to your premises:
 
-- Deliveries; are now sent from your local storage volume(s), supporting both the accsyn fast file transfer protocol (ASC) and web browser deliveries (HTTPS).
-- File sharing; is now served from your local storage volumes.
+- *Deliveries*; are now sent from your local storage volume(s), supporting both the accsyn fast file transfer protocol (ASC) and web browser deliveries (HTTPS).
+- *Collaboration*; ACL driven project folders sharing on local storage volumes.
 
-  
 
 With BYOS, remote Sites are supported - install servers on additional remote physical offices or cloud, for mirrored path synchronisation/backup of production assets.
-
   
 
 Additionally, these [Workflow](/developer/) features will be enabled:
 
+- [Sites](/admin/byos/site); Setup remote offices and cloud locations for file sync and backup.
 - [Hooks](/developer/hooks/); Have scripts run on your server when a job is submitted, finished, and so on.
-- [Compute](/developer/farm/); Set up a render farm with Python script engines for common apps such as ffmpeg, Houdini, Unreal MRQ render and much more.
 - [Publish](/developer/publish/); Set up a publish workflow, enabling remote vendor ingest of files within your production pipeline.
+- [Compute](/developer/farm/); Set up a render farm with Python script engines for common apps such as ffmpeg, Houdini, Unreal MRQ render and much more.
 
-  
 
-Important note:
-
-- Media Vault is NOT available for BYOS mode workspaces, sign up and set up a separate BYOS workspace if you require both within your organisation. Feel free to reach out to support so we can guide and assist you in this process.
+*Important note: Media Vault is NOT available for BYOS mode workspaces, sign up and set up a separate BYOS workspace if you require both within your organisation. Feel free to reach out to support so we can guide and assist you in this process.*
 
 ## Setting up
 

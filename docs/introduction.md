@@ -1,17 +1,19 @@
 # An introduction to accsyn
 
-accsyn is a complete **file I/O platform** for film and media — underpinned by the high-speed encrypted **[ASC](/whitepaper/)** (Accelerated Secure Copy) protocol.
+accsyn is a complete **accelerated file I/O platform** targeting film and media — underpinned by the high-speed encrypted **[ASC](/whitepaper/)** (Accelerated Secure Copy) protocol.
+
+![](/assets/introduction-schematics.png)
 
 It is offered as **two product variants**, each aimed at a different stage of the media life-cycle. Most organisations use one or the other; if you need both production I/O and a cloud master archive, sign up for **two workspaces** (BYOS + Cloud) rather than combining them in one.
 
 | Variant | Stage | Storage model |
 | --- | --- | --- |
-| **[accsyn for media production](#accsyn-for-media-production)** *(default)* | Shoot, DIT, post, VFX, collaboration, site sync, automation | [BYOS](/admin/byos/) — your on-premises or cloud VPC storage |
-| **[accsyn for media distribution](#accsyn-for-media-distribution)** | Masters, archival, streaming, sales/festival delivery, lab | [accsyn Cloud](/vault/) — hosted vault storage |
+| **[accsyn for production](#accsyn-for-production)** *(default)* | Shoot, DIT, Post, VFX, Collaboration, Site Sync, Automations | [BYOS](/admin/byos/) — your on-premises or cloud VPC storage |
+| **[accsyn for distribution](#accsyn-for-media-distribution)** | Mastering, DCP validation, streaming, sales/festival delivery, archival, lab | [accsyn Cloud](/vault/) — hosted vault storage |
 
-Both move **large folders and many files** securely and efficiently over ASC. Product videos for each variant are planned under the same names.
+Both move **large folders and many files** securely and efficiently over ASC.
 
-## accsyn for media production
+## accsyn for production
 
 **Default path for studios and post.** Expose production storage you already own — on-premises or in your cloud VPC — with accelerated, secure file I/O. This is the [BYOS](/admin/byos/) (Bring Your Own Storage) workspace.
 

@@ -39,6 +39,8 @@ By mapping shared folders locally, and exposing them as readable and writeable, 
 
 With **read** access, operators can **pull** (upload from your mapped folder onto main storage or a site). With **write** access, they can **push** (download from main storage or a site onto your mapped folder). Transfers require your Desktop App or User server client to be online — see [Map shares locally](#map-shares-locally) below.
 
+Share mappings can be configured in the **Desktop app** (Settings → Share mappings) or on the **Hosts** page in the web app for your own client — see the steps under [Map shares locally](#map-shares-locally).
+
 ### Sites — permanent remote office or cloud push and pull
 
 Local share mappings are ideal for a single machine. If you need a more permanent push and pull setup for a **remote office or cloud location** — shared storage at that place, hq-to-site sync, and transfers that do not depend on one user's laptop — use **sites** and **site servers** instead.
@@ -194,21 +196,26 @@ Here is how to get going with local file sharing on your computer, for unattende
 
 5. Wait for the client to show up before you proceed.
 
-6. On the same machine, logon to the accsyn Desktop app as the same user.
+6. Configure **local share mappings** for that client. You can do this from either place — both edit the same client config and apply to all clients on the same machine (matching host ID / network card MAC addresses):
 
-7. Switch to the workspace you installed the client for.
+#### Option A — From the Hosts page (web)
 
-8. Open app settings by clicking the user button in upper right corner.
+1. On the Hosts page, find your host and the workspace client you just installed (it must be **your** client — share mappings can only be edited for clients owned by your user).
+2. Open **Share mappings** from the client actions (folder-tree control on the client row, or **Share mappings** in the client menu / client edit page).
+3. Enable the shared folder or volume you want to map, choose **Override path** and enter an absolute local path, then optionally enable **Read** and/or **Write**. Changes are saved live; click **Done** when finished.
 
-9. Go to Share mappings tab. You should see a User server entry in the client list at the bottom.
+#### Option B — From the Desktop app
 
-10. Choose the shared folder you want to map locally, where you want to map it and if remote elevated workspace users should be able to read (upload from your mapped folder, pull material) or write (download to your shared folder, push material):
+1. On the same machine, log on to the accsyn Desktop app as the same user.
+2. Switch to the workspace you installed the client for.
+3. Open app settings by clicking the user button in the upper right corner.
+4. Go to the **Share mappings** tab. You should see a User server entry in the client list at the bottom.
+5. Choose the shared folder you want to map locally, where you want to map it, and whether remote elevated workspace users should be able to **read** (upload from your mapped folder, pull material) or **write** (download to your shared folder, push material):
 
 ![](/assets/admin_hosts-ce53c04370db.png)
 
-11. A list of all clients on the same machine (matching host ID -  network card MAC addresses) is presented, your daemon client should be present there and the share mapping should apply to them all.
-
-12. Click close when done.
+6. A list of all clients on the same machine is presented; your daemon client should be present and the share mapping should apply to them all.
+7. Click close when done.
 
   
 
@@ -226,7 +233,7 @@ If the user should have the entire volume folder structure mirrored locally, it 
 2. Shut down all accsyn processes (desktop app and background daemon/services).
 3. Set this environment variable globally, or by configuring the accsyn client startup environment: ACCSYN_STORAGE_PATH=/Path/To/Local/Storage. "STORAGE" should match the volume API code attribute in this example, /Path/To/Local/Storage is the local path where the volume should be mapped.
 4. Start the background daemon/service and desktop app again. From this point on, downloads of files from the volume will be preset to the local path with mirrored paths enabled and the same applies for uploads from that path - if it matches a shared folder or home path.
-5. In desktop app share mapping preferences, the volume should now appear. Enable "Read" and "Write" permissions, this will now enable workspace operators (admins and employees with access to volume) to push and pull files to/from the local path [/Path/To/Local/Storage].
+5. In share mapping preferences (Desktop app **Share mappings** tab, or **Share mappings** for your client on the Hosts page), the volume should now appear. Enable **Read** and **Write** permissions; this will enable workspace operators (admins and employees with access to the volume) to push and pull files to/from the local path [/Path/To/Local/Storage].
 
   
 
