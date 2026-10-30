@@ -257,7 +257,7 @@ Right click the lane, choose the assigned engine and then choose Enable/Disable.
 
 ### Attributes
 
-- Site; The site the server is at can be changed as long as it is not serving any volumes. De-configure any volumes @  [https://accsyn.io/admin/volumes/](https://accsyn.io/admin/volumes) to enable site change.
+- Site; The site the server is at can be changed as long as it is not serving any volumes. De-configure any volumes @  [https://accsyn.io/admin/storage/](https://accsyn.io/admin/storage) to enable site change.
 - Description; Set the optional description the server should have.
 
   

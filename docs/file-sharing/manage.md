@@ -105,7 +105,7 @@ Right-click the share in the share list and choose **Edit**.
 
 ### Removing a shared folder
 
-Right-click the shared folder and choose **Delete**. To keep it for audit, choose **Inactivate** (archive). Restore inactive shares from the share settings page (<https://accsyn.io/admin/volumes>).
+Right-click the shared folder and choose **Delete**. To keep it for audit, choose **Inactivate** (archive). Restore inactive shares from the share settings page (<https://accsyn.io/admin/storage>).
 
 ## Creating a collection
 

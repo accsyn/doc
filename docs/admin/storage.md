@@ -6,7 +6,7 @@ This guide shows how to administrate your workspace storage - volumes, shared fo
 
 Prerequisites:
 
-- Logged on as an administrator at <https://accsyn.io/admin/volumes>.
+- Logged on as an administrator at <https://accsyn.io/admin/storage>.
 
 ## What is a volume?
 

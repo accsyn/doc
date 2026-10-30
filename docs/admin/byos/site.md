@@ -111,7 +111,7 @@ Description (optional); Give the site a description, for display only.
 When created, you can take the following actions:
 
 - Install a new server at site, go to <https://accsyn.io/admin/servers/new>.
-- Serve volume(s) at site, go to <https://accsyn.io/admin/volumes>, edit the volume that should be served by the server and then go to the "Servers" tab where you can set the server. Make sure storage is available at the site at the same physical disk locations as configured at the volume, you can override the paths if needed.
+- Serve volume(s) at site, go to <https://accsyn.io/admin/storage>, edit the volume that should be served by the server and then go to the "Servers" tab where you can set the server. Make sure storage is available at the site at the same physical disk locations as configured at the volume, you can override the paths if needed.
 - Assign compute engines to server lanes, to enable remote office/cloud rendering capabilities. For more information, see [Workflows](/developer/).
 
 ## Edit a site

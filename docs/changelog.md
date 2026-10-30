@@ -4,7 +4,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
-## v3.6-8 <small>October 27-28, 2026</small>
+## v3.6-8 <small>October 27-30, 2026</small>
 
 **Minor features**
 
@@ -15,7 +15,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [MCP] First release of accsyn MCP server, supporting quering transfers, their logs and modifying state.
 - [DAEMON INSTALLER] Preserve environment variable definitions in Linux init/systemd / Mac plist on upgrade.
 - [WEB] Properly show job hooks, with hook exec log viewer.
-- [WEB] Possbility to edit local share path mappings from the hosts page.
+- [WEB] Possbility to edit local share path mappings and enable/disable clients from the hosts page.
 - [WEB/DELIVERY] Edit delivery public, secret(password) and anonymous attributes. Improved storage file browser with location(share) selector.
 - [APP] Changed the local filesystem file browser to look like the same as the native (operating system), affects app delivery download folder select and request file browse. 
 

@@ -90,7 +90,7 @@ queue = session.create("job", {"type":2,"code":"proj001"})
 
 ## Setting up volume
 
-In this tutorial, we assume you have your project data stored on a NAS on a share and this share is mapped/served as the volume "projects" in accsyn. To verify your storage configuration, head over to <https://accsyn.io/admin/volumes>.
+In this tutorial, we assume you have your project data stored on a NAS on a share and this share is mapped/served as the volume "projects" in accsyn. To verify your storage configuration, head over to <https://accsyn.io/admin/storage>.
 
   
 
