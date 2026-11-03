@@ -18,6 +18,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [WEB] Possbility to edit local share path mappings and enable/disable clients from the hosts page.
 - [WEB/DELIVERY] Edit delivery public, secret(password) and anonymous attributes. Improved storage file browser with location(share) selector.
 - [APP] Changed the local filesystem file browser to look like the same as the native (operating system), affects app delivery download folder select and request file browse. 
+- [DOC] New tutorial: API Driven Delivery.
 
 **Bug fixes**
 

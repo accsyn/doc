@@ -40,7 +40,7 @@ The app is written in Java and requires Java installed on Linux platforms, Windo
 
 Find the links to the app installer below, log in with your personal accsyn account:
 
-[DOWNLOAD APP](https://www.google.com/url?q=https%3A%2F%2Faccsyn.io%2Fgetapp&sa=D&sntz=1&usg=AOvVaw347DVoq0Wwbl4tjIp_nP7D)
+[DOWNLOAD APP](https://accsyn.io/getapp)
 
 ## Windows install
 

@@ -199,7 +199,7 @@ We are not going into detail on how to implement the ftrack logic of this script
 
 With the list of relative file paths at hand, use the accsyn Python API to create a daily sync job that pushes the files to the vendor. For detailed information about the accsyn Python API:
 
-[accsyn Python API Documentation](https://www.google.com/url?q=https%3A%2F%2Faccsyn-python-api.readthedocs.io%2F&sa=D&sntz=1&usg=AOvVaw05k5tY40Ah3v6XBNmxX2mb)
+[accsyn Python API Documentation](https://accsyn-python-api.readthedocs.io/)
 
 Boilerplate code:
 
@@ -356,10 +356,10 @@ accsyn provides a versatile API-enabled file I/O platform, easy to integrate int
 
 ### Additional resources
 
-[Case study: Filmgate VFX](https://www.google.com/url?q=https%3A%2F%2Faccsyn.com%2Fcasestudy-filmgate%2F&sa=D&sntz=1&usg=AOvVaw3bnYjgBQU-EoOKdyqsFRyq)
+[Case study: Filmgate VFX](https://accsyn.com/casestudy-filmgate/)
 
 Learn how Filmgate Films use accsyn within their VFX pipeline for conform, data wrangling, outsourcing and rendering.
 
-[accsyn Python API on Github](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Faccsyn%2Faccsyn-python-api&sa=D&sntz=1&usg=AOvVaw2ZBwcEBZZrND8mclEA7jK4)
+[accsyn Python API on Github](https://github.com/accsyn/accsyn-python-api)
 
 Download the accsyn Python API source code from Github.

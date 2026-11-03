@@ -55,7 +55,7 @@ With this script you can then further ingest the files into your system, for exa
 
 The publish feature is 100% code driven, you will need basic Python developer experience. We provide production ready template scripts on our public GitHub that you should be able to download and augment:
 
-[Example publish scripts @ GitHub](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Faccsyn%2Fpublish-workflow&sa=D&sntz=1&usg=AOvVaw2-EBcyStRLGp8BT3SduYQ4)
+[Example publish scripts @ GitHub](https://github.com/accsyn/publish-workflow)
 
 *Note: In this guide we assume your publish scripts will be written in Python, and deployed on a Linux server.*
 

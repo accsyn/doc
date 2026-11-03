@@ -561,6 +561,12 @@ Automate transfers, hooks, publish workflows, and multi-site farms.
 
     Automate sync between offices and cloud with the Python API.
 
+-   **[API driven delivery](/tutorials/api-driven-delivery/)**
+
+    ---
+
+    Create deliveries and upload requests with the Python API.
+
 -   ![](/assets/index-9b4e5ebdf324.jpg)
 
     **[Film festival](/tutorials/film-festival/)**

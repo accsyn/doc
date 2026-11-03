@@ -92,13 +92,13 @@ job = session.create("transfer",{"source":"volume=projects/A001_C064_09224Y_001.
 
 Find full Python API documentation here:
 
-[accsyn-python-api.readthedocs.io/en/latest/](https://www.google.com/url?q=https%3A%2F%2Faccsyn-python-api.readthedocs.io%2Fen%2Flatest%2F&sa=D&sntz=1&usg=AOvVaw0_5CXRsktK7y-oUlru4v5r)
+[accsyn-python-api.readthedocs.io/en/latest/](https://accsyn-python-api.readthedocs.io/)
 
 ## Source code
 
 Access source code on GitHub:
 
-[https://github.com/accsyn](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Faccsyn&sa=D&sntz=1&usg=AOvVaw11YcTk5PDkFMqd5ZfYzKXI)
+[https://github.com/accsyn](https://github.com/accsyn/accsyn-python-api)
 
 ## Further resources
 
@@ -109,3 +109,7 @@ Specification of accsyn job JSON format
 [Tutorial | Remote Office Sync](/tutorials/remote-office-sync/)
 
 Learn how to use the accsyn Python API to automate file synchronisation between your offices and/or cloud storage.
+
+[Tutorial | API driven delivery](/tutorials/api-driven-delivery/)
+
+Create deliveries and upload requests from Python against Cloud or BYOS storage.

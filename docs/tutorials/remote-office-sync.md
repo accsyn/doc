@@ -60,7 +60,7 @@ With a site active, you can now start syncing files between your main location (
 
 Download and run the accsyn desktop app:
 
-[Get the accsyn Desktop app](https://www.google.com/url?q=https%3A%2F%2Faccsyn.io%2Fgetapp&sa=D&sntz=1&usg=AOvVaw347DVoq0Wwbl4tjIp_nP7D)
+[Get the accsyn Desktop app](https://accsyn.io/getapp)
 
 Here is an example of how to download a folder from central hq/accsyn location, to your remote site:
 
@@ -164,7 +164,7 @@ Breakdown of the script:
 
 ## Further resources
 
-[Source code](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Faccsyn%2Fremote-office-sync&sa=D&sntz=1&usg=AOvVaw1WF_udRmS3T7SMnXaMs25k)
+[Source code](https://github.com/accsyn/remote-office-sync/)
 
 View and download the source code on Github
 

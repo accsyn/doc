@@ -73,7 +73,7 @@ For more information, please visit <https://accsyn.com/pricing>. To check your c
 
 accsyn provides a set of default engine scripts, available as open source on GitHub:
 
-[GitHub](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Faccsyn%2Fcompute-scripts&sa=D&sntz=1&usg=AOvVaw1HU23EYktAZKPIUbUC3yeS)
+[GitHub](https://github.com/accsyn/accsyn-python-api)
 
 You are free to fork off these or create your own engine scripts, as needed. Feel free to reach out to support providing suggestions for improvement and pull requests.
 
@@ -217,7 +217,7 @@ The accsyn Python API allows for integrating render job submission inside the DC
 
 Detailed information about the Python API and how to submit render jobs is available within our Python API documentation:
 
-[API Documentation](https://www.google.com/url?q=https%3A%2F%2Faccsyn-python-api.readthedocs.io%2Fen%2Flatest%2Frender.html&sa=D&sntz=1&usg=AOvVaw2SZZ54BWSGTwTnYJhDZX6D)
+[API Documentation](https://accsyn-python-api.readthedocs.io/)
 
 Compute job JSON payload examples can be found here:
 
@@ -660,6 +660,6 @@ Breakdown of the engine script:
 
 Get to learn more about the accsyn Python API.
 
-[Case Study](https://www.google.com/url?q=https%3A%2F%2Faccsyn.com%2Fcasestudy-stillerstudios-hfs%2F&sa=D&sntz=1&usg=AOvVaw3qJqkJvfwSbH-PkgyzhFPl)
+[Case Study](https://accsyn.com/casestudy-stillerstudios-hfs/)
 
 Learn how accsyn was implemented at Stiller Studios for rendering the Handbok För Superhjältar animated feature.

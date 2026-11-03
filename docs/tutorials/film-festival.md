@@ -240,6 +240,6 @@ Ready to try out accsyn for free? Head over to <https://accsyn.io/trial>.
 
 ### More resources
 
-[Case study - SFF](https://www.google.com/url?q=https%3A%2F%2Faccsyn.com%2Fcasestudy-sff%2F&sa=D&sntz=1&usg=AOvVaw0hNzDknfmPjXDpvhHB6Kl6)
+[Case study - SFF](https://accsyn.com/casestudy-sff/)
 
 Learn how Stockholm Film Festival used accsyn as the main platform for managing the contributions.

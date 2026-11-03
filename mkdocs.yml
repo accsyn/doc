@@ -112,6 +112,7 @@ nav:
     - FTP server replacement: tutorials/ftp-server-replacement.md
     - Outsourcing pipeline: tutorials/outsourcing-pipeline.md
     - Remote office sync: tutorials/remote-office-sync.md
+    - API driven delivery: tutorials/api-driven-delivery.md
     - Film Festival: tutorials/film-festival.md
   - Troubleshooting:
       - troubleshooting.md
