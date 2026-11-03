@@ -4,7 +4,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
-## v3.6-8 <small>October 27-30, 2026</small>
+## v3.6-8 <small>October 30, 2026</small>
 
 **Minor features**
 
@@ -12,7 +12,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [APP] Send deliveries and upload requests directly from the app, no need anymore to roundtrip the web browser to finish up.
 - [PYTHON API] Support for reading task/process execution logs. Append job now supports supplying the ID of the job to append task(s) to. Aligned version with accsyn/backend.
 - [JS] First public release of the new accsyn Javascript API, in feature parity with the accsyn Python API. Removed the old JS browser transfer API for now.
-- [MCP] First release of accsyn MCP server, supporting quering transfers, their logs and modifying state.
+- [MCP] First release of accsyn MCP server, supporting agent query of transfers, their logs and modifying state.
 - [DAEMON INSTALLER] Preserve environment variable definitions in Linux init/systemd / Mac plist on upgrade.
 - [WEB] Properly show job hooks, with hook exec log viewer.
 - [WEB] Possbility to edit local share path mappings and enable/disable clients from the hosts page.
