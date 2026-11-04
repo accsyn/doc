@@ -86,6 +86,7 @@ nav:
       - Users: admin/user.md
       - Storage: admin/storage.md
       - Queues: admin/queue.md
+      - Projects: admin/project.md
       - Workspace Settings: admin/settings.md
       - Clients: admin/client.md
       - Internal settings: settings.md
