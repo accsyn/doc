@@ -13,7 +13,7 @@ A complete listing of all accsyn error codes that can appear as:
 | Code/ID | Description | Suggestion(s) for action |
 |---|---|---|
 | E#G001 | Cloud database down. | Contact support@accsyn.com. |
-| E#G002 | Your Accsyn free trial has EXPIRED, .. | Contact sales@accsyn.com to purchase your permanent licence and get transfers going. |
+| E#G002 | Your accsyn free trial has EXPIRED, .. | Contact sales@accsyn.com to purchase your permanent licence and get transfers going. |
 
 ## Job error codes
 

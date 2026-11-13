@@ -1,12 +1,12 @@
 # Storage administration
 
-This guide shows how to administrate your workspace storage - volumes, shared folders and collections. 
+This guide shows how to administrate your workspace storage - volumes, shared folders, homes and collections. 
 
   
 
 Prerequisites:
 
-- Logged on as an administrator at <https://accsyn.io/admin/storage>.
+- Logged on as an administrator or employee at <https://accsyn.io/admin/storage>.
 
 ## What is a volume?
 
@@ -17,20 +17,22 @@ A volume is the topmost folder on a server where accsyn is allowed to access fil
 - More than one volume may exist within a workspace.
 - accsyn cannot access anything outside volumes, admins can access all volumes whereas employees and standard users must be given explicit access.
 - One volume must be the "default" volume, the default volume is where home shares are created and new temp deliveries live.
-- A volume must be served by a [server](/admin/byos/server/), the server that is serving the default volume is called the main server.
+- A volume must be served by a [server](/admin/server/), the server that is serving the default volume is called the main server.
 - Volumes can be served on other sites,  as proxy volumes, enabling replication across physical or cloud locations.
 
 ## Volume list
 
-![](/assets/admin_storage-9ea46a0561b4.png)
+![](/assets/admin_storage.png)
+
+*Screenshot of the volume list with a volume expanded*
 
 The volume list shows all active volumes within your workspace:
 
 - Status indicator; Green is enabled, orange is disabled.
 - Name (code); The name of the volume.
 - Default indicator - points out the workspace default volume, where deliveries originate from and accsyn home share folders are created.
-- Share count: Shows the number of shared folders beneath the volume.
-- User count: Shows the number of users having access to the volume.
+- Share count; Shows the number of shared folders beneath the volume.
+- User count; Shows the number of users having access to the volume.
 - Description; (Optional) The description of volume.
 - Servers; List of main and site servers serving volume.
 - Edit (pen) button.
@@ -40,13 +42,13 @@ The volume list shows all active volumes within your workspace:
 
 Volume menu:
 
-- Edit; Bring up volume editor.
-- Disable; Disable the volume.
-- Enable; Enable the volume.
-- Inactivate; Archive the volume.
-- Activate; Restore volume from archive.
-- Logs; Show log events related to the volume.
-- Delete; Delete the volume.
+- **Edit**; Open the volume editor.
+- **Disable**; Disable the volume.
+- **Enable**; Enable the volume.
+- **Inactivate**; Archive the volume.
+- **Activate**; Restore volume from archive.
+- **Logs**; Show log events related to the volume.
+- **Delete**; Delete the volume.
 
 Filtering:
 
@@ -55,47 +57,54 @@ Filtering:
 
 ## View volume
 
-To view/expand a volume, click on it. Volume information that is presented is:
+To view (expand) a volume, click on it. Volume information that is presented is:
 
 - Space usage, together with a summary of capacity, occupied and free space.
 - A list of shares - shared folders and home folders.
 
-  
+A **shared folder** is a folder beneath, or the entire volume itself, where standard users can be granted access to download and upload files. 
 
-A shared folder is a folder beneath, or the entire volume itself, where standard users can be granted access to download and upload files. 
+A **home folder** is a special type of personal shared folder that can be created upon invitation, to provide a default area of user collaboration.  
 
-A home folder is a special type of personal shared folder that can be created upon invitation, to provide a default area of user collaboration.
-
-  
-
-Hint: For more information about operating shared folders and storage in general, see [File Sharing](/file-sharing/).
-
-  
+*Hint: For more information about operating shared folders and storage in general, see [Collaboration](/collaboration/).*
 
 Shares (folders/homes) list:
 
-- Name; The given name of the share.
-- Path; The (relative) path the shared folder is at.
-- Metrics; The number of access points within the share folder, and the number of users having access to shared folders, as defined by ACLs.
-- Accessed; The most recent time the share was accessed.
+- **Name**; The given name of the share.
+- **Path**; The (relative) path the shared folder is at.
+- **Metrics**; The number of access points within the share folder, and the number of users having access to shared folders, as defined by ACLs.
+- **Accessed**; The most recent time the share was accessed.
 
-  
 
 Share menu:
 
-- Edit; Audit and edit the share.
-- Logs; Display log events related to the share.
-- Disable; Disable the share.
-- Enable; Enable the share.
-- Inactivate (archive); Remove the share but keep it in the platform for auditing purposes.
-- Activate (restore); Restore an inactive share.
-- Delete; Permanently delete the share, this will not affect physical data on disk.
+- **Edit**; Audit and edit the share.
+- **Logs**; Display log events related to the share.
+- **Disable**; Disable the share.
+- **Enable**; Enable the share.
+- **Inactivate**; (archive) Remove the share but keep it in the platform for auditing purposes.
+- **Activate** (restore); Restore an inactive share.
+- **Delete**; Permanently delete the share, this will not affect physical data on disk.
+
+## Create a new share
+
+Please refer to: [Collaboration](/collaboration/)
+
+## Create a home share
+
+*Note: home shares can be configured to be created automatically when a user is created, see [Workspace Settings](/admin/settings)*
+
+To create a new home share: switch to *Homes* tab on volume and click **Create home** button.
+
+Then choose the user to create home for, user without a home share will be listed.
+
+*Note: employees might not be able to access volumes were home share resides, please make sure admin as given to proper permission on beforehand*
 
 ## Create a new volume
 
-To create a new volume, click the NEW VOLUME button in the upper right corner.
+*Note: Only administrators can create new volumes*
 
-  
+To create a new volume, click the NEW VOLUME button in the upper right corner.
 
 A volume needs to be served by a server, choose the server from the list. The servers are listed with the site they are at.
 
@@ -180,9 +189,7 @@ Define metadata for this volume, which will be appended to upstream metadata and
 
 ## Delete a volume
 
-To delete a volume, open the volume menu (three dots icon) on the right hand side and choose Delete.
-
-  
+To delete a volume, open the volume menu (three dots icon) on the right hand side and choose Delete.  
 
 *NOTES:*
 
@@ -190,6 +197,17 @@ To delete a volume, open the volume menu (three dots icon) on the right hand sid
 
 - *This cannot be undone.*
 
-  
 
 Any shared folders and homes beneath the volume will also be deleted. Also, collections containing files on the volume will have these file references removed.
+
+
+## Collections
+
+To configure collections, switch to the collections tab. 
+
+A collection is virtual shared folder containing set of files and folders picked from different locations on accsyn storage, it can be from the same volume/share or from different volumes.
+
+
+## Manage file sharing
+
+For documentation on how to manage file sharing on volumes: [Collaboration](/collaboration/)

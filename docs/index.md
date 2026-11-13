@@ -144,7 +144,7 @@ Guides for end users, operators, administrators, and developers.
 
 -   ![](/assets/index-8f6c501ebf13.png)
 
-    **[Access shared material](/file-sharing/access/)**
+    **[Access shared material](/collaboration/access/)**
 
     ---
 
@@ -240,7 +240,7 @@ Share specific project subfolders on production storage with partners, powered b
 
 -   ![](/assets/index-111204e33993.jpg)
 
-    **[Introduction](/file-sharing/)**
+    **[Introduction](/collaboration/)**
 
     ---
 
@@ -248,7 +248,7 @@ Share specific project subfolders on production storage with partners, powered b
 
 -   ![](/assets/index-f7999a9ec454.png)
 
-    **[Manage file sharing](/file-sharing/manage/)**
+    **[Manage file sharing](/collaboration/manage/)**
 
     ---
 
@@ -334,7 +334,7 @@ Tag and manage masters on accsyn Cloud — proxies, streaming, delivery, and lab
 
 -   ![](/assets/index-f385b76f1d64.png)
 
-    **[Job monitoring & queues](/manage/job/)**
+    **[Job monitoring](/manage/job/)** · **[Queue management](/manage/queue/)**
 
     ---
 
@@ -342,7 +342,7 @@ Tag and manage masters on accsyn Cloud — proxies, streaming, delivery, and lab
 
 -   ![](/assets/index_transfer.png)
 
-    **[Transfer](/manage/transfer/)**
+    **[Transfer](/transfer/)**
 
     ---
 
@@ -431,7 +431,7 @@ Run servers on your office or cloud premises for production I/O.
 
 -   ![](/assets/index-8a99ee601ff1.png)
 
-    **[Servers](/admin/byos/server/)**
+    **[Servers](/admin/server/)**
 
     ---
 
@@ -439,7 +439,7 @@ Run servers on your office or cloud premises for production I/O.
 
 -   ![](/assets/index-6d4e93031185.png)
 
-    **[Sites](/admin/byos/site/)**
+    **[Sites](/admin/site/)**
 
     ---
 
@@ -447,7 +447,7 @@ Run servers on your office or cloud premises for production I/O.
 
 -   ![](/assets/index-f7c60344d030.png)
 
-    **[Engines](/admin/byos/engine/)**
+    **[Engines](/admin/engine/)**
 
     ---
 

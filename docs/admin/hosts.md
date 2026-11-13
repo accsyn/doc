@@ -47,7 +47,7 @@ Local share mappings are ideal for a single machine. If you need a more permanen
 
 In a [BYOS](/admin/byos/) (or Enterprise) workspace you define a site, install a site server there, and serve volumes at that location. Operators can then sync and transfer between the main (HQ) site and the remote site in a durable way. Clients on the site can also have downloads/uploads routed through the site server so work continues when individual Desktop Apps are closed.
 
-See [Site administration](/admin/byos/site/) and the [Remote office sync](/tutorials/remote-office-sync/) tutorial. An overview of both approaches is in [Collaboration](/file-sharing/#can-i-share-files-and-folders-on-a-remote-office-or-cloud-site).
+See [Site administration](/admin/site/) and the [Remote office sync](/tutorials/remote-office-sync/) tutorial. An overview of both approaches is in [Collaboration](/collaboration/#can-i-share-files-and-folders-on-a-remote-office-or-cloud-site).
 
 ## The Hosts page
 
@@ -237,7 +237,7 @@ If the user should have the entire volume folder structure mirrored locally, it 
 
   
 
-For information on how to set environment variables so they apply to the accsyn daemon running process, see [Setting environment variables](/admin/byos/server/#setting-environment-variables) on the Server admin page. Variables configured in the Mac launchd plist or Linux systemd unit are preserved when you reinstall or upgrade the daemon — you do not need to re-enter them after the installer finishes.
+For information on how to set environment variables so they apply to the accsyn daemon running process, see [Setting environment variables](/admin/server/#setting-environment-variables) on the Server admin page. Variables configured in the Mac launchd plist or Linux systemd unit are preserved when you reinstall or upgrade the daemon — you do not need to re-enter them after the installer finishes.
 
 ## Troubleshooting
 

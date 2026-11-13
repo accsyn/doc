@@ -70,7 +70,7 @@ Description:
 
 *Note: Affects trial licensed accsyn workspaces only.*
 
-When the accsyn trial ends, no transfer jobs will be executed until the trial is extended or a valid permanent subscription licence is made active. The message “Accsyn demo license as expired. (W#J066)” should be displayed on the job. This is a global issue and should be displayed as a top bar notification in your UI. 
+When the accsyn trial ends, no transfer jobs will be executed until the trial is extended or a valid permanent subscription licence is made active. The message “accsyn trial license as expired. (W#J066)” should be displayed on the job. This is a global issue and should be displayed as a top bar notification in your UI. 
 
 Solution: For information on how to obtain an accsyn licence, please head over to [Pricing](https://accsyn.com/pricing).
 

@@ -1,29 +1,27 @@
 # Create a delivery
 
-This guide shows how to create an accsyn file delivery and send it to recipients — including temporary uploads for a single delivery, and delivering files or title media already on accsyn Cloud or BYOS storage.
+This guide shows how to create an accsyn file delivery and send it to recipients — including temporary uploads for a single delivery, and delivering files or title media already on accsyn BYOS or Cloud storage.
 
-With a delivery link you can send **large folders — including terabyte-scale packages with many files** — for recipients to pull securely over the accelerated [ASC](/whitepaper/) protocol (Desktop App recommended).
+With a delivery link you can send **large folders — including terabyte-scale packages with many files** — for recipients to pull securely over the accelerated, secure and resumable [ASC](/whitepaper/) protocol.
 
 ### Prerequisites
 
 - An active accsyn workspace trial or subscription.
-- A web browser (Google Chrome recommended).
+- A web browser.
 
 ## Create a temporary delivery
 
-A temporary delivery uploads one or more files and/or folders to a temporary location on your accsyn cloud storage, then delivers that package to one or more recipients.
-
-*Note: Guides for delivering files already on cloud storage, or media from a title, appear later on this page.*
+A temporary delivery uploads one or more files and/or folders to a temporary location on your accsyn cloud storage, then delivers that package to one or more recipients, an then gets deleted when delivery finishes up or is aborted.
 
 1. Sign in to the accsyn web app at <https://accsyn.io>.
-2. Open **Outbound** under the workspace menu on the left.
+2. Open **Deliveries** under the workspace menu on the left.
 3. Click **NEW DELIVERY**.
 
-![](/assets/delivery_create-451ffedea6d9.png)
+![](/assets/delivery_create.png)
 
 *Screenshot of the delivery create page.*
 
-4. To add content, click **DROP FILES OR PRESS HERE TO ADD CONTENT**. Choose either uploading from your computer to a temporary directory on accsyn storage, or browsing files and folders already on your accsyn storage:
+To add content, click **DROP FILES OR PRESS HERE TO ADD CONTENT**. Choose either uploading from your computer to a temporary directory on accsyn storage, or browsing files and folders already on your accsyn storage:
 
 ![](/assets/delivery_create-cab61300168d.png)
 
@@ -54,6 +52,14 @@ To allow download without an accsyn account, enable **Allow anonymous access**.
 
 *Disclaimer: Anonymous access is generally a poor idea — it exposes your files without a meaningful access-control layer.*
 
+### Additional options
+
+- **Name**; Give the delivery a name, does not need to be unique.
+- **Message**; (Optional) The message to provide to user.
+- **Recipients**; (Optional if public) The recipients to send delivery to, identified as email addresses. New users will be invited on send.
+- **Project**; (Optional) The project to use as a theme for the recipient delivery page, if not entered the project default project theme will be applied (if configured).
+- **Expires**; Set the date when delivery expires.
+
 ### Send delivery
 
 When ready, click **SEND DELIVERY** to create the download link and email the recipients.
@@ -70,7 +76,9 @@ Watch this video to see how to send a folder from storage:
 
 A file browser lists your accsyn storage. Select the file(s) and/or folder(s) to send, then click **ADD TO DELIVERY**:
 
-![](/assets/delivery_create-983924dcc160.png)
+![](/assets/delivery_create_standard.png)
+
+Finish up and send delivery as you would with a temporary delivery.
 
 ## How to create an upload request
 
@@ -90,7 +98,7 @@ This video shows creating an upload request to a temporary folder:
 
 A file browser lets you choose the destination folder. Create a new folder by entering a name and clicking the plus (+) button:
 
-![](/assets/delivery_create-8e262200e5c2.png)
+![](/assets/request_create.png)
 
 4. Enter the email address(es) of users who should upload. Multiple recipients are supported; previous recipients are remembered.
 5. Set the **Expiry** date (default: one month / 30 days).
@@ -98,7 +106,7 @@ A file browser lets you choose the destination folder. Create a new folder by en
 
 When ready, click **SEND REQUEST** to email recipients with upload instructions. If you chose a temporary folder, it is created on storage at send time.
 
-## Deliver from Cloud or on-premises storage
+## Deliver using desktop app
 
 You can also create deliveries from permanent accsyn Cloud storage, or from BYOS volumes and shared folders — entirely in the Desktop App, without opening the browser.
 
@@ -107,7 +115,7 @@ You can also create deliveries from permanent accsyn Cloud storage, or from BYOS
 3. Upload files and folders to permanent storage if needed.
 4. Select the files/folders, then click **Share** in the action bar and choose **Deliver**, or right-click and choose **Share → Deliver**.
 
-![](/assets/delivery_create-f5721007308e.png)
+![](/assets/delivery_create_app.png)
 
 *Screenshot of the Desktop App when choosing a file for delivery.*
 

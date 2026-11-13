@@ -22,14 +22,14 @@ Create your first accsyn title (project) and prepare it for tagged deliverable m
 Choose how the title is identified — this controls whether it can be bound to IMDb:
 
 - **Create a local workspace title** — Not bound to IMDb; for corporate or other generic media projects.
-- **New IMDb-bound title** — Enter an IMDb URL or ID (for example `tt6751668`). Accsyn fetches metadata via OMDB when available. If the title is missing from OMDB, create it as a local workspace title instead.
+- **New IMDb-bound title** — Enter an IMDb URL or ID (for example `tt6751668`). accsyn fetches metadata via OMDB when available. If the title is missing from OMDB, create it as a local workspace title instead.
 - **Select an existing accsyn title** — Browse titles already added elsewhere on the platform and reuse them.
 
 If the title already exists in accsyn, prefer **Select an existing accsyn title**.
 
 3. Click **Next**. The cover image is downloaded when available; change it with the pencil on the cover. Optionally set a banner (JPEG, ideally 9:1) via the pencil in the upper-right.
 
-4. Choose the folder for the title. Accsyn suggests a name matching the title; you can also pick an existing folder. Enable **Apply title template folder structure** to create standard category folders (see below).
+4. Choose the folder for the title. accsyn suggests a name matching the title; you can also pick an existing folder. Enable **Apply title template folder structure** to create standard category folders (see below).
 
 ![](/assets/vault_create-6c1e5e7f0426.png)
 

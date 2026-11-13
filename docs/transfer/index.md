@@ -4,8 +4,9 @@ This guide is for operators (admin or employee) who need to move files between e
 
 Typical operations:
 
-- **Download from / upload to a site** — Sync material between main (HQ) storage and a remote office or cloud site.
-- **Push to / pull from a remote user** — Exchange files with a user who has one or more shares [mapped locally](/admin/hosts/#map-shares-locally) (Desktop App or User server).
+- **Download from / upload to a site** — Sync files between main (HQ) storage and a remote office or cloud site.
+- **Push to / pull from a remote user** — Sync files with a user who has one or more shares [mapped locally](/admin/hosts/#map-shares-locally) (with Desktop App or User server) and main (HW) storage or site.
+- **Transfer between sites** — Sync files between two sites.
 
 You can use either the **workspace endpoint** (main site / HQ storage) or a **remote site** as source or destination. Transfers are peer-to-peer between the selected endpoints; they do not have to pass through HQ when both sides are sites or a site and a mapped user.
 
@@ -14,7 +15,7 @@ You can use either the **workspace endpoint** (main site / HQ storage) or a **re
 ## Prerequisites
 
 - Signed in to the [Desktop App](/desktop-app/) as an administrator or employee.
-- For **site** transfers: sites and site servers configured — see [Site administration](/admin/byos/site/).
+- For **site** transfers: sites and site servers configured — see [Site administration](/admin/site/).
 - For **remote user** push/pull: the user has mapped the relevant share(s) locally, ideally with a [User server](/admin/hosts/) for unattended 24/7 access. Read access on the mapping allows operators to **pull** (upload from the user); write access allows **push** (download to the user).
 
 ## Create a transfer
@@ -30,12 +31,13 @@ Open **Transfer** in the Desktop App top menu. You get a dual-pane browser: sour
 3. If the destination has a matching share context (volume served on that site, or a share the user mapped locally), **Mirror paths** is available and selected by default — the relative folder structure is preserved. Otherwise use **Browse** to choose a destination folder.
 4. Click the green **>** button in the middle to start the transfer.
 
-Progress appears under **My Jobs** / **Transfers** in the bottom panel. Pause, resume, abort, and re-queue from there or from [Job & queue management](/manage/job/).
+Progress appears under **My Jobs** / **Transfers** in the bottom panel. Pause, resume, and abort from there or from [Job monitoring](/manage/job/); re-queue and prioritise via [Queue management](/manage/queue/).
 
 ## Related articles
 
-- [Site administration](/admin/byos/site/) — Add sites and site servers for office/cloud sync.
-- [Hosts](/admin/hosts/) — Install a User server and map shares for remote push/pull.
-- [Job & queue management](/manage/job/) — Monitor and prioritise transfer jobs.
-- [Collaboration](/file-sharing/) — Shares, ACLs, and local mapping concepts.
+- [Site administration](/admin/site/) — Add sites and site servers for office/cloud sync.
+- [Hosts](/admin/hosts/) — Install a User server and map shares locally for remote push/pull.
+- [Job monitoring](/manage/job/) — Monitor transfer jobs.
+- [Queue management](/manage/queue/) — Prioritise and re-queue transfer jobs.
+- [Collaboration](/collaboration/) — Shares, ACLs, and local mapping concepts.
 - [Remote office sync](/tutorials/remote-office-sync/) — API-driven site synchronisation tutorial.

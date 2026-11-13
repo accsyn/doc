@@ -41,7 +41,7 @@ Hint: find out your workspace API code identifier @ <https://accsyn.io/admin/set
 
 ## Setting up site
 
-We are not going into great detail on how to set up remote sites with accsyn, this is well covered in the [site documentation](/admin/byos/site/):
+We are not going into great detail on how to set up remote sites with accsyn, this is well covered in the [site documentation](/admin/site/):
 
 1. Create the site @ <https://accsyn.io/admin/sites/new> that will represent the remote office in accsyn [london]
 2. Install a server on the site @ <https://accsyn.io/admin/servers/new>, acting as the endpoint for all p2p ASC file transfer between the main hq site and the office.
@@ -172,6 +172,6 @@ View and download the source code on Github
 
 accsyn Python API support main page.
 
-[Site admin](/admin/byos/site/)
+[Site admin](/admin/site/)
 
 accsyn site management documentation.

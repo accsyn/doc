@@ -1,8 +1,8 @@
 # File Delivery — an introduction
 
-This page introduces the accsyn File Delivery subsystem. Delivery is available as a standalone tool, built into [File Sharing](/file-sharing/) and the [Media Vault](/vault/), or driven through [automations](/developer/).
+This page introduces the accsyn File Delivery subsystem. Delivery is available as a standalone tool, built into [Collaboration](/collaboration/) and the [Media Vault](/vault/), or driven through [automations](/developer/).
 
-The core benefit: send **terabyte-scale folders with large numbers of files** using a simple link. Recipients download with the secure, accelerated [ASC](/whitepaper/) protocol — no FTP servers, no fragile browser ZIPs for huge packages.
+The core benefit: send **terabyte-scale folders with large numbers of files** using a simple link. Recipients download with the secure, resumable and accelerated [ASC](/whitepaper/) protocol — no FTP servers, no fragile browser ZIPs for huge packages.
 
 ## Get started
 
@@ -44,7 +44,7 @@ The first time, the user chooses the web browser or the Desktop App. App install
 
 ### Standard authorisation
 
-By default, only users identified by the email addresses entered when the delivery was created may download the files. They must create an accsyn account, or sign in with a supported external provider (for example Google), before they can access the delivery.
+By default, only users identified by the email addresses entered when the delivery was created may download the files. They must create an accsyn account, or sign in with a supported external identity provider (for example Google), before they can access the delivery.
 
 ### Public link
 
@@ -72,7 +72,7 @@ Yes. The **Upload request** feature (Inbound / Requested) sends upload links to 
 
 ## Can deliveries be sent from permanent storage?
 
-Yes. From the accsyn Desktop App you can deliver files and folders from accsyn Cloud storage or your own BYOS storage.
+Yes. From the accsyn Desktop App you can deliver files and folders from your own accsyn BYOS storage or the hosted accsyn Cloud storage.
 
 ## Can deliveries download automatically without someone at the computer?
 
@@ -80,10 +80,14 @@ Yes. Install accsyn as a **User server** (daemon/service) on the receiving machi
 
 Typical use cases: cinema or showroom drop-off, unattended vendor machines, and office endpoints that should receive packages overnight.
 
-Setup steps: [Hosts](/admin/hosts/) (daemon install and automated deliveries).
+For more information on how to setup a host and install a user server: [Hosts](/admin/hosts/)
+
+## Can I style a delivery with a background wallpaper, logo and other information?
+
+Yes, accsyn supports creating projects which can be assigned to deliveries. For more information: [Projects](/manage/project/)
 
 ## Can recipients preview files or media with a delivery?
 
-accsyn does not generate thumbnails for arbitrary files. With the Media Vault, however, you can create a title stream delivery so recipients watch high-quality, bandwidth-aware streaming in the browser. Learn how to [create a stream](/vault/stream/).
+accsyn does not generate thumbnails for arbitrary files. With the Media Vault, however, you can create a title stream delivery so recipients watch high-quality, bandwidth-aware streaming in the browser. Learn how to [Create a stream](/vault/stream/).
 
 Next: [Create your first delivery](/delivery/create/).

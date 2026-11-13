@@ -4,7 +4,7 @@
 
   
 
-The accsyn app is a desktop application primarily for providing accelerated accsyn p2p file transfers running in the background (tray), but also has a GUI enabling advanced functionality that includes extended [Delivery](/delivery/), [File Sharing](/file-sharing/) and [Media Vault](/vault/) management.
+The accsyn app is a desktop application primarily for providing accelerated accsyn p2p file transfers running in the background (tray), but also has a GUI enabling advanced functionality that includes extended [Delivery](/delivery/), [File Sharing](/collaboration/) and [Media Vault](/vault/) management.
 
 ![](/assets/admin_desktop-app-fa39d7dd7bb8.png)
 
@@ -25,12 +25,12 @@ Besides this, the app is mandatory when:
   
 
 - Detailed monitoring and audit of jobs (deliveries, transfers, queues).
-- Managing [file sharing](/file-sharing/) on your cloud or on-prem storage.
-- [Access](/file-sharing/access/) shared folders.
+- Managing [file sharing](/collaboration/) on your cloud or on-prem storage.
+- [Access](/collaboration/access/) shared folders.
 - Manage the accsyn [Media Vault](/vault/) - ingest and manage your media, as a manager.
 - Submit render jobs and publish files in BYOS configurations - part of [workflows](/developer/).
 
-*Note: the desktop app is also included in the accsyn Daemon(service) installation, used for setting up [BYOS servers](/admin/byos/server/).*
+*Note: the desktop app is also included in the accsyn Daemon(service) installation, used for setting up [BYOS servers](/admin/server/).*
 
 ## Where to download
 
@@ -208,8 +208,8 @@ Having further issues? Please reach out to support providing your logs folder co
 
 ### Related articles
 
-[Daemon(service)](/admin/byos/server/)
+[Daemon(service)](/admin/server/)
 
-[File Sharing](/file-sharing/)
+[File Sharing](/collaboration/)
 
 [Media Vault](/vault/)

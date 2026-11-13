@@ -132,7 +132,7 @@ Cloud infrastructure is hosted within the European Union in ISO/IEC 27001-certif
 
 ### Identity and access
 
-User authentication is handled through the configured identity provider. Accsyn supports its own account flow and federation with Google and Microsoft. Authentication produces a time-limited token used by clients when calling the control plane; users do not send their account password to the remote transfer endpoint.
+User authentication is handled through the configured identity provider. accsyn supports its own account flow and federation with Google and Microsoft. Authentication produces a time-limited token used by clients when calling the control plane; users do not send their account password to the remote transfer endpoint.
 
 Workspace roles, share permissions, endpoint authorization, and job policy determine whether a user may initiate or receive a transfer. Multi-factor authentication can be enforced at workspace or role level. See [Internal settings](/settings/) for the current authentication controls.
 

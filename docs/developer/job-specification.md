@@ -125,7 +125,7 @@ For a detailed breakdown of parties and paths, please refer to the [accsyn Pytho
 
 Example party definitions:
 
-- myworkspacecode; THe workspace API unique identifier (code). Denotes the workspace party, the main site (hq), as source or destination. Resolves to the [Server](/admin/byos/server/) hosting the file (through volume) identified by the path.
+- myworkspacecode; THe workspace API unique identifier (code). Denotes the workspace party, the main site (hq), as source or destination. Resolves to the [Server](/admin/server/) hosting the file (through volume) identified by the path.
 - john@user.com; Denotes a user as a source or destination, they must have a (running) client ([Desktop App](/desktop-app/) or [User Server](/admin/hosts/) instance) that can be resolved by accsyn. The most recent online client will be chosen.
 - john@user.com@Hostname; A user source and destination resolving to a client having a specific hostname. 
 - site=london; Denotes the site with (unique) API "code" identifier "london".

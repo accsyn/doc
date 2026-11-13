@@ -12,7 +12,7 @@ A complete listing of all accsyn warning codes that can appear as:
 
 | Code/ID | Description | Suggestion(s) for action |
 |---|---|---|
-| W#G001 | .. days left of Accsyn trial license,.. | The trial is close to ending, contact sales@accsyn.com to purchase your permanent licence. |
+| W#G001 | .. days left of accsyn trial license,.. | The trial is close to ending, contact sales@accsyn.com to purchase your permanent licence. |
 
 ## Job warning codes
 

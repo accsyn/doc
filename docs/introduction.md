@@ -2,8 +2,6 @@
 
 accsyn is a complete **accelerated file I/O platform** targeting film and media — underpinned by the high-speed encrypted **[ASC](/whitepaper/)** (Accelerated Secure Copy) protocol.
 
-![](/assets/introduction-schematics.png)
-
 It is offered as **two product variants**, each aimed at a different stage of the media life-cycle. Most organisations use one or the other; if you need both production I/O and a cloud master archive, sign up for **two workspaces** (BYOS + Cloud) rather than combining them in one.
 
 | Variant | Stage | Storage model |
@@ -11,7 +9,6 @@ It is offered as **two product variants**, each aimed at a different stage of th
 | **[accsyn for production](#accsyn-for-production)** *(default)* | Shoot, DIT, Post, VFX, Collaboration, Site Sync, Automations | [BYOS](/admin/byos/) — your on-premises or cloud VPC storage |
 | **[accsyn for distribution](#accsyn-for-media-distribution)** | Mastering, DCP validation, streaming, sales/festival delivery, archival, lab | [accsyn Cloud](/vault/) — hosted vault storage |
 
-Both move **large folders and many files** securely and efficiently over ASC.
 
 ## accsyn for production
 
@@ -23,12 +20,11 @@ Watch video to get started:
 
 Main features:
 
-- Deliver and receive multi-terabyte packages over a link ([Delivery](/delivery/))
-- Share **specific project subfolders** with vendors and partners via ACLs ([Collaboration](/file-sharing/))
-- Sync remote offices and cloud sites ([Sites](/admin/byos/site/)); push/pull with operators via [Transfer](/manage/transfer/)
-- Push/pull with remote users via mapped shares and User servers ([Hosts](/admin/hosts/))
+- Deliver and receive **multi-terabyte packages** over a link ([Delivery](/delivery/))
+- Share **specific project subfolders** with vendors and partners via ACLs ([Collaboration](/collaboration/))
+- **Sync** remote offices/cloud **sites** ([Sites](/admin/site/)) and remote **users** ([Hosts and locally mapped shares](/admin/hosts/)) via [Transfer](/transfer/)
 - Automate with [hooks](/developer/hooks/), [publish](/developer/publish/), [Python API](/developer/python-api/), and [render/compute](/developer/farm/)
-- Central monitoring with [Job & Wueue management](/manage/job/)
+- Central monitoring with [Job monitoring](/manage/job/) and [Queue management](/manage/queue/)
 
 Start with [BYOS](/admin/byos/) and a [free trial](/trial/) (one storage server).
 
@@ -42,12 +38,14 @@ Typical capabilities:
 
 - Tag and organise masters in the Media Vault (IMDb linkage, proxies, QC-oriented workflows)
 - Stream and deliver to cinemas, buyers, and partners ([Stream](/vault/stream/), [Delivery](/delivery/))
-- Collaborate on sales and festival packages ([Collaboration](/file-sharing/))
+- Collaborate on sales and festival packages ([Collaboration](/collaboration/))
 - Transcode deliverables, validate media including DCP check.
-- Central monitoring with [Job & Wueue management](/manage/job/)
+- Central monitoring with [Job monitoring](/manage/job/) and [Queue management](/manage/queue/)
 - Professional [Lab services](/vault/media-lab/) for mastering, VOD export, QC, and more
 
 Start with a [Cloud trial](/trial/) (500 GB) and the [Media Vault](/vault/) guides.
+
+*Media vault is not available for BYOS deployments*
 
 ### Production + distribution together?
 
@@ -56,11 +54,9 @@ There is no benefit today to combining BYOS production storage and Media Vault i
 1. A **BYOS** workspace for production I/O on your own storage  
 2. A separate **Cloud** workspace for the master archive, streaming, and lab  
 
-See also the note under [Media Vault](/vault/).
-
 ## Why accsyn?
 
-Slow transfers and fragmented tools still dominate media pipelines. Accsyn is the **file hub from set to screen** — cinema or streaming — with ASC for accelerated peer-to-peer transfers, central orchestration, and audit.
+Slow transfers and fragmented tools still dominate media pipelines. accsyn is the **file hub from set to screen** — cinema or streaming — with ASC for accelerated peer-to-peer transfers, central orchestration, and audit.
 
 Security highlights: HTTPS for control-plane traffic; AES-encrypted ASC for data; on-demand listeners (no ASC port open 24/7). Full detail: [Whitepaper](/whitepaper/).
 
@@ -68,40 +64,44 @@ Security highlights: HTTPS for control-plane traffic; AES-encrypted ASC for data
 
 The accsyn cloud backend orchestrates high-speed P2P transfers, compute jobs, and (on Cloud) media management. The Desktop App (and background daemon / User server / BYOS storage server) acts as the transfer endpoint on each machine.
 
-![](/assets/introduction-679212a60583.png)
+![](/assets/introduction-schematics.png)
 
-## Free trial
+## How to start a free trial
 
 Start a **30-day trial** at <https://accsyn.io/trial> — full features, no credit card:
 
 - **Media production (BYOS)** — one storage server on your premises or VPC  
 - **Media distribution (Cloud)** — 500 GB hosted storage  
 
-1. Register at <https://accsyn.io> and verify your email.
+1. Register a personal account at <https://accsyn.io> and verify your email.
 2. Click **Start 30 days free trial** and create the workspace type you need.
-3. For production: [BYOS setup](/admin/byos/), [delivery](/delivery/), or [file sharing](/file-sharing/). For distribution: [Media Vault](/vault/).
+3. For production: [BYOS setup](/admin/byos/), [delivery](/delivery/), or [file sharing](/collaboration/). For distribution: [Media Vault](/vault/).
 
 Step-by-step: [Trial](/trial/).
 
 ## Licensing and pricing
 
-An accsyn licence includes unlimited traffic, bandwidth, and standard users (delivery recipients and file-sharing users). Operator seats and storage (Cloud) or servers (BYOS) are licensed separately.
+An accsyn licence includes unlimited traffic, bandwidth, and standard users (delivery recipients and collaborators). Operator seats and storage (Cloud) or servers (BYOS) are licensed separately.
 
-| | **accsyn Cloud** *(distribution)* | **Cloud Essentials** | **accsyn BYOS** *(production)* | **BYOS Lite** |
+Please visit our online price list for current pricing: [https://accsyn.com/pricing](https://accsyn.com/pricing)
+
+Comparison of base workspace licenses:
+
+| | **accsyn BYOS** *(production)* | **BYOS Lite** | **accsyn Cloud** *(distribution)* | **Cloud Essentials** |
 | --- | --- | --- | --- | --- |
-| Storage | 1 TB + PAYG | 500 GB | Unlimited (your disk) | Unlimited (your disk) |
-| Operators | 2 + PAYG | 1 | 2 + PAYG | 2 + PAYG |
+| Storage | Unlimited (your disk) | Unlimited (your disk) | 1 TB + PAYG | 500 GB |
+| Operators | 2 + PAYG | 2 + PAYG | 2 + PAYG | 1 |
 | Users | Unlimited | Unlimited | Unlimited | Unlimited |
 | Traffic / bandwidth | Unlimited | Unlimited | Unlimited | Unlimited |
-| Storage servers | 1 (Cloud) | 1 (Cloud) | 1 included | 1 included |
-| Site / render servers | N/A | N/A | PAYG | PAYG |
-| Media Vault / streaming / deliverable transcode | :material-check:{ .feature-yes } | :material-check:{ .feature-yes } | N/A | N/A |
-| Hooks / publish / render | N/A | N/A | :material-check:{ .feature-yes } | :material-check:{ .feature-yes } |
+| Storage servers | 1 | 1 | 1 (Cloud) | 1 (Cloud) |
+| Site / render servers | PAYG | PAYG | N/A | N/A |
+| Media Vault / streaming / deliverable transcode | N/A | N/A | :material-check:{ .feature-yes } | :material-check:{ .feature-yes } |
+| Hooks / publish / render | :material-check:{ .feature-yes } | :material-check:{ .feature-yes } | N/A | N/A |
 | API | :material-check:{ .feature-yes } | N/A | :material-check:{ .feature-yes } | N/A |
-| Lab services | :material-check:{ .feature-yes } | :material-check:{ .feature-yes } | N/A | N/A |
+| Lab services | N/A | N/A | :material-check:{ .feature-yes } | :material-check:{ .feature-yes } |
 | Professional services | :material-check:{ .feature-yes } | :material-check:{ .feature-yes } | :material-check:{ .feature-yes } | :material-check:{ .feature-yes } |
 
-Usage is measured at midnight CET; peak usage bills into the next cycle. Price list: [Pricing](https://accsyn.com/pricing).
+*Usage is measured at midnight CET; peak usage bills into the next cycle.*
 
 **Essentials / Lite** are budget variants: Essentials is 500 GB Cloud with one operator and no API; Lite is one BYOS storage server with two operators and no API.
 
@@ -123,8 +123,8 @@ Usage is measured at midnight CET; peak usage bills into the next cycle. Price l
 | **accsyn for media production** (BYOS) | [BYOS](/admin/byos/) |
 | **accsyn for media distribution** (Cloud Vault) | [Media Vault](/vault/) |
 | Send / receive large packages over a link | [Delivery](/delivery/) |
-| Share project subfolders with partners | [Collaboration](/file-sharing/) |
-| Sync HQ ↔ sites / mapped users | [Transfer](/manage/transfer/) |
+| Share project subfolders with partners | [Collaboration](/collaboration/) |
+| Sync HQ ↔ sites / mapped users | [Transfer](/transfer/) |
 | Automate transfers and farms | [Developer Hub](/developer/) |
 | Protocol and security deep dive | [Whitepaper](/whitepaper/) |
 | Desktop App install | [Desktop App](/desktop-app/) |

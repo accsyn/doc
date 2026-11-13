@@ -127,7 +127,7 @@ Once the material is uploaded it is time to ingest it into the vault as media, w
 
   
 
-At this stage, before ingesting media, you might involve your lab provider if you need to perform additional mastering. Use [File Sharing](/file-sharing/) within accsyn to collaborate with your lab, providing a simple yet effective file transfer workflow similar to FTP.
+At this stage, before ingesting media, you might involve your lab provider if you need to perform additional mastering. Use [File Sharing](/collaboration/) within accsyn to collaborate with your lab, providing a simple yet effective file transfer workflow similar to FTP.
 
   
 

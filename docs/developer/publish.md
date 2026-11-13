@@ -8,7 +8,7 @@ This guide walks through how to set up a publishing workflow within your accsyn 
 
 ## What is publish?
 
-Common in media production is the need to work with external vendors; the accsyn [File Sharing](/file-sharing/) feature is ideal for setting up shared folders to distribute work assets and also receive the final work done.
+Common in media production is the need to work with external vendors; the accsyn [File Sharing](/collaboration/) feature is ideal for setting up shared folders to distribute work assets and also receive the final work done.
 
 accsyn Publish is a special uploader that adds a layer of validation and also facilitates automated ingest of material into the production system. This is a huge time saver as it eliminates a lot of manual work and brings your external vendors closer to production - as if they were a part of your in-house team.
 
@@ -18,7 +18,7 @@ Publish is driven by the accsyn [Hooks](/developer/hooks/) subsystem.
 
 The following schematic visualises the accsyn publish workflow:
 
-![](/assets/developer_publish-3bc980e29cd0.png)
+![](/assets/developer_publish_flow.png)
 
 The remote user logs on to the desktop app, chooses the publish option and drops the files onto the publish area.
 
@@ -185,7 +185,7 @@ Cause: Hook script syntax is malformed or the executable throws an exception and
 
 Solution 1: Either check the Job audit logs available here: <https://accsyn.io/admin/audit> > Job log.
 
-Solution 2: Inspect the accsyn daemon (server) log, the log file location is documented [here](/admin/byos/server/).
+Solution 2: Inspect the accsyn daemon (server) log, the log file location is documented [here](/admin/server/).
 
   
 

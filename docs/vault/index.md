@@ -25,7 +25,7 @@ accsyn adds media-management capabilities on top of files that live on **accsyn 
 - Structured title libraries that are easy to search, with IMDb linkage where applicable
 - Streamlined, accelerated [delivery](/delivery/) of DCPs, masters, sound, sales material, pictures, and video — via ASC when using the Desktop App
 - Accelerated upload of media into titles (ASC)
-- [Collaboration](/file-sharing/) for collaboration with vendors, partners, and clients
+- [Collaboration](/collaboration/) for collaboration with vendors, partners, and clients
 - Web streaming so recipients can watch title media in a browser — no extra player software
 - Clip and still extraction — transcode selected ranges from masters to ProRes, H.264, or TIFF/JPEG
 - Export tooling aimed at established SVOD/TVOD vendors
@@ -35,7 +35,7 @@ Tagging is what turns ordinary files on cloud storage into managed deliverables;
 
 ## How does it work?
 
-The Media Vault works alongside Deliveries and File Sharing on accsyn Cloud storage. Accsyn separates file and media management into two phases:
+The Media Vault works alongside Deliveries and File Sharing on accsyn Cloud storage. accsyn separates file and media management into two phases:
 
 - **Film production / media refinement** — Covered by Delivery, File Sharing, and Workflow tools. Media is not logged in the Vault by default during this phase (you can still log items manually if you wish).
 - **Film distribution / archival** — Masters and related deliverables are ingested as media into the Vault: proxies are rendered and metadata is extracted. Delivery and File Sharing remain available during distribution — for example when mastering a DCP or delivering to VOD platforms.
@@ -58,7 +58,7 @@ When you upload media to a title, you can let accsyn sort it into a standard cat
 
 ## Media
 
-A **media** asset is a file or folder beneath a title, tagged with attributes that describe format (technical) and role in your delivery pipeline. Accsyn probes the media to give a solid technical view of video and audio streams.
+A **media** asset is a file or folder beneath a title, tagged with attributes that describe format (technical) and role in your delivery pipeline. accsyn probes the media to give a solid technical view of video and audio streams.
 
 Once tagged, media can take part in advanced Vault operations: automated transcoding, streaming, DCP-related workflows, and VOD delivery.
 
@@ -88,7 +88,7 @@ After master media is logged (**Category: MAS**), you can transcode into defined
 - **Proxy** — 1280×720, ~2 Mbps preview
 - **Thumbnails**
 
-Accsyn Cloud storage is backed by an ffmpeg farm for proxy-style transcodes; proxy transcoding is included without an extra charge under current Cloud offerings.
+accsyn Cloud storage is backed by an ffmpeg farm for proxy-style transcodes; proxy transcoding is included without an extra charge under current Cloud offerings.
 
 ## Web streaming
 
@@ -119,6 +119,6 @@ Next: [Create your first title](/vault/create/).
 
 [Delivery](/delivery/) — file delivery subsystem.
 
-[Collaboration](/file-sharing/) — share titles with sales teams, vendors, partners, and end users.
+[Collaboration](/collaboration/) — share titles with sales teams, vendors, partners, and end users.
 
 [Lab services](/vault/media-lab/) — experienced media lab staff for deliverables.

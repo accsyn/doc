@@ -28,9 +28,15 @@ The unique API identifier of workspace, as generated from the initial name chose
 
 ### Logotype
 
-The images to use for branding, in light and dark mode variants.  They are chosen from resources, and need to be uploaded here in advance: <https://accsyn.io/admin/resources>
+The images to use for branding, in light and dark mode variants. They are chosen from [Resources](/manage/resources/), and need to be uploaded in advance at <https://accsyn.io/admin/resources>.
 
 *Note: logotype images will be scaled down to fit 140x40px which are the default accsyn logotype dimensions, make sure your imagery looks decent in this format.*
+
+### Default project (theme)
+
+Defines the default [project](/manage/project/) theme to apply to deliveries and shares when no more specific project is set. Choose a project from the list (projects are managed under Manage → Projects), or clear it to use no workspace-level default.
+
+If not overridden at delivery or share level (volume, folder, home, or collection), this workspace default is used for branding / theme presentation.
 
 ## Security
 
@@ -213,7 +219,7 @@ If enabled, download and upload transfers initiated by clients on the same site 
 
 Can be overridden per site under Admin → Sites → Settings.
 
-See [Site administration](/admin/byos/site/) for more information about sites and file transfers.
+See [Site administration](/admin/site/) for more information about sites and file transfers.
 
 ## Email
 

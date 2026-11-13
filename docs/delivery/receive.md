@@ -4,9 +4,12 @@ This guide is for anyone expecting an accsyn delivery or upload request.
 
 A delivery link can represent anything from a single file to a **large folder with many files at terabyte scale**. Using the Desktop App, the download runs in the background over the secure, accelerated [ASC](/whitepaper/) protocol — with folder support and resume if the transfer is interrupted.
 
-*Note: If you were granted access to a shared folder or collection instead, see [Access shared folders](/file-sharing/access/).*
+*Note: If you were granted access to a shared folder or collection instead, see [Access shared folders](/collaboration/access/).*
 
 This video shows how to download a delivery:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kckfWz6TNgA" title="accsyn Delivery introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 If you expect a delivery, check your email for a message from accsyn:
 
@@ -16,13 +19,30 @@ Click **Download now** (or **Upload now** for an upload request) to open the del
 
 If you did not receive an email, check spam filters. You can also open <https://accsyn.io>, sign in with the email address the delivery was sent to, and find it under **Downloads**.
 
+
 ### Using accsyn for the first time
 
 If you do not have an accsyn account yet, register one.
 
-*Note: Anonymous access is not available for ordinary deliveries. If you need access, ask the sender to add your email as a recipient.*
-
 You can sign up with email or sign in with Google (recommended when applicable).
+
+### Public link
+
+You can also access a delivery through a link, sent to you outside the accsyn platform. Anyone with a accsyn account can access a public link
+
+Example of a public link:
+
+```html
+https://accsyn.io/downloads/ze3JupqQkc8wxEL6
+```
+
+### Password protection
+
+A link can be password protected, enter the secret password to have it unlock.
+
+### Anonymous access
+
+Anonymous deliveries does not require a login to access - anyone with the link can anonymously download the delivery.
 
 ### Downloading the delivery
 
@@ -30,20 +50,20 @@ After you sign in, you see the delivery view with the package contents. You can 
 
 Click **DOWNLOAD NOW**:
 
-![](/assets/delivery_receive-e2ba6513a004.png)
+![](/assets/delivery_receive_choose_method.png)
 
 *Screenshot of a delivery and download options.*
 
 You are offered two options:
 
-- **USE ACCSYN … (Desktop App)** — Recommended for stable, secure, accelerated deliveries. The app downloads in the background over ASC, supports full folders (including very large packages), and resumes if interrupted.
+- **USE ACCSYN FOR …** — (Desktop App) Recommended for stable, secure, accelerated deliveries. The app downloads in the background over ASC, supports full folders (including very large packages), and resumes if interrupted.
 - **PROCEED WITH BROWSER** — Secure browser download, but not accelerated or resumable in the same way.
 
-**Important:** Web browsers do not download multiple files or folders natively. If the delivery is not a single file, accsyn may try to ZIP the package first — which can take a long time for large folders. Prefer the Desktop App for multi-file or large deliveries.
+*Important: Web browsers do not download multiple files or folders natively. If the delivery is not a single file, accsyn may try to ZIP the whole delivery first — which can take a long time for large folders. Prefer the Desktop App for multi-file or large deliveries.*
 
 After you choose a method, you are asked where to save. Confirm to start the download:
 
-![](/assets/delivery_receive-4d026ca9f0c4.png)
+![](/assets/delivery_receive_downloading.png)
 
 *Screenshot of a delivery being downloaded.*
 
@@ -59,6 +79,8 @@ For an upload request, you see files already uploaded (by you or others) and an 
 Upload requests also appear under **Uploads** in the left menu.
 
 Watch this video on actioning an upload request:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xq-9C-GL6lQ" title="accsyn Delivery introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Watch a stream
 

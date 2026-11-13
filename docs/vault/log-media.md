@@ -31,7 +31,7 @@ Logging usually starts with masters. Example: log a trailer master.
 
 **Destination folder** — how the destination path is chosen:
 
-- **Based on content, category & type** (default in Media view outside a folder) — Accsyn picks a suitable folder from tags.
+- **Based on content, category & type** (default in Media view outside a folder) — accsyn picks a suitable folder from tags.
 - **Preserve folder structure** (default in Files view) — Keep the current folder; in Media view this puts files at the title root.
 - **Put in title root folder** — Upload with no extra subfolder.
 
@@ -40,10 +40,10 @@ Logging usually starts with masters. Example: log a trailer master.
 **Tag the media**
 
 - **Content** — Feature, trailer, or clip
-- **Category** — Accsyn standard categories for a video master library (for example MAS, DCP, VOD)
+- **Category** — accsyn standard categories for a video master library (for example MAS, DCP, VOD)
 - **Custom** — Free-text tag
 
-Accsyn may infer other tags from the filename (grey pills). Remove files with the trash can.
+accsyn may infer other tags from the filename (grey pills). Remove files with the trash can.
 
 3. Click **Upload and ingest**.
 

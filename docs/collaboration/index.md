@@ -1,8 +1,8 @@
-# Collaboration - File sharing — introduction
+# Collaboration — an introduction
 
-This page introduces the accsyn File Sharing subsystem — available on Cloud or on-premises (BYOS) storage, and integrated with the [Media Vault](/vault/).
+This page introduces the accsyn File Sharing subsystem — available from web app and integrated with the accsyn [Desktop App](/desktop-app/).
 
-The core idea: **share specific subfolders of a project tree on production storage** — not the whole volume — so external users and partners can work inside production safely. Access is controlled with ACLs; transfers use the secure, accelerated [ASC](/whitepaper/) protocol via the Desktop App.
+The core feature: **share specific subfolders of a project tree on production storage** — not the whole volume — so external users and partners can work inside production safely. Access is controlled with ACLs. Manage shares in the browser **Storage** page; transfers use the secure, resumable and accelerated [ASC](/whitepaper/) protocol with the accsyn Desktop App or [User Server](/admin/hosts).
 
 ## Get started
 
@@ -10,11 +10,9 @@ We recommend this short video introducing file sharing:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PqQLXAfZF5M" title="accsyn File Sharing introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Tutorial
+## Tutorials
 
-Set up file sharing step by step with this tutorial:
-
-[FTP server replacement](/tutorials/ftp-server-replacement/)
+Set up file sharing step by step with this tutorial: [FTP server replacement](/tutorials/ftp-server-replacement/)
 
 ## What is accsyn File Sharing?
 
@@ -28,18 +26,18 @@ accsyn is built for that: share only the project subfolders partners need (for e
 
 ## How does file sharing work with accsyn?
 
-The simplest one-shot transfer is a [delivery](/delivery/) — a time-limited package. **File sharing** is for ongoing access: permanent (or long-lived) folders, homes, and collections on your storage.
+The simplest one-shot sharing is a [delivery](/delivery/) — a time-limited package. **File sharing** is for ongoing access: permanent (or long-lived) folders, homes, and collections on your storage.
 
-A **share** is an accsyn entity you can expose long term to one or more users. It is similar to a delivery, except a share stays active for as long as the project (or collaboration) needs it, while a delivery can expire. Shares are often thought of as **projects** — typically mapped 1:1 to production projects — in a way that is comparable to a Windows SMB share: a named place on storage that people connect to with controlled permissions.
+A **share** is an accsyn entity you can expose long term to one or more users. It is similar to a delivery, except a share stays active for as long as the project (or collaboration) needs it, while a delivery can expire. Shares are often thought of as **projects** — typically mapped 1:1 to production projects — in a way that is comparable to a Windows SMB share: a named place on storage that people connect to by controlled permissions.
 
 There are four types of shares:
 
-- **Volume** — Disk storage or network share: the root folder. Accsyn cannot access files outside this folder. Administrators have full access. Employees can be granted read (download) and/or write (upload) on a volume. A workspace can have multiple volumes, served by different storage servers.
+- **Volume** — Disk storage or network share: the root folder. accsyn cannot access files outside this folder. Administrators have full access, employees can be granted read (download) and/or write (upload) here and standard users have no access to volumes. A workspace can have multiple volumes, served by different storage servers.
 - **Shared folder** — A folder beneath a volume (or the volume itself) shared with standard-role users. You can share the entire folder or only a particular subfolder. Administrators and employees may create shares beneath volumes they can access.
 - **Home** — A special shared folder designated and tied to a single user (typically named after their email), for personal upload/download outside the main production tree. Off by default; enable in Settings.
 - **Collection** — A virtual shared folder: a named set of files and folders picked from across a volume, or even spanning multiple volumes, shared like a shared folder.
 
-Accsyn uses **ACLs** (Access Control Lists) on shares to define what each user may do. The share API `code` must be unique within the workspace; in the API, paths often use `share=<ident>/…` notation.
+accsyn uses **ACLs** (Access Control Lists) on shares to define what each user may do. The share API `code` must be unique within the workspace; in the API, paths often use `share=<ident>/…` notation.
 
 That model means you do **not** need to copy files into a temporary account folder just to share them (as you often would with FTP). Instead you can share a project folder and use ACLs so partners only get download and/or upload on specific subfolders — keeping the rest of the tree private.
 
@@ -78,6 +76,6 @@ Yes. In a [BYOS](/admin/byos/) (or Enterprise) workspace you define **sites** �
 
 Site servers sync material between HQ and the remote site, serve shared storage there, and can take over transfers initiated by clients on that site so jobs continue when individual Desktop Apps close.
 
-See [Site administration](/admin/byos/site/) and the [Remote office sync](/tutorials/remote-office-sync/) tutorial.
+See [Site administration](/admin/site/) and the [Remote office sync](/tutorials/remote-office-sync/) tutorial.
 
-Next: [Work with accsyn File Sharing](/file-sharing/manage/)
+Next: [Manage collaboration (Storage)](/collaboration/manage/)

@@ -8,7 +8,7 @@ Media lab services operated by senior staff with 25+ years of media industry exp
 
 ## What is the accsyn Lab?
 
-Accsyn partners with Swedish provider FyraK Media / FilmTech to offer lab services alongside the Cloud Vault and delivery platform.
+accsyn partners with Swedish provider FyraK Media / FilmTech to offer lab services alongside the Cloud Vault and delivery platform.
 
 Work rides on accsyn Delivery — smooth handoff of material and a straightforward experience for large packages (including [ASC](/whitepaper/) when using the Desktop App).
 

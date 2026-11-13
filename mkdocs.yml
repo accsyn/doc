@@ -61,9 +61,10 @@ nav:
       - Manage: delivery/manage.md
       - Receive: delivery/receive.md
   - Collaboration:
-      - file-sharing/index.md
-      - Manage: file-sharing/manage.md
-      - Access: file-sharing/access.md
+      - collaboration/index.md
+      - Manage: collaboration/manage.md
+      - Access: collaboration/access.md
+  - Transfer: transfer/index.md
   - Media Vault:
       - vault/index.md
       - Create title: vault/create.md
@@ -78,23 +79,23 @@ nav:
       - Lab: vault/media-lab.md
   - Manage:
       - manage/index.md
-      - Transfer: manage/transfer.md
       - Jobs: manage/job.md
+      - Queues: manage/queue.md
+      - Projects: manage/project.md
+      - Resources: manage/resources.md
   - Administration:
       - admin/index.md
       - Hosts: admin/hosts.md
       - Users: admin/user.md
       - Storage: admin/storage.md
       - Queues: admin/queue.md
-      - Projects: admin/project.md
-      - Workspace Settings: admin/settings.md
       - Clients: admin/client.md
+      - BYOS: admin/byos.md
+      - Servers: admin/server.md
+      - Sites: admin/site.md
+      - Engines: admin/engine.md
+      - Workspace Settings: admin/settings.md
       - Internal settings: settings.md
-      - BYOS:
-          - admin/byos/index.md
-          - Server: admin/byos/server.md
-          - Site: admin/byos/site.md
-          - Engine: admin/byos/engine.md
   - Developer Hub:
       - developer/index.md
       - Python API: developer/python-api.md

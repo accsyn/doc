@@ -4,9 +4,7 @@
 
 ## Introduction
 
-This tutorial walks through how to set up accsyn for automated delivery of work material to a remote vendor, 
-
-and ingest of produced asset(s) back into a media production pipeline, without any manual file transfer labour back and forth.
+This tutorial walks through how to set up accsyn for automated delivery of work material to a remote vendor, and ingest of produced asset(s) back into a media production pipeline, without any manual file transfer labour back and forth.
 
   
   
@@ -14,13 +12,12 @@ and ingest of produced asset(s) back into a media production pipeline, without a
 ### Why automate outsourcing?
 
 - Collecting and sending a work file package manually is time-consuming and error-prone.
-- The receiving end needs to manually receive the material and unpack it, which can be a challenge when in different time zones.
+- The receiving end needs to manually download the material and unpack it, which can be a challenge when in different time zones.
 - When the work has been done, the vendor has no way of telling that their result aligns with your internal asset specifications.
 - The assets uploaded must be manually unpacked, transferred into the production storage, validated and then ingested into the production pipeline (e.g. ftrack Publish / Autodesk Flow / frame IO uploads).
 
 In short, providing an automated outsourcing pipeline saves a vast amount of time and leaves your staff to do creative work instead of file wrangling - invaluable when on tight deadlines and when vendors are in different time zones.
 
-  
 
 ### Why choose accsyn as the solution?
 
@@ -204,26 +201,21 @@ With the list of relative file paths at hand, use the accsyn Python API to creat
 Boilerplate code:
 
   
-
-#### Install accsyn python API
+**Install accsyn python API**
 
 >pip install accsyn-python-api
 
   
-
-#### Inside ftrack action script
-
-Implement code that collect/generate outsourcing file asset paths.
+**Inside ftrack action script, implement code that collect/generate outsourcing file asset paths**
 
   
-
-#### Assume the list of file paths calculated from ftrack are generated and stored in the variable source_files:
+- Assume the list of file paths calculated from ftrack are generated and stored in the variable source_files:
 
 ```python
 source_files = ["scd/0010/0010/src/plates/scd_0010_0010_src", "scd/0010/0010/cleanup/scd_0010_0010_cleanup_description.txt"]
 ```
 
-### Import and create the accsyn session object
+**Import and create the accsyn session object**
 
 It requires the following environment variables set:
 
@@ -244,7 +236,7 @@ session = accsyn_api.Session()
 ```
   
 
-#### Assume vendor name is already looked up by task assignee and defined. Also assume project name has been evaluated
+**Assume vendor name is already looked up by task assignee and defined. Also assume project name has been evaluated**
 
 ```python
 vendor_name = "CompersInc"
@@ -253,14 +245,14 @@ project_name = "scd"
 
   
 
-#### Generate sync job name, optimal is to have on per project, vendor and day.
+**Generate sync job name, optimal is to have on per project, vendor and day.**
 
 ```python
 job_name = f"Outsource - download - {project_name} - {vendor_name} - {datetime.now.strftime('%y%m%d')}"
 ```
   
 
-#### Build accsyn sync transfer tasks
+**Build accsyn sync transfer tasks**
 
 
 ```python
@@ -273,14 +265,14 @@ for path_rel in source_files:
 ```
   
 
-# Locate daily sync transfer:
+**Locate daily sync transfer:**
 
 ```python
 job = session.find(f'Transfer where name="{job_name}"')
 ```
   
 
-# Create or append to existing job
+**Create or append to existing job**
 
 ```python
 if not job:
@@ -310,9 +302,8 @@ We now have the pipeline ready for sending material, the final part of the pipel
 
 ### What is accsyn Publish?
 
-It is a variant of the standard accsyn desktop app upload mechanism, designed to pre-validate material before uploading. In addition to that, it supports defining where to upload the assets (without necessarily sharing the folder and granting ACL access), time report, notes taking, status and guidelines in-app.
+It is a variant of the standard accsyn desktop app upload mechanism, designed to pre-validate material before uploading and deciding destination path (without necessarily sharing the folder and granting ACL access). In addition to that, it supports entering time report, notes taking, status and providing publishing guidelines.
 
-  
 
 The publish mechanism is driven by two scripts:
 

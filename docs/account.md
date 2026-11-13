@@ -22,9 +22,9 @@ By design, all access to the accsyn platform is restricted and you need to be lo
 
 To sign up, open <https://accsyn.io/signup> in your browser. You can also reach the registration page by clicking the Sign up link at the login page:
 
-![](/assets/account-200bd96c1cf7.png)
+![](/assets/account_login.png)
 
-Screenshot of accsyn login prompt
+*Screenshot of accsyn login prompt*
 
 ### Choosing identity provider
 
@@ -35,11 +35,11 @@ An identity provider is the actual database where your email and password are st
 
   
 
-### Signing up with accsyn email-password provider
+### Signing up with default accsyn email-password provider
 
 Enter your email address and choose a strong password:
 
-![](/assets/account-7574280510f4.png)
+![](/assets/account_signup.png)
 
 Screenshot of accsyn signup prompt.
 
@@ -133,14 +133,10 @@ If you believe this is wrongdoing, please reach out to [support@accsyn.com](mail
 
 ## Further resources
 
-[Receive delivery](/delivery/receive/)
+How to action a Delivery, Upload request or Stream: [Receive delivery](/delivery/receive/)
 
-How to action a Delivery, Upload request or Stream
+How to access folders and collections shared with you: [Access Shared Files](/collaboration/access/)
 
-[Access Shared Files](/file-sharing/access/)
+Try out accsyn with your own Workspace trial: [Start a trial](/trial/)
 
-How to access folders and collections shared with you.
 
-[Start a trial](/trial/)
-
-Try out accsyn with your own Workspace trial

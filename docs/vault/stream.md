@@ -35,7 +35,7 @@ By default, VOD download is disabled — recipients can watch but not download. 
 
 ## Subtitles
 
-Accsyn finds subtitle media that share the video’s **Content** tag and have **Subtitles** set to the language.
+accsyn finds subtitle media that share the video’s **Content** tag and have **Subtitles** set to the language.
 
 Example:
 

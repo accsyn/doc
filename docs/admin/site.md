@@ -29,7 +29,7 @@ Servers and clients owned by elevated (admin or employee role) users can be assi
 
 ### Site types
 
-- Main site; This is the default site within a workspace, servers are assigned to this site by default and the server on main site serving the default volume is called the main server. See [servers](/admin/byos/server/) for more in-depth information. A workspace must have exactly one main site.
+- Main site; This is the default site within a workspace, servers are assigned to this site by default and the server on main site serving the default volume is called the main server. See [servers](/admin/server/) for more in-depth information. A workspace must have exactly one main site.
 - Roaming; This is a built-in site to which all standard role user clients are assigned, this can also be called the road warrior site.
 - accsyn; This is the accsyn cloud storage site, and is primarily assigned to new workspaces in the default accsyn setup before moving to BYOS. The accsyn site can be used in tandem with on-prem storage.
 
@@ -67,7 +67,7 @@ Sites are the durable way to connect a **remote office or cloud location** — t
 
 Mappings can run through the Desktop App (user logged in) or a **User server** daemon for unattended 24/7 access. That model suits a single machine; for an entire office or cloud VPC with shared storage and sync, prefer a site and site server as described on this page.
 
-See also [File sharing — local machines](/file-sharing/#can-my-clients-share-folders-on-their-local-machine).
+See also [File sharing — local machines](/collaboration/#can-my-clients-share-folders-on-their-local-machine).
 
 ## Site list
 
@@ -178,7 +178,7 @@ To delete a site, open the site's menu (three dots icon) on the right hand side 
 
 ### Related resources
 
-[Server admin](/admin/byos/server/)
+[Server admin](/admin/server/)
 
 Install a site server, enabling hq-to-site file synchronisation and backups.
 

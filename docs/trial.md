@@ -19,7 +19,7 @@ There are no limitations when it comes to functionality with an accsyn trial - w
 The default type of accsyn workspace is called a Cloud workspace. Suitable both for media production and distribution - sales, film festivals, archival:
 
 - Storage is securely hosted within the ISO 27001 certified premises in Stockholm, Sweden.
-- Suitable for both media production ([File Sharing](/file-sharing/) / [Delivery](/delivery/) features) and media distribution ([Media Vault](/vault/) feature).
+- Suitable for both media production ([File Sharing](/collaboration/) / [Delivery](/delivery/) features) and media distribution ([Media Vault](/vault/) feature).
 
 #### ESSENTIALS
 
@@ -35,7 +35,7 @@ accsyn is offered as an ESSENTIALS cloud workspace, at a reduced price and with 
 accsyn supports self hosted storage, this is called a BYOS Workspace (Bring-Your-Own-Storage) and is tailored for media production - shoot, DIT, post, delivery:
 
 - You install accsyn on your own premises, be it a physical location or cloud.
-- You serve files from your own storage  ([File Sharing](/file-sharing/) / [Delivery](/delivery/) features), with no limits on used space.
+- You serve files from your own storage  ([File Sharing](/collaboration/) / [Delivery](/delivery/) features), with no limits on used space.
 - Enables advanced [Workflows](/developer/) including [Site sync](/tutorials/remote-office-sync/), Hooks, Publishing and Compute(render) farms.
 
 
@@ -118,7 +118,7 @@ Further resources:
 
 ## Can I get help setting up a trial?
 
-Yes, we can set up a trial in the cloud for you to test out. Simply reach out to us at [support@accsyn.com](mailto:support@accsyn.com).
+Yes, we provide professional services billed on an hourly basis were we assist hands on with getting you up and running with accsyn. Simply reach out to us at [support@accsyn.com](mailto:support@accsyn.com).
 
 ## For how long will my trial last?
 

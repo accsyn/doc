@@ -302,7 +302,7 @@ class SubmitterDialog(QDialog):
     """Dialog for submitting a generic render job to accsyn"""
     def __init__(self, parent=None):
         super(SubmitterDialog, self).__init__(parent)
-        self.setWindowTitle("Accsyn Render Farm Submitter")
+        self.setWindowTitle("accsyn Render Farm Submitter")
         self.setMinimumWidth(600)
         # Create farm session object, requires environment variables set:
         #    ACCSYN_WORKSPACE=<workspace API code>
@@ -432,7 +432,7 @@ class SubmitterDialog(QDialog):
         if not path:
             return False, "Output path is required"
         # Similar pattern to input, but should be a folder path
-        # Accsyn paths typically start with share=
+        # accsyn paths typically start with share=
         pattern = r'^share=[^/]+(/[^/]+)+/?$'
         if not re.match(pattern, path):
             return False, "Output path must be a valid accsyn folder path (share=<share ident>/<path>/<to>/<folder>)"

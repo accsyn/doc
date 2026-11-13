@@ -113,7 +113,7 @@ To delete an engine, click the red trashcan button on the engine in the listing.
 
 ### Related resources
 
-[Server admin](/admin/byos/server/)
+[Server admin](/admin/server/)
 
 Install and assign engines to a  render/compute server.
 

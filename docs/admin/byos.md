@@ -29,7 +29,7 @@ With BYOS, remote Sites are supported - install servers on additional remote phy
 
 Additionally, these [Workflow](/developer/) features will be enabled:
 
-- [Sites](/admin/byos/site); Setup remote offices and cloud locations for file sync and backup.
+- [Sites](/admin/site/); Setup remote offices and cloud locations for file sync and backup.
 - [Hooks](/developer/hooks/); Have scripts run on your server when a job is submitted, finished, and so on.
 - [Publish](/developer/publish/); Set up a publish workflow, enabling remote vendor ingest of files within your production pipeline.
 - [Compute](/developer/farm/); Set up a render farm with Python script engines for common apps such as ffmpeg, Houdini, Unreal MRQ render and much more.
@@ -102,7 +102,7 @@ Hint: Hover the download buttons to copy the link to the installer.
 
   
 
-For detailed instructions on how to install and configure servers, please refer to [server documentation](/admin/byos/server/).
+For detailed instructions on how to install and configure servers, please refer to [server documentation](/admin/server/).
 
   
 
@@ -142,7 +142,7 @@ Enter the absolute path on the server, the path must exist and be writeable by t
 
   
 
-*Note: To change the user that the server runs as, please refer to [server documentation](/admin/byos/server/).*
+*Note: To change the user that the server runs as, please refer to [server documentation](/admin/server/).*
 
   
 
@@ -178,28 +178,20 @@ Click OK to reload the BYOS workspace,  you are now serving content from your o
 
 As a first thing to do, we recommend you test file transfers by uploading and then downloading a folder containing files.
 
-  
-
 Checklist:
 
 1. Make sure the file transfers perform as expected in regard to bandwidth utilisation.
 2. On server storage, check file permissions - make sure they align with the rest of your workflows in terms of security and accessibility.
 3. Open storage in desktop app and test creating folders, renaming and deleting files.
 
+
 ## Steps to take from here
 
-[Servers](/admin/byos/server/)
+- Install a server, for serving volumes on a remote site, running hooks or compute processes: [Servers](/admin/server/)
 
-Install a server, for serving volumes on a remote site, running hooks or compute processes.
+- Install accsyn on a remote office or cloud endpoint, to facilitate remote file sync/backups: [Sites](/admin/site/)
 
-[Sites](/admin/byos/site/)
+- Configure Python scripted engines, for render/compute farm deployments: [Engines](/admin/engine/)
 
-Install accsyn on a remote office or cloud endpoint, to facilitate remote file sync/backups.
+- You can now set up advanced Workflows with Hooks, Publishing and Render farm processing: [Developer Hub](/developer/)
 
-[Engines](/admin/byos/engine/)
-
-Configure Python scripted engines, for render/compute farm deployments.
-
-[Developer Hub](/developer/)
-
-You can now set up advanced Workflows with Hooks, Publishing and Render farm processing.
