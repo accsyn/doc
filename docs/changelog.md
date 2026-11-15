@@ -8,9 +8,10 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 **Major features**
 
-- [WEB/CORE] Support for accessing shares in the web browser, with support for download and upload through desktop app or web browser (single files).
-- [WEB] Collaboration/File Sharing now implemented on the web, offering the same funcationality as in the Desktop app - share folders and grant access to users.
-- [WEB/CORE] Support for theme projects, allowing customising delivery and share recipient pages. Default project for entire workspace can be set, as well as default for deliveries, requests, streams and shares.
+- [WEB/CORE] Support for end users accessof shares in the web browser, with support for download and upload through desktop app or web browser (single files). ZIP of entire share/arbitrary selection to be added in future release.
+- [WEB] Collaboration/File Sharing now implemented on the web @ Storage page, offering the same funcationality as in the Desktop app - share folders, grant access to users and audit permissions.
+- [WEB/CORE] Support for theme "projects", allowing customising delivery and share recipient pages. Default project for entire workspace can be set, as well as default for deliveries, requests, streams and shares.
+- [APP] Added support for downloading/uploading from/to shares in the browser.
 
 
 ## v3.6-8 <small>October 30, 2026</small>
