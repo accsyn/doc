@@ -4,15 +4,27 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
-## v3.7-0 <small>November 15, 2026</small>
+## v3.7-0 <small>November 16, 2026</small>
 
 **Major features**
 
-- [WEB/CORE] Support for end users accessof shares in the web browser, with support for download and upload through desktop app or web browser (single files). ZIP of entire share/arbitrary selection to be added in future release.
-- [WEB] Collaboration/File Sharing now implemented on the web @ Storage page, offering the same funcationality as in the Desktop app - share folders, grant access to users and audit permissions.
+- [WEB/CORE] Support for end users access of shares (shared folders, collections & homes) in the web browser, with support for download and upload through desktop app or web browser (single files, ZIP of entire share/arbitrary selection to be added in future release). Mirror path transfers are supported, if local share mappings are configured in client.
+- [WEB] Collaboration/File Sharing now implemented in browser @ Storage page (https://accsyn.io/storage), offering the same funcationality as in the Desktop app - share folders, grant access to users and audit permissions.
 - [WEB/CORE] Support for theme "projects", allowing customising delivery and share recipient pages. Default project for entire workspace can be set, as well as default for deliveries, requests, streams and shares.
 - [APP] Added support for downloading/uploading from/to shares in the browser.
 
+**Minor features**
+
+- [WEB/DAEMON] Properly support upload of directories with content, within the browser, preserving file modification timestamps. Requires upgrade of storage server(daemon installer) to v3.7.
+- [DELIVERY/APP] Native file browser instead of accsyn when saving deliveries and uploading to requests, and browsing local filesystem in general.
+
+**Bug fixes**
+
+- [DELIVERY/CORE] Fixed bug with ZIP filename colliding with filenames in delivery.
+
+</div>
+
+<div class="release-card" markdown>
 
 ## v3.6-8 <small>October 30, 2026</small>
 
@@ -39,6 +51,11 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [APP/WEB] Fixed bug where sensitive local paths were not properly obscured, properly show accsyn paths on source & destination.
 - [CORE] Fixed bug causing delay on transfer start.
 
+</div>
+
+
+<div class="release-card" markdown>
+
 ## v3.6-7 <small>October 8, 2026</small>
 
 **Minor features**
@@ -61,6 +78,9 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 - [CORE] Added global and site boolean setting "site_route_transfers" (default: false). If true, downloads & uploads initated by a client on same site will go through the site server (if present).
 
+</div>
+
+<div class="release-card" markdown>
 
 ## v3.6-6 <small>September 25, 2026</small>
 
