@@ -122,19 +122,30 @@ TCP provides standardized reliability, ordering, congestion control, and broad c
 
 Custom UDP transports can have an advantage on highly lossy or unusual paths, historically including satellite and unstable ADSL links, because they can implement behavior tailored to those conditions. On modern fiber and well-managed IP networks, parallel TCP can approach link capacity while remaining predictable and network-friendly. Actual performance depends on latency, packet loss, congestion, endpoint I/O, and network policy; protocol choice alone does not guarantee throughput.
 
+
 ## Security model
 
 ### Control-plane transport
 
 Applications and services communicate with the accsyn control plane through HTTPS/TLS on TCP port 443. TLS authenticates the service endpoint and protects authentication tokens, job metadata, connection instructions, and session key material in transit.
 
-Cloud infrastructure is hosted within the European Union in ISO/IEC 27001-certified premises. Each customer workspace operates as a private cloud instance with customer data isolated from other workspaces. Network access to control-plane services is restricted by infrastructure firewalls. Administrative access is limited to authorized accsyn personnel, uses individual key-based authentication, and is separated from normal Product access.
+Network access to control-plane services is restricted by infrastructure firewalls. Administrative access is limited to authorized accsyn personnel, uses individual key-based authentication, and is separated from normal Product access.
 
-### Identity and access
+### Identity and OAuth (Auth0)
 
-User authentication is handled through the configured identity provider. accsyn supports its own account flow and federation with Google and Microsoft. Authentication produces a time-limited token used by clients when calling the control plane; users do not send their account password to the remote transfer endpoint.
+All authorization inside accsyn is based on **OAuth access tokens**. Clients, the Desktop App, APIs, and transfer endpoints present these tokens when calling the control plane; workspace roles, share permissions, endpoint authorization, and job policy then decide what each request may do.
 
-Workspace roles, share permissions, endpoint authorization, and job policy determine whether a user may initiate or receive a transfer. Multi-factor authentication can be enforced at workspace or role level. See [Internal settings](/settings/) for the current authentication controls.
+Identity is delegated to [Auth0](https://auth0.com/) ([auth0.com](https://auth0.com/)), an external **SOC II**-compliant identity provider. Auth0 issues and validates the OAuth tokens used by accsyn. Supported login paths include the default accsyn email/password flow (hosted by Auth0) and federation with providers such as Google and Microsoft.
+
+**accsyn does not store user passwords or personal identity credentials.** Password verification and account credential storage remain with Auth0 (or the federated IdP). Users do not send an account password to a remote transfer peer; endpoints receive only short-lived authorization and session material issued for the orchestrated transfer.
+
+Multi-factor authentication can be enforced at workspace or role level. See [Internal settings](/settings/) and [Account](/account/) for authentication controls and provider options.
+
+### Hosting and compliance
+
+accsyn cloud infrastructure is hosted in the **European Union**, with primary hosting in **Stockholm, Sweden**, in **ISO/IEC 27001**-certified premises. Each customer workspace operates as a private cloud instance with customer data isolated from other workspaces.
+
+For BYOS deployments, file payloads remain on customer-controlled storage; the EU-hosted control plane still orchestrates jobs, authorization, and audit metadata as described above. See also [Specifications](/specifications/) for hosting and compliance summaries.
 
 ### On-demand listener
 

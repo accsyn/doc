@@ -228,7 +228,7 @@ acl = session.grant(
 
 Omit `path` (or use `"/"`) to grant the entire shared folder. Transfers to and from these shares use ASC when clients run the Desktop App or a User server.
 
-For volumes, collections, revoke/deactivate, and more, see the full [File Sharing](https://accsyn-python-api.readthedocs.io/en/latest/filesharing.html) chapter. API keys and installation: [Developer Hub — Python API](/developer/python-api/).
+For volumes, collections, revoke/deactivate, and more, see the full [Collaboration](https://accsyn-python-api.readthedocs.io/en/latest/collaboration.html) chapter. API keys and installation: [Developer Hub — Python API](/developer/python-api/).
 
 *Note: The API is not available for Cloud Essentials or BYOS Lite workspaces.*
 
