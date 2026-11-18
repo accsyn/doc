@@ -38,7 +38,96 @@ When a hook execution event triggers, accsyn executes the configured hook script
 
 ### Job lifecycle hooks
 
-Here follows example hook input data, as being passed on to the "post-done-server" hook after the file "moonshot.tif" was uploaded to a project share:
+Here follows example hook input data, as being passed on to the **job-post-done-server** hook after the file "moonshot.tif" was uploaded to a project share:
+
+```json
+{
+    "metadata": {
+        "external": {
+            "dev": true
+        },
+        "internal": {
+            "volume": "X",
+            "method": "rules",
+            "index": 0
+        }
+    },
+    "clients": [
+        {
+            "site": {
+                "code": "hq",
+                "main": true,
+                "id": "66fc222ebeabd25ad64f04ec"
+            },
+            "code": "CoruscantVII.local",
+            "role": "client",
+            "os": "mac",
+            "user_hr": "demo.user@accsyn.com",
+            "wan_ip": "127.0.0.1",
+            "id": "6a4102788e7ddf61d0305b03",
+            "type": 2,
+            "user": "6676f3e9c7ef4e27da254e57",
+            "version": "3.7-0_3",
+            "status": "online"
+        },
+        {
+            "metadata": {
+                "index": 0
+            },
+            "site": {
+                "code": "hq",
+                "main": true,
+                "id": "66fc222ebeabd25ad64f04ec"
+            },
+            "code": "CoruscantVII.local",
+            "role": "server",
+            "os": "mac",
+            "user_hr": "demo.admin@accsyn.com",
+            "wan_ip": "127.0.0.1",
+            "id": "664b5db8ed9dc749a06f9bd6",
+            "type": 1,
+            "user": "661014984428048969323147",
+            "version": "3.7-0_3",
+            "status": "online"
+        }
+    ],
+    "code": "Delivery 'Auto del push volume 1' auth push to CoruscantVII.local: proj_task001_v001_completed",
+    "user_hr": "demo.user@accsyn.com",
+    "destination": "user:6676f3e9c7ef4e27da254e57",
+    "engine_hr": "builtin-accsyn-transfer",
+    "source_hr": "seagull",
+    "source": "workspace:6645fbca9f8c4d3e7a3b678d",
+    "version": "3.7-0_9",
+    "queue_hr": "Auto del push volume 1",
+    "destination_hr": "demo.user@accsyn.com",
+    "hook": "job-post-done-server",
+    "size": 118141,
+    "engine": "664b6db9e43eb396e5e5542e",
+    "name": "Delivery 'Auto del push volume 1' auth push to CoruscantVII.local: proj_task001_v001_completed",
+    "id": "6afd7e279a94681659d4691e",
+    "job": "Delivery 'Auto del push volume 1' auth push to CoruscantVII.local: proj_task001_v001_completed",
+    "user": "6676f3e9c7ef4e27da254e57",
+    "queue": "6afd7dcf9a94681659d46919",
+    "tasks": {
+        "0": {
+            "destination_path": "download/cinemotion/proj_task001_v001_completed",
+            "destination": "proj_task001_v001_completed",
+            "source": "/Volumes/projects/FilmProj001/download/cinemotion/proj_task001_v001_completed",
+            "source_share_path": "FilmProj001",
+            "uri": "0",
+            "destination_share": "672c827fb66ea1e50b153386",
+            "size": 118141,
+            "source_share": "672c827fb66ea1e50b153386",
+            "destination_volume": "664b6d76e43eb396e5e55419",
+            "source_path": "download/cinemotion/proj_task001_v001_completed",
+            "source_volume": "664b6d76e43eb396e5e55419",
+            "destination_share_path": "FilmProj001",
+            "status": "done"
+        }
+    },
+    "status": "running"
+}
+```
 
 Breakdown of JSON data:
 
