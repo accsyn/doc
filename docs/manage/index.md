@@ -6,9 +6,9 @@ Documentation for operators (admin and employee roles).
 
 Manage deliveries and upload requests: [Delivery](/delivery/manage/).
 
-### Collaboration
+### Collaboration / Storage
 
-Manage shares and ACLs: [Collaboration](/collaboration/manage/).
+Manage shares and ACLs in the browser Storage page (`https://accsyn.io/storage`): [Collaboration](/collaboration/manage/).
 
 ### Media Vault
 

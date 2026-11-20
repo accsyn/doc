@@ -28,7 +28,7 @@ The unique API identifier of workspace, as generated from the initial name chose
 
 ### Logotype
 
-The images to use for branding, in light and dark mode variants. They are chosen from [Resources](/manage/resources/), and need to be uploaded in advance at <https://accsyn.io/admin/resources>.
+The images to use for branding, in light and dark mode variants. They are chosen from [Resources](/manage/resources/), and need to be uploaded in advance at <https://accsyn.io/manage/resources>.
 
 *Note: logotype images will be scaled down to fit 140x40px which are the default accsyn logotype dimensions, make sure your imagery looks decent in this format.*
 

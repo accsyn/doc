@@ -79,6 +79,7 @@ nav:
       - Lab: vault/media-lab.md
   - Manage:
       - manage/index.md
+      - Storage: manage/storage.md
       - Jobs: manage/job.md
       - Queues: manage/queue.md
       - Projects: manage/project.md

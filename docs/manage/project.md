@@ -6,7 +6,7 @@ Theme layout editing and resource (logo/wallpaper) selection will be expanded in
 
 Prerequisites:
 
-- Logged on as an administrator to <https://accsyn.io/admin/projects>.
+- Logged on as an administrator to <https://accsyn.io/manage/projects>.
 
 ## What is a project?
 
@@ -84,7 +84,7 @@ Choose **Delete** from the project context menu and confirm.
 
 [Resources](/manage/resources/)
 
-Upload logos, wallpapers and other branding assets used by projects and workspace settings (<https://accsyn.io/admin/resources>).
+Upload logos, wallpapers and other branding assets used by projects and workspace settings (<https://accsyn.io/manage/resources>).
 
 [Workspace Settings](/settings/)
 

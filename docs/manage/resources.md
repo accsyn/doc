@@ -6,7 +6,7 @@ They can also be used as default email attachments for invite / joined messages.
 
 **Prerequisites**
 
-- Signed in as an administrator or employee at <https://accsyn.io/admin/resources>.
+- Signed in as an administrator or employee at <https://accsyn.io/manage/resources>.
 
 ## What you can upload
 
@@ -22,7 +22,7 @@ Allowed file types:
 
 ## Resource list
 
-Open **Workspace → Administrate → Resources** (or go to <https://accsyn.io/admin/resources>).
+Open **Workspace → Administrate → Resources** (or go to <https://accsyn.io/manage/resources>).
 
 The list shows:
 
