@@ -99,20 +99,25 @@ The Python path can also be overridden if you need to point out a dedicated Pyth
 
 Linux prep
 
-The installer relies on Java being present at the host, as Java is not bundled with the installer:
+The installer relies on Java being present on the host, as Java is not bundled with the Linux installer. Install a headless OpenJDK **17 or 21** LTS runtime (JRE) using the package for your distribution:
 
-- RHEL / CentOS (7) / Oracle Linux: sudo yum install -y java-17-openjdk-headless
-- RHEL/CentOS 8 or later: dnf install java-17-openjdk-headless
-- Ubuntu/Debian: sudo apt-get install -y default-jre-headless
-- openSUSE: sudo zypper --non-interactive install java-1_8_0-openjdk-headless
-- Fedora: sudo dnf install -y java-17-openjdk-headless
-- Arch Linux / Manjaro: sudo pacman -S --noconfirm jre-openjdk-headless
-- Amazon Linux 2 / 2023: sudo dnf install -y java-17-amazon-corretto-headless
-- Alpine Linux: sudo apk add openjdk17-jre-headless
+- **Ubuntu / Debian:** ```sudo apt-get install -y default-jre-headless```  
+  *(Ubuntu 24.04+ and Debian 13 ship OpenJDK 21 as default; Ubuntu 22.04 / Debian 12 ship OpenJDK 17. To pin a version: `openjdk-17-jre-headless` or `openjdk-21-jre-headless`.)*
+- **RHEL / Rocky Linux / AlmaLinux / Oracle Linux 8–9:** ```sudo dnf install -y java-17-openjdk-headless```
+- **RHEL / Rocky Linux / AlmaLinux 10:** ```sudo dnf install -y java-21-openjdk-headless```  
+  *(OpenJDK 17 is no longer in the default AppStream on version 10; use 21, or install Temurin/Corretto 17 from a vendor repo if you must stay on 17.)*
+- **Amazon Linux 2023:** ```sudo dnf install -y java-17-amazon-corretto-headless```  
+  *(Corretto 21 is also available as `java-21-amazon-corretto-headless`.)*
+- **Amazon Linux 2:** ```sudo yum install -y java-17-amazon-corretto-headless```
+- **Fedora:** ```sudo dnf install -y java-21-openjdk-headless```  
+  *(Or `java-17-openjdk-headless` if still available in your release.)*
+- **openSUSE Leap / SLES:** ```sudo zypper --non-interactive install java-21-openjdk-headless```  
+  *(`java-17-openjdk-headless` is also available on Leap 15.x.)*
+- **Arch Linux / Manjaro:** ```sudo pacman -S --noconfirm jre-openjdk-headless```
+- **Alpine Linux:** ```sudo apk add openjdk21-jre-headless```  
+  *(Or `openjdk17-jre-headless` — enable the community repository if needed.)*
 
-  
-
-*Note: Mac and Windows installers come with Java bundled.*
+*Note: CentOS Linux is end-of-life; use Rocky Linux or AlmaLinux as the RHEL-compatible replacement. Mac and Windows installers come with Java bundled.*
 
   
 

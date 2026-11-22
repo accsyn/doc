@@ -67,24 +67,25 @@ Hint: Keep it in your dock for easy access in the future.
 
 You can install accsyn on most major Linux distributions using the appropriate package format:
 
-•.deb for Debian-based systems (like Ubuntu, Linux Mint)
+- `.deb` for Debian-based systems (Ubuntu, Debian, Linux Mint)
+- `.rpm` for Red Hat-based systems (Fedora, RHEL, Rocky Linux, AlmaLinux, openSUSE)
 
-•.rpm for Red Hat-based systems (like Fedora, RHEL, CentOS, openSUSE)
+1. Install Java (headless OpenJDK **17 or 21** LTS):
 
-1. Install Java:
+- **Ubuntu / Debian:** `sudo apt install -y default-jre-headless` (or pin `openjdk-17-jre-headless` / `openjdk-21-jre-headless`)
+- **RHEL / Rocky / AlmaLinux 8–9:** `sudo dnf install -y java-17-openjdk-headless`
+- **RHEL / Rocky / AlmaLinux 10:** `sudo dnf install -y java-21-openjdk-headless`
+- **Fedora:** `sudo dnf install -y java-21-openjdk-headless`
+- **openSUSE:** `sudo zypper --non-interactive install java-21-openjdk-headless`
 
-- RHEL/CentOS 7 and earlier; sudo yum install java-1.8.0-openjdk-headless.
-- RHEL/CentOS 8 or later: dnf install java-17-openjdk-headless.
-- Ubuntu: sudo apt install openjdk-17-jdk.
-- OpenSUSE: sudo zypper --non-interactive install java-1_8_0-openjdk-headless.
+See [Server administration — Linux prep](/admin/server/#linux-prep) for Amazon Linux, Alpine, Arch, and more.
 
-2. Download the installer;  For .deb (Debian-based): accsyn_3.6-5_5.all.deb, for .rpm (Red Hat-based): accsyn-3.6-5_5.x86_64.rpm (replace the version with the current release)
-3. Install
+2. Download the installer from <https://accsyn.io/getapp> — `.deb` (Debian-based) or `.rpm` (Red Hat-based); use the current release filename shown on the download page.
+3. Install:
 
-- Debian/Ubuntu (.deb):  sudo apt install ./yourapp_1.2.3.deb (or extract and then move to a folder of choice: sudo dpkg -x accsyn_3.6-5_5.all.deb && sudo mv usr/local/accsyn <folder>.
-- Fedora (.rpm): sudo dnf install accsyn-3.6-5_5.x86_64.rpm.
-- RHEL (.rpm): sudo yum localinstall accsyn-3.6-5_5.x86_64.rpm.
-- OpenSUSE  (.rpm):  sudo zypper install accsyn-3.6-5_5.x86_64.rpm.
+- **Debian / Ubuntu (.deb):** `sudo apt install ./accsyn_<version>.all.deb` (or extract and move: `sudo dpkg -x accsyn_<version>.all.deb && sudo mv usr/local/accsyn <folder>`)
+- **Fedora / RHEL / Rocky / AlmaLinux (.rpm):** `sudo dnf install ./accsyn-<version>.x86_64.rpm`
+- **openSUSE (.rpm):** `sudo zypper install ./accsyn-<version>.x86_64.rpm`
 
   
 
