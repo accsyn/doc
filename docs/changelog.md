@@ -4,7 +4,7 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
-## v3.7-1 <small>Upcoming</small>
+## v3.7-1 <small>November 22, 2026</small>
 
 **Major features**
 
@@ -15,12 +15,16 @@ All notable changes to the accsyn platform are documented here, most recent rele
 - [WEB] Notify if a new version of the accsyn web UI is available, with reload button.
 - [WEB] Warn if reloading or leaving page when a browser file transfer is active.
 - [WEB] Support for disabling users globally across all workspaces.
+- [CORE] Auto inactivate (archive) shared folders and collections not accessed in 1 year.
+- [CORE] Auto delete shared folders and collections not accessed in 2 years.
+- [APP] Improved publish - enable browse of publish asset, not only drag-n-drop. Clarified publish entry.
+- [WEB] Notify user if email not verified, ability to re-send email verification email.
 
 **Bug fixes**
 
 - [WEB] Fixed missing role change mechanism when editing user attributes. 
 - [CORE/API] Directly generate public delivery tokens upon creation and return with API response.
-- [WEB] Ability to access a public delivery,request or stream by its ID.
+- [WEB] Ability to access a delivery, request, stream and share by ID based link.
 
 </div>
 
