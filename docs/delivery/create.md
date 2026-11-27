@@ -94,17 +94,27 @@ This video shows creating an upload request to a temporary folder:
 
 ![](/assets/delivery_create-ea26b59c82c4.png)
 
+### Upload to temp folder
+
+Recipients upload files to a temp folder on storage, which you then download to your computer before the delivery expires. At expiry, the files are then deleted
+from the temporary folder.
+
+Before request is sent, you can change to a folder on storage by clicking button "Switch to folder on storage".
+
 ### Upload to a folder on accsyn storage
 
 A file browser lets you choose the destination folder. Create a new folder by entering a name and clicking the plus (+) button:
 
 ![](/assets/request_create.png)
 
-4. Enter the email address(es) of users who should upload. Multiple recipients are supported; previous recipients are remembered.
-5. Set the **Expiry** date (default: one month / 30 days).
-6. As with a delivery, you can allow any accsyn user with the link to upload by enabling the corresponding option.
+1. Enter the email address(es) of users who should upload. Multiple recipients are supported; previous recipients are remembered.
+2. Set the **Expiry** date (default: one month / 30 days).
+3. As with a delivery, you can allow any accsyn user with the link to upload by enabling the corresponding option.
 
 When ready, click **SEND REQUEST** to email recipients with upload instructions. If you chose a temporary folder, it is created on storage at send time.
+
+Before request is sent, you can change the current selevted upload destination folder by clicking the three dots(...) button next to the path. You can also switch to a temp folder request by clicking the button "Switch to a temporary folder". 
+
 
 ## Deliver using desktop app
 

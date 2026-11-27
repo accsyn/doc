@@ -91,7 +91,7 @@ Here follows example hook input data, as being passed on to the **job-post-done-
             "status": "online"
         }
     ],
-    "code": "Delivery 'Auto del push volume 1' auth push to CoruscantVII.local: proj_task001_v001_completed",
+    "code": "Delivery 'Auto del push volume 1' auto push to CoruscantVII.local: proj_task001_v001_completed",
     "user_hr": "demo.user@accsyn.com",
     "destination": "user:6676f3e9c7ef4e27da254e57",
     "engine_hr": "builtin-accsyn-transfer",
@@ -103,9 +103,9 @@ Here follows example hook input data, as being passed on to the **job-post-done-
     "hook": "job-post-done-server",
     "size": 118141,
     "engine": "664b6db9e43eb396e5e5542e",
-    "name": "Delivery 'Auto del push volume 1' auth push to CoruscantVII.local: proj_task001_v001_completed",
+    "name": "Delivery 'Auto del push volume 1' auto push to CoruscantVII.local: proj_task001_v001_completed",
     "id": "6afd7e279a94681659d4691e",
-    "job": "Delivery 'Auto del push volume 1' auth push to CoruscantVII.local: proj_task001_v001_completed",
+    "job": "Delivery 'Auto del push volume 1' auto push to CoruscantVII.local: proj_task001_v001_completed",
     "user": "6676f3e9c7ef4e27da254e57",
     "queue": "6afd7dcf9a94681659d46919",
     "tasks": {

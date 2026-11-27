@@ -4,27 +4,46 @@ All notable changes to the accsyn platform are documented here, most recent rele
 
 <div class="release-card" markdown>
 
-## v3.7-1 <small>November 22, 2026</small>
-
-**Major features**
-
-- [WEB/CORE] Web transfer page, with same functionality as Desktop App Transfer view - initiate push and pull to/from remote sites, users with mapped accessible shares and own running clients with mapped shares.
+## v3.7-2 <small>November 27, 2026</small>
 
 **Minor features**
 
+- [WEB] New security setting "security_enforce_verified_email" - enforce email verification for users,  Notify user if email not verified, ability to re-send email verification email from web. Proper notification in desktop app.
+- [APP] Remove account from app option from login screen.
+- [WEB] Remember last browsed location.
+- [WEB] Internal database verification.
+- [WEB/UPLOAD REQUESTS] Change destination folder on storage, or switch to temp folder and back.
+- [WEB/CORE] Bind volume to a queue, not only shares.
+- [WEB] Overall improvements, consolidation and bug fixes.
+
+**Bug fixes**
+
+- [WEB] Ability to access a delivery, request, stream and share by ID based link.
+- [WEB] Bring back missing farm page.
+- [CORE/APP/WEB] Fixed bug in log pagination.
+
+</div>
+
+
+<div class="release-card" markdown>
+
+## v3.7-1 <small>November 22, 2026</small>
+
+**Minor features**
+
+- [WEB/CORE] Web transfer page, with same functionality as Desktop App Transfer view - initiate push and pull to/from remote sites, users with mapped accessible shares and own running clients with mapped shares.
+- [DELIVERY] Auto start download of delivery for recipient that has local mapped shares matching delivery content.
 - [WEB] Notify if a new version of the accsyn web UI is available, with reload button.
 - [WEB] Warn if reloading or leaving page when a browser file transfer is active.
 - [WEB] Support for disabling users globally across all workspaces.
 - [CORE] Auto inactivate (archive) shared folders and collections not accessed in 1 year.
 - [CORE] Auto delete shared folders and collections not accessed in 2 years.
 - [APP] Improved publish - enable browse of publish asset, not only drag-n-drop. Clarified publish entry.
-- [WEB] Notify user if email not verified, ability to re-send email verification email.
 
 **Bug fixes**
 
 - [WEB] Fixed missing role change mechanism when editing user attributes. 
 - [CORE/API] Directly generate public delivery tokens upon creation and return with API response.
-- [WEB] Ability to access a delivery, request, stream and share by ID based link.
 
 </div>
 

@@ -61,21 +61,14 @@ The method to use to authenticate, if not already MFA authenticated at login.
 
 The default method is email - a six (6) digit code is sent by email to the user and needs to be entered in the browser or app before login can be concluded.
 
-Enforce for all roles
+- **Enforce for all roles** Require MFA for all users.
+- **Enforce for administrators** Require MFA for users having the elevated administrator base role.
+- **Enforce for employees** Require MFA for users having the elevated employee/operator base role.
+- **Enforce for standard users** Require MFA for standard non-elevated users.
 
-Require MFA for all users.
+### Enforce verified email
 
-Enforce for administrators
-
-Require MFA for users having the elevated administrator base role.
-
-Enforce for employees
-
-Require MFA for users having the elevated employee/operator base role.
-
-Enforce for standard users
-
-Require MFA for standard non-elevated users.
+Enforce users to verify their email before they can perform any file operations, submit any jobs or create ACLs - invite users or grant access to shares.
 
 ## Storage
 
@@ -103,7 +96,17 @@ Enable volume cache - store directory structure in accsyn cache for fast retriev
 
 When listing files on a volume with the desktop app, the cached results will first be retrieved followed by the actual listing by the server that also updates the cache afterwards.
 
-  
+### Share inactivate grace
+
+How long after a share is no longer in use before it is inactivated. Choose **Infinite** to never auto-inactivate. Home shares are unaffected.
+
+Default: 1 year (365 days). See [Internal settings](/settings/) (`share_inactivate_grace_d`).
+
+### Share delete grace
+
+How long after a share is inactivated before it is permanently deleted. Choose **Infinite** to keep inactivated shares indefinitely. Home shares are unaffected.
+
+Default: 2 years (730 days). See [Internal settings](/settings/) (`share_delete_grace_d`).
 
 ### Advanced
 
